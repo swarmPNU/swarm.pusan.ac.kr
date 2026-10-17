@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SWARM Laboratory | Pusan National University</title>
 
-  <!-- Inter Font -->
+  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-
-    /* =========================
-       BASIC
-    ========================= */
 
     * {
       margin: 0;
@@ -29,10 +26,9 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #000000;
+      background: #fff;
+      color: #0a0a0a;
     }
-
 
     /* =========================
        HEADER
@@ -55,31 +51,23 @@
       z-index: 100;
     }
 
-
-    /* PUSAN NATIONAL UNIVERSITY */
-
     .pnu-name {
       font-size: 18px;
       font-weight: 700;
       letter-spacing: -0.4px;
-
       color: #0b4a8b;
     }
-
-
-    /* NAVIGATION */
 
     nav {
       display: flex;
       align-items: center;
-
       gap: 52px;
     }
 
     nav a {
       position: relative;
 
-      color: #111111;
+      color: #111;
       text-decoration: none;
 
       font-size: 16px;
@@ -87,7 +75,7 @@
 
       padding: 10px 0;
 
-      transition: color 0.2s ease;
+      transition: 0.2s;
     }
 
     nav a:hover {
@@ -111,7 +99,6 @@
       background: #0b4a8b;
     }
 
-
     /* =========================
        HERO
     ========================= */
@@ -128,17 +115,11 @@
       padding: 105px 6% 60px;
     }
 
-
     .hero-content {
       margin-top: 30px;
     }
 
-
-    /* SWARM */
-
     .hero h1 {
-      font-family: 'Inter', sans-serif;
-
       font-size: clamp(100px, 12vw, 185px);
       font-weight: 900;
 
@@ -148,12 +129,7 @@
       margin-bottom: 40px;
     }
 
-
-    /* LAB NAME */
-
     .hero h2 {
-      font-family: 'Inter', sans-serif;
-
       max-width: 1050px;
 
       font-size: clamp(30px, 3.1vw, 52px);
@@ -163,10 +139,7 @@
       letter-spacing: -1.8px;
     }
 
-
-    /* =========================
-       SCROLL
-    ========================= */
+    /* Scroll */
 
     .scroll {
       position: absolute;
@@ -184,27 +157,171 @@
 
       font-size: 13px;
       font-weight: 500;
-
       letter-spacing: 2px;
-
-      color: #222222;
     }
 
-
-    .arrow {
+    .arrow-down {
       width: 15px;
       height: 15px;
 
-      border-right: 2px solid #111111;
-      border-bottom: 2px solid #111111;
+      border-right: 2px solid #111;
+      border-bottom: 2px solid #111;
 
       transform: rotate(45deg);
     }
 
+    /* =========================
+       RESEARCH
+    ========================= */
+
+    .research {
+      background: #f5f6f7;
+
+      padding: 110px 6% 130px;
+    }
+
+    .research-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 60px;
+
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      color: #0b4a8b;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(42px, 4vw, 64px);
+      font-weight: 800;
+
+      letter-spacing: -2.5px;
+      line-height: 1;
+    }
+
+    .research-intro {
+      max-width: 470px;
+
+      font-size: 17px;
+      line-height: 1.6;
+
+      color: #555;
+    }
+
+    /* GRID */
+
+    .research-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 22px;
+    }
+
+    /* CARD */
+
+    .research-card {
+      background: #fff;
+
+      overflow: hidden;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* IMAGE PLACEHOLDER */
+
+    .research-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      background: #e4e6e8;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #999;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      letter-spacing: 2px;
+    }
+
+    /* CARD CONTENT */
+
+    .research-content {
+      min-height: 240px;
+
+      padding: 28px 26px 25px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .research-content h3 {
+      font-size: 21px;
+      font-weight: 750;
+
+      line-height: 1.25;
+      letter-spacing: -0.7px;
+
+      margin-bottom: 14px;
+    }
+
+    .research-content p {
+      color: #666;
+
+      font-size: 14px;
+      line-height: 1.65;
+
+      margin-bottom: 25px;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      align-self: flex-end;
+
+      font-size: 28px;
+      font-weight: 300;
+
+      transition: transform 0.2s;
+    }
+
+    .research-card:hover .card-arrow {
+      transform: translateX(5px);
+    }
 
     /* =========================
-       MOBILE
+       RESPONSIVE
     ========================= */
+
+    @media (max-width: 1200px) {
+
+      .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
 
     @media (max-width: 900px) {
 
@@ -225,27 +342,33 @@
         font-size: 14px;
       }
 
-
       .hero {
         padding: 85px 30px 50px;
       }
 
-
       .hero h1 {
         font-size: 20vw;
         letter-spacing: -5px;
-
-        margin-bottom: 30px;
       }
-
 
       .hero h2 {
         font-size: 5.5vw;
-        letter-spacing: -1px;
+      }
+
+      .research {
+        padding:
+          90px 30px
+          100px;
+      }
+
+      .research-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
       }
 
     }
-
 
     @media (max-width: 650px) {
 
@@ -257,27 +380,32 @@
         display: none;
       }
 
-
       .hero {
         padding-left: 22px;
         padding-right: 22px;
       }
-
 
       .hero h1 {
         font-size: 21vw;
         letter-spacing: -4px;
       }
 
-
       .hero h2 {
         font-size: 7vw;
-        line-height: 1.2;
       }
 
+      .research {
+        padding:
+          75px 22px
+          80px;
+      }
 
-      .scroll {
-        bottom: 25px;
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .research-content {
+        min-height: 210px;
       }
 
     }
@@ -288,10 +416,7 @@
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -299,43 +424,22 @@
       Pusan National University
     </div>
 
-
     <nav>
-
-      <a href="#home" class="active">
-        Home
-      </a>
-
-      <a href="#research">
-        Research
-      </a>
-
-      <a href="#people">
-        People
-      </a>
-
-      <a href="#publications">
-        Publications
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#home" class="active">Home</a>
+      <a href="#research">Research</a>
+      <a href="#people">People</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
     </nav>
 
   </header>
 
 
-
-  <!-- =========================
-       MAIN
-  ========================== -->
-
   <main>
 
-
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero" id="home">
 
@@ -345,7 +449,6 @@
           SWARM
         </h1>
 
-
         <h2>
           Smart Wireless Antenna,<br>
           Radiation, and Microwave Laboratory
@@ -353,22 +456,176 @@
 
       </div>
 
+      <a href="#research" class="scroll"
+         style="color:inherit; text-decoration:none;">
 
-      <div class="scroll">
+        <span>Scroll</span>
 
-        <span>
-          Scroll
-        </span>
+        <div class="arrow-down"></div>
 
-        <div class="arrow"></div>
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         RESEARCH
+    ========================== -->
+
+    <section class="research" id="research">
+
+      <div class="research-top">
+
+        <div>
+
+          <div class="section-label">
+            RESEARCH
+          </div>
+
+          <h2 class="section-title">
+            Research Areas
+          </h2>
+
+        </div>
+
+
+        <p class="research-intro">
+          We explore advanced antenna and microwave technologies
+          for next-generation wireless systems.
+        </p>
+
+      </div>
+
+
+      <div class="research-grid">
+
+
+        <!-- 01 -->
+
+        <article class="research-card">
+
+          <div class="research-image">
+            IMAGE
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Reconfigurable Antennas
+              & Intelligent Surfaces
+            </h3>
+
+            <p>
+              Reconfigurable reflectarrays, adaptive antennas,
+              and beam-steering technologies for advanced
+              wireless systems.
+            </p>
+
+            <div class="card-arrow">
+              →
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="research-card">
+
+          <div class="research-image">
+            IMAGE
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              mmWave & Sub-THz
+              Technologies
+            </h3>
+
+            <p>
+              Millimeter-wave and sub-THz antennas,
+              waveguide transitions, RF components,
+              and measurement technologies.
+            </p>
+
+            <div class="card-arrow">
+              →
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="research-card">
+
+          <div class="research-image">
+            IMAGE
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              RF Front-End
+              & Antenna-in-Package
+            </h3>
+
+            <p>
+              Antennas, filters, filtennas, RF front-end
+              components, and antenna-in-package technologies
+              for highly integrated wireless systems.
+            </p>
+
+            <div class="card-arrow">
+              →
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="research-card">
+
+          <div class="research-image">
+            IMAGE
+          </div>
+
+          <div class="research-content">
+
+            <h3>
+              Emerging Wireless
+              Technologies
+            </h3>
+
+            <p>
+              Emerging antenna and RF technologies including
+              RF-photonics, leaky-wave antennas, and
+              next-generation wireless applications.
+            </p>
+
+            <div class="card-arrow">
+              →
+            </div>
+
+          </div>
+
+        </article>
+
 
       </div>
 
     </section>
 
-
   </main>
 
-
 </body>
+
 </html>
