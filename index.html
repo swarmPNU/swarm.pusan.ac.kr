@@ -29,8 +29,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: #0a0a0a;
       background: #ffffff;
+      color: #0a0a0a;
     }
 
 
@@ -52,8 +52,9 @@
       align-items: center;
       justify-content: space-between;
 
-      z-index: 20;
+      z-index: 100;
     }
+
 
     .pnu-name {
       color: #0b4a8b;
@@ -64,12 +65,14 @@
       letter-spacing: -0.4px;
     }
 
+
     nav {
       display: flex;
       align-items: center;
 
       gap: 48px;
     }
+
 
     nav a {
       position: relative;
@@ -81,16 +84,21 @@
       font-weight: 500;
 
       padding: 10px 0;
+
+      transition: color 0.2s ease;
     }
+
 
     nav a:hover {
       color: #0b4a8b;
     }
 
+
     nav a.active {
       color: #0b4a8b;
       font-weight: 600;
     }
+
 
     nav a.active::after {
       content: "";
@@ -105,6 +113,7 @@
 
       background: #0b4a8b;
     }
+
 
 
     /* ========================================
@@ -124,140 +133,21 @@
 
       padding: 95px 6% 30px;
 
-      background:
-        linear-gradient(
-          90deg,
-          #ffffff 0%,
-          #ffffff 38%,
-          #f9fcff 58%,
-          #eef6ff 100%
-        );
+      background-image: url("hero-bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-
-    /* ========================================
-       HERO CURVES
-    ======================================== */
-
-    .hero-waves {
-      position: absolute;
-
-      top: 0;
-      right: 0;
-
-      width: 68%;
-      height: 100%;
-
-      pointer-events: none;
-    }
-
-
-    .wave {
-      position: absolute;
-
-      border-radius: 50%;
-
-      transform: rotate(-14deg);
-    }
-
-
-    /* large pale blue band */
-
-    .wave-1 {
-      width: 1100px;
-      height: 420px;
-
-      top: -270px;
-      right: -180px;
-
-      border: 70px solid rgba(72, 145, 225, 0.10);
-    }
-
-
-    /* second pale band */
-
-    .wave-2 {
-      width: 950px;
-      height: 390px;
-
-      top: -180px;
-      right: -120px;
-
-      border: 48px solid rgba(87, 158, 232, 0.08);
-    }
-
-
-    /* lower curve */
-
-    .wave-3 {
-      width: 900px;
-      height: 440px;
-
-      top: 155px;
-      right: -250px;
-
-      border: 55px solid rgba(79, 153, 230, 0.09);
-    }
-
-
-    /* thin line */
-
-    .wave-line-1 {
-      width: 1050px;
-      height: 440px;
-
-      top: -205px;
-      right: -210px;
-
-      border: 1px solid rgba(61, 136, 218, 0.26);
-    }
-
-
-    /* second thin line */
-
-    .wave-line-2 {
-      width: 950px;
-      height: 420px;
-
-      top: 105px;
-      right: -240px;
-
-      border: 1px solid rgba(61, 136, 218, 0.20);
-    }
-
-
-    /* soft fade toward SWARM */
-
-    .hero-waves::after {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 45%;
-      height: 100%;
-
-      background:
-        linear-gradient(
-          90deg,
-          #ffffff 0%,
-          rgba(255,255,255,0.95) 30%,
-          rgba(255,255,255,0) 100%
-        );
-    }
-
-
-    /* ========================================
-       HERO TEXT
-    ======================================== */
 
     .hero-content {
       position: relative;
+
       z-index: 5;
     }
 
+
+    /* SWARM */
 
     .hero h1 {
       color: #050505;
@@ -283,6 +173,8 @@
     }
 
 
+    /* LAB NAME */
+
     .hero h2 {
       max-width: 850px;
 
@@ -294,6 +186,7 @@
       line-height: 1.15;
       letter-spacing: -1.3px;
     }
+
 
 
     /* ========================================
@@ -323,8 +216,9 @@
     }
 
 
+
     /* ========================================
-       GRID
+       RESEARCH GRID
     ======================================== */
 
     .research-grid {
@@ -336,8 +230,9 @@
     }
 
 
+
     /* ========================================
-       CARD
+       RESEARCH CARD
     ======================================== */
 
     .research-card {
@@ -364,8 +259,9 @@
     }
 
 
+
     /* ========================================
-       IMAGE
+       RESEARCH IMAGE
     ======================================== */
 
     .research-image {
@@ -376,12 +272,7 @@
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          135deg,
-          #d9e7f5,
-          #b9d0e8
-        );
+      background: #dce8f3;
     }
 
 
@@ -395,7 +286,7 @@
     }
 
 
-    /* placeholder until real images are added */
+    /* TEMPORARY PLACEHOLDER */
 
     .image-placeholder {
       width: 100%;
@@ -409,6 +300,9 @@
         );
     }
 
+
+
+    /* NUMBER */
 
     .research-number {
       position: absolute;
@@ -424,7 +318,7 @@
       font-weight: 700;
 
       text-shadow:
-        0 1px 5px rgba(0,0,0,0.35);
+        0 1px 5px rgba(0, 0, 0, 0.35);
     }
 
 
@@ -438,8 +332,9 @@
 
       margin-top: 7px;
 
-      background: rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.85);
     }
+
 
 
     /* ========================================
@@ -477,8 +372,9 @@
     }
 
 
+
     /* ========================================
-       ARROW
+       CARD ARROW
     ======================================== */
 
     .card-arrow {
@@ -513,6 +409,7 @@
     }
 
 
+
     /* ========================================
        TABLET
     ======================================== */
@@ -521,10 +418,6 @@
 
       .research-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-waves {
-        width: 75%;
       }
 
     }
@@ -538,17 +431,21 @@
         padding: 0 30px;
       }
 
+
       .pnu-name {
         font-size: 16px;
       }
+
 
       nav {
         gap: 22px;
       }
 
+
       nav a {
         font-size: 14px;
       }
+
 
       .hero {
         height: 410px;
@@ -556,7 +453,10 @@
         padding:
           95px 30px
           30px;
+
+        background-position: center;
       }
+
 
       .hero h1 {
         font-size: 16vw;
@@ -564,14 +464,11 @@
         letter-spacing: -5px;
       }
 
+
       .hero h2 {
         font-size: 4.5vw;
       }
 
-      .hero-waves {
-        width: 85%;
-        opacity: 0.7;
-      }
 
       .research {
         padding:
@@ -580,6 +477,7 @@
       }
 
     }
+
 
 
     /* ========================================
@@ -592,13 +490,16 @@
         padding: 0 22px;
       }
 
+
       .pnu-name {
         font-size: 15px;
       }
 
+
       nav {
         display: none;
       }
+
 
       .hero {
         height: 370px;
@@ -606,13 +507,17 @@
         padding:
           90px 22px
           30px;
+
+        background-position: 55% center;
       }
+
 
       .hero h1 {
         font-size: 20vw;
 
         letter-spacing: -4px;
       }
+
 
       .swarm-line {
         width: 60px;
@@ -622,16 +527,13 @@
         margin-bottom: 15px;
       }
 
+
       .hero h2 {
         font-size: 6vw;
 
         line-height: 1.18;
       }
 
-      .hero-waves {
-        width: 100%;
-        opacity: 0.45;
-      }
 
       .research {
         padding:
@@ -639,13 +541,16 @@
           65px;
       }
 
+
       .section-title {
         font-size: 36px;
       }
 
+
       .research-grid {
         grid-template-columns: 1fr;
       }
+
 
       .research-content {
         min-height: 175px;
@@ -708,26 +613,6 @@
 
     <section class="hero" id="home">
 
-
-      <!-- BACKGROUND CURVES -->
-
-      <div class="hero-waves">
-
-        <div class="wave wave-1"></div>
-
-        <div class="wave wave-2"></div>
-
-        <div class="wave wave-3"></div>
-
-        <div class="wave wave-line-1"></div>
-
-        <div class="wave wave-line-2"></div>
-
-      </div>
-
-
-      <!-- HERO TEXT -->
-
       <div class="hero-content">
 
         <h1>
@@ -744,7 +629,6 @@
         </h2>
 
       </div>
-
 
     </section>
 
@@ -770,12 +654,9 @@
       <div class="research-grid">
 
 
-        <!-- =====================================
-             01 RF FRONT-END
-        ====================================== -->
+        <!-- 01 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -794,7 +675,6 @@
               RF Front-End Modules
             </h3>
 
-
             <p>
               Antenna-in-package (AiP) modules,
               integrated antennas, RF front-end components,
@@ -802,24 +682,19 @@
               next-generation wireless systems.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             02 METASURFACES
-        ====================================== -->
+        <!-- 02 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -839,7 +714,6 @@
               Reconfigurable Antennas
             </h3>
 
-
             <p>
               Metasurfaces, reflectarrays, and
               reconfigurable antenna technologies
@@ -847,24 +721,19 @@
               intelligent wireless environments.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             03 BACKSCATTER
-        ====================================== -->
+        <!-- 03 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -883,7 +752,6 @@
               Backscatter Communication
             </h3>
 
-
             <p>
               Backscatter communication systems,
               low-power wireless architectures,
@@ -891,24 +759,19 @@
               and wireless connectivity.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             04 RF-PHOTONICS
-        ====================================== -->
+        <!-- 04 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -927,7 +790,6 @@
               RF-Photonics
             </h3>
 
-
             <p>
               Photonics-assisted RF generation,
               integrated RF-photonic systems,
@@ -935,25 +797,21 @@
               next-generation wireless applications.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
       </div>
 
-
     </section>
 
 
   </main>
-
 
 </body>
 
