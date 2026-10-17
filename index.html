@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SWARM Laboratory | Pusan National University</title>
 
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -17,16 +28,21 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #000;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #000000;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       position: absolute;
       top: 0;
       left: 0;
+
       width: 100%;
       height: 105px;
 
@@ -35,42 +51,47 @@
       justify-content: space-between;
 
       padding: 0 6%;
-      z-index: 10;
+
+      z-index: 100;
     }
 
-    .pnu {
-      display: flex;
-      align-items: center;
-      gap: 18px;
+
+    /* PUSAN NATIONAL UNIVERSITY */
+
+    .pnu-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+
       color: #0b4a8b;
     }
 
-    .pnu-logo {
-      font-size: 32px;
-      font-weight: 900;
-      font-style: italic;
-      letter-spacing: -3px;
-    }
 
-    .divider {
-      width: 1px;
-      height: 38px;
-      background: #0b4a8b;
-    }
+    /* NAVIGATION */
 
     nav {
       display: flex;
       align-items: center;
+
       gap: 52px;
     }
 
     nav a {
       position: relative;
-      color: #111;
+
+      color: #111111;
       text-decoration: none;
+
       font-size: 16px;
       font-weight: 500;
+
       padding: 10px 0;
+
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #0b4a8b;
     }
 
     nav a.active {
@@ -79,6 +100,7 @@
 
     nav a.active::after {
       content: "";
+
       position: absolute;
       left: 0;
       bottom: 0;
@@ -89,152 +111,240 @@
       background: #0b4a8b;
     }
 
-    nav a:hover {
-      color: #0b4a8b;
-    }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       position: relative;
+
       width: 100%;
       min-height: 100vh;
 
       display: flex;
       align-items: center;
 
-      padding: 100px 6% 60px;
+      padding: 105px 6% 60px;
     }
+
 
     .hero-content {
-      margin-top: 35px;
+      margin-top: 30px;
     }
+
+
+    /* SWARM */
 
     .hero h1 {
+      font-family: 'Inter', sans-serif;
+
       font-size: clamp(100px, 12vw, 185px);
       font-weight: 900;
+
       letter-spacing: -8px;
-      line-height: 0.9;
-      margin-bottom: 38px;
+      line-height: 0.88;
+
+      margin-bottom: 40px;
     }
+
+
+    /* LAB NAME */
 
     .hero h2 {
-      max-width: 1000px;
+      font-family: 'Inter', sans-serif;
+
+      max-width: 1050px;
+
       font-size: clamp(30px, 3.1vw, 52px);
       font-weight: 700;
-      line-height: 1.17;
-      letter-spacing: -1.5px;
+
+      line-height: 1.16;
+      letter-spacing: -1.8px;
     }
 
-    /* SCROLL */
+
+    /* =========================
+       SCROLL
+    ========================= */
+
     .scroll {
       position: absolute;
-      bottom: 32px;
+
       left: 50%;
+      bottom: 32px;
+
       transform: translateX(-50%);
 
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 9px;
 
-      font-size: 14px;
+      gap: 10px;
+
+      font-size: 13px;
+      font-weight: 500;
+
       letter-spacing: 2px;
-      color: #222;
+
+      color: #222222;
     }
 
-    .arrow {
-      width: 16px;
-      height: 16px;
 
-      border-right: 2px solid #111;
-      border-bottom: 2px solid #111;
+    .arrow {
+      width: 15px;
+      height: 15px;
+
+      border-right: 2px solid #111111;
+      border-bottom: 2px solid #111111;
 
       transform: rotate(45deg);
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 900px) {
 
       header {
-        height: 80px;
-        padding: 0 25px;
+        height: 85px;
+        padding: 0 30px;
       }
 
-      .pnu-logo {
-        font-size: 27px;
-      }
-
-      .divider {
-        height: 30px;
+      .pnu-name {
+        font-size: 15px;
       }
 
       nav {
-        gap: 20px;
+        gap: 22px;
       }
 
       nav a {
         font-size: 14px;
       }
 
+
       .hero {
-        padding: 80px 25px 50px;
+        padding: 85px 30px 50px;
       }
+
 
       .hero h1 {
-        font-size: 22vw;
+        font-size: 20vw;
         letter-spacing: -5px;
+
+        margin-bottom: 30px;
       }
+
 
       .hero h2 {
-        font-size: 6vw;
+        font-size: 5.5vw;
+        letter-spacing: -1px;
       }
+
     }
 
+
     @media (max-width: 650px) {
+
+      header {
+        padding: 0 22px;
+      }
 
       nav {
         display: none;
       }
 
+
+      .hero {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+
       .hero h1 {
         font-size: 21vw;
+        letter-spacing: -4px;
       }
+
 
       .hero h2 {
         font-size: 7vw;
+        line-height: 1.2;
       }
+
+
+      .scroll {
+        bottom: 25px;
+      }
+
     }
 
   </style>
 </head>
 
+
 <body>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
 
   <header>
 
-    <div class="pnu">
-      <div class="pnu-logo">PNU</div>
-      <div class="divider"></div>
+    <div class="pnu-name">
+      Pusan National University
     </div>
 
+
     <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#research">Research</a>
-      <a href="#people">People</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#home" class="active">
+        Home
+      </a>
+
+      <a href="#research">
+        Research
+      </a>
+
+      <a href="#people">
+        People
+      </a>
+
+      <a href="#publications">
+        Publications
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </nav>
 
   </header>
 
 
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
   <main>
 
-    <section class="hero">
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
 
       <div class="hero-content">
 
-        <h1>SWARM</h1>
+        <h1>
+          SWARM
+        </h1>
+
 
         <h2>
           Smart Wireless Antenna,<br>
@@ -243,14 +353,22 @@
 
       </div>
 
+
       <div class="scroll">
-        <span>Scroll</span>
+
+        <span>
+          Scroll
+        </span>
+
         <div class="arrow"></div>
+
       </div>
 
     </section>
 
+
   </main>
+
 
 </body>
 </html>
