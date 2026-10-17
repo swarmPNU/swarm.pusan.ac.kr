@@ -14,9 +14,9 @@
 
   <style>
 
-    /* ========================================
+    /* ==============================
        BASIC
-    ======================================== */
+    ============================== */
 
     * {
       margin: 0;
@@ -35,9 +35,9 @@
     }
 
 
-    /* ========================================
+    /* ==============================
        HEADER
-    ======================================== */
+    ============================== */
 
     header {
       position: absolute;
@@ -45,7 +45,7 @@
       left: 0;
 
       width: 100%;
-      height: 100px;
+      height: 95px;
 
       display: flex;
       align-items: center;
@@ -57,8 +57,6 @@
     }
 
 
-    /* PUSAN NATIONAL UNIVERSITY */
-
     .pnu-name {
       font-size: 18px;
       font-weight: 700;
@@ -68,14 +66,13 @@
     }
 
 
-    /* NAVIGATION */
-
     nav {
       display: flex;
       align-items: center;
 
-      gap: 52px;
+      gap: 50px;
     }
+
 
     nav a {
       position: relative;
@@ -91,16 +88,16 @@
       transition: 0.2s;
     }
 
+
     nav a:hover {
       color: #0b4a8b;
     }
 
 
-    /* HOME */
-
     nav a.active {
       font-weight: 700;
     }
+
 
     nav a.active::after {
       content: "";
@@ -117,7 +114,7 @@
     }
 
 
-    /* RESEARCH NAVY */
+    /* Research menu */
 
     nav a[href="#research"] {
       color: #0b4a8b;
@@ -125,25 +122,25 @@
     }
 
 
-    /* ========================================
+
+    /* ==============================
        HERO
-    ======================================== */
+    ============================== */
 
     .hero {
-      position: relative;
-
       width: 100%;
-      min-height: 100vh;
+
+      min-height: 62vh;
 
       display: flex;
       align-items: center;
 
-      padding: 100px 6% 60px;
+      padding: 110px 6% 45px;
     }
 
 
     .hero-content {
-      margin-top: 20px;
+      margin-top: 5px;
     }
 
 
@@ -153,14 +150,14 @@
       font-size: clamp(90px, 10vw, 155px);
       font-weight: 900;
 
-      letter-spacing: -7px;
       line-height: 0.9;
+      letter-spacing: -7px;
 
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
 
-    /* LAB FULL NAME */
+    /* Full laboratory name */
 
     .hero h2 {
       max-width: 1000px;
@@ -173,63 +170,25 @@
     }
 
 
-    /* ========================================
-       SCROLL
-    ======================================== */
 
-    .scroll {
-      position: absolute;
-
-      left: 50%;
-      bottom: 30px;
-
-      transform: translateX(-50%);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      gap: 10px;
-
-      color: #222222;
-      text-decoration: none;
-
-      font-size: 13px;
-      font-weight: 500;
-
-      letter-spacing: 2px;
-    }
-
-
-    .arrow-down {
-      width: 15px;
-      height: 15px;
-
-      border-right: 2px solid #111111;
-      border-bottom: 2px solid #111111;
-
-      transform: rotate(45deg);
-    }
-
-
-    /* ========================================
-       RESEARCH AREAS
-    ======================================== */
+    /* ==============================
+       RESEARCH
+    ============================== */
 
     .research {
       background: #f5f6f7;
 
-      padding: 90px 6% 120px;
+      padding: 45px 6% 100px;
     }
 
 
     .research-top {
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
 
 
     .section-title {
-      font-size: clamp(38px, 3.5vw, 54px);
+      font-size: clamp(36px, 3.3vw, 52px);
       font-weight: 800;
 
       line-height: 1;
@@ -237,9 +196,10 @@
     }
 
 
-    /* ========================================
+
+    /* ==============================
        RESEARCH GRID
-    ======================================== */
+    ============================== */
 
     .research-grid {
       display: grid;
@@ -250,9 +210,10 @@
     }
 
 
-    /* ========================================
-       RESEARCH CARD
-    ======================================== */
+
+    /* ==============================
+       CARD
+    ============================== */
 
     .research-card {
       background: #ffffff;
@@ -266,16 +227,17 @@
 
 
     .research-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
 
       box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.08);
+        0 16px 35px rgba(0, 0, 0, 0.08);
     }
 
 
-    /* ========================================
-       IMAGE PLACEHOLDER
-    ======================================== */
+
+    /* ==============================
+       IMAGE
+    ============================== */
 
     .research-image {
       position: relative;
@@ -298,8 +260,6 @@
     }
 
 
-    /* NUMBER */
-
     .research-number {
       position: absolute;
 
@@ -310,19 +270,18 @@
       font-weight: 700;
 
       color: #7c8794;
-
-      letter-spacing: 0;
     }
 
 
-    /* ========================================
-       CARD TEXT
-    ======================================== */
+
+    /* ==============================
+       CARD CONTENT
+    ============================== */
 
     .research-content {
-      min-height: 225px;
+      min-height: 220px;
 
-      padding: 25px 24px 22px;
+      padding: 24px 24px 22px;
 
       display: flex;
       flex-direction: column;
@@ -350,8 +309,6 @@
     }
 
 
-    /* CARD ARROW */
-
     .card-arrow {
       margin-top: auto;
       align-self: flex-end;
@@ -368,9 +325,10 @@
     }
 
 
-    /* ========================================
+
+    /* ==============================
        TABLET
-    ======================================== */
+    ============================== */
 
     @media (max-width: 1200px) {
 
@@ -384,8 +342,7 @@
     @media (max-width: 900px) {
 
       header {
-        height: 85px;
-
+        height: 80px;
         padding: 0 30px;
       }
 
@@ -406,7 +363,11 @@
 
 
       .hero {
-        padding: 85px 30px 50px;
+        min-height: 60vh;
+
+        padding:
+          100px 30px
+          40px;
       }
 
 
@@ -425,15 +386,18 @@
 
 
       .research {
-        padding: 80px 30px 90px;
+        padding:
+          45px 30px
+          80px;
       }
 
     }
 
 
-    /* ========================================
+
+    /* ==============================
        MOBILE
-    ======================================== */
+    ============================== */
 
     @media (max-width: 650px) {
 
@@ -453,8 +417,11 @@
 
 
       .hero {
-        padding-left: 22px;
-        padding-right: 22px;
+        min-height: 55vh;
+
+        padding:
+          95px 22px
+          35px;
       }
 
 
@@ -473,12 +440,14 @@
 
 
       .research {
-        padding: 65px 22px 75px;
+        padding:
+          45px 22px
+          70px;
       }
 
 
       .section-title {
-        font-size: 38px;
+        font-size: 36px;
       }
 
 
@@ -488,22 +457,21 @@
 
 
       .research-content {
-        min-height: 200px;
+        min-height: 195px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- ========================================
+  <!-- ==============================
        HEADER
-  ========================================= -->
+  =============================== -->
 
   <header>
 
@@ -543,19 +511,17 @@
   <main>
 
 
-    <!-- ========================================
+    <!-- ==============================
          HERO
-    ========================================= -->
+    =============================== -->
 
     <section class="hero" id="home">
-
 
       <div class="hero-content">
 
         <h1>
           SWARM
         </h1>
-
 
         <h2>
           Smart Wireless Antenna,<br>
@@ -564,25 +530,13 @@
 
       </div>
 
-
-      <a href="#research" class="scroll">
-
-        <span>
-          Scroll
-        </span>
-
-        <div class="arrow-down"></div>
-
-      </a>
-
-
     </section>
 
 
 
-    <!-- ========================================
+    <!-- ==============================
          RESEARCH AREAS
-    ========================================= -->
+    =============================== -->
 
     <section class="research" id="research">
 
@@ -600,12 +554,9 @@
       <div class="research-grid">
 
 
-        <!-- =====================================
-             01 RF FRONT-END
-        ====================================== -->
+        <!-- 01 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -624,7 +575,6 @@
               RF Front-End Modules
             </h3>
 
-
             <p>
               Antenna-in-package (AiP) modules,
               integrated antennas, RF front-end components,
@@ -632,24 +582,19 @@
               next-generation wireless systems.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             02 METASURFACES
-        ====================================== -->
+        <!-- 02 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -668,7 +613,6 @@
               Metasurfaces & Reconfigurable Antennas
             </h3>
 
-
             <p>
               Metasurfaces, reflectarrays, and
               reconfigurable antenna technologies
@@ -676,24 +620,19 @@
               intelligent wireless environments.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             03 BACKSCATTER
-        ====================================== -->
+        <!-- 03 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -712,7 +651,6 @@
               Backscatter Communication
             </h3>
 
-
             <p>
               Backscatter communication systems,
               low-power wireless architectures,
@@ -720,24 +658,19 @@
               and wireless connectivity.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
 
-        <!-- =====================================
-             04 RF PHOTONICS
-        ====================================== -->
+        <!-- 04 -->
 
         <article class="research-card">
-
 
           <div class="research-image">
 
@@ -756,7 +689,6 @@
               RF-Photonics
             </h3>
 
-
             <p>
               Photonics-assisted RF generation,
               integrated RF-photonic systems,
@@ -764,19 +696,16 @@
               next-generation wireless applications.
             </p>
 
-
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
-
         </article>
 
 
       </div>
-
 
     </section>
 
