@@ -7,16 +7,15 @@
 
   <title>SWARM Laboratory | Pusan National University</title>
 
-  <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
 
-    /* ==============================
+    /* ========================================
        BASIC
-    ============================== */
+    ======================================== */
 
     * {
       margin: 0;
@@ -30,14 +29,14 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
       color: #0a0a0a;
+      background: #ffffff;
     }
 
 
-    /* ==============================
+    /* ========================================
        HEADER
-    ============================== */
+    ======================================== */
 
     header {
       position: absolute;
@@ -45,37 +44,32 @@
       left: 0;
 
       width: 100%;
-      height: 95px;
+      height: 90px;
+
+      padding: 0 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      padding: 0 6%;
-
-      z-index: 100;
+      z-index: 20;
     }
-
-
-    /* PUSAN NATIONAL UNIVERSITY */
 
     .pnu-name {
+      color: #0b4a8b;
+
       font-size: 18px;
       font-weight: 700;
+
       letter-spacing: -0.4px;
-
-      color: #0b4a8b;
     }
-
-
-    /* NAVIGATION */
 
     nav {
       display: flex;
       align-items: center;
-      gap: 50px;
-    }
 
+      gap: 48px;
+    }
 
     nav a {
       position: relative;
@@ -83,24 +77,20 @@
       color: #111111;
       text-decoration: none;
 
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
 
       padding: 10px 0;
-
-      transition: color 0.2s ease;
     }
-
 
     nav a:hover {
       color: #0b4a8b;
     }
 
-
     nav a.active {
-      font-weight: 700;
+      color: #0b4a8b;
+      font-weight: 600;
     }
-
 
     nav a.active::after {
       content: "";
@@ -111,117 +101,254 @@
       bottom: 0;
 
       width: 100%;
-      height: 3px;
+      height: 2px;
 
       background: #0b4a8b;
     }
 
 
-
-    /* ==============================
+    /* ========================================
        HERO
-    ============================== */
+    ======================================== */
 
     .hero {
-      width: 100%;
+      position: relative;
 
-      min-height: 62vh;
+      width: 100%;
+      height: 430px;
+
+      overflow: hidden;
 
       display: flex;
       align-items: center;
 
-      padding: 110px 6% 45px;
+      padding: 95px 6% 30px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff 0%,
+          #ffffff 38%,
+          #f9fcff 58%,
+          #eef6ff 100%
+        );
     }
 
+
+    /* ========================================
+       HERO CURVES
+    ======================================== */
+
+    .hero-waves {
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      width: 68%;
+      height: 100%;
+
+      pointer-events: none;
+    }
+
+
+    .wave {
+      position: absolute;
+
+      border-radius: 50%;
+
+      transform: rotate(-14deg);
+    }
+
+
+    /* large pale blue band */
+
+    .wave-1 {
+      width: 1100px;
+      height: 420px;
+
+      top: -270px;
+      right: -180px;
+
+      border: 70px solid rgba(72, 145, 225, 0.10);
+    }
+
+
+    /* second pale band */
+
+    .wave-2 {
+      width: 950px;
+      height: 390px;
+
+      top: -180px;
+      right: -120px;
+
+      border: 48px solid rgba(87, 158, 232, 0.08);
+    }
+
+
+    /* lower curve */
+
+    .wave-3 {
+      width: 900px;
+      height: 440px;
+
+      top: 155px;
+      right: -250px;
+
+      border: 55px solid rgba(79, 153, 230, 0.09);
+    }
+
+
+    /* thin line */
+
+    .wave-line-1 {
+      width: 1050px;
+      height: 440px;
+
+      top: -205px;
+      right: -210px;
+
+      border: 1px solid rgba(61, 136, 218, 0.26);
+    }
+
+
+    /* second thin line */
+
+    .wave-line-2 {
+      width: 950px;
+      height: 420px;
+
+      top: 105px;
+      right: -240px;
+
+      border: 1px solid rgba(61, 136, 218, 0.20);
+    }
+
+
+    /* soft fade toward SWARM */
+
+    .hero-waves::after {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 45%;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff 0%,
+          rgba(255,255,255,0.95) 30%,
+          rgba(255,255,255,0) 100%
+        );
+    }
+
+
+    /* ========================================
+       HERO TEXT
+    ======================================== */
 
     .hero-content {
-      margin-top: 5px;
+      position: relative;
+      z-index: 5;
     }
 
-
-    /* SWARM */
 
     .hero h1 {
-      font-size: clamp(90px, 10vw, 155px);
+      color: #050505;
+
+      font-size: clamp(90px, 9.5vw, 145px);
       font-weight: 900;
 
-      line-height: 0.9;
+      line-height: 0.88;
       letter-spacing: -7px;
-
-      color: #0a0a0a;
-
-      margin-bottom: 28px;
     }
 
 
-    /* LABORATORY NAME */
+    /* BLUE LINE UNDER SWARM */
+
+    .swarm-line {
+      width: 82px;
+      height: 4px;
+
+      margin-top: 22px;
+      margin-bottom: 18px;
+
+      background: #0b4a8b;
+    }
+
 
     .hero h2 {
-      max-width: 1000px;
+      max-width: 850px;
 
-      font-size: clamp(28px, 2.7vw, 45px);
+      color: #111111;
+
+      font-size: clamp(25px, 2.3vw, 37px);
       font-weight: 700;
 
-      line-height: 1.17;
-      letter-spacing: -1.5px;
-
-      color: #0a0a0a;
+      line-height: 1.15;
+      letter-spacing: -1.3px;
     }
 
 
-
-    /* ==============================
+    /* ========================================
        RESEARCH
-    ============================== */
+    ======================================== */
 
     .research {
-      background: #f5f6f7;
+      background: #f6f7f8;
 
-      padding: 45px 6% 100px;
+      padding: 34px 6% 80px;
     }
 
 
     .research-top {
-      margin-bottom: 35px;
+      margin-bottom: 28px;
     }
 
 
-    /* RESEARCH AREAS TITLE */
-
     .section-title {
-      font-size: clamp(36px, 3.3vw, 52px);
+      color: #111111;
+
+      font-size: clamp(36px, 3.2vw, 50px);
       font-weight: 800;
 
       line-height: 1;
       letter-spacing: -2px;
-
-      color: #0b4a8b;
     }
 
 
-
-    /* ==============================
-       RESEARCH GRID
-    ============================== */
+    /* ========================================
+       GRID
+    ======================================== */
 
     .research-grid {
       display: grid;
 
       grid-template-columns: repeat(4, 1fr);
 
-      gap: 22px;
+      gap: 20px;
     }
 
 
-
-    /* ==============================
-       RESEARCH CARD
-    ============================== */
+    /* ========================================
+       CARD
+    ======================================== */
 
     .research-card {
+      overflow: hidden;
+
       background: #ffffff;
 
-      overflow: hidden;
+      border-radius: 6px;
+
+      box-shadow:
+        0 7px 20px rgba(30, 50, 70, 0.045);
 
       transition:
         transform 0.25s ease,
@@ -233,58 +360,96 @@
       transform: translateY(-5px);
 
       box-shadow:
-        0 16px 35px rgba(0, 0, 0, 0.08);
+        0 14px 30px rgba(30, 50, 70, 0.09);
     }
 
 
-
-    /* ==============================
-       IMAGE PLACEHOLDER
-    ============================== */
+    /* ========================================
+       IMAGE
+    ======================================== */
 
     .research-image {
       position: relative;
 
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 7.3;
 
-      background: #e1e4e7;
+      overflow: hidden;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background:
+        linear-gradient(
+          135deg,
+          #d9e7f5,
+          #b9d0e8
+        );
+    }
 
-      color: #9098a2;
 
-      font-size: 12px;
-      font-weight: 600;
+    .research-image img {
+      width: 100%;
+      height: 100%;
 
-      letter-spacing: 2px;
+      display: block;
+
+      object-fit: cover;
+    }
+
+
+    /* placeholder until real images are added */
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d8e6f3,
+          #aec8e2
+        );
     }
 
 
     .research-number {
       position: absolute;
 
-      top: 16px;
-      left: 18px;
+      top: 15px;
+      left: 16px;
 
-      font-size: 13px;
+      z-index: 3;
+
+      color: #ffffff;
+
+      font-size: 17px;
       font-weight: 700;
 
-      color: #7c8794;
+      text-shadow:
+        0 1px 5px rgba(0,0,0,0.35);
     }
 
 
+    .research-number::after {
+      content: "";
 
-    /* ==============================
+      display: block;
+
+      width: 25px;
+      height: 2px;
+
+      margin-top: 7px;
+
+      background: rgba(255,255,255,0.85);
+    }
+
+
+    /* ========================================
        CARD CONTENT
-    ============================== */
+    ======================================== */
 
     .research-content {
-      min-height: 220px;
+      min-height: 190px;
 
-      padding: 24px 24px 22px;
+      padding: 14px 17px 14px;
 
       display: flex;
       flex-direction: column;
@@ -292,55 +457,74 @@
 
 
     .research-content h3 {
-      font-size: 20px;
-      font-weight: 700;
-
-      line-height: 1.25;
-      letter-spacing: -0.6px;
-
       color: #111111;
 
-      margin-bottom: 13px;
+      font-size: 17px;
+      font-weight: 700;
+
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+
+      margin-bottom: 9px;
     }
 
 
     .research-content p {
-      color: #626262;
+      color: #657181;
 
-      font-size: 14px;
-      line-height: 1.6;
-
-      margin-bottom: 22px;
+      font-size: 12.5px;
+      line-height: 1.45;
     }
 
 
+    /* ========================================
+       ARROW
+    ======================================== */
+
     .card-arrow {
+      width: 36px;
+      height: 36px;
+
       margin-top: auto;
-      align-self: flex-end;
+      margin-left: auto;
 
-      font-size: 27px;
-      font-weight: 300;
+      border-radius: 50%;
 
-      color: #111111;
+      background: #edf5fd;
 
-      transition: transform 0.2s ease;
+      color: #0b4a8b;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
     }
 
 
     .research-card:hover .card-arrow {
-      transform: translateX(5px);
+      transform: translateX(3px);
+
+      background: #e1effc;
     }
 
 
-
-    /* ==============================
+    /* ========================================
        TABLET
-    ============================== */
+    ======================================== */
 
     @media (max-width: 1200px) {
 
       .research-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-waves {
+        width: 75%;
       }
 
     }
@@ -350,61 +534,57 @@
 
       header {
         height: 80px;
+
         padding: 0 30px;
       }
-
 
       .pnu-name {
         font-size: 16px;
       }
 
-
       nav {
         gap: 22px;
       }
-
 
       nav a {
         font-size: 14px;
       }
 
-
       .hero {
-        min-height: 60vh;
+        height: 410px;
 
         padding:
-          100px 30px
-          40px;
+          95px 30px
+          30px;
       }
-
 
       .hero h1 {
-        font-size: 18vw;
+        font-size: 16vw;
 
         letter-spacing: -5px;
-
-        margin-bottom: 25px;
       }
-
 
       .hero h2 {
-        font-size: 5vw;
+        font-size: 4.5vw;
       }
 
+      .hero-waves {
+        width: 85%;
+        opacity: 0.7;
+      }
 
       .research {
         padding:
-          45px 30px
-          80px;
+          35px 30px
+          70px;
       }
 
     }
 
 
-
-    /* ==============================
+    /* ========================================
        MOBILE
-    ============================== */
+    ======================================== */
 
     @media (max-width: 650px) {
 
@@ -412,57 +592,63 @@
         padding: 0 22px;
       }
 
-
       .pnu-name {
         font-size: 15px;
       }
-
 
       nav {
         display: none;
       }
 
-
       .hero {
-        min-height: 55vh;
+        height: 370px;
 
         padding:
-          95px 22px
-          35px;
+          90px 22px
+          30px;
       }
-
 
       .hero h1 {
         font-size: 20vw;
+
         letter-spacing: -4px;
       }
 
+      .swarm-line {
+        width: 60px;
+        height: 3px;
 
-      .hero h2 {
-        font-size: 6.5vw;
-        line-height: 1.2;
+        margin-top: 17px;
+        margin-bottom: 15px;
       }
 
+      .hero h2 {
+        font-size: 6vw;
+
+        line-height: 1.18;
+      }
+
+      .hero-waves {
+        width: 100%;
+        opacity: 0.45;
+      }
 
       .research {
         padding:
-          45px 22px
-          70px;
+          32px 22px
+          65px;
       }
-
 
       .section-title {
         font-size: 36px;
       }
 
-
       .research-grid {
         grid-template-columns: 1fr;
       }
 
-
       .research-content {
-        min-height: 195px;
+        min-height: 175px;
       }
 
     }
@@ -474,9 +660,9 @@
 <body>
 
 
-  <!-- ==============================
+  <!-- ========================================
        HEADER
-  =============================== -->
+  ======================================== -->
 
   <header>
 
@@ -516,17 +702,41 @@
   <main>
 
 
-    <!-- ==============================
+    <!-- ========================================
          HERO
-    =============================== -->
+    ======================================== -->
 
     <section class="hero" id="home">
+
+
+      <!-- BACKGROUND CURVES -->
+
+      <div class="hero-waves">
+
+        <div class="wave wave-1"></div>
+
+        <div class="wave wave-2"></div>
+
+        <div class="wave wave-3"></div>
+
+        <div class="wave wave-line-1"></div>
+
+        <div class="wave wave-line-2"></div>
+
+      </div>
+
+
+      <!-- HERO TEXT -->
 
       <div class="hero-content">
 
         <h1>
           SWARM
         </h1>
+
+
+        <div class="swarm-line"></div>
+
 
         <h2>
           Smart Wireless Antenna,<br>
@@ -535,13 +745,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ==============================
+    <!-- ========================================
          RESEARCH AREAS
-    =============================== -->
+    ======================================== -->
 
     <section class="research" id="research">
 
@@ -559,17 +770,20 @@
       <div class="research-grid">
 
 
-        <!-- 01 RF FRONT-END -->
+        <!-- =====================================
+             01 RF FRONT-END
+        ====================================== -->
 
         <article class="research-card">
 
+
           <div class="research-image">
+
+            <div class="image-placeholder"></div>
 
             <span class="research-number">
               01
             </span>
-
-            IMAGE
 
           </div>
 
@@ -580,6 +794,7 @@
               RF Front-End Modules
             </h3>
 
+
             <p>
               Antenna-in-package (AiP) modules,
               integrated antennas, RF front-end components,
@@ -587,27 +802,32 @@
               next-generation wireless systems.
             </p>
 
+
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
+
         </article>
 
 
 
-        <!-- 02 METASURFACES -->
+        <!-- =====================================
+             02 METASURFACES
+        ====================================== -->
 
         <article class="research-card">
 
+
           <div class="research-image">
+
+            <div class="image-placeholder"></div>
 
             <span class="research-number">
               02
             </span>
-
-            IMAGE
 
           </div>
 
@@ -615,8 +835,10 @@
           <div class="research-content">
 
             <h3>
-              Metasurfaces & Reconfigurable Antennas
+              Metasurfaces &amp;<br>
+              Reconfigurable Antennas
             </h3>
+
 
             <p>
               Metasurfaces, reflectarrays, and
@@ -625,27 +847,32 @@
               intelligent wireless environments.
             </p>
 
+
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
+
         </article>
 
 
 
-        <!-- 03 BACKSCATTER -->
+        <!-- =====================================
+             03 BACKSCATTER
+        ====================================== -->
 
         <article class="research-card">
 
+
           <div class="research-image">
+
+            <div class="image-placeholder"></div>
 
             <span class="research-number">
               03
             </span>
-
-            IMAGE
 
           </div>
 
@@ -656,6 +883,7 @@
               Backscatter Communication
             </h3>
 
+
             <p>
               Backscatter communication systems,
               low-power wireless architectures,
@@ -663,27 +891,32 @@
               and wireless connectivity.
             </p>
 
+
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
+
         </article>
 
 
 
-        <!-- 04 RF-PHOTONICS -->
+        <!-- =====================================
+             04 RF-PHOTONICS
+        ====================================== -->
 
         <article class="research-card">
 
+
           <div class="research-image">
+
+            <div class="image-placeholder"></div>
 
             <span class="research-number">
               04
             </span>
-
-            IMAGE
 
           </div>
 
@@ -694,6 +927,7 @@
               RF-Photonics
             </h3>
 
+
             <p>
               Photonics-assisted RF generation,
               integrated RF-photonic systems,
@@ -701,16 +935,19 @@
               next-generation wireless applications.
             </p>
 
+
             <div class="card-arrow">
               →
             </div>
 
           </div>
 
+
         </article>
 
 
       </div>
+
 
     </section>
 
