@@ -2,585 +2,790 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SWARM Laboratory | Pusan National University</title>
+<title>SWARM Laboratory | Pusan National University</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    /* ========================================
-       BASIC
-    ======================================== */
+/* ========================================
+   BASIC
+======================================== */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #0a0a0a;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+}
+
+.pnu-name {
+    color: #0b4a8b;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0b4a8b;
+}
+
+nav a.active {
+    color: #0b4a8b;
+    font-weight: 600;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #0b4a8b;
+}
+
+
+/* ========================================
+   BLUE / HERO
+======================================== */
+
+.blue {
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 95px 6% 30px;
+
+    background-image: url("blue-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blue-content {
+    position: relative;
+    z-index: 5;
+}
+
+.blue h1 {
+    color: #050505;
+
+    font-size: clamp(90px, 9.5vw, 145px);
+    font-weight: 900;
+
+    line-height: 0.88;
+
+    letter-spacing: -7px;
+}
+
+.swarm-line {
+    width: 82px;
+    height: 4px;
+
+    margin-top: 22px;
+    margin-bottom: 18px;
+
+    background: #0b4a8b;
+}
+
+.blue h2 {
+    max-width: 850px;
+
+    color: #111111;
+
+    font-size: clamp(25px, 2.3vw, 37px);
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.3px;
+}
+
+
+/* ========================================
+   RESEARCH
+======================================== */
+
+.research {
+    background: #f6f7f8;
+
+    padding: 34px 6% 80px;
+}
+
+.research-top {
+    margin-bottom: 28px;
+}
+
+.section-title {
+    color: #111111;
+
+    font-size: clamp(36px, 3.2vw, 50px);
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+/* ========================================
+   RESEARCH GRID
+======================================== */
+
+.research-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   RESEARCH CARD
+======================================== */
+
+.research-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 7px 20px rgba(30, 50, 70, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(30, 50, 70, 0.09);
+}
+
+
+/* ========================================
+   RESEARCH IMAGE
+======================================== */
+
+.research-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 7.3;
+
+    overflow: hidden;
+
+    background: #dce8f3;
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8e6f3,
+            #aec8e2
+        );
+}
+
+
+/* ========================================
+   RESEARCH NUMBER
+======================================== */
+
+.research-number {
+    position: absolute;
+
+    top: 15px;
+    left: 16px;
+
+    z-index: 3;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.35);
+}
+
+.research-number::after {
+    content: "";
+
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    margin-top: 7px;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.research-content {
+    min-height: 190px;
+
+    padding: 14px 17px 14px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.research-content h3 {
+    color: #111111;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 9px;
+}
+
+.research-content p {
+    color: #657181;
+
+    font-size: 12.5px;
+
+    line-height: 1.45;
+}
+
+
+/* ========================================
+   CARD ARROW
+======================================== */
+
+.card-arrow {
+    width: 36px;
+    height: 36px;
+
+    margin-top: auto;
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background: #edf5fd;
+
+    color: #0b4a8b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.research-card:hover .card-arrow {
+    transform: translateX(3px);
+
+    background: #e1effc;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1200px) {
+
+    .research-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #0a0a0a;
-    }
+}
 
 
-    /* ========================================
-       HEADER
-    ======================================== */
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 900px) {
 
     header {
-      position: absolute;
-      top: 0;
-      left: 0;
+        height: 80px;
 
-      width: 100%;
-      height: 90px;
-
-      padding: 0 6%;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      z-index: 100;
+        padding: 0 30px;
     }
 
     .pnu-name {
-      color: #0b4a8b;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.4px;
+        font-size: 18px;
     }
 
     nav {
-      display: flex;
-      align-items: center;
-      gap: 48px;
+        gap: 22px;
     }
 
     nav a {
-      position: relative;
-
-      color: #111111;
-      text-decoration: none;
-
-      font-size: 15px;
-      font-weight: 500;
-
-      padding: 10px 0;
-
-      transition: color 0.2s ease;
+        font-size: 14px;
     }
-
-    nav a:hover {
-      color: #0b4a8b;
-    }
-
-    nav a.active {
-      color: #0b4a8b;
-      font-weight: 600;
-    }
-
-    nav a.active::after {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      width: 100%;
-      height: 2px;
-
-      background: #0b4a8b;
-    }
-
-
-    /* ========================================
-       blue
-    ======================================== */
 
     .blue {
-      position: relative;
+        height: 410px;
 
-      width: 100%;
-      height: 430px;
+        padding: 95px 30px 30px;
 
-      overflow: hidden;
-
-      display: flex;
-      align-items: center;
-
-      padding: 95px 6% 30px;
-
-      background-image: url("blue-bg.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .blue-content {
-      position: relative;
-      z-index: 5;
+        background-position: center;
     }
 
     .blue h1 {
-      color: #050505;
+        font-size: 16vw;
 
-      font-size: clamp(90px, 9.5vw, 145px);
-      font-weight: 900;
-
-      line-height: 0.88;
-      letter-spacing: -7px;
-    }
-
-    .swarm-line {
-      width: 82px;
-      height: 4px;
-
-      margin-top: 22px;
-      margin-bottom: 18px;
-
-      background: #0b4a8b;
+        letter-spacing: -5px;
     }
 
     .blue h2 {
-      max-width: 850px;
-
-      color: #111111;
-
-      font-size: clamp(25px, 2.3vw, 37px);
-      font-weight: 700;
-
-      line-height: 1.15;
-      letter-spacing: -1.3px;
+        font-size: 4.5vw;
     }
-
-
-    /* ========================================
-       RESEARCH
-    ======================================== */
 
     .research {
-      background: #f6f7f8;
-      padding: 34px 6% 80px;
+        padding: 35px 30px 70px;
     }
 
-    .research-top {
-      margin-bottom: 28px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* --------------------------------
+       HEADER
+    -------------------------------- */
+
+    header {
+        position: absolute;
+
+        height: auto;
+        min-height: 104px;
+
+        padding: 17px 20px 12px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 11px;
     }
 
-    .section-title {
-      color: #111111;
+    .pnu-name {
+        font-size: 16px;
 
-      font-size: clamp(36px, 3.2vw, 50px);
-      font-weight: 800;
-
-      line-height: 1;
-      letter-spacing: -2px;
+        line-height: 1.2;
     }
 
+    /*
+       기존 코드에서는 모바일에서 nav를
+       display:none 처리해서 메뉴가 사라졌음.
+       모바일에서는 가로 메뉴로 다시 표시.
+    */
 
-    /* ========================================
-       RESEARCH GRID
-    ======================================== */
+    nav {
+        display: flex;
 
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+        width: 100%;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        white-space: nowrap;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
     }
 
-
-    /* ========================================
-       RESEARCH CARD
-    ======================================== */
-
-    .research-card {
-      overflow: hidden;
-
-      background: #ffffff;
-      border-radius: 6px;
-
-      box-shadow:
-        0 7px 20px rgba(30, 50, 70, 0.045);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .research-card:hover {
-      transform: translateY(-5px);
-
-      box-shadow:
-        0 14px 30px rgba(30, 50, 70, 0.09);
-    }
-
-
-    /* ========================================
-       RESEARCH IMAGE
-    ======================================== */
-
-    .research-image {
-      position: relative;
-
-      width: 100%;
-      aspect-ratio: 16 / 7.3;
-
-      overflow: hidden;
-
-      background: #dce8f3;
-    }
-
-    .research-image img {
-      width: 100%;
-      height: 100%;
-
-      display: block;
-      object-fit: cover;
-    }
-
-    /* 현재는 사진 넣기 전 placeholder */
-
-    .image-placeholder {
-      width: 100%;
-      height: 100%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d8e6f3,
-          #aec8e2
-        );
-    }
-
-
-    /* ========================================
-       RESEARCH NUMBER
-    ======================================== */
-
-    .research-number {
-      position: absolute;
-
-      top: 15px;
-      left: 16px;
-
-      z-index: 3;
-
-      color: #ffffff;
-
-      font-size: 17px;
-      font-weight: 700;
-
-      text-shadow:
-        0 1px 5px rgba(0, 0, 0, 0.35);
-    }
-
-    .research-number::after {
-      content: "";
-
-      display: block;
-
-      width: 25px;
-      height: 2px;
-
-      margin-top: 7px;
-
-      background: rgba(255, 255, 255, 0.85);
-    }
-
-
-    /* ========================================
-       CARD CONTENT
-    ======================================== */
-
-    .research-content {
-      min-height: 190px;
-
-      padding: 14px 17px 14px;
-
-      display: flex;
-      flex-direction: column;
-    }
-
-    .research-content h3 {
-      color: #111111;
-
-      font-size: 17px;
-      font-weight: 700;
-
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-
-      margin-bottom: 9px;
-    }
-
-    .research-content p {
-      color: #657181;
-
-      font-size: 12.5px;
-      line-height: 1.45;
-    }
-
-
-    /* ========================================
-       CARD ARROW
-    ======================================== */
-
-    .card-arrow {
-      width: 36px;
-      height: 36px;
-
-      margin-top: auto;
-      margin-left: auto;
-
-      border-radius: 50%;
-
-      background: #edf5fd;
-      color: #0b4a8b;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 22px;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .research-card:hover .card-arrow {
-      transform: translateX(3px);
-      background: #e1effc;
-    }
-
-
-    /* ========================================
-       TABLET
-    ======================================== */
-
-    @media (max-width: 1200px) {
-
-      .research-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      header {
-        height: 80px;
-        padding: 0 30px;
-      }
-
-      .pnu-name {
-        font-size: 18px;
-      }
-
-      nav {
-        gap: 22px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
-      .blue {
-        height: 410px;
-
-        padding:
-          95px 30px
-          30px;
-
-        background-position: center;
-      }
-
-      .blue h1 {
-        font-size: 16vw;
-        letter-spacing: -5px;
-      }
-
-      .blue h2 {
-        font-size: 4.5vw;
-      }
-
-      .research {
-        padding:
-          35px 30px
-          70px;
-      }
-
-    }
-
-
-    /* ========================================
-       MOBILE
-    ======================================== */
-
-    @media (max-width: 650px) {
-
-      header {
-        padding: 0 22px;
-      }
-
-      .pnu-name {
-        font-size: 15px;
-      }
-
-      nav {
+    nav::-webkit-scrollbar {
         display: none;
-      }
+    }
 
-      .blue {
-        height: 370px;
+    nav a {
+        flex: 0 0 auto;
 
-        padding:
-          90px 22px
-          30px;
+        font-size: 12px;
+        font-weight: 500;
 
+        padding: 5px 0 7px;
+
+        margin-right: 22px;
+    }
+
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    nav a.active::after {
+        height: 2px;
+    }
+
+
+    /* --------------------------------
+       HERO
+    -------------------------------- */
+
+    .blue {
+        height: 400px;
+
+        padding: 125px 20px 35px;
+
+        align-items: center;
+
+        background-size: cover;
+
+        /*
+           기존 이미지 유지.
+           모바일에서 중요한 부분이 너무
+           오른쪽으로 밀리지 않도록 조정.
+        */
         background-position: 55% center;
-      }
+    }
 
-      .blue h1 {
-        font-size: 20vw;
+    .blue-content {
+        width: 100%;
+    }
+
+    .blue h1 {
+        font-size: clamp(62px, 20vw, 90px);
+
+        line-height: 0.9;
+
         letter-spacing: -4px;
-      }
 
-      .swarm-line {
+        word-break: keep-all;
+    }
+
+    .swarm-line {
         width: 60px;
         height: 3px;
 
         margin-top: 17px;
         margin-bottom: 15px;
-      }
-
-      .blue h2 {
-        font-size: 6vw;
-        line-height: 1.18;
-      }
-
-      .research {
-        padding:
-          32px 22px
-          65px;
-      }
-
-      .section-title {
-        font-size: 36px;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .research-content {
-        min-height: 175px;
-      }
-
     }
 
-  </style>
+    .blue h2 {
+        max-width: 92%;
+
+        font-size: clamp(20px, 5.7vw, 27px);
+
+        line-height: 1.18;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    /* --------------------------------
+       RESEARCH
+    -------------------------------- */
+
+    .research {
+        padding: 35px 20px 60px;
+    }
+
+    .research-top {
+        margin-bottom: 24px;
+    }
+
+    .section-title {
+        font-size: 34px;
+
+        letter-spacing: -1.4px;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .research-card {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .research-image {
+        aspect-ratio: 16 / 8.5;
+    }
+
+    .research-content {
+        min-height: 160px;
+
+        padding: 16px 17px;
+    }
+
+    .research-content h3 {
+        font-size: 18px;
+
+        line-height: 1.2;
+    }
+
+    .research-content p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONE
+======================================== */
+
+@media (max-width: 390px) {
+
+    header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .pnu-name {
+        font-size: 15px;
+    }
+
+    nav a {
+        font-size: 11.5px;
+
+        margin-right: 17px;
+    }
+
+    .blue {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        background-position: 57% center;
+    }
+
+    .blue h1 {
+        font-size: 19vw;
+
+        letter-spacing: -3px;
+    }
+
+    .blue h2 {
+        font-size: 5.8vw;
+    }
+
+    .research {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .section-title {
+        font-size: 31px;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
 
-  <!-- ========================================
-       HEADER
-  ======================================== -->
+<!-- ========================================
+     HEADER
+======================================== -->
 
-  <header>
+<header>
 
     <div class="pnu-name">
-      Pusan National University
+        Pusan National University
     </div>
 
     <nav>
 
-      <a href="#home" class="active">
-        Home
-      </a>
+        <a href="#home" class="active">
+            Home
+        </a>
 
-      <a href="#research">
-        Research
-      </a>
+        <a href="#research">
+            Research
+        </a>
 
-      <a href="#people">
-        People
-      </a>
+        <a href="#people">
+            People
+        </a>
 
-      <a href="publications.html">
-        Publications
-      </a>
+        <a href="publications.html">
+            Publications
+        </a>
 
-      <a href="#contact">
-        Contact
-      </a>
+        <a href="#contact">
+            Contact
+        </a>
 
     </nav>
 
-  </header>
+</header>
 
 
+<main>
 
-  <main>
 
+<!-- ========================================
+     BLUE / HERO
+======================================== -->
 
-    <!-- ========================================
-         blue
-    ======================================== -->
+<section class="blue" id="home">
 
-    <section class="blue" id="home">
-
-      <div class="blue-content">
+    <div class="blue-content">
 
         <h1>
-          SWARM
+            SWARM
         </h1>
 
         <div class="swarm-line"></div>
 
         <h2>
-          Smart Wireless Antenna,<br>
-          Radiation, and Microwave Laboratory
+            Smart Wireless Antenna,<br>
+            Radiation, and Microwave Laboratory
         </h2>
 
-      </div>
+    </div>
 
-    </section>
+</section>
 
 
+<!-- ========================================
+     RESEARCH AREAS
+======================================== -->
 
-    <!-- ========================================
-         RESEARCH AREAS
-    ======================================== -->
+<section class="research" id="research">
 
-    <section class="research" id="research">
-
-      <div class="research-top">
+    <div class="research-top">
 
         <h2 class="section-title">
-          Research Areas
+            Research Areas
         </h2>
 
-      </div>
+    </div>
 
 
-      <div class="research-grid">
+    <div class="research-grid">
 
 
         <!-- =====================================
@@ -589,36 +794,35 @@
 
         <article class="research-card">
 
-          <div class="research-image">
+            <div class="research-image">
 
-            <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
 
-            <span class="research-number">
-              01
-            </span>
+                <span class="research-number">
+                    01
+                </span>
 
-          </div>
-
-
-          <div class="research-content">
-
-            <h3>
-              Phased Array
-            </h3>
-
-            <p>
-              Phased array antenna technologies for electronic beam steering,
-              beamforming, and high-performance wireless communication systems.
-            </p>
-
-            <div class="card-arrow">
-              →
             </div>
 
-          </div>
+
+            <div class="research-content">
+
+                <h3>
+                    Phased Array
+                </h3>
+
+                <p>
+                    Phased array antenna technologies for electronic beam steering,
+                    beamforming, and high-performance wireless communication systems.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </div>
 
         </article>
-
 
 
         <!-- =====================================
@@ -627,37 +831,36 @@
 
         <article class="research-card">
 
-          <div class="research-image">
+            <div class="research-image">
 
-            <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
 
-            <span class="research-number">
-              02
-            </span>
+                <span class="research-number">
+                    02
+                </span>
 
-          </div>
-
-
-          <div class="research-content">
-
-            <h3>
-              Full-Duplex BackCom
-            </h3>
-
-            <p>
-              Full-duplex backscatter communication technologies for
-              simultaneous transmission and reception, enabling efficient
-              and low-power wireless connectivity.
-            </p>
-
-            <div class="card-arrow">
-              →
             </div>
 
-          </div>
+
+            <div class="research-content">
+
+                <h3>
+                    Full-Duplex BackCom
+                </h3>
+
+                <p>
+                    Full-duplex backscatter communication technologies for
+                    simultaneous transmission and reception, enabling efficient
+                    and low-power wireless connectivity.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </div>
 
         </article>
-
 
 
         <!-- =====================================
@@ -666,38 +869,37 @@
 
         <article class="research-card">
 
-          <div class="research-image">
+            <div class="research-image">
 
-            <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
 
-            <span class="research-number">
-              03
-            </span>
+                <span class="research-number">
+                    03
+                </span>
 
-          </div>
-
-
-          <div class="research-content">
-
-            <h3>
-              Magnetic Materials-Based<br>
-              Absorber &amp; Metasurface
-            </h3>
-
-            <p>
-              Magnetic materials-based absorbers and metasurfaces for
-              electromagnetic wave absorption, manipulation, and advanced
-              wireless applications.
-            </p>
-
-            <div class="card-arrow">
-              →
             </div>
 
-          </div>
+
+            <div class="research-content">
+
+                <h3>
+                    Magnetic Materials-Based<br>
+                    Absorber &amp; Metasurface
+                </h3>
+
+                <p>
+                    Magnetic materials-based absorbers and metasurfaces for
+                    electromagnetic wave absorption, manipulation, and advanced
+                    wireless applications.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </div>
 
         </article>
-
 
 
         <!-- =====================================
@@ -706,46 +908,44 @@
 
         <article class="research-card">
 
-          <div class="research-image">
+            <div class="research-image">
 
-            <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
 
-            <span class="research-number">
-              04
-            </span>
+                <span class="research-number">
+                    04
+                </span>
 
-          </div>
-
-
-          <div class="research-content">
-
-            <h3>
-              Antenna-in-Package (AiP)
-            </h3>
-
-            <p>
-              Antenna-in-package technologies integrating antennas,
-              RF components, and beamforming circuits into compact
-              packages for next-generation wireless systems.
-            </p>
-
-            <div class="card-arrow">
-              →
             </div>
 
-          </div>
+
+            <div class="research-content">
+
+                <h3>
+                    Antenna-in-Package (AiP)
+                </h3>
+
+                <p>
+                    Antenna-in-package technologies integrating antennas,
+                    RF components, and beamforming circuits into compact
+                    packages for next-generation wireless systems.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </div>
 
         </article>
 
 
-      </div>
+    </div>
 
-    </section>
+</section>
 
 
-  </main>
-
+</main>
 
 </body>
-
 </html>
