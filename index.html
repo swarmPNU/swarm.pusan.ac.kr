@@ -332,7 +332,7 @@ nav a.active::after {
 .research-content {
     min-height: 190px;
 
-    padding: 14px 17px 14px;
+    padding: 14px 17px;
 
     display: flex;
     flex-direction: column;
@@ -392,6 +392,41 @@ nav a.active::after {
     transform: translateX(3px);
 
     background: #e1effc;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 30px 6%;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.footer-inner {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-lab {
+    color: #0b4a8b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-copy {
+    color: #8a929b;
+
+    font-size: 12px;
 }
 
 
@@ -463,9 +498,7 @@ nav a.active::after {
 
 @media (max-width: 650px) {
 
-    /* --------------------------------
-       HEADER
-    -------------------------------- */
+    /* HEADER */
 
     header {
         position: absolute;
@@ -475,7 +508,6 @@ nav a.active::after {
 
         padding: 17px 20px 12px;
 
-        display: flex;
         flex-direction: column;
 
         align-items: flex-start;
@@ -489,12 +521,6 @@ nav a.active::after {
 
         line-height: 1.2;
     }
-
-    /*
-       기존 코드에서는 모바일에서 nav를
-       display:none 처리해서 메뉴가 사라졌음.
-       모바일에서는 가로 메뉴로 다시 표시.
-    */
 
     nav {
         display: flex;
@@ -535,14 +561,8 @@ nav a.active::after {
         margin-right: 0;
     }
 
-    nav a.active::after {
-        height: 2px;
-    }
 
-
-    /* --------------------------------
-       HERO
-    -------------------------------- */
+    /* HERO */
 
     .blue {
         height: 400px;
@@ -552,12 +572,6 @@ nav a.active::after {
         align-items: center;
 
         background-size: cover;
-
-        /*
-           기존 이미지 유지.
-           모바일에서 중요한 부분이 너무
-           오른쪽으로 밀리지 않도록 조정.
-        */
         background-position: 55% center;
     }
 
@@ -594,9 +608,7 @@ nav a.active::after {
     }
 
 
-    /* --------------------------------
-       RESEARCH
-    -------------------------------- */
+    /* RESEARCH */
 
     .research {
         padding: 35px 20px 60px;
@@ -644,6 +656,21 @@ nav a.active::after {
         font-size: 13px;
 
         line-height: 1.5;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 26px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
     }
 
 }
@@ -718,7 +745,7 @@ nav a.active::after {
 
     <nav>
 
-        <a href="#home" class="active">
+        <a href="index.html" class="active">
             Home
         </a>
 
@@ -726,7 +753,7 @@ nav a.active::after {
             Research
         </a>
 
-        <a href="#people">
+        <a href="people.html">
             People
         </a>
 
@@ -734,7 +761,7 @@ nav a.active::after {
             Publications
         </a>
 
-        <a href="#contact">
+        <a href="contact.html">
             Contact
         </a>
 
@@ -747,7 +774,7 @@ nav a.active::after {
 
 
 <!-- ========================================
-     BLUE / HERO
+     HERO
 ======================================== -->
 
 <section class="blue" id="home">
@@ -788,9 +815,7 @@ nav a.active::after {
     <div class="research-grid">
 
 
-        <!-- =====================================
-             01 PHASED ARRAY
-        ====================================== -->
+        <!-- 01 -->
 
         <article class="research-card">
 
@@ -803,7 +828,6 @@ nav a.active::after {
                 </span>
 
             </div>
-
 
             <div class="research-content">
 
@@ -825,9 +849,7 @@ nav a.active::after {
         </article>
 
 
-        <!-- =====================================
-             02 FULL-DUPLEX BACKCOM
-        ====================================== -->
+        <!-- 02 -->
 
         <article class="research-card">
 
@@ -840,7 +862,6 @@ nav a.active::after {
                 </span>
 
             </div>
-
 
             <div class="research-content">
 
@@ -863,9 +884,7 @@ nav a.active::after {
         </article>
 
 
-        <!-- =====================================
-             03 MAGNETIC MATERIALS
-        ====================================== -->
+        <!-- 03 -->
 
         <article class="research-card">
 
@@ -878,7 +897,6 @@ nav a.active::after {
                 </span>
 
             </div>
-
 
             <div class="research-content">
 
@@ -902,9 +920,7 @@ nav a.active::after {
         </article>
 
 
-        <!-- =====================================
-             04 AiP
-        ====================================== -->
+        <!-- 04 -->
 
         <article class="research-card">
 
@@ -917,7 +933,6 @@ nav a.active::after {
                 </span>
 
             </div>
-
 
             <div class="research-content">
 
@@ -946,6 +961,28 @@ nav a.active::after {
 
 
 </main>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-lab">
+            SWARM Laboratory
+        </div>
+
+        <div class="footer-copy">
+            © 2026 SWARM Laboratory, Pusan National University
+        </div>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
