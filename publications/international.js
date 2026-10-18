@@ -4,14 +4,25 @@ const internationalPublications = [
    2026
 ========================================================= */
 
+/* 1 */
 {
     year: 2026,
-    title: "From Additive Manufacturing to 4D-Printed RF Systems: Origami- and Kirigami-Inspired Mechanically Reconfigurable RF Front Ends",
-    authors: "N. Ha, M. M. Tentzeris, and S. Kim",
+    title: "Thermal-Via-Enhanced FC-BGA Antenna-in-Package (AiP) on LTCC for an Upper-Mid-Band Beam-Steering 2×2 Array in 6G Mobile Devices",
+    authors: "E. Park, H. Kim, Y. Jeong, S. Kim, and S. Kim",
     journal: "",
     underReview: true
 },
 
+/* 2 */
+{
+    year: 2026,
+    title: "From Additive Manufacturing to 4D-Printed RF Systems: Origami- and Kirigami-Inspired Mechanically Reconfigurable RF Front Ends",
+    authors: "N. Ha, H. A. Jamal, Y. Cui, A. Nauroze, M. M. Tentzeris, and S. Kim",
+    journal: "",
+    underReview: true
+},
+
+/* 3 */
 {
     year: 2026,
     title: "A Lightweight, Broadband, Additively Manufactured Dual-CP Waveguide Active Phased Array for Ku-Band SATCOM",
@@ -20,6 +31,7 @@ const internationalPublications = [
     underReview: true
 },
 
+/* 4 */
 {
     year: 2026,
     title: "A Low-Profile Dual-Polarized Wide-Beamwidth Crossed-Dipole Antenna on LTCC with High Isolation for 6G FR3 User Equipment",
@@ -28,6 +40,7 @@ const internationalPublications = [
     underReview: true
 },
 
+/* 5 - arXiv */
 {
     year: 2026,
     title: "Transformer-Hypernetwork-Controlled Deep-Unfolded Phase-Aware Channel Estimation Refinement for Phase-Drift-Robust Backscatter Links",
@@ -36,6 +49,7 @@ const internationalPublications = [
     doi: "10.48550/arXiv.2606.31400"
 },
 
+/* 6 */
 {
     year: 2026,
     title: "A Design of Compact Monostatic In-Band Full-Duplex System for IoT Applications Using Isolation Analysis Method",
@@ -44,6 +58,7 @@ const internationalPublications = [
     underReview: true
 },
 
+/* 7 */
 {
     year: 2026,
     title: "Low-Profile Shared-Aperture Transmitarray Design for Wide-Angle 2D Switched-Beam Steering",
@@ -52,14 +67,7 @@ const internationalPublications = [
     underReview: true
 },
 
-{
-    year: 2026,
-    title: "A Ferrite-Based Metasurface for Interference Mitigation and Ghost Target Suppression in W-Band Automotive Radar and Vehicular IoT Networks",
-    authors: "S. H. Kim, N. Ha, J. Kim, S. Kwon, H. Lee, B. Park, and S. Kim",
-    journal: "",
-    underReview: true
-},
-
+/* 8 */
 {
     year: 2026,
     title: "DDPG-Based Topology-Aware Beamforming in Origami-Inspired 4D Phased Arrays for 5G+ Applications",
@@ -68,6 +76,16 @@ const internationalPublications = [
     underReview: true
 },
 
+/* 9 */
+{
+    year: 2026,
+    title: "Design of a Compact Lumped-Element BPF on LTCC for 6G Upper Mid-Band Systems",
+    authors: "S. Kim and S. Kim",
+    journal: "Journal of Electromagnetic Engineering and Science.",
+    underReview: true
+},
+
+/* 10 */
 {
     year: 2026,
     title: "1×8 Dipole Array Antenna with a Compact Waveguide-to-Microstrip Transition for Sub-THz Characterization",
@@ -76,6 +94,15 @@ const internationalPublications = [
     underReview: true
 },
 
+/* 11 - Accepted */
+{
+    year: 2026,
+    title: "A Ferrite-Based Metasurface for Interference Mitigation and Ghost Target Suppression in W-Band Automotive Radar and Vehicular IoT Networks",
+    authors: "S. H. Kim, N. Ha, J. Kim, S. Kwon, H. Lee, B. Park, and S. Kim",
+    journal: "IEEE Transactions on Vehicular Technology."
+},
+
+/* 12 - Accepted */
 {
     year: 2026,
     title: "Dual-Polarized Reconfigurable Reflectarray Fed by a Bull’s Eye Aperture Antenna With Continuous Reflection-Type Phase Shifter",
@@ -83,13 +110,16 @@ const internationalPublications = [
     journal: "IEEE Transactions on Antennas and Propagation, Sep. 2026."
 },
 
+/* 13 - Accepted / public preprint */
 {
     year: 2026,
     title: "Janus Metasurface Breaking Polarization Symmetry: Surface-Modulated Electromagnetic Wave Radiation with Coexistent Linear and Circular Polarization",
     authors: "A. Parameswaran, H. Kim, and S. Kim",
-    journal: "IEEE Transactions on Antennas and Propagation, Aug. 2026."
+    journal: "IEEE Transactions on Antennas and Propagation, Aug. 2026.",
+    url: "https://arxiv.org/abs/2512.15045"
 },
 
+/* 14 - Accepted */
 {
     year: 2026,
     title: "Integrated Sensing and Backscatter Communication (ISABC): Toward Self-Sustainable Autonomous IoT Networks",
@@ -98,6 +128,7 @@ const internationalPublications = [
     doi: "10.1109/MMM.2026.3717878"
 },
 
+/* 15 */
 {
     year: 2026,
     title: "Design of a Compact HF and UHF Dual-Band on-Metal RFID Tag for Pipeline Marker Applications Using an Equivalent Circuit Model",
@@ -106,6 +137,7 @@ const internationalPublications = [
     doi: "10.1109/JRFID.2026.3727067"
 },
 
+/* 16 */
 {
     year: 2026,
     title: "Ultra-Low-Power Monostatic Backscatter Platform with Phase-Aware Channel Estimation and System-Level Validation",
@@ -114,6 +146,7 @@ const internationalPublications = [
     doi: "10.1109/JIOT.2026.3696951"
 },
 
+/* 17 */
 {
     year: 2026,
     title: "Multi-Functional Metasurfaces with M-Type Ferrites: Shaping the Future of mmWave Absorption and Beam Steering",
@@ -122,6 +155,7 @@ const internationalPublications = [
     doi: "10.1109/JIOT.2026.3699125"
 },
 
+/* 18 */
 {
     year: 2026,
     title: "An Additively Manufactured, Conformal, Cross-Polarized and Retrodirective Transmitarray-mmID System with Modular Flexible Functions for 5G Cyberphysical Systems",
@@ -215,7 +249,7 @@ const internationalPublications = [
     year: 2024,
     title: "Polarization Diversity and Transfer Learning Based Modulation Optimization for High-Speed Dual Channel MIMO Backscatter Communication",
     authors: "H. Jeong, N. Ha, A. Georgiadis, M. M. Tentzeris, and S. Kim",
-    journal: "IEEE Internet of Things Journal, vol. 11, no. 23, pp. 21857–21871, 2024.",
+    journal: "IEEE Internet of Things Journal, vol. 11, no. 23, pp. 21857–21871, Jun. 2024.",
     doi: "10.1109/JIOT.2024.3379854"
 },
 
@@ -237,7 +271,7 @@ const internationalPublications = [
 {
     year: 2024,
     title: "Facile and Rapid Fabrication of Wearable Biosensors via Femtosecond Laser-Directed Micro-Patterning with Large-Sized Reduced Graphene Oxide for Physiological Monitoring",
-    authors: "H.-I. Moon et al.",
+    authors: "H.-I. Moon, S. Kim, J. E. Byun, Y. W. Kim, Y. W. Jung, S. G. Jo, Y. Shin, Y. Kang, S. J. Kim, E.-S. Lee, H.-J. Lee, M.-C. Oh, M.-H. Seo, S. Kim, K. H. Kim, Y.-R. Cho, C. Park, and J. W. Lee",
     journal: "Chemical Engineering Journal, vol. 479, Art. no. 147819, Jan. 2024.",
     doi: "10.1016/j.cej.2023.147819"
 },
@@ -293,14 +327,6 @@ const internationalPublications = [
 
 {
     year: 2022,
-    title: "Self-Deployable Circularly Polarized Phased Yagi-Uda Antenna Array Using 3D Printing Technology for CubeSat Applications",
-    authors: "D. Kim, M. Hwang, G. Kim, and S. Kim",
-    journal: "IEEE Antennas and Wireless Propagation Letters, vol. 21, no. 11, pp. 2249–2253, Nov. 2022.",
-    doi: "10.1109/LAWP.2022.3197359"
-},
-
-{
-    year: 2022,
     title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
     authors: "M. Hwang, G. Kim, S. Kim, and J. Kim",
     journal: "IEEE Access, vol. 10, pp. 105111–105119, Oct. 2022.",
@@ -321,6 +347,14 @@ const internationalPublications = [
     authors: "G. Kim, M. Hwang, H. Jeong, C.-M. Lim, K. Y. Park, and S. Kim",
     journal: "Electronics, vol. 11, no. 17, Art. no. 2729, Aug. 2022.",
     doi: "10.3390/electronics11172729"
+},
+
+{
+    year: 2022,
+    title: "Self-Deployable Circularly Polarized Phased Yagi-Uda Antenna Array Using 3D Printing Technology for CubeSat Applications",
+    authors: "D. Kim, M. Hwang, G. Kim, and S. Kim",
+    journal: "IEEE Antennas and Wireless Propagation Letters, vol. 21, no. 11, pp. 2249–2253, Nov. 2022.",
+    doi: "10.1109/LAWP.2022.3197359"
 },
 
 {
@@ -346,18 +380,18 @@ const internationalPublications = [
 
 {
     year: 2021,
-    title: "Backfire Suppressed Low Profile Aperture Coupled Stacked Patch Antenna Backed by a High Impedance Surface (HIS) Reflector for UHF RFID Reader Applications",
-    authors: "S. Kim",
-    journal: "International Journal of Microwave and Wireless Technologies, vol. 13, no. 10, pp. 1072–1077, Dec. 2021.",
-    doi: "10.1017/S1759078720001671"
-},
-
-{
-    year: 2021,
     title: "Educational Low-Cost C-Band FMCW Radar System Comprising Commercial Off-the-Shelf Components for Indoor Through-Wall Object Detection",
     authors: "H. Jeong and S. Kim",
     journal: "Electronics, vol. 10, no. 22, Art. no. 2758, Nov. 2021.",
     doi: "10.3390/electronics10222758"
+},
+
+{
+    year: 2021,
+    title: "Backfire Suppressed Low Profile Aperture Coupled Stacked Patch Antenna Backed by a High Impedance Surface (HIS) Reflector for UHF RFID Reader Applications",
+    authors: "S. Kim",
+    journal: "International Journal of Microwave and Wireless Technologies, vol. 13, no. 10, pp. 1072–1077, Dec. 2021.",
+    doi: "10.1017/S1759078720001671"
 },
 
 {
@@ -457,14 +491,6 @@ const internationalPublications = [
 
 {
     year: 2018,
-    title: "Parylene Coated Waterproof Washable Inkjet-Printed Dual-Band Antenna on Paper Substrate",
-    authors: "S. Kim and M. M. Tentzeris",
-    journal: "International Journal of Microwave and Wireless Technologies, vol. 10, no. 7, pp. 814–818, Sep. 2018.",
-    doi: "10.1017/S1759078718000685"
-},
-
-{
-    year: 2018,
     title: "Design of Reconfigurable Antenna Feeding Network Using Couple-Line Switch for 5G Millimeter-Wave Communication System",
     authors: "S. Kim and J. Kim",
     journal: "Applied Computational Electromagnetics Society Journal, vol. 33, no. 8, pp. 861–867, Aug. 2018."
@@ -480,9 +506,17 @@ const internationalPublications = [
 
 {
     year: 2018,
+    title: "Parylene Coated Waterproof Washable Inkjet-Printed Dual-Band Antenna on Paper Substrate",
+    authors: "S. Kim and M. M. Tentzeris",
+    journal: "International Journal of Microwave and Wireless Technologies, vol. 10, no. 7, pp. 814–818, Sep. 2018.",
+    doi: "10.1017/S1759078718000685"
+},
+
+{
+    year: 2018,
     title: "A Flexible RF Energy Harvester Using a Hybrid Printing Technology for Stand-Alone Wireless Sensor Platforms",
     authors: "S. Kim, S. Jeong, J. Bito, A. Georgiadis, and M. M. Tentzeris",
-    journal: "Flexible and Printed Electronics, vol. 3, no. 1, 2018.",
+    journal: "Flexible and Printed Electronics, vol. 3, no. 1, Jan. 2018.",
     doi: "10.1088/2058-8585/aaa4a9"
 },
 
@@ -532,7 +566,7 @@ const internationalPublications = [
     year: 2015,
     title: "Silver Nanoparticle-Based Inkjet-Printed Metamaterial Absorber on Flexible Paper",
     authors: "M. Yoo, H. Kim, S. Kim, M. M. Tentzeris, and S. Lim",
-    journal: "IEEE Antennas and Wireless Propagation Letters, vol. 14, pp. 1718–1721, 2015.",
+    journal: "IEEE Antennas and Wireless Propagation Letters, vol. 14, pp. 1718–1721, Apr. 2015.",
     doi: "10.1109/LAWP.2015.2420712"
 },
 
@@ -605,7 +639,7 @@ const internationalPublications = [
 {
     year: 2013,
     title: "Inkjet-Printed Antennas, Sensors and Circuits on Paper Substrate",
-    authors: "S. Kim, B. Cook, T. Le, J. Cooper, H. Lee, V. Lakafosis, R. Vyas, M. Bozzi, A. Georgiadis, A. Collado, and M. M. Tentzeris",
+    authors: "S. Kim, B. Cook, T. Le, J. Cooper, H. Lee, V. Lakafosis, R. Vyas, M. Riccardo, M. Bozzi, A. Georgiadis, A. Collado, and M. M. Tentzeris",
     journal: "IET Microwaves, Antennas & Propagation, vol. 7, no. 10, pp. 858–868, Jul. 2013.",
     doi: "10.1049/iet-map.2012.0685"
 },
