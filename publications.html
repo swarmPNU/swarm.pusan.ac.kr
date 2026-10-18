@@ -2,296 +2,401 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Publications | SWARM Laboratory</title>
+<title>Publications | SWARM Laboratory</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #111;
-      background: #fff;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    header {
-      width: 100%;
-      height: 90px;
-      padding: 0 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      border-bottom: 1px solid #eee;
-    }
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #fff;
+}
 
-    .pnu-name {
-      color: #0b4a8b;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.4px;
-    }
+/* ================= HEADER ================= */
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 48px;
-    }
+header {
+    width: 100%;
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
 
-    nav a {
-      position: relative;
-      color: #111;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 10px 0;
-    }
+.pnu-name {
+    color: #0b4a8b;
+    font-size: 20px;
+    font-weight: 700;
+}
 
-    nav a:hover,
-    nav a.active {
-      color: #0b4a8b;
-    }
+nav {
+    display: flex;
+    gap: 48px;
+}
 
-    nav a.active {
-      font-weight: 600;
-    }
+nav a {
+    position: relative;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+}
 
-    nav a.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: #0b4a8b;
-    }
+nav a:hover,
+nav a.active {
+    color: #0b4a8b;
+}
 
-    .page-hero {
-      padding: 65px 8% 55px;
-      background: linear-gradient(
+nav a.active {
+    font-weight: 600;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0b4a8b;
+}
+
+/* ================= HERO ================= */
+
+.page-hero {
+    padding: 65px 8% 55px;
+    background: linear-gradient(
         100deg,
         #ffffff 0%,
         #ffffff 55%,
         #f1f7fd 100%
-      );
+    );
+}
+
+.page-hero h1 {
+    font-size: clamp(50px, 5vw, 72px);
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.title-line {
+    width: 70px;
+    height: 4px;
+    margin-top: 20px;
+    background: #0b4a8b;
+}
+
+.page-hero p {
+    margin-top: 18px;
+    color: #657181;
+    font-size: 15px;
+}
+
+/* ================= PUBLICATIONS ================= */
+
+.publications {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 55px 8% 100px;
+}
+
+/* ================= TABS ================= */
+
+.publication-tabs {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 52px;
+    border-bottom: 1px solid #dfe3e7;
+}
+
+.pub-tab {
+    position: relative;
+    padding: 15px 2px 17px;
+    border: none;
+    background: transparent;
+    color: #7a8491;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pub-tab:hover {
+    color: #0b4a8b;
+}
+
+.pub-tab.active {
+    color: #0b4a8b;
+}
+
+.pub-tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    background: #0b4a8b;
+}
+
+/* ================= CATEGORY HEADING ================= */
+
+.publication-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #111;
+}
+
+.publication-heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.publication-count {
+    color: #77818d;
+    font-size: 13px;
+}
+
+/* ================= YEAR ================= */
+
+.year-section {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    border-bottom: 1px solid #dfe3e7;
+}
+
+.year-label {
+    padding-top: 28px;
+    color: #0b4a8b;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.year-papers {
+    padding-left: 32px;
+    border-left: 1px solid #e3e6e9;
+}
+
+/* ================= PAPER ================= */
+
+.paper {
+    padding: 24px 0;
+    border-bottom: 1px solid #eceef0;
+}
+
+.paper:last-child {
+    border-bottom: none;
+}
+
+.paper-title,
+.paper-title a {
+    color: #111;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.paper-title a:hover {
+    color: #0b4a8b;
+}
+
+.authors {
+    margin-top: 8px;
+    color: #4f5a67;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.journal {
+    margin-top: 4px;
+    color: #7a8491;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.doi {
+    margin-left: 10px;
+    color: #0b4a8b;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.doi:hover {
+    text-decoration: underline;
+}
+
+.empty-message {
+    padding: 70px 0;
+    text-align: center;
+    color: #8b949e;
+    font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 80px;
+        padding: 0 25px;
     }
 
-    .page-hero h1 {
-      font-size: clamp(50px, 5vw, 72px);
-      font-weight: 800;
-      letter-spacing: -3px;
-      line-height: 1;
+    .pnu-name {
+        font-size: 17px;
     }
 
-    .title-line {
-      width: 70px;
-      height: 4px;
-      margin-top: 20px;
-      background: #0b4a8b;
+    nav {
+        display: none;
     }
 
-    .page-hero p {
-      margin-top: 18px;
-      color: #657181;
-      font-size: 15px;
+    .page-hero {
+        padding: 50px 25px 40px;
     }
 
     .publications {
-      width: 100%;
-      max-width: 1450px;
-      margin: 0 auto;
-      padding: 55px 8% 100px;
+        padding: 40px 25px 70px;
+    }
+
+    .publication-tabs {
+        gap: 25px;
+        overflow-x: auto;
+        margin-bottom: 40px;
+    }
+
+    .pub-tab {
+        flex: 0 0 auto;
+        font-size: 13px;
     }
 
     .publication-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #111;
-    }
-
-    .publication-heading h2 {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: -1px;
-    }
-
-    .publication-count {
-      color: #77818d;
-      font-size: 13px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .year-section {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      border-bottom: 1px solid #dfe3e7;
+        grid-template-columns: 1fr;
     }
 
     .year-label {
-      padding-top: 28px;
-      color: #0b4a8b;
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: -1px;
+        padding: 28px 0 5px;
     }
 
     .year-papers {
-      padding-left: 32px;
-      border-left: 1px solid #e3e6e9;
-    }
-
-    .paper {
-      padding: 24px 0;
-      border-bottom: 1px solid #eceef0;
-    }
-
-    .paper:last-child {
-      border-bottom: none;
-    }
-
-    .paper-title,
-    .paper-title a {
-      color: #111;
-      font-size: 16px;
-      font-weight: 650;
-      line-height: 1.45;
-      text-decoration: none;
-    }
-
-    .paper-title a:hover {
-      color: #0b4a8b;
-    }
-
-    .paper-title a::after {
-      content: " ↗";
-      color: #0b4a8b;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .authors {
-      margin-top: 8px;
-      color: #4f5a67;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    .journal {
-      margin-top: 4px;
-      color: #7a8491;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    .doi-text {
-      margin-left: 9px;
-      color: #0b4a8b;
-      font-size: 11px;
-      font-weight: 600;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .doi-text:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 800px) {
-      header {
-        height: 80px;
-        padding: 0 25px;
-      }
-
-      .pnu-name {
-        font-size: 17px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .page-hero {
-        padding: 50px 25px 40px;
-      }
-
-      .publications {
-        padding: 40px 25px 70px;
-      }
-
-      .publication-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .year-section {
-        grid-template-columns: 1fr;
-      }
-
-      .year-label {
-        padding: 28px 0 5px;
-      }
-
-      .year-papers {
         padding-left: 0;
         border-left: none;
-      }
     }
-  </style>
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="pnu-name">Pusan National University</div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#research">Research</a>
-    <a href="index.html#people">People</a>
-    <a href="publications.html" class="active">Publications</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+    <div class="pnu-name">
+        Pusan National University
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#people">People</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
 </header>
 
 
 <section class="page-hero">
-  <h1>Publications</h1>
-  <div class="title-line"></div>
-  <p>Research publications from the SWARM Laboratory.</p>
+
+    <h1>Publications</h1>
+
+    <div class="title-line"></div>
+
+    <p>
+        Research publications from the SWARM Laboratory.
+    </p>
+
 </section>
 
 
 <main class="publications">
 
-  <div class="publication-heading">
-    <h2>International Journals</h2>
-    <div class="publication-count" id="publication-count"></div>
-  </div>
+    <div class="publication-tabs">
 
-  <div id="publication-list"></div>
+        <button
+            class="pub-tab active"
+            data-category="international">
+            International Journals
+        </button>
+
+        <button
+            class="pub-tab"
+            data-category="domestic">
+            Domestic Journals
+        </button>
+
+        <button
+            class="pub-tab"
+            data-category="conference">
+            Conference Proceedings
+        </button>
+
+    </div>
+
+
+    <div class="publication-heading">
+
+        <h2 id="category-title">
+            International Journals
+        </h2>
+
+        <div
+            class="publication-count"
+            id="publication-count">
+        </div>
+
+    </div>
+
+
+    <div id="publication-list"></div>
 
 </main>
 
 
 <script>
 
-const publications = [
-
 /* =========================================================
-   2026
+   INTERNATIONAL JOURNALS
 ========================================================= */
+
+const internationalPublications = [
+
+/* ================= 2026 ================= */
 
 {
 year: 2026,
@@ -325,7 +430,7 @@ journal: ""
 year: 2026,
 title: "Transformer-Hypernetwork-Controlled Deep-Unfolded Phase-Aware Channel Estimation Refinement for Phase-Drift-Robust Backscatter Links",
 authors: "H. Ryu, N. Ha, and S. Kim",
-journal: "arXiv, 2026.",
+journal: "arXiv, Jul. 2026.",
 doi: "10.48550/arXiv.2606.31400"
 },
 
@@ -382,13 +487,12 @@ journal: "IEEE Transactions on Antennas and Propagation, 2026."
 year: 2026,
 title: "Janus Metasurface Breaking Polarization Symmetry: Surface-Modulated Electromagnetic Wave Radiation with Coexistent Linear and Circular Polarization",
 authors: "A. Parameswaran, H. Kim, and S. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, 2026.",
-doi: "10.48550/arXiv.2512.15045"
+journal: "IEEE Transactions on Antennas and Propagation, 2026."
 },
 
 {
 year: 2026,
-title: "Integrated Sensing and Backscatter Communication: Toward Self-Sustainable Autonomous Internet of Things Networks",
+title: "Integrated Sensing and Backscatter Communication (ISABC): Toward Self-Sustainable Autonomous IoT Networks",
 authors: "N. Ha, H. Ryu, H. Jeong, H. Kim, G. Kim, A. Georgiadis, M. M. Tentzeris, and S. Kim",
 journal: "IEEE Microwave Magazine, 2026.",
 doi: "10.1109/MMM.2026.3717878"
@@ -396,46 +500,43 @@ doi: "10.1109/MMM.2026.3717878"
 
 {
 year: 2026,
-title: "Design of a Compact HF and UHF Dual-Band On-Metal RFID Tag Using an Equivalent Circuit Model for Pipeline Marker Applications",
+title: "Design of a Compact HF and UHF Dual-Band on-Metal RFID Tag for Pipeline Marker Applications Using an Equivalent Circuit Model",
 authors: "H. Kim, H. Jeong, D. Kim, S. Choi, and S. Kim",
-journal: "IEEE Journal of Radio Frequency Identification, vol. 10, pp. 624–637, 2026.",
+journal: "IEEE Journal of Radio Frequency Identification, vol. 10, pp. 624–637, Aug. 2026.",
 doi: "10.1109/JRFID.2026.3727067"
 },
 
 {
 year: 2026,
-title: "Ultralow-Power Monostatic Backscatter Platform With Phase-Aware Channel Estimation and System-Level Validation",
+title: "Ultra-Low-Power Monostatic Backscatter Platform with Phase-Aware Channel Estimation and System-Level Validation",
 authors: "H. Ryu and S. Kim",
-journal: "IEEE Internet of Things Journal, vol. 13, no. 16, pp. 36090–36122, 2026.",
+journal: "IEEE Internet of Things Journal, vol. 13, no. 16, pp. 36090–36122, Aug. 2026.",
 doi: "10.1109/JIOT.2026.3696951"
 },
 
 {
 year: 2026,
-title: "Multifunctional Metasurfaces With M-Type Ferrites: Shaping the Future of mmWave Absorption and Beam Steering",
-authors: "N. Ha, H. Lee, M. Jang, G. Kim, H. Kim, B. Park, M. M. Tentzeris, and S. Kim",
-journal: "IEEE Internet of Things Journal, vol. 13, no. 16, pp. 36482–36505, 2026.",
+title: "Multi-Functional Metasurfaces with M-Type Ferrites: Shaping the Future of mmWave Absorption and Beam Steering",
+authors: "N. Ha, H. Lim, M. Jang, G. Kim, H. Kim, B. Park, M. M. Tentzeris, and S. Kim",
+journal: "IEEE Internet of Things Journal, vol. 13, no. 16, pp. 36482–36505, Aug. 2026.",
 doi: "10.1109/JIOT.2026.3699125"
 },
 
 {
 year: 2026,
-title: "An Additively Manufactured, Conformal, Cross-Polarized, and Retrodirective Transmitarray-mmID System for 5G IoT and Cyberphysical Systems",
+title: "An Additively Manufactured, Conformal, Cross-Polarized and Retrodirective Transmitarray-mmID System with Modular Flexible Functions for 5G Cyberphysical Systems",
 authors: "T. W. Callis, M. Hwang, G. Soto-Valle, M. Joshi, S. Kim, and M. M. Tentzeris",
-journal: "IEEE Transactions on Microwave Theory and Techniques, vol. 74, no. 1, pp. 499–511, 2026.",
+journal: "IEEE Transactions on Microwave Theory and Techniques, vol. 74, no. 1, pp. 499–511, Jan. 2026.",
 doi: "10.1109/TMTT.2025.3626205"
 },
 
-
-/* =========================================================
-   2025
-========================================================= */
+/* ================= 2025 ================= */
 
 {
 year: 2025,
 title: "Design of a Magnetic Composite-Based Ultrawideband Absorber Using a Reactance Compensation Strategy for Ku-/Ka-Band Applications",
-authors: "S. H. Kim, N. Ha, A. Parameswaran, S. Kim, S. Kwon, and B. Park",
-journal: "Advances in Materials Science and Engineering, vol. 2025, Art. no. 8881902, 2025.",
+authors: "S. H. Kim, N. Ha, S. Kwon, B. Park, and S. Kim",
+journal: "Advances in Materials Science and Engineering, vol. 2025, Art. no. 8881902, Sep. 2025.",
 doi: "10.1155/amse/8881902"
 },
 
@@ -443,7 +544,7 @@ doi: "10.1155/amse/8881902"
 year: 2025,
 title: "Glass-Confined, Ultrafine Nanocrystalline Core/Shell Microwires with Enhanced Giant Magneto-Impedance Performances",
 authors: "S. An, J. E. Byun, Y. Kang, J.-W. Jeong, N. Ha, S. H. Kim, S.-S. Yang, S. Kim, J. W. Lee, and Y.-T. Kwon",
-journal: "Journal of Alloys and Compounds, vol. 1038, Art. no. 182624, 2025.",
+journal: "Journal of Alloys and Compounds, vol. 1038, Art. no. 182624, Aug. 2025.",
 doi: "10.1016/j.jallcom.2025.182624"
 },
 
@@ -451,7 +552,7 @@ doi: "10.1016/j.jallcom.2025.182624"
 year: 2025,
 title: "A Dual-Broadband Dual-Polarized Patch Antenna Array Antenna-in-Package (AiP) Module on Asymmetric Substrate Stack-Up",
 authors: "D. Kim, G. Kim, K. Lim, C. Yang, C. You, and S. Kim",
-journal: "IEEE Access, vol. 13, pp. 139920–139930, 2025.",
+journal: "IEEE Access, vol. 13, pp. 139920–139930, Aug. 2025.",
 doi: "10.1109/ACCESS.2025.3596653"
 },
 
@@ -459,15 +560,15 @@ doi: "10.1109/ACCESS.2025.3596653"
 year: 2025,
 title: "Theoretical Analysis and Design of Metasurface Antennas for Wide Beamwidth and Dual-Circularly-Polarized High Gain",
 authors: "G. Kim, H. Kim, N. Ha, J. Cho, K. Park, and S. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 73, no. 8, pp. 5154–5165, 2025.",
+journal: "IEEE Transactions on Antennas and Propagation, vol. 73, no. 8, pp. 5154–5165, Aug. 2025.",
 doi: "10.1109/TAP.2025.3560197"
 },
 
 {
 year: 2025,
-title: "A 3-D-Printed Dual-Band Waveguide-Fed Hexagonal Cavity Slot Array for mmWave Applications",
+title: "A 3D-Printed Dual-Band Waveguide-Fed Hexagonal Cavity Slot Array for mmWave Applications",
 authors: "N. Ha, H. Kim, G. Kim, and S. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 73, no. 8, pp. 5455–5467, 2025.",
+journal: "IEEE Transactions on Antennas and Propagation, vol. 73, no. 8, pp. 5455–5467, Aug. 2025.",
 doi: "10.1109/TAP.2025.3556298"
 },
 
@@ -475,7 +576,7 @@ doi: "10.1109/TAP.2025.3556298"
 year: 2025,
 title: "Compact Dual-Band, Dual-Circular Polarized Microstrip Antenna Array for K/Ka-Band Application",
 authors: "N. Ha, G. Kim, H.-C. Bae, and S. Kim",
-journal: "IEEE Open Journal of Antennas and Propagation, vol. 6, no. 2, pp. 372–382, 2025.",
+journal: "IEEE Open Journal of Antennas and Propagation, vol. 6, no. 2, pp. 372–382, Apr. 2025.",
 doi: "10.1109/OJAP.2024.3518556"
 },
 
@@ -483,7 +584,7 @@ doi: "10.1109/OJAP.2024.3518556"
 year: 2025,
 title: "Design of a Wideband Right-Angle CPWG-to-Waveguide Transition for Ku-Band Applications",
 authors: "H. Kim, G. Kim, J. Cho, K. Park, and S. Kim",
-journal: "IEEE Microwave and Wireless Technology Letters, vol. 35, no. 2, pp. 149–152, 2025.",
+journal: "IEEE Microwave and Wireless Technology Letters, vol. 35, no. 2, pp. 149–152, Feb. 2025.",
 doi: "10.1109/LMWT.2024.3518843"
 },
 
@@ -491,19 +592,16 @@ doi: "10.1109/LMWT.2024.3518843"
 year: 2025,
 title: "Design and Analysis of an Ultra-Wideband Multi-Pyramidal Magnetic Absorber Using an Equivalent Circuit Model",
 authors: "A. Parameswaran, N. Ha, S. Kim, S. Kwon, B. Park, and S. Kim",
-journal: "IEEE Open Journal of Antennas and Propagation, vol. 6, no. 1, pp. 88–97, 2025."
+journal: "IEEE Open Journal of Antennas and Propagation, vol. 6, no. 1, pp. 88–97, Feb. 2025."
 },
 
-
-/* =========================================================
-   2024
-========================================================= */
+/* ================= 2024 ================= */
 
 {
 year: 2024,
 title: "Dual-Band and Dual-Polarized Rhombic Patch Antenna Array for 5G mmWave RF Front-End Antenna-in-Package (AiP) Module",
 authors: "G. Kim, D. Kim, K. Lim, C. Yang, C. You, and S. Kim",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 23, no. 7, pp. 2120–2124, 2024.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 23, no. 7, pp. 2120–2124, Jul. 2024.",
 doi: "10.1109/LAWP.2024.3382728"
 },
 
@@ -519,7 +617,7 @@ doi: "10.1109/JIOT.2024.3379854"
 year: 2024,
 title: "Enhanced Precision in Beam Pattern Synthesis for Compact Transmitarray Antenna Design: Integrating Comprehensive Unit Cell and Measurement Environment Models",
 authors: "M. Hwang, G. Kim, I. Lee, S. Kim, and J.-G. Yook",
-journal: "IEEE Access, vol. 12, pp. 68668–68679, 2024.",
+journal: "IEEE Access, vol. 12, pp. 68668–68679, May 2024.",
 doi: "10.1109/ACCESS.2024.3401021"
 },
 
@@ -527,27 +625,24 @@ doi: "10.1109/ACCESS.2024.3401021"
 year: 2024,
 title: "Design and Analysis of Ultra-Wideband Multi-Layered Electromagnetic Absorber Using Carbonyl Iron Magnetic Substrate and Planar Periodic Conductive Structure for mmWave Applications",
 authors: "N. Ha, G. Kim, H. Kim, S. Kwon, B. Park, and S. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 72, no. 2, pp. 1648–1660, 2024."
+journal: "IEEE Transactions on Antennas and Propagation, vol. 72, no. 2, pp. 1648–1660, Feb. 2024."
 },
 
 {
 year: 2024,
 title: "Facile and Rapid Fabrication of Wearable Biosensors via Femtosecond Laser-Directed Micro-Patterning with Large-Sized Reduced Graphene Oxide for Physiological Monitoring",
 authors: "H.-I. Moon, S. Kim, J. E. Byun, Y. W. Kim, Y. W. Jung, S. G. Jo, Y. Shin, Y. Kang, S. J. Kim, E.-S. Lee, H.-J. Lee, M.-C. Oh, M.-H. Seo, S. Kim, K. H. Kim, Y.-R. Cho, C. Park, and J. W. Lee",
-journal: "Chemical Engineering Journal, vol. 479, Art. no. 147819, 2024.",
+journal: "Chemical Engineering Journal, vol. 479, Art. no. 147819, Jan. 2024.",
 doi: "10.1016/j.cej.2023.147819"
 },
 
-
-/* =========================================================
-   2023
-========================================================= */
+/* ================= 2023 ================= */
 
 {
 year: 2023,
 title: "Design and Verification of a Miniaturized Multifunctional Transmitarray Unit Cell",
 authors: "G. Kim, M. Hwang, I. Lee, and S. Kim",
-journal: "Journal of Electromagnetic Engineering and Science, vol. 23, no. 6, pp. 502–511, 2023.",
+journal: "Journal of Electromagnetic Engineering and Science, vol. 23, no. 6, pp. 502–511, Nov. 2023.",
 doi: "10.26866/jees.2023.6.r.195"
 },
 
@@ -555,14 +650,14 @@ doi: "10.26866/jees.2023.6.r.195"
 year: 2023,
 title: "A Hole-Patterned Carbonyl Iron Powder/Epoxy Composite Millimeter-Wave Electromagnetic Absorber Operating at the Ka-Band",
 authors: "N. Ha, G. Kim, S. J. Kwon, S. H. Ryu, B. Park, and S. Kim",
-journal: "IEEE Transactions on Electromagnetic Compatibility, vol. 65, no. 4, pp. 997–1007, 2023."
+journal: "IEEE Transactions on Electromagnetic Compatibility, vol. 65, no. 4, pp. 997–1007, Aug. 2023."
 },
 
 {
 year: 2023,
 title: "A Compact Ultra-Wideband Monocone Antenna with Folded Shorting Wires for Vehicle-to-Everything (V2X) Applications",
 authors: "M. W. Lee, F. Abushakra, Z. Choffin, S. Kim, H.-J. Lee, and N. S. Jeong",
-journal: "Sensors, vol. 23, no. 13, Art. no. 6086, 2023.",
+journal: "Sensors, vol. 23, no. 13, Art. no. 6086, Jul. 2023.",
 doi: "10.3390/s23136086"
 },
 
@@ -570,7 +665,7 @@ doi: "10.3390/s23136086"
 year: 2023,
 title: "Analysis of Exponential Frequency Diverse Array for Short-Range Beam Focusing Technology",
 authors: "W. Choi, A. Georgiadis, M. M. Tentzeris, and S. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 71, no. 2, pp. 1437–1447, 2023.",
+journal: "IEEE Transactions on Antennas and Propagation, vol. 71, no. 2, pp. 1437–1447, Feb. 2023.",
 doi: "10.1109/TAP.2022.3226155"
 },
 
@@ -578,20 +673,17 @@ doi: "10.1109/TAP.2022.3226155"
 year: 2023,
 title: "A Coupled-Fed Broadband Dual-Polarized Magneto-Electric Dipole Antenna for WLAN and Sub-6 GHz 5G Communication Applications",
 authors: "S. Park and S. Kim",
-journal: "Journal of Electromagnetic Engineering and Science, vol. 23, no. 1, pp. 75–77, 2023.",
+journal: "Journal of Electromagnetic Engineering and Science, vol. 23, no. 1, pp. 75–77, Jan. 2023.",
 doi: "10.26866/jees.2023.1.l.11"
 },
 
-
-/* =========================================================
-   2022
-========================================================= */
+/* ================= 2022 ================= */
 
 {
 year: 2022,
-title: "Self-Deployable Circularly Polarized Phased Yagi-Uda Antenna Array Using 3-D Printing Technology for CubeSat Applications",
+title: "Self-Deployable Circularly Polarized Phased Yagi-Uda Antenna Array Using 3D Printing Technology for CubeSat Applications",
 authors: "D. Kim, M. Hwang, G. Kim, and S. Kim",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 21, no. 11, pp. 2249–2253, 2022.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 21, no. 11, pp. 2249–2253, Nov. 2022.",
 doi: "10.1109/LAWP.2022.3197359"
 },
 
@@ -599,7 +691,7 @@ doi: "10.1109/LAWP.2022.3197359"
 year: 2022,
 title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
 authors: "M. Hwang, G. Kim, S. Kim, and J. Kim",
-journal: "IEEE Access, vol. 10, pp. 105111–105119, 2022.",
+journal: "IEEE Access, vol. 10, pp. 105111–105119, Oct. 2022.",
 doi: "10.1109/ACCESS.2022.3211303"
 },
 
@@ -607,7 +699,7 @@ doi: "10.1109/ACCESS.2022.3211303"
 year: 2022,
 title: "A Low-Cost Continuous Wave Doppler Radar System with 3D-Printed Horn Antennas for Human Vital Sign Detection",
 authors: "H. Jeong, D. Kim, G. Kim, and S. Kim",
-journal: "HardwareX, vol. 12, Art. no. e00361, 2022.",
+journal: "HardwareX, vol. 12, Art. no. e00361, Oct. 2022.",
 doi: "10.1016/j.ohx.2022.e00361"
 },
 
@@ -615,14 +707,14 @@ doi: "10.1016/j.ohx.2022.e00361"
 year: 2022,
 title: "Design of a Flat-Panel Metasurface Reflectarray C-Band Antenna",
 authors: "G. Kim, M. Hwang, H. Jeong, C.-M. Lim, K. Y. Park, and S. Kim",
-journal: "Electronics, vol. 11, no. 17, Art. no. 2729, 2022.",
+journal: "Electronics, vol. 11, no. 17, Art. no. 2729, Aug. 2022.",
 doi: "10.3390/electronics11172729"
 },
 
 {
 year: 2022,
-title: "Design of mmWave Foldable Vertically Stacked Yagi-Uda Antenna Inspired by Origami and Kirigami Theories",
-authors: "N. Ha, G. Kim, N. S. Jeong, and S. Kim",
+title: "Design of mmWave Foldable Vertically Stacked Yagi-Uda Antenna Inspired by Origami and Kirigami Theory",
+authors: "N. Ha, G. Kim, N. Jeong, and S. Kim",
 journal: "IEEE Antennas and Wireless Propagation Letters, vol. 21, no. 8, pp. 1634–1638, 2022.",
 doi: "10.1109/LAWP.2022.3175992"
 },
@@ -630,21 +722,18 @@ doi: "10.1109/LAWP.2022.3175992"
 {
 year: 2022,
 title: "Wireless Charging of a Metal-Encased Device",
-authors: "N. S. Jeong, S. Kim, H.-J. Lee, and J. H. Kim",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 70, no. 1, pp. 654–663, 2022.",
+authors: "N. Jeong, S. Kim, H.-J. Lee, and J. H. Kim",
+journal: "IEEE Transactions on Antennas and Propagation, vol. 70, no. 1, pp. 654–663, Jan. 2022.",
 doi: "10.1109/TAP.2021.3102023"
 },
 
-
-/* =========================================================
-   2021
-========================================================= */
+/* ================= 2021 ================= */
 
 {
 year: 2021,
 title: "Backfire Suppressed Low Profile Aperture Coupled Stacked Patch Antenna Backed by a High Impedance Surface (HIS) Reflector for UHF RFID Reader Applications",
 authors: "S. Kim",
-journal: "International Journal of Microwave and Wireless Technologies, vol. 13, no. 10, pp. 1072–1077, 2021.",
+journal: "International Journal of Microwave and Wireless Technologies, vol. 13, no. 10, pp. 1072–1077, Dec. 2021.",
 doi: "10.1017/S1759078720001671"
 },
 
@@ -652,7 +741,7 @@ doi: "10.1017/S1759078720001671"
 year: 2021,
 title: "Educational Low-Cost C-Band FMCW Radar System Comprising Commercial Off-the-Shelf Components for Indoor Through-Wall Object Detection",
 authors: "H. Jeong and S. Kim",
-journal: "Electronics, vol. 10, no. 22, Art. no. 2758, 2021.",
+journal: "Electronics, vol. 10, no. 22, Art. no. 2758, Nov. 2021.",
 doi: "10.3390/electronics10222758"
 },
 
@@ -660,7 +749,7 @@ doi: "10.3390/electronics10222758"
 year: 2021,
 title: "On the Optimal Modes for Glucose Droplet Sensing Based on Multi-Modes",
 authors: "H.-J. Lee, S. Kim, and Y.-P. Hong",
-journal: "IEEE Sensors Journal, vol. 21, no. 21, pp. 24048–24055, 2021.",
+journal: "IEEE Sensors Journal, vol. 21, no. 21, pp. 24048–24055, Nov. 2021.",
 doi: "10.1109/JSEN.2021.3113725"
 },
 
@@ -668,7 +757,7 @@ doi: "10.1109/JSEN.2021.3113725"
 year: 2021,
 title: "Origami-Inspired Radiation Pattern and Shape Reconfigurable Dipole Array Antenna at C-Band for CubeSat Applications",
 authors: "M. Hwang, G. Kim, S. Kim, and N. S. Jeong",
-journal: "IEEE Transactions on Antennas and Propagation, vol. 69, no. 5, pp. 2697–2705, 2021.",
+journal: "IEEE Transactions on Antennas and Propagation, vol. 69, no. 5, pp. 2697–2705, May 2021.",
 doi: "10.1109/TAP.2020.3030908"
 },
 
@@ -676,20 +765,17 @@ doi: "10.1109/TAP.2020.3030908"
 year: 2021,
 title: "Design and Analysis of Dual Polarized Broadband Microstrip Patch Antenna for 5G mmWave Antenna Module on FR4 Substrate",
 authors: "G. Kim and S. Kim",
-journal: "IEEE Access, vol. 9, pp. 64306–64316, 2021.",
+journal: "IEEE Access, vol. 9, pp. 64306–64316, May 2021.",
 doi: "10.1109/ACCESS.2021.3075495"
 },
 
-
-/* =========================================================
-   2020
-========================================================= */
+/* ================= 2020 ================= */
 
 {
 year: 2020,
 title: "Inkjet-Printed Electronics on Paper for RF Identification (RFID) and Sensing",
 authors: "S. Kim",
-journal: "Electronics, vol. 9, no. 10, Art. no. 1636, 2020.",
+journal: "Electronics, vol. 9, no. 10, Art. no. 1636, Oct. 2020.",
 doi: "10.3390/electronics9101636"
 },
 
@@ -697,7 +783,7 @@ doi: "10.3390/electronics9101636"
 year: 2020,
 title: "Machine Learning Approach for Wirelessly Powered RFID-Based Backscattering Sensor System",
 authors: "S. Jeong, M. M. Tentzeris, and S. Kim",
-journal: "IEEE Journal of Radio Frequency Identification, vol. 4, no. 3, pp. 186–194, 2020.",
+journal: "IEEE Journal of Radio Frequency Identification, vol. 4, no. 3, pp. 186–194, Sep. 2020.",
 doi: "10.1109/JRFID.2020.3004035"
 },
 
@@ -705,20 +791,17 @@ doi: "10.1109/JRFID.2020.3004035"
 year: 2020,
 title: "Design and Analysis of a TEM Mode Rectangular Coaxial Waveguide for Mobile 5G mmWave Antenna Module Applications",
 authors: "E. Park and S. Kim",
-journal: "Journal of Electromagnetic Engineering and Science, vol. 20, no. 3, pp. 169–175, 2020.",
+journal: "Journal of Electromagnetic Engineering and Science, vol. 20, no. 3, pp. 169–175, Jul. 2020.",
 doi: "10.26866/jees.2020.20.3.169"
 },
 
-
-/* =========================================================
-   2019
-========================================================= */
+/* ================= 2019 ================= */
 
 {
 year: 2019,
-title: "A Circularly Polarized High-Gain Planar 2×2 Dipole Array Antenna Fed by a 4-Way Gysel Power Divider for WLAN Applications",
+title: "A Circularly Polarized High Gain Planar 2×2 Dipole Array Antenna Fed by a 4-Way Gysel Power Divider for WLAN Applications",
 authors: "S. Kim and J. Kim",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 18, no. 5, pp. 1051–1055, 2019.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 18, no. 5, pp. 1051–1055, May 2019.",
 doi: "10.1109/LAWP.2019.2909041"
 },
 
@@ -726,7 +809,7 @@ doi: "10.1109/LAWP.2019.2909041"
 year: 2019,
 title: "A Low-Complexity I/Q Imbalance Calibration Method for Quadrature Modulator",
 authors: "J. Kim, H. Jo, K. Lee, D. Lee, D. Choi, and S. Kim",
-journal: "IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 27, no. 4, pp. 974–977, 2019.",
+journal: "IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 27, no. 4, pp. 974–977, Apr. 2019.",
 doi: "10.1109/TVLSI.2018.2883758"
 },
 
@@ -734,43 +817,40 @@ doi: "10.1109/TVLSI.2018.2883758"
 year: 2019,
 title: "Hybrid Printed Energy Harvesting Technology for Self-Sustainable Autonomous Sensor Application",
 authors: "S. Kim, A. Georgiadis, and M. M. Tentzeris",
-journal: "Sensors, vol. 19, no. 3, Art. no. 728, 2019.",
+journal: "Sensors, vol. 19, no. 3, Art. no. 728, Feb. 2019.",
 doi: "10.3390/s19030728"
 },
 
 {
 year: 2019,
-title: "77-GHz mmWave Antenna Array on Liquid Crystal Polymer for Automotive Radar and RF Front-End Module",
+title: "A 77 GHz mmWave Array Antenna on Liquid Crystal Polymer (LCP) for Automotive Radar and RF Front-End Module",
 authors: "S. Kim, A. Rida, V. Lakafosis, M. M. Tentzeris, and S. Nikolaou",
 journal: "ETRI Journal, vol. 41, no. 2, pp. 262–269, 2019.",
 doi: "10.4218/etrij.2018-0163"
 },
 
-
-/* =========================================================
-   2018
-========================================================= */
+/* ================= 2018 ================= */
 
 {
 year: 2018,
 title: "Parylene Coated Waterproof Washable Inkjet-Printed Dual-Band Antenna on Paper Substrate",
 authors: "S. Kim and M. M. Tentzeris",
-journal: "International Journal of Microwave and Wireless Technologies, vol. 10, no. 7, pp. 814–818, 2018.",
+journal: "International Journal of Microwave and Wireless Technologies, vol. 10, no. 7, pp. 814–818, Sep. 2018.",
 doi: "10.1017/S1759078718000685"
 },
 
 {
 year: 2018,
-title: "Design of Reconfigurable Antenna Feeding Network Using Coupled-Line Switch for 5G Millimeter-Wave Communication System",
+title: "Design of Reconfigurable Antenna Feeding Network Using Couple-Line Switch for 5G Millimeter-Wave Communication System",
 authors: "S. Kim and J. Kim",
-journal: "Applied Computational Electromagnetics Society Journal, vol. 33, no. 8, pp. 861–867, 2018."
+journal: "Applied Computational Electromagnetics Society Journal, vol. 33, no. 8, pp. 861–867, Aug. 2018."
 },
 
 {
 year: 2018,
 title: "Design of Inkjet-Printed RFID-Based Sensor on Paper: Single- and Dual-Tag Sensor Topologies",
 authors: "S. Kim, A. Georgiadis, and M. M. Tentzeris",
-journal: "Sensors, vol. 18, no. 6, Art. no. 1958, 2018.",
+journal: "Sensors, vol. 18, no. 6, Art. no. 1958, Jun. 2018.",
 doi: "10.3390/s18061958"
 },
 
@@ -782,29 +862,23 @@ journal: "Flexible and Printed Electronics, vol. 3, no. 1, 2018.",
 doi: "10.1088/2058-8585/aaa4a9"
 },
 
-
-/* =========================================================
-   2016
-========================================================= */
+/* ================= 2016 ================= */
 
 {
 year: 2016,
 title: "Fabrication of Fully Inkjet-Printed Vias and SIW Structures on Thick Polymer Substrates",
 authors: "S. Kim, A. Shamim, A. Georgiadis, H. Aubert, and M. M. Tentzeris",
-journal: "IEEE Transactions on Components, Packaging and Manufacturing Technology, vol. 6, no. 3, pp. 486–496, 2016.",
+journal: "IEEE Transactions on Components, Packaging and Manufacturing Technology, vol. 6, no. 3, pp. 486–496, Mar. 2016.",
 doi: "10.1109/TCPMT.2016.2522461"
 },
 
-
-/* =========================================================
-   2015
-========================================================= */
+/* ================= 2015 ================= */
 
 {
 year: 2015,
 title: "Reconfigurable Dual-Mode Bandpass Filter with Switchable Bandwidth Using PIN Diodes",
 authors: "P. Vryonides, S. Nikolaou, S. Kim, and M. M. Tentzeris",
-journal: "International Journal of Microwave and Wireless Technologies, vol. 7, no. 6, pp. 655–660, 2015.",
+journal: "International Journal of Microwave and Wireless Technologies, vol. 7, no. 6, pp. 655–660, Dec. 2015.",
 doi: "10.1017/S1759078714000932"
 },
 
@@ -812,7 +886,7 @@ doi: "10.1017/S1759078714000932"
 year: 2015,
 title: "Low-Cost Inkjet-Printed Fully Passive RFID Tags Using Metamaterial-Inspired Antennas for Calibration-Free Capacitive/Haptic Sensor Applications",
 authors: "S. Kim, Y. Kawahara, A. Georgiadis, A. Collado, and M. M. Tentzeris",
-journal: "IEEE Sensors Journal, vol. 15, no. 6, pp. 3135–3145, 2015.",
+journal: "IEEE Sensors Journal, vol. 15, no. 6, pp. 3135–3145, Jun. 2015.",
 doi: "10.1109/JSEN.2014.2366915"
 },
 
@@ -820,7 +894,7 @@ doi: "10.1109/JSEN.2014.2366915"
 year: 2015,
 title: "Additively Manufactured Nanotechnology and Origami-Enabled Flexible Microwave Electronics",
 authors: "J. G. Hester, S. Kim, J. Bito, T. Le, J. Kimionis, D. Revier, C. Saintsing, W. Su, B. Tehrani, A. Traille, B. S. Cook, and M. M. Tentzeris",
-journal: "Proceedings of the IEEE, vol. 103, no. 4, pp. 583–606, 2015.",
+journal: "Proceedings of the IEEE, vol. 103, no. 4, pp. 583–606, Apr. 2015.",
 doi: "10.1109/JPROC.2015.2405545"
 },
 
@@ -832,24 +906,21 @@ journal: "IEEE Antennas and Wireless Propagation Letters, vol. 14, pp. 1718–17
 doi: "10.1109/LAWP.2015.2420712"
 },
 
-
-/* =========================================================
-   2014
-========================================================= */
+/* ================= 2014 ================= */
 
 {
 year: 2014,
 title: "Solar/Electromagnetic Energy Harvesting and Wireless Power Transmission",
 authors: "K. Niotaki, A. Collado, S. Kim, A. Georgiadis, and M. M. Tentzeris",
-journal: "Proceedings of the IEEE, vol. 102, no. 11, pp. 1712–1722, 2014.",
+journal: "Proceedings of the IEEE, vol. 102, no. 11, pp. 1712–1722, Nov. 2014.",
 doi: "10.1109/JPROC.2014.2358646"
 },
 
 {
 year: 2014,
-title: "Ambient RF Energy-Harvesting Technologies for Self-Sustainable Stand-Alone Wireless Sensor Platforms",
+title: "Ambient RF Energy Harvesting Technologies for Self-Sustainable Stand-Alone Wireless Sensor Platforms",
 authors: "S. Kim, R. Vyas, J. Bito, K. Niotaki, A. Collado, A. Georgiadis, and M. M. Tentzeris",
-journal: "Proceedings of the IEEE, vol. 102, no. 11, pp. 1649–1666, 2014.",
+journal: "Proceedings of the IEEE, vol. 102, no. 11, pp. 1649–1666, Nov. 2014.",
 doi: "10.1109/JPROC.2014.2357031"
 },
 
@@ -857,65 +928,67 @@ doi: "10.1109/JPROC.2014.2357031"
 year: 2014,
 title: "RFID-Based Sensors for Zero-Power Autonomous Wireless Sensor Networks",
 authors: "B. Cook, R. Vyas, S. Kim, T. Thai, T. Le, A. Traille, H. Aubert, and M. M. Tentzeris",
-journal: "IEEE Sensors Journal, vol. 14, no. 8, pp. 2419–2431, 2014.",
+journal: "IEEE Sensors Journal, vol. 14, no. 8, pp. 2419–2431, Aug. 2014.",
 doi: "10.1109/JSEN.2013.2297436"
 },
 
-
-/* =========================================================
-   2013
-========================================================= */
+/* ================= 2013 ================= */
 
 {
 year: 2013,
-title: "A Compact Dual-Band Rectenna Using Slot-Loaded Dual-Band Folded Dipole Antenna",
+title: "A Compact Dual-Band Rectenna Using Slot-Loaded Dual Band Folded Dipole Antenna",
 authors: "K. Niotaki, S. Kim, S. Jeong, A. Collado, A. Georgiadis, and M. M. Tentzeris",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 12, pp. 1634–1637, 2013.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 12, pp. 1634–1637, Dec. 2013.",
 doi: "10.1109/LAWP.2013.2294200"
-},
-
-{
-year: 2013,
-title: "Inkjet Catalyst Printing and Electroless Copper Deposition for Low-Cost Patterned Microwave Passive Devices on Paper",
-authors: "B. Cook, Y. Fang, S. Kim, T. Le, W. B. Goodwin, K. H. Sandhage, and M. M. Tentzeris",
-journal: "Electronic Materials Letters, vol. 9, no. 5, pp. 669–676, 2013.",
-doi: "10.1007/s13391-013-3027-0"
 },
 
 {
 year: 2013,
 title: "No Battery Required: Perpetual RFID-Enabled Wireless Sensors for Cognitive Intelligence Applications",
 authors: "S. Kim, C. Mariotti, F. Alimenti, P. Mezzanotte, A. Georgiadis, A. Collado, L. Roselli, and M. M. Tentzeris",
-journal: "IEEE Microwave Magazine, vol. 14, no. 5, pp. 66–77, 2013.",
+journal: "IEEE Microwave Magazine, vol. 14, no. 5, pp. 66–77, Jul.–Aug. 2013.",
 doi: "10.1109/MMM.2013.2259398"
 },
 
 {
 year: 2013,
-title: "Inkjet-Printed Antennas, Sensors and Circuits on Paper Substrate",
-authors: "S. Kim, B. Cook, T. Le, J. Cooper, H. Lee, V. Lakafosis, R. Vyas, R. Moro, M. Bozzi, A. Georgiadis, A. Collado, and M. M. Tentzeris",
-journal: "IET Microwaves, Antennas & Propagation, vol. 7, no. 10, pp. 858–868, 2013.",
-doi: "10.1049/iet-map.2012.0685"
+title: "Inkjet Catalyst Printing and Electroless Copper Deposition for Low-Cost Patterned Microwave Passive Devices on Paper",
+authors: "B. Cook, Y. Fang, S. Kim, T. Le, W. B. Goodwin, K. H. Sandhage, and M. M. Tentzeris",
+journal: "Electronic Materials Letters, vol. 9, no. 5, pp. 669–676, Sep. 2013.",
+doi: "10.1007/s13391-013-3027-0"
 },
 
 {
 year: 2013,
 title: "Inkjet-Printed Paper-Based Substrate Integrated Waveguide (SIW) Components and Antennas",
 authors: "R. Moro, S. Kim, M. Bozzi, and M. M. Tentzeris",
-journal: "International Journal of Microwave and Wireless Technologies, vol. 5, no. 3, pp. 197–204, 2013.",
+journal: "International Journal of Microwave and Wireless Technologies, vol. 5, no. 3, pp. 197–204, May 2013.",
 doi: "10.1017/S1759078713000494"
 },
 
+{
+year: 2013,
+title: "Inkjet-Printed Antennas, Sensors and Circuits on Paper Substrate",
+authors: "S. Kim, B. Cook, T. Le, J. Cooper, H. Lee, V. Lakafosis, R. Vyas, M. Riccardo, M. Bozzi, A. Georgiadis, A. Collado, and M. M. Tentzeris",
+journal: "IET Microwaves, Antennas & Propagation, vol. 7, no. 10, pp. 858–868, Jul. 2013.",
+doi: "10.1049/iet-map.2012.0685"
+},
 
-/* =========================================================
-   2012
-========================================================= */
+/* ================= 2012 ================= */
+
+{
+year: 2012,
+title: "Conformal 2D/3D Wireless Modules Utilizing Inkjet Printing and Nanotechnology",
+authors: "M. M. Tentzeris, R. Vyas, V. Lakafosis, T. Le, A. Rida, and S. Kim",
+journal: "Microwave Journal, vol. 55, Feb. 2012.",
+url: "https://www.microwavejournal.com/articles/16914-conformal-2d-3d-wireless-modules-utilizing-inkjet-printing-and-nanotechnology"
+},
 
 {
 year: 2012,
 title: "An Inkjet-Printed Solar-Powered Wireless Beacon on Paper for Identification and Wireless Power Transmission Applications",
 authors: "S. Kim, A. Georgiadis, A. Collado, and M. M. Tentzeris",
-journal: "IEEE Transactions on Microwave Theory and Techniques, vol. 60, no. 12, pp. 4178–4186, 2012.",
+journal: "IEEE Transactions on Microwave Theory and Techniques, vol. 60, no. 12, pp. 4178–4186, Dec. 2012.",
 doi: "10.1109/TMTT.2012.2222922"
 },
 
@@ -923,179 +996,369 @@ doi: "10.1109/TMTT.2012.2222922"
 year: 2012,
 title: "A Novel Polarization-Independent, Free-Space, Microwave Beam Splitter Utilizing an Inkjet Printed, 2-D Array Frequency Selective Surface",
 authors: "J. Cooper, S. Kim, and M. M. Tentzeris",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 11, pp. 686–688, 2012.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 11, pp. 686–688, Jun. 2012.",
 doi: "10.1109/LAWP.2012.2204715"
 },
 
 {
 year: 2012,
-title: "Monopole Antenna with Inkjet-Printed EBG Array on Paper Substrate for Wearable Applications",
+title: "Monopole Antenna with Inkjet Printed EBG Array on Paper Substrate for Wearable Applications",
 authors: "S. Kim, Y. Ren, H. Lee, A. Rida, S. Nikolaou, and M. M. Tentzeris",
-journal: "IEEE Antennas and Wireless Propagation Letters, vol. 11, pp. 663–666, 2012.",
+journal: "IEEE Antennas and Wireless Propagation Letters, vol. 11, pp. 663–666, Jun. 2012.",
 doi: "10.1109/LAWP.2012.2203291"
-},
-
-{
-year: 2012,
-title: "Conformal 2D/3D Wireless Modules Utilizing Inkjet Printing and Nanotechnology",
-authors: "M. M. Tentzeris, R. Vyas, V. Lakafosis, T. Le, A. Rida, and S. Kim",
-journal: "Microwave Journal, vol. 55, 2012.",
-url: "https://www.microwavejournal.com/articles/16914-conformal-2d-3d-wireless-modules-utilizing-inkjet-printing-and-nanotechnology"
 }
 
 ];
 
 
 /* =========================================================
-   DISPLAY COUNT
+   DOMESTIC JOURNALS
 ========================================================= */
 
-document.getElementById("publication-count").textContent =
-  publications.length + " Publications";
+const domesticPublications = [
+
+{
+year: 2025,
+title: "Design of a 24 GHz Band Rasorber with High Frequency Selectivity and Broadband Absorption Performance",
+authors: "S. Kim, N. Ha, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 36, no. 4, pp. 362–373, Apr. 2025."
+},
+
+{
+year: 2025,
+title: "Improved Backscattering Communication Range Using Reflection Amplifiers",
+authors: "J. Choi, H. Ryu, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 36, no. 3, pp. 266–273, Feb. 2025."
+},
+
+{
+year: 2024,
+title: "Design of a High-Gain Patch Antenna Integrated with a 3D Printed Inverted Pyramidal GRIN Lens for mmWave Communications",
+authors: "J. Jo, N. Ha, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 35, no. 4, Apr. 2024."
+},
+
+{
+year: 2023,
+title: "Design of Miniaturized 360° Analog Phase Shifter for Multi-Functional Transmit-Array Antenna",
+authors: "M. Hwang, G. Kim, I.-G. Lee, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 34, no. 2, pp. 103–110, Feb. 2023."
+},
+
+{
+year: 2022,
+title: "Frequency Diverse Array Technique for Short-Range 3D Beam Focusing Technology",
+authors: "W. Choi and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 33, no. 3, pp. 169–176, Mar. 2022."
+},
+
+{
+year: 2022,
+title: "Miniaturized Unit Cell Design and Verification of Multi-Functional Transmittal Meta-Surface for S-Band Radar",
+authors: "M. Hwang, G. Kim, S. Kim, and J. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 33, no. 1, pp. 12–19, Jan. 2022."
+},
+
+{
+year: 2021,
+title: "Design of Arduino-Based FMCW Radar Using Cantenna",
+authors: "H. Jeong and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 32, no. 9, pp. 836–844, Sep. 2021."
+},
+
+{
+year: 2021,
+title: "Design of 3-Dimensional T-Shaped Dipole Antenna Inspired by Origami and Kirigami Theory",
+authors: "D. Kim, G. Kim, H. Jeong, M. Hwang, W. Choi, N. Ha, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 32, no. 8, pp. 690–698, Aug. 2021."
+},
+
+{
+year: 2021,
+title: "Design of a Stacked Patch Antenna for UHF RFID Reader Applications",
+authors: "S. Kim",
+journal: "Journal of the Institute of Electronics and Information Engineers, vol. 58, no. 6, pp. 3–10, Jun. 2021."
+},
+
+{
+year: 2021,
+title: "2D Indoor Direction and Location Finding System Based on Gradient Descent Machine Learning Algorithm",
+authors: "H. Kang, Y. Mun, S. Park, and S. Kim",
+journal: "Journal of Korean Institute of Electromagnetic Engineering and Science, vol. 32, no. 3, pp. 289–296, Mar. 2021."
+},
+
+{
+year: 2017,
+title: "Design of the Low-Power Continuous-Time Sigma-Delta Modulator for Wideband Applications",
+authors: "K. Kim, C.-J. Park, S. Lee, S. Kim, and J. Kim",
+journal: "Journal of Institute of Korean Electrical and Electronics Engineers, vol. 21, no. 4, pp. 331–337, Dec. 2017."
+}
+
+];
+
+
+/* =========================================================
+   CONFERENCE PROCEEDINGS
+
+   나중에 여기에 추가하면 자동으로 표시됨.
+========================================================= */
+
+const conferencePublications = [
+
+/*
+
+예시:
+
+{
+year: 2026,
+title: "Conference Paper Title",
+authors: "E. Park, H. Kim, and S. Kim",
+journal: "2026 International Symposium on Antennas and Propagation (ISAP), City, Country, Oct. 2026.",
+doi: "10.xxxx/xxxxx"
+},
+
+*/
+
+];
+
+
+/* =========================================================
+   CATEGORY DATA
+========================================================= */
+
+const publicationData = {
+
+    international: {
+        title: "International Journals",
+        data: internationalPublications
+    },
+
+    domestic: {
+        title: "Domestic Journals",
+        data: domesticPublications
+    },
+
+    conference: {
+        title: "Conference Proceedings",
+        data: conferencePublications
+    }
+
+};
+
+
+/* =========================================================
+   TAB CLICK
+========================================================= */
+
+document.querySelectorAll(".pub-tab").forEach(button => {
+
+    button.addEventListener("click", function() {
+
+        document.querySelectorAll(".pub-tab")
+            .forEach(tab => tab.classList.remove("active"));
+
+        this.classList.add("active");
+
+        renderPublications(this.dataset.category);
+
+    });
+
+});
 
 
 /* =========================================================
    RENDER
 ========================================================= */
 
-const publicationList =
-  document.getElementById("publication-list");
+function renderPublications(category) {
 
-const years =
-  [...new Set(publications.map(p => p.year))]
-  .sort((a, b) => b - a);
+    const info = publicationData[category];
+    const publications = info.data;
 
+    document.getElementById("category-title").textContent =
+        info.title;
 
-years.forEach(year => {
+    document.getElementById("publication-count").textContent =
+        publications.length + " Publications";
 
-  const section =
-    document.createElement("section");
+    const list =
+        document.getElementById("publication-list");
 
-  section.className = "year-section";
-
-
-  const yearLabel =
-    document.createElement("div");
-
-  yearLabel.className = "year-label";
-  yearLabel.textContent = year;
+    list.innerHTML = "";
 
 
-  const papers =
-    document.createElement("div");
+    /* EMPTY CONFERENCE */
 
-  papers.className = "year-papers";
+    if (publications.length === 0) {
 
+        const empty =
+            document.createElement("div");
 
-  publications
-    .filter(p => p.year === year)
-    .forEach(p => {
+        empty.className = "empty-message";
 
-      const article =
-        document.createElement("article");
+        empty.textContent =
+            "Conference publications will be added soon.";
 
-      article.className = "paper";
+        list.appendChild(empty);
 
-
-      /* TITLE */
-
-      const title =
-        document.createElement("div");
-
-      title.className = "paper-title";
+        return;
+    }
 
 
-      if (p.doi || p.url) {
+    /* YEAR LIST */
 
-        const titleLink =
-          document.createElement("a");
-
-        titleLink.href =
-          p.doi
-            ? "https://doi.org/" + p.doi
-            : p.url;
-
-        titleLink.target = "_blank";
-        titleLink.rel = "noopener noreferrer";
-        titleLink.textContent = p.title;
-
-        title.appendChild(titleLink);
-
-      } else {
-
-        title.textContent = p.title;
-
-      }
+    const years =
+        [...new Set(publications.map(p => p.year))]
+        .sort((a, b) => b - a);
 
 
-      /* AUTHORS */
+    years.forEach(year => {
 
-      const authors =
-        document.createElement("div");
+        const section =
+            document.createElement("section");
 
-      authors.className = "authors";
-      authors.textContent = p.authors;
-
-
-      /* JOURNAL */
-
-      const journal =
-        document.createElement("div");
-
-      journal.className = "journal";
-      journal.textContent = p.journal;
+        section.className = "year-section";
 
 
-      /* DOI TEXT */
+        const yearLabel =
+            document.createElement("div");
 
-      if (p.doi) {
-
-        const doi =
-          document.createElement("a");
-
-        doi.className = "doi-text";
-        doi.href = "https://doi.org/" + p.doi;
-        doi.target = "_blank";
-        doi.rel = "noopener noreferrer";
-        doi.textContent = "DOI: " + p.doi;
-
-        journal.appendChild(doi);
-
-      }
-
-      else if (p.url) {
-
-        const articleLink =
-          document.createElement("a");
-
-        articleLink.className = "doi-text";
-        articleLink.href = p.url;
-        articleLink.target = "_blank";
-        articleLink.rel = "noopener noreferrer";
-        articleLink.textContent = "Article ↗";
-
-        journal.appendChild(articleLink);
-
-      }
+        yearLabel.className = "year-label";
+        yearLabel.textContent = year;
 
 
-      article.appendChild(title);
-      article.appendChild(authors);
+        const papers =
+            document.createElement("div");
 
-      if (p.journal || p.doi || p.url) {
-        article.appendChild(journal);
-      }
+        papers.className = "year-papers";
 
-      papers.appendChild(article);
+
+        publications
+            .filter(p => p.year === year)
+            .forEach(p => {
+
+                const article =
+                    document.createElement("article");
+
+                article.className = "paper";
+
+
+                /* TITLE */
+
+                const title =
+                    document.createElement("div");
+
+                title.className = "paper-title";
+
+
+                if (p.doi || p.url) {
+
+                    const link =
+                        document.createElement("a");
+
+                    link.href =
+                        p.doi
+                            ? "https://doi.org/" + p.doi
+                            : p.url;
+
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.textContent = p.title;
+
+                    title.appendChild(link);
+
+                } else {
+
+                    title.textContent = p.title;
+
+                }
+
+
+                /* AUTHORS */
+
+                const authors =
+                    document.createElement("div");
+
+                authors.className = "authors";
+                authors.textContent = p.authors;
+
+
+                /* JOURNAL */
+
+                const journal =
+                    document.createElement("div");
+
+                journal.className = "journal";
+                journal.textContent = p.journal || "";
+
+
+                /* DOI */
+
+                if (p.doi) {
+
+                    const doi =
+                        document.createElement("a");
+
+                    doi.className = "doi";
+                    doi.href =
+                        "https://doi.org/" + p.doi;
+
+                    doi.target = "_blank";
+                    doi.rel = "noopener noreferrer";
+
+                    doi.textContent =
+                        "DOI: " + p.doi;
+
+                    journal.appendChild(doi);
+
+                }
+
+
+                /* ARTICLE LINK */
+
+                else if (p.url) {
+
+                    const link =
+                        document.createElement("a");
+
+                    link.className = "doi";
+                    link.href = p.url;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.textContent = "Article ↗";
+
+                    journal.appendChild(link);
+
+                }
+
+
+                article.appendChild(title);
+                article.appendChild(authors);
+
+                if (p.journal || p.doi || p.url) {
+                    article.appendChild(journal);
+                }
+
+                papers.appendChild(article);
+
+            });
+
+
+        section.appendChild(yearLabel);
+        section.appendChild(papers);
+
+        list.appendChild(section);
 
     });
 
+}
 
-  section.appendChild(yearLabel);
-  section.appendChild(papers);
-  publicationList.appendChild(section);
 
-});
+/* =========================================================
+   DEFAULT = INTERNATIONAL
+========================================================= */
+
+renderPublications("international");
 
 </script>
 
