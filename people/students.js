@@ -117,17 +117,14 @@ const studentData = [
             "RF Communication Systems",
         image: ""
     },
-    {
-    {
-        group: "M.S. Students",
-        name: "Hanyeol Ryu",
-        degree: "M.S. Student",
-        email: "9lo522@pusan.ac.kr",
-        website: "https://hyrecon.github.io/",
-        research:
-            "Self-Sustainable Wireless Communication and Sensing Systems, AI/ML",
-        image: "./people/ryuHanyeol.jpg
-    },
-    }
+  {
+    group: "M.S. Students",
+    name: "Hanyeol Ryu",
+    degree: "M.S. Student",
+    email: "9lo522@pusan.ac.kr",
+    website: "https://hyrecon.github.io/",
+    research: "Self-Sustainable Wireless Communication and Sensing Systems, AI/ML",
+    image: "./people/ryuHanyeol.jpg"
+}
 
 ];
