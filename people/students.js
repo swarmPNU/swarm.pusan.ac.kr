@@ -84,8 +84,8 @@ const studentData = [
         degree: "M.S. Student",
         email: "exid3165@pusan.ac.kr",
         research:
-            "RF Filter, RF Passive Component",
-        image: ""
+            "RF Filter, Phased array, Filtenna ",
+        image: "./people/kimsehyun.jpg"
     },
 
     {
