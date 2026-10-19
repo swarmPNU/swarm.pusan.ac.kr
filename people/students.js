@@ -11,7 +11,7 @@ const studentData = [
         email: "ncong@pusan.ac.kr",
         research:
             "RF Frontends, mmWave Antennas and Packaging, 3D-Printed Antennas, CubeSat, Waveguide",
-        image: "people/images/kimdohyun.jpg"
+        image: "people/kimdohyun.jpg"
     },
 
     {
