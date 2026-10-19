@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- 사이트 완성 전 검색엔진 노출 방지 -->
+<meta name="robots" content="noindex, nofollow">
+
 <title>People | SWARM Laboratory</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,11 +79,15 @@ nav {
 
 nav a {
     position: relative;
+
     color: #111;
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 500;
+
     padding: 10px 0;
+
     white-space: nowrap;
 }
 
@@ -95,11 +102,14 @@ nav a.active {
 
 nav a.active::after {
     content: "";
+
     position: absolute;
     left: 0;
     bottom: 0;
+
     width: 100%;
     height: 2px;
+
     background: #0b4a8b;
 }
 
@@ -136,7 +146,9 @@ nav a.active::after {
 .title-line {
     width: 70px;
     height: 4px;
+
     margin-top: 24px;
+
     background: #0b4a8b;
 }
 
@@ -152,6 +164,7 @@ nav a.active::after {
 .people-container {
     width: 100%;
     max-width: 1450px;
+
     margin: 0 auto;
 }
 
@@ -207,6 +220,7 @@ nav a.active::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: -1px;
@@ -241,7 +255,9 @@ nav a.active::after {
 
 .content-line {
     flex: 1;
+
     height: 1px;
+
     background: #dfe4e8;
 }
 
@@ -298,6 +314,7 @@ nav a.active::after {
 
 .professor-photo {
     width: 100%;
+
     aspect-ratio: 4 / 5;
 }
 
@@ -308,6 +325,7 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 1px;
+
     text-transform: uppercase;
 
     margin-bottom: 9px;
@@ -337,6 +355,7 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 0.8px;
+
     text-transform: uppercase;
 
     margin-bottom: 7px;
@@ -352,6 +371,7 @@ nav a.active::after {
 
 .info-block a {
     color: #0b4a8b;
+
     text-decoration: none;
 }
 
@@ -444,13 +464,44 @@ nav a.active::after {
 
     text-decoration: none;
 
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 
     word-break: break-all;
 }
 
 .email:hover {
     color: #0b4a8b;
+}
+
+
+/* PERSONAL WEBSITE */
+
+.personal-website {
+    display: block;
+
+    width: fit-content;
+
+    color: #0b4a8b;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    margin-bottom: 15px;
+}
+
+.personal-website:hover {
+    text-decoration: underline;
+}
+
+
+/* EMAIL만 있고 WEBSITE가 없는 사람 */
+
+.email:last-child {
+    margin-bottom: 15px;
 }
 
 
@@ -463,6 +514,7 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 0.8px;
+
     text-transform: uppercase;
 
     margin-bottom: 5px;
@@ -512,6 +564,7 @@ nav a.active::after {
 
 .alumni-top {
     display: block;
+
     margin: 0;
 }
 
@@ -533,9 +586,6 @@ nav a.active::after {
     margin-bottom: 8px;
 }
 
-
-/* ALUMNI DEGREE - BIGGER */
-
 .alumni-degree {
     color: #0b4a8b;
 
@@ -544,9 +594,6 @@ nav a.active::after {
 
     margin-bottom: 9px;
 }
-
-
-/* ALUMNI EMAIL - BIGGER */
 
 .alumni-email {
     display: inline-block;
@@ -616,9 +663,6 @@ nav a.active::after {
     background: #0b4a8b;
 }
 
-
-/* DATE = NAVY */
-
 .history-date {
     color: #0b4a8b;
 
@@ -626,9 +670,6 @@ nav a.active::after {
 
     margin-right: 7px;
 }
-
-
-/* DESCRIPTION = BLACK */
 
 .history-text {
     color: #111;
@@ -775,8 +816,6 @@ footer {
 ========================================================= */
 
 @media (max-width: 650px) {
-
-    /* HEADER */
 
     header {
         height: auto;
@@ -945,6 +984,12 @@ footer {
     }
 
     .email {
+        font-size: 11.5px;
+
+        margin-bottom: 6px;
+    }
+
+    .personal-website {
         font-size: 11.5px;
 
         margin-bottom: 12px;
@@ -1620,6 +1665,23 @@ function renderMembers(data, container) {
 
 
                 ${
+                    p.website
+
+                    ? `
+                        <a
+                            class="personal-website"
+                            href="${p.website}"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Personal Website ↗
+                        </a>
+                    `
+
+                    : ""
+                }
+
+
+                ${
                     p.research
 
                     ? `
@@ -1683,8 +1745,6 @@ function renderAlumni(data, container) {
             "alumni-card";
 
 
-        /* LEFT SIDE */
-
         const top =
             document.createElement("div");
 
@@ -1747,8 +1807,6 @@ function renderAlumni(data, container) {
         card.appendChild(top);
 
 
-        /* RIGHT SIDE */
-
         const historyArea =
             document.createElement("div");
 
@@ -1776,14 +1834,6 @@ function renderAlumni(data, container) {
                 historyItem.className =
                     "history-item";
 
-
-                /*
-                    DATE EXAMPLES:
-                    2019. 8.
-                    2025. 08.
-                    2025. 1 – 2026. 08
-                    2026. 09 – Present
-                */
 
                 const dateMatch =
                     item.match(
