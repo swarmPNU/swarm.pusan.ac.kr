@@ -118,14 +118,16 @@ const studentData = [
         image: ""
     },
     {
+    {
         group: "M.S. Students",
         name: "Hanyeol Ryu",
         degree: "M.S. Student",
         email: "9lo522@pusan.ac.kr",
-        site: https://hyrecon.github.io/
+        website: "https://hyrecon.github.io/",
         research:
             "Self-Sustainable Wireless Communication and Sensing Systems, AI/ML",
-        image: "./people/ryuHanyeol.jpg"
+        image: "./people/ryuHanyeol.jpg
+    },
     }
 
 ];
