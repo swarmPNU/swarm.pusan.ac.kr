@@ -1,7 +1,6 @@
 const professorData = [
     {
         name: "Sangkil Kim",
-        koreanName: "김상길",
         position: "Professor",
         image: "",
 
