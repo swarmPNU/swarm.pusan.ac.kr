@@ -70,7 +70,6 @@ header {
     justify-content: space-between;
 
     z-index: 9999;
-
     pointer-events: auto;
 }
 
@@ -123,7 +122,6 @@ nav a {
     white-space: nowrap;
 
     cursor: pointer;
-
     pointer-events: auto;
 
     transition: color 0.2s ease;
@@ -297,19 +295,16 @@ nav a.active::after {
 
     width: 100%;
 
-    /* PC 사진 영역 */
     aspect-ratio: 16 / 10;
 
     overflow: hidden;
 
-    background: #dce8f3;
+    background: #ffffff;
 }
 
 .research-image img {
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
 }
 
 .image-placeholder {
@@ -326,10 +321,10 @@ nav a.active::after {
 
 
 /* =========================================================
-   BACKCOM SLIDESHOW
+   COMMON SLIDER
 ========================================================= */
 
-.backcom-slider {
+.research-slider {
     position: absolute;
 
     top: 0;
@@ -343,7 +338,7 @@ nav a.active::after {
     background: #ffffff;
 }
 
-.research-image img.backcom-slide {
+.research-image img.research-slide {
     position: absolute;
 
     top: 0;
@@ -362,49 +357,7 @@ nav a.active::after {
     transition: opacity 0.9s ease-in-out;
 }
 
-.research-image img.backcom-slide.active {
-    opacity: 1;
-}
-
-
-/* =========================================================
-   META SLIDESHOW
-========================================================= */
-
-.meta-slider {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-
-    background: #ffffff;
-}
-
-.research-image img.meta-slide {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    max-width: none;
-
-    object-fit: contain !important;
-    object-position: center center;
-
-    opacity: 0;
-
-    transition: opacity 0.9s ease-in-out;
-}
-
-.research-image img.meta-slide.active {
+.research-image img.research-slide.active {
     opacity: 1;
 }
 
@@ -427,7 +380,7 @@ nav a.active::after {
     font-weight: 700;
 
     text-shadow:
-        0 1px 5px rgba(0, 0, 0, 0.6);
+        0 1px 5px rgba(0, 0, 0, 0.75);
 }
 
 .research-number::after {
@@ -440,7 +393,7 @@ nav a.active::after {
 
     margin-top: 7px;
 
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -570,7 +523,6 @@ footer {
 
     header {
         height: 80px;
-
         padding: 0 30px;
     }
 
@@ -684,7 +636,6 @@ footer {
         z-index: 10001;
 
         cursor: pointer;
-
         pointer-events: auto;
     }
 
@@ -991,23 +942,23 @@ footer {
 
             <div class="research-image">
 
-                <div class="backcom-slider">
+                <div class="research-slider">
 
                     <img
                         src="backcom1.png"
-                        class="backcom-slide active"
+                        class="research-slide backcom-slide active"
                         alt="AI-based backscatter communication signal processing"
                     >
 
                     <img
                         src="backcom2.png"
-                        class="backcom-slide"
+                        class="research-slide backcom-slide"
                         alt="Full-duplex backscatter communication system"
                     >
 
                     <img
                         src="backcom3.png"
-                        class="backcom-slide"
+                        class="research-slide backcom-slide"
                         alt="Backscatter communication and sensing application"
                     >
 
@@ -1048,23 +999,23 @@ footer {
 
             <div class="research-image">
 
-                <div class="meta-slider">
+                <div class="research-slider">
 
                     <img
                         src="meta1.png"
-                        class="meta-slide active"
+                        class="research-slide meta-slide active"
                         alt="Magnetic materials and metasurface research"
                     >
 
                     <img
                         src="meta2.png"
-                        class="meta-slide"
+                        class="research-slide meta-slide"
                         alt="Multifunctional metasurface research"
                     >
 
                     <img
                         src="meta3.png"
-                        class="meta-slide"
+                        class="research-slide meta-slide"
                         alt="Metasurface unit-cell and equivalent circuit research"
                     >
 
@@ -1106,7 +1057,27 @@ footer {
 
             <div class="research-image">
 
-                <div class="image-placeholder"></div>
+                <div class="research-slider">
+
+                    <img
+                        src="AIP1.png"
+                        class="research-slide aip-slide active"
+                        alt="Antenna-in-Package RF front-end module"
+                    >
+
+                    <img
+                        src="AIP2.png"
+                        class="research-slide aip-slide"
+                        alt="LTCC Antenna-in-Package structure"
+                    >
+
+                    <img
+                        src="AIP3.png"
+                        class="research-slide aip-slide"
+                        alt="Antenna-in-Package module"
+                    >
+
+                </div>
 
                 <span class="research-number">
                     04
@@ -1170,58 +1141,43 @@ footer {
 
 <script>
 
+
 /* =========================================================
-   BACKCOM SLIDESHOW
+   SLIDESHOW FUNCTION
 ========================================================= */
 
-const backcomSlides =
-    document.querySelectorAll(".backcom-slide");
+function startSlideshow(selector, interval = 3000) {
 
-let backcomCurrent = 0;
+    const slides = document.querySelectorAll(selector);
 
-if (backcomSlides.length > 1) {
+    if (slides.length <= 1) {
+        return;
+    }
+
+    let current = 0;
 
     setInterval(() => {
 
-        backcomSlides[backcomCurrent]
-            .classList.remove("active");
+        slides[current].classList.remove("active");
 
-        backcomCurrent =
-            (backcomCurrent + 1) % backcomSlides.length;
+        current = (current + 1) % slides.length;
 
-        backcomSlides[backcomCurrent]
-            .classList.add("active");
+        slides[current].classList.add("active");
 
-    }, 3000);
-
+    }, interval);
 }
 
 
 /* =========================================================
-   META SLIDESHOW
+   START SLIDESHOWS
 ========================================================= */
 
-const metaSlides =
-    document.querySelectorAll(".meta-slide");
+startSlideshow(".backcom-slide", 3000);
 
-let metaCurrent = 0;
+startSlideshow(".meta-slide", 3000);
 
-if (metaSlides.length > 1) {
+startSlideshow(".aip-slide", 3000);
 
-    setInterval(() => {
-
-        metaSlides[metaCurrent]
-            .classList.remove("active");
-
-        metaCurrent =
-            (metaCurrent + 1) % metaSlides.length;
-
-        metaSlides[metaCurrent]
-            .classList.add("active");
-
-    }, 3000);
-
-}
 
 </script>
 
