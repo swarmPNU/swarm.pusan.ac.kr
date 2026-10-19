@@ -80,7 +80,8 @@ const studentData = [
         koreanName: "최성운",
         degree: "M.S. Student",
         email: "tjddns2214@pusan.ac.kr",
-        research: "FSS, Radar",
+        research:
+            "FSS, Radar",
         image: ""
     },
 
