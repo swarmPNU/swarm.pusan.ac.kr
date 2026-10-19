@@ -3,7 +3,7 @@ const alumniData = [
     {
         name: "Nohgyeom Ha",
         degree: "Ph.D.",
-        email: "nohgyeom@hanwha.com",
+        email: "nohgyeom@gknu.ac.kr",
         image: "",
 
         history: [
@@ -18,7 +18,7 @@ const alumniData = [
     {
         name: "Gyoungdeuk Kim",
         degree: "Ph.D.",
-        email: "kgd0406@pusan.ac.kr",
+        email: "kgd0406@kari.re.kr",
         image: "",
 
         history: [
