@@ -76,15 +76,11 @@ nav {
 
 nav a {
     position: relative;
-
     color: #111;
     text-decoration: none;
-
     font-size: 15px;
     font-weight: 500;
-
     padding: 10px 0;
-
     white-space: nowrap;
 }
 
@@ -99,14 +95,11 @@ nav a.active {
 
 nav a.active::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: 0;
-
     width: 100%;
     height: 2px;
-
     background: #0b4a8b;
 }
 
@@ -143,9 +136,7 @@ nav a.active::after {
 .title-line {
     width: 70px;
     height: 4px;
-
     margin-top: 24px;
-
     background: #0b4a8b;
 }
 
@@ -161,7 +152,6 @@ nav a.active::after {
 .people-container {
     width: 100%;
     max-width: 1450px;
-
     margin: 0 auto;
 }
 
@@ -217,7 +207,6 @@ nav a.active::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: -1px;
@@ -252,9 +241,7 @@ nav a.active::after {
 
 .content-line {
     flex: 1;
-
     height: 1px;
-
     background: #dfe4e8;
 }
 
@@ -311,7 +298,6 @@ nav a.active::after {
 
 .professor-photo {
     width: 100%;
-
     aspect-ratio: 4 / 5;
 }
 
@@ -322,7 +308,6 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 1px;
-
     text-transform: uppercase;
 
     margin-bottom: 9px;
@@ -352,7 +337,6 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 0.8px;
-
     text-transform: uppercase;
 
     margin-bottom: 7px;
@@ -368,7 +352,6 @@ nav a.active::after {
 
 .info-block a {
     color: #0b4a8b;
-
     text-decoration: none;
 }
 
@@ -415,7 +398,7 @@ nav a.active::after {
 /* MEMBER PHOTO */
 
 .student-photo {
-    width: 88%;
+    width: 82%;
 
     aspect-ratio: 4 / 4.8;
 
@@ -480,7 +463,6 @@ nav a.active::after {
     font-weight: 700;
 
     letter-spacing: 0.8px;
-
     text-transform: uppercase;
 
     margin-bottom: 5px;
@@ -530,7 +512,6 @@ nav a.active::after {
 
 .alumni-top {
     display: block;
-
     margin: 0;
 }
 
@@ -549,24 +530,30 @@ nav a.active::after {
 
     line-height: 1.35;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
+
+
+/* ALUMNI DEGREE - BIGGER */
 
 .alumni-degree {
     color: #0b4a8b;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
 
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
+
+
+/* ALUMNI EMAIL - BIGGER */
 
 .alumni-email {
     display: inline-block;
 
     color: #69737d;
 
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
 
     text-decoration: none;
@@ -579,7 +566,9 @@ nav a.active::after {
 }
 
 
-/* ALUMNI HISTORY */
+/* =========================================================
+   ALUMNI HISTORY
+========================================================= */
 
 .alumni-history-area {
     display: flex;
@@ -628,7 +617,7 @@ nav a.active::after {
 }
 
 
-/* DATE ONLY */
+/* DATE = NAVY */
 
 .history-date {
     color: #0b4a8b;
@@ -639,7 +628,7 @@ nav a.active::after {
 }
 
 
-/* TEXT AFTER DATE */
+/* DESCRIPTION = BLACK */
 
 .history-text {
     color: #111;
@@ -759,7 +748,7 @@ footer {
     }
 
     .student-photo {
-        width: 90%;
+        width: 84%;
     }
 
 
@@ -902,7 +891,7 @@ footer {
     }
 
 
-    /* CONTENT TITLE */
+    /* TITLE */
 
     .content-title h2 {
         font-size: 25px;
@@ -938,7 +927,7 @@ footer {
     }
 
     .student-photo {
-        width: 92%;
+        width: 84%;
 
         margin-bottom: 14px;
     }
@@ -1008,11 +997,13 @@ footer {
     }
 
     .alumni-degree {
-        font-size: 11.5px;
+        font-size: 13px;
+
+        margin-bottom: 7px;
     }
 
     .alumni-email {
-        font-size: 10.5px;
+        font-size: 12px;
     }
 
     .alumni-history-area {
@@ -1088,7 +1079,7 @@ footer {
     }
 
     .student-photo {
-        width: 94%;
+        width: 84%;
     }
 
     .alumni-top {
@@ -1787,13 +1778,11 @@ function renderAlumni(data, container) {
 
 
                 /*
-                    DATE EXAMPLES
-
+                    DATE EXAMPLES:
                     2019. 8.
                     2025. 08.
                     2025. 1 – 2026. 08
                     2026. 09 – Present
-                    2024. 2 – Present
                 */
 
                 const dateMatch =
@@ -1826,13 +1815,9 @@ function renderAlumni(data, container) {
                         );
 
 
-                    historyItem.appendChild(
-                        date
-                    );
+                    historyItem.appendChild(date);
 
-                    historyItem.appendChild(
-                        text
-                    );
+                    historyItem.appendChild(text);
 
                 }
 
@@ -1848,9 +1833,7 @@ function renderAlumni(data, container) {
                         item;
 
 
-                    historyItem.appendChild(
-                        text
-                    );
+                    historyItem.appendChild(text);
 
                 }
 
