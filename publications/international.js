@@ -97,7 +97,7 @@ const internationalPublications = [
 /* 11 - Accepted */
 {
     year: 2026,
-    title: "A Ferrite-Based Metasurface for Interference Mitigation and Ghost Target Suppression in W-Band Automotive Radar and Vehicular IoT Networks",
+    title: "Floquet-Engineered Resistor-Free Ferrite Metasurface for Triple-Functional Automotive Radar and Vehicular IoT Applications",
     authors: "S. H. Kim, N. Ha, J. Kim, S. Kwon, H. Lee, B. Park, and S. Kim",
     journal: "IEEE Transactions on Vehicular Technology."
 },
