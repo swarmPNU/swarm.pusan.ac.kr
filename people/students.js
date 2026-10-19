@@ -7,7 +7,6 @@ const studentData = [
     {
         group: "Ph.D. Students",
         name: "DoHyun Kim",
-        koreanName: "김도현",
         degree: "Ph.D. Student",
         email: "ncong@pusan.ac.kr",
         research:
@@ -18,7 +17,6 @@ const studentData = [
     {
         group: "Ph.D. Students",
         name: "Hoyong Kim",
-        koreanName: "김호용",
         degree: "Ph.D. Student",
         email: "hoyung110@pusan.ac.kr",
         research:
@@ -29,7 +27,6 @@ const studentData = [
     {
         group: "Ph.D. Students",
         name: "Eunyoung Park",
-        koreanName: "박은영",
         degree: "Ph.D. Student",
         email: "eunyoung_24@pusan.ac.kr",
         research:
@@ -45,7 +42,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "DongHoon Kim",
-        koreanName: "김동훈",
         degree: "M.S. Student",
         email: "dean1009@pusan.ac.kr",
         research: "RF Front-End Module",
@@ -55,7 +51,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Junsoo Kim",
-        koreanName: "김준수",
         degree: "M.S. Student",
         email: "wnstn2047@pusan.ac.kr",
         research:
@@ -66,7 +61,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Yuna Jeong",
-        koreanName: "정유나",
         degree: "M.S. Student",
         email: "dbsk0328@pusan.ac.kr",
         research:
@@ -77,7 +71,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Seongun Choi",
-        koreanName: "최성운",
         degree: "M.S. Student",
         email: "tjddns2214@pusan.ac.kr",
         research:
@@ -88,7 +81,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Sehyun Kim",
-        koreanName: "김세현",
         degree: "M.S. Student",
         email: "exid3165@pusan.ac.kr",
         research:
@@ -99,7 +91,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Taegyun Kang",
-        koreanName: "강태균",
         degree: "M.S. Student",
         email: "xorbs7545@pusan.ac.kr",
         research:
@@ -110,7 +101,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "JunHyeong Park",
-        koreanName: "박준형",
         degree: "M.S. Student",
         email: "juun4704@pusan.ac.kr",
         research:
@@ -121,7 +111,6 @@ const studentData = [
     {
         group: "M.S. Students",
         name: "Seongyeop Hwang",
-        koreanName: "황성엽",
         degree: "M.S. Student",
         email: "sung04111@pusan.ac.kr",
         research:
