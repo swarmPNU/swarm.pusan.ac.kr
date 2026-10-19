@@ -54,7 +54,7 @@ const studentData = [
         degree: "M.S. Student",
         email: "wnstn2047@pusan.ac.kr",
         research:
-            "Reconfigurable Metasurface, Microwave Absorber",
+            "RF Metasurfaces, Phased Array Antennas, Electromagnetic Absorbers",
         image: "./people/kimjunsoo.jpg"
     },
 
