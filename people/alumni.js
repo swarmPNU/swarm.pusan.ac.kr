@@ -32,7 +32,7 @@ const alumniData = [
         name: "Hyunmin Jeong",
         degree: "M.S.",
         email: "jinly09@pusan.ac.kr",
-        image: "",
+        image: "./people/jeonghyunmin.jpg",
 
         history: [
             "2022. 03 – 2024. 02. M.S. in Electrical and Electronic Engineering, Pusan National University",
