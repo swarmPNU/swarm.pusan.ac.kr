@@ -296,7 +296,8 @@ nav a.active::after {
 
     width: 100%;
 
-    aspect-ratio: 16 / 13;
+    /* PC 사진 영역 비율 */
+    aspect-ratio: 16 / 10;
 
     overflow: hidden;
 
@@ -341,7 +342,12 @@ nav a.active::after {
     background: #ffffff;
 }
 
-.meta-slide {
+/*
+   중요:
+   일반 research-image의 cover 설정보다
+   Meta 이미지의 contain을 우선 적용
+*/
+.research-image img.meta-slide {
     position: absolute;
 
     top: 0;
@@ -350,14 +356,17 @@ nav a.active::after {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    max-width: none;
+
+    object-fit: contain !important;
+    object-position: center center;
 
     opacity: 0;
 
     transition: opacity 0.9s ease-in-out;
 }
 
-.meta-slide.active {
+.research-image img.meta-slide.active {
     opacity: 1;
 }
 
@@ -1100,18 +1109,22 @@ const metaSlides =
 
 let metaCurrent = 0;
 
-setInterval(() => {
+if (metaSlides.length > 1) {
 
-    metaSlides[metaCurrent]
-        .classList.remove("active");
+    setInterval(() => {
 
-    metaCurrent =
-        (metaCurrent + 1) % metaSlides.length;
+        metaSlides[metaCurrent]
+            .classList.remove("active");
 
-    metaSlides[metaCurrent]
-        .classList.add("active");
+        metaCurrent =
+            (metaCurrent + 1) % metaSlides.length;
 
-}, 3000);
+        metaSlides[metaCurrent]
+            .classList.add("active");
+
+    }, 3000);
+
+}
 
 </script>
 
