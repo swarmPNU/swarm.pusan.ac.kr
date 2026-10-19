@@ -56,8 +56,8 @@ const alumniData = [
     {
         name: "SooHyun Kim",
         degree: "M.S.",
-        email: "shk2047@pusan.ac.kr",
-        image: "",
+        email: "shk2047@hanwha.com",
+        image: "./people/kimsoohyun.jpg",
 
         history: [
             "2024. 2. B.S. in Electronic Engineering, Pusan National University",
