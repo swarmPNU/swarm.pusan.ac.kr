@@ -145,7 +145,6 @@ nav a.active::after {
     font-weight: 800;
 
     letter-spacing: -4px;
-
     line-height: 1;
 }
 
@@ -201,13 +200,11 @@ nav a.active::after {
     align-items: center;
 
     border: 0;
-
     background: transparent;
 
     color: #727b84;
 
     font-family: 'Inter', sans-serif;
-
     font-size: 16px;
     font-weight: 600;
 
@@ -349,17 +346,12 @@ nav a.active::after {
     margin-bottom: 25px;
 }
 
-.professor-korean {
-    color: #8a929b;
-
-    font-size: 14px;
-    font-weight: 400;
-
-    margin-left: 7px;
-}
-
 .info-block {
     margin-top: 23px;
+}
+
+.info-block:first-of-type {
+    margin-top: 0;
 }
 
 .info-block h3 {
@@ -368,7 +360,7 @@ nav a.active::after {
     font-size: 11px;
     font-weight: 700;
 
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
 
     text-transform: uppercase;
 
@@ -389,9 +381,13 @@ nav a.active::after {
     text-decoration: none;
 }
 
+.info-block a:hover {
+    text-decoration: underline;
+}
+
 
 /* =========================================================
-   STUDENTS
+   MEMBERS
 ========================================================= */
 
 .student-group {
@@ -433,21 +429,14 @@ nav a.active::after {
 }
 
 .member-name {
+    color: #111;
+
     font-size: 18px;
     font-weight: 700;
 
     line-height: 1.35;
 
     margin-bottom: 4px;
-}
-
-.korean-name {
-    color: #8a929b;
-
-    font-size: 12px;
-    font-weight: 400;
-
-    margin-left: 5px;
 }
 
 .degree {
@@ -483,7 +472,7 @@ nav a.active::after {
     font-size: 9px;
     font-weight: 700;
 
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
 
     text-transform: uppercase;
 
@@ -540,12 +529,14 @@ nav a.active::after {
 }
 
 .alumni-name {
+    color: #111;
+
     font-size: 17px;
     font-weight: 700;
 
     line-height: 1.35;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .alumni-degree {
@@ -579,7 +570,7 @@ nav a.active::after {
     font-size: 9px;
     font-weight: 700;
 
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
 
     text-transform: uppercase;
 
@@ -713,6 +704,8 @@ footer {
 
 @media (max-width: 650px) {
 
+    /* HEADER */
+
     header {
         height: auto;
         min-height: 104px;
@@ -722,6 +715,7 @@ footer {
         flex-direction: column;
 
         align-items: flex-start;
+        justify-content: flex-start;
 
         gap: 11px;
     }
@@ -851,7 +845,7 @@ footer {
     }
 
 
-    /* STUDENTS */
+    /* MEMBERS */
 
     .student-grid {
         grid-template-columns:
@@ -862,14 +856,6 @@ footer {
 
     .member-name {
         font-size: 16px;
-    }
-
-    .korean-name {
-        display: block;
-
-        margin-left: 0;
-
-        margin-top: 2px;
     }
 
 
@@ -1019,8 +1005,8 @@ footer {
 
         <button
             class="tab"
-            data-category="students">
-            Current Members
+            data-category="members">
+            Members
         </button>
 
         <button
@@ -1033,7 +1019,7 @@ footer {
 
 
     <!-- =====================================================
-         RENDER AREA
+         CONTENT RENDER AREA
     ====================================================== -->
 
     <div id="people-content"></div>
@@ -1069,7 +1055,7 @@ footer {
 
 
 <!-- =========================================================
-     DATA FILES
+     PEOPLE DATA FILES
 ========================================================= -->
 
 <script src="people/professor.js"></script>
@@ -1090,8 +1076,8 @@ const peopleData = {
         data: professorData
     },
 
-    students: {
-        title: "Current Members",
+    members: {
+        title: "Members",
         data: studentData
     },
 
@@ -1107,20 +1093,24 @@ const peopleData = {
    CREATE PHOTO
 ========================================================= */
 
-function createPhoto(image, className) {
+function createPhoto(image, className, altText) {
 
-    const photo = document.createElement("div");
+    const photo =
+        document.createElement("div");
 
-    photo.className = "photo " + className;
+    photo.className =
+        "photo " + className;
 
 
     if (image) {
 
-        const img = document.createElement("img");
+        const img =
+            document.createElement("img");
 
         img.src = image;
 
-        img.alt = "Profile photo";
+        img.alt =
+            altText || "Profile photo";
 
 
         img.onerror = function () {
@@ -1134,9 +1124,12 @@ function createPhoto(image, className) {
 
         photo.appendChild(img);
 
-    } else {
+    }
 
-        photo.textContent = "Photo";
+    else {
+
+        photo.textContent =
+            "Photo";
 
     }
 
@@ -1146,7 +1139,7 @@ function createPhoto(image, className) {
 
 
 /* =========================================================
-   CREATE TITLE
+   CREATE CONTENT TITLE
 ========================================================= */
 
 function createTitle(title) {
@@ -1158,10 +1151,11 @@ function createTitle(title) {
         "content-title";
 
 
-    const h2 =
+    const heading =
         document.createElement("h2");
 
-    h2.textContent = title;
+    heading.textContent =
+        title;
 
 
     const line =
@@ -1171,9 +1165,13 @@ function createTitle(title) {
         "content-line";
 
 
-    wrapper.appendChild(h2);
+    wrapper.appendChild(
+        heading
+    );
 
-    wrapper.appendChild(line);
+    wrapper.appendChild(
+        line
+    );
 
 
     return wrapper;
@@ -1203,7 +1201,8 @@ function renderProfessor(data, container) {
         card.appendChild(
             createPhoto(
                 p.image,
-                "professor-photo"
+                "professor-photo",
+                p.name
             )
         );
 
@@ -1215,87 +1214,135 @@ function renderProfessor(data, container) {
         info.innerHTML = `
 
             <div class="position">
-                ${p.position}
+                ${p.position || ""}
             </div>
 
             <div class="professor-name">
-
                 ${p.name}
-
-                ${
-                    p.koreanName
-                    ? `<span class="professor-korean">${p.koreanName}</span>`
-                    : ""
-                }
-
             </div>
 
 
-            <div class="info-block">
+            ${
+                p.affiliation &&
+                p.affiliation.length
 
-                <h3>
-                    Affiliation
-                </h3>
+                ? `
+                    <div class="info-block">
 
-                <p>
-                    ${p.affiliation.join("<br>")}
-                </p>
+                        <h3>
+                            Affiliation
+                        </h3>
 
-            </div>
+                        <p>
+                            ${p.affiliation.join("<br>")}
+                        </p>
 
+                    </div>
+                `
 
-            <div class="info-block">
-
-                <h3>
-                    Education
-                </h3>
-
-                <p>
-                    ${p.education.join("<br>")}
-                </p>
-
-            </div>
+                : ""
+            }
 
 
-            <div class="info-block">
+            ${
+                p.education &&
+                p.education.length
 
-                <h3>
-                    Professional Experience
-                </h3>
+                ? `
+                    <div class="info-block">
 
-                <p>
-                    ${p.experience.join("<br>")}
-                </p>
+                        <h3>
+                            Education
+                        </h3>
 
-            </div>
+                        <p>
+                            ${p.education.join("<br>")}
+                        </p>
+
+                    </div>
+                `
+
+                : ""
+            }
 
 
-            <div class="info-block">
+            ${
+                p.experience &&
+                p.experience.length
 
-                <h3>
-                    Contact
-                </h3>
+                ? `
+                    <div class="info-block">
 
-                <p>
+                        <h3>
+                            Professional Experience
+                        </h3>
 
-                    <a href="mailto:${p.email}">
-                        ${p.email}
-                    </a>
+                        <p>
+                            ${p.experience.join("<br>")}
+                        </p>
 
-                    <br>
+                    </div>
+                `
 
-                    ${p.tel}
+                : ""
+            }
 
-                </p>
 
-            </div>
+            ${
+                p.email || p.tel
+
+                ? `
+                    <div class="info-block">
+
+                        <h3>
+                            Contact
+                        </h3>
+
+                        <p>
+
+                            ${
+                                p.email
+
+                                ? `
+                                    <a href="mailto:${p.email}">
+                                        ${p.email}
+                                    </a>
+                                `
+
+                                : ""
+                            }
+
+                            ${
+                                p.email && p.tel
+                                ? "<br>"
+                                : ""
+                            }
+
+                            ${
+                                p.tel
+                                ? p.tel
+                                : ""
+                            }
+
+                        </p>
+
+                    </div>
+                `
+
+                : ""
+            }
 
         `;
 
 
-        card.appendChild(info);
+        card.appendChild(
+            info
+        );
 
-        container.appendChild(card);
+
+        container.appendChild(
+            card
+        );
 
     });
 
@@ -1303,13 +1350,13 @@ function renderProfessor(data, container) {
 
 
 /* =========================================================
-   STUDENTS
+   MEMBERS
 ========================================================= */
 
-function renderStudents(data, container) {
+function renderMembers(data, container) {
 
     container.appendChild(
-        createTitle("Current Members")
+        createTitle("Members")
     );
 
 
@@ -1366,7 +1413,8 @@ function renderStudents(data, container) {
             card.appendChild(
                 createPhoto(
                     p.image,
-                    "student-photo"
+                    "student-photo",
+                    p.name
                 )
             );
 
@@ -1378,25 +1426,26 @@ function renderStudents(data, container) {
             info.innerHTML = `
 
                 <div class="member-name">
-
                     ${p.name}
-
-                    ${
-                        p.koreanName
-                        ? `<span class="korean-name">${p.koreanName}</span>`
-                        : ""
-                    }
-
-                </div>
-
-
-                <div class="degree">
-                    ${p.degree}
                 </div>
 
 
                 ${
+                    p.degree
+
+                    ? `
+                        <div class="degree">
+                            ${p.degree}
+                        </div>
+                    `
+
+                    : ""
+                }
+
+
+                ${
                     p.email
+
                     ? `
                         <a
                             class="email"
@@ -1404,12 +1453,14 @@ function renderStudents(data, container) {
                             ${p.email}
                         </a>
                     `
+
                     : ""
                 }
 
 
                 ${
                     p.research
+
                     ? `
                         <div class="research-label">
                             Research Area
@@ -1419,24 +1470,37 @@ function renderStudents(data, container) {
                             ${p.research}
                         </div>
                     `
+
                     : ""
                 }
 
             `;
 
 
-            card.appendChild(info);
+            card.appendChild(
+                info
+            );
 
-            grid.appendChild(card);
+
+            grid.appendChild(
+                card
+            );
 
         });
 
 
-        group.appendChild(heading);
+        group.appendChild(
+            heading
+        );
 
-        group.appendChild(grid);
+        group.appendChild(
+            grid
+        );
 
-        container.appendChild(group);
+
+        container.appendChild(
+            group
+        );
 
     });
 
@@ -1470,9 +1534,7 @@ function renderAlumni(data, container) {
             "alumni-card";
 
 
-        /* -------------------------
-           TOP
-        ------------------------- */
+        /* TOP */
 
         const top =
             document.createElement("div");
@@ -1484,7 +1546,8 @@ function renderAlumni(data, container) {
         top.appendChild(
             createPhoto(
                 p.image,
-                "alumni-photo"
+                "alumni-photo",
+                p.name
             )
         );
 
@@ -1496,31 +1559,26 @@ function renderAlumni(data, container) {
         identity.innerHTML = `
 
             <div class="alumni-name">
-
                 ${p.name}
-
-                ${
-                    p.koreanName
-                    ? `<span class="korean-name">${p.koreanName}</span>`
-                    : ""
-                }
-
             </div>
 
 
             ${
                 p.degree
+
                 ? `
                     <div class="alumni-degree">
                         ${p.degree}
                     </div>
                 `
+
                 : ""
             }
 
 
             ${
                 p.email
+
                 ? `
                     <a
                         class="alumni-email"
@@ -1528,20 +1586,24 @@ function renderAlumni(data, container) {
                         ${p.email}
                     </a>
                 `
+
                 : ""
             }
 
         `;
 
 
-        top.appendChild(identity);
+        top.appendChild(
+            identity
+        );
 
-        card.appendChild(top);
+
+        card.appendChild(
+            top
+        );
 
 
-        /* -------------------------
-           HISTORY
-        ------------------------- */
+        /* EDUCATION & CAREER */
 
         if (
             p.history &&
@@ -1568,11 +1630,17 @@ function renderAlumni(data, container) {
                 p.history.join("<br>");
 
 
-            card.appendChild(label);
+            card.appendChild(
+                label
+            );
 
-            card.appendChild(history);
+            card.appendChild(
+                history
+            );
 
-        } else {
+        }
+
+        else {
 
             const empty =
                 document.createElement("div");
@@ -1584,17 +1652,23 @@ function renderAlumni(data, container) {
                 "Additional information will be updated.";
 
 
-            card.appendChild(empty);
+            card.appendChild(
+                empty
+            );
 
         }
 
 
-        grid.appendChild(card);
+        grid.appendChild(
+            card
+        );
 
     });
 
 
-    container.appendChild(grid);
+    container.appendChild(
+        grid
+    );
 
 }
 
@@ -1611,7 +1685,8 @@ function renderPeople(category) {
         );
 
 
-    container.innerHTML = "";
+    container.innerHTML =
+        "";
 
 
     const selected =
@@ -1623,7 +1698,9 @@ function renderPeople(category) {
     }
 
 
-    if (category === "professor") {
+    if (
+        category === "professor"
+    ) {
 
         renderProfessor(
             selected.data,
@@ -1632,18 +1709,20 @@ function renderPeople(category) {
 
     }
 
+    else if (
+        category === "members"
+    ) {
 
-    else if (category === "students") {
-
-        renderStudents(
+        renderMembers(
             selected.data,
             container
         );
 
     }
 
-
-    else if (category === "alumni") {
+    else if (
+        category === "alumni"
+    ) {
 
         renderAlumni(
             selected.data,
@@ -1697,10 +1776,13 @@ document
    DEFAULT
 ========================================================= */
 
-renderPeople("professor");
+renderPeople(
+    "professor"
+);
 
 </script>
 
 
 </body>
+
 </html>
