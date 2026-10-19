@@ -2,7 +2,6 @@ const alumniData = [
 
     {
         name: "Nohgyeom Ha",
-        koreanName: "하노겸",
         degree: "Ph.D.",
         email: "nohgyeom@hanwha.com",
         image: "",
@@ -18,7 +17,6 @@ const alumniData = [
 
     {
         name: "Gyoungdeuk Kim",
-        koreanName: "김경득",
         degree: "Ph.D.",
         email: "kgd0406@pusan.ac.kr",
         image: "",
@@ -32,7 +30,6 @@ const alumniData = [
 
     {
         name: "Hyunmin Jeong",
-        koreanName: "정현민",
         degree: "M.S.",
         email: "jinly09@pusan.ac.kr",
         image: "",
@@ -45,7 +42,6 @@ const alumniData = [
 
     {
         name: "Woohyeok Choi",
-        koreanName: "최우혁",
         degree: "M.S.",
         email: "whchoi1@postech.ac.kr",
         image: "",
@@ -59,7 +55,6 @@ const alumniData = [
 
     {
         name: "SooHyun Kim",
-        koreanName: "김수현",
         degree: "M.S.",
         email: "shk2047@pusan.ac.kr",
         image: "",
@@ -73,17 +68,14 @@ const alumniData = [
 
     {
         name: "Aparna Parameswaran",
-        koreanName: "",
         degree: "",
         email: "aparna16@pusan.ac.kr",
         image: "",
-
         history: []
     },
 
     {
         name: "Myeongha Hwang",
-        koreanName: "황명하",
         degree: "Ph.D.",
         email: "myeongha20@gmail.com",
         image: "",
