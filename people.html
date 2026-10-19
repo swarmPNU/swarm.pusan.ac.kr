@@ -101,7 +101,6 @@ nav a.active::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 0;
 
@@ -277,7 +276,6 @@ nav a.active::after {
     justify-content: center;
 
     color: #9ca6af;
-
     font-size: 12px;
 
     overflow: hidden;
@@ -313,6 +311,7 @@ nav a.active::after {
 
 .professor-photo {
     width: 100%;
+
     aspect-ratio: 4 / 5;
 }
 
@@ -458,7 +457,6 @@ nav a.active::after {
     color: #69737d;
 
     font-size: 12.5px;
-
     line-height: 1.5;
 
     text-decoration: none;
@@ -528,7 +526,7 @@ nav a.active::after {
 }
 
 
-/* LEFT SIDE */
+/* ALUMNI LEFT */
 
 .alumni-top {
     display: block;
@@ -569,7 +567,6 @@ nav a.active::after {
     color: #69737d;
 
     font-size: 12px;
-
     line-height: 1.5;
 
     text-decoration: none;
@@ -582,7 +579,7 @@ nav a.active::after {
 }
 
 
-/* RIGHT SIDE */
+/* ALUMNI HISTORY */
 
 .alumni-history-area {
     display: flex;
@@ -594,21 +591,8 @@ nav a.active::after {
     min-width: 0;
 }
 
-.history-label {
-    color: #0b4a8b;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 0.8px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 13px;
-}
-
 .history {
-    color: #59636d;
+    color: #111;
 
     font-size: 14px;
 
@@ -620,7 +604,7 @@ nav a.active::after {
 
     padding-left: 18px;
 
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .history-item:last-child {
@@ -641,6 +625,26 @@ nav a.active::after {
     border-radius: 50%;
 
     background: #0b4a8b;
+}
+
+
+/* DATE ONLY */
+
+.history-date {
+    color: #0b4a8b;
+
+    font-weight: 700;
+
+    margin-right: 7px;
+}
+
+
+/* TEXT AFTER DATE */
+
+.history-text {
+    color: #111;
+
+    font-weight: 400;
 }
 
 .no-history {
@@ -898,7 +902,7 @@ footer {
     }
 
 
-    /* TITLE */
+    /* CONTENT TITLE */
 
     .content-title h2 {
         font-size: 25px;
@@ -1015,12 +1019,6 @@ footer {
         display: block;
     }
 
-    .history-label {
-        font-size: 10px;
-
-        margin-bottom: 10px;
-    }
-
     .history {
         font-size: 12px;
 
@@ -1030,7 +1028,7 @@ footer {
     .history-item {
         padding-left: 15px;
 
-        margin-bottom: 7px;
+        margin-bottom: 8px;
     }
 
     .history-item::before {
@@ -1160,9 +1158,7 @@ footer {
 
     <div class="hero-inner">
 
-        <h1>
-            People
-        </h1>
+        <h1>People</h1>
 
         <div class="title-line"></div>
 
@@ -1180,8 +1176,6 @@ footer {
 
 <div class="people-container">
 
-
-    <!-- TABS -->
 
     <div class="tabs">
 
@@ -1205,8 +1199,6 @@ footer {
 
     </div>
 
-
-    <!-- CONTENT -->
 
     <div id="people-content"></div>
 
@@ -1309,9 +1301,7 @@ function createPhoto(image, className, altText) {
         };
 
 
-        photo.appendChild(
-            img
-        );
+        photo.appendChild(img);
 
     }
 
@@ -1328,7 +1318,7 @@ function createPhoto(image, className, altText) {
 
 
 /* =========================================================
-   CONTENT TITLE
+   TITLE
 ========================================================= */
 
 function createTitle(title) {
@@ -1354,13 +1344,9 @@ function createTitle(title) {
         "content-line";
 
 
-    wrapper.appendChild(
-        heading
-    );
+    wrapper.appendChild(heading);
 
-    wrapper.appendChild(
-        line
-    );
+    wrapper.appendChild(line);
 
 
     return wrapper;
@@ -1524,14 +1510,9 @@ function renderProfessor(data, container) {
         `;
 
 
-        card.appendChild(
-            info
-        );
+        card.appendChild(info);
 
-
-        container.appendChild(
-            card
-        );
+        container.appendChild(card);
 
     });
 
@@ -1666,30 +1647,18 @@ function renderMembers(data, container) {
             `;
 
 
-            card.appendChild(
-                info
-            );
+            card.appendChild(info);
 
-
-            grid.appendChild(
-                card
-            );
+            grid.appendChild(card);
 
         });
 
 
-        group.appendChild(
-            heading
-        );
+        group.appendChild(heading);
 
-        group.appendChild(
-            grid
-        );
+        group.appendChild(grid);
 
-
-        container.appendChild(
-            group
-        );
+        container.appendChild(group);
 
     });
 
@@ -1782,14 +1751,9 @@ function renderAlumni(data, container) {
         `;
 
 
-        top.appendChild(
-            identity
-        );
+        top.appendChild(identity);
 
-
-        card.appendChild(
-            top
-        );
+        card.appendChild(top);
 
 
         /* RIGHT SIDE */
@@ -1806,21 +1770,6 @@ function renderAlumni(data, container) {
             p.history.length > 0
         ) {
 
-            const label =
-                document.createElement("div");
-
-            label.className =
-                "history-label";
-
-            label.textContent =
-                "Education & Career";
-
-
-            historyArea.appendChild(
-                label
-            );
-
-
             const history =
                 document.createElement("div");
 
@@ -1836,8 +1785,74 @@ function renderAlumni(data, container) {
                 historyItem.className =
                     "history-item";
 
-                historyItem.textContent =
-                    item;
+
+                /*
+                    DATE EXAMPLES
+
+                    2019. 8.
+                    2025. 08.
+                    2025. 1 – 2026. 08
+                    2026. 09 – Present
+                    2024. 2 – Present
+                */
+
+                const dateMatch =
+                    item.match(
+                        /^((?:\d{4}\.\s*\d{1,2}\.?|\d{4})(?:\s*[–-]\s*(?:\d{4}\.?\s*\d{0,2}\.?|Present))?)\s*/
+                    );
+
+
+                if (dateMatch) {
+
+                    const date =
+                        document.createElement("span");
+
+                    date.className =
+                        "history-date";
+
+                    date.textContent =
+                        dateMatch[1];
+
+
+                    const text =
+                        document.createElement("span");
+
+                    text.className =
+                        "history-text";
+
+                    text.textContent =
+                        item.slice(
+                            dateMatch[0].length
+                        );
+
+
+                    historyItem.appendChild(
+                        date
+                    );
+
+                    historyItem.appendChild(
+                        text
+                    );
+
+                }
+
+                else {
+
+                    const text =
+                        document.createElement("span");
+
+                    text.className =
+                        "history-text";
+
+                    text.textContent =
+                        item;
+
+
+                    historyItem.appendChild(
+                        text
+                    );
+
+                }
 
 
                 history.appendChild(
@@ -1988,9 +2003,7 @@ document
    DEFAULT
 ========================================================= */
 
-renderPeople(
-    "professor"
-);
+renderPeople("professor");
 
 </script>
 
