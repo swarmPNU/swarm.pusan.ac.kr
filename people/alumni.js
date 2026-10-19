@@ -4,7 +4,7 @@ const alumniData = [
         name: "Nohgyeom Ha",
         degree: "Ph.D.",
         email: "nohgyeom@gknu.ac.kr",
-        image: "",
+        image: "./people/hanogyeom.jpg",
 
         history: [
             "2019. 8. B.S. in Electronic Engineering, Pusan National University",
@@ -19,7 +19,7 @@ const alumniData = [
         name: "Gyoungdeuk Kim",
         degree: "Ph.D.",
         email: "kgd0406@kari.re.kr",
-        image: "",
+        image: "./people/kimgyeongdeuk.jpg",
 
         history: [
             "2020. 2. B.S. in Electronic Engineering, Pusan National University",
