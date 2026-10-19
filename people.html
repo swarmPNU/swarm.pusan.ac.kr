@@ -47,7 +47,6 @@ body {
 header {
     width: 100%;
     height: 90px;
-
     padding: 0 6%;
 
     display: flex;
@@ -63,10 +62,8 @@ header {
 
 .pnu-name {
     color: #0b4a8b;
-
     font-size: 20px;
     font-weight: 700;
-
     letter-spacing: -0.4px;
     white-space: nowrap;
 }
@@ -74,7 +71,6 @@ header {
 nav {
     display: flex;
     align-items: center;
-
     gap: 48px;
 }
 
@@ -82,7 +78,6 @@ nav a {
     position: relative;
 
     color: #111;
-
     text-decoration: none;
 
     font-size: 15px;
@@ -136,14 +131,12 @@ nav a.active::after {
 .hero-inner {
     width: 100%;
     max-width: 1450px;
-
     margin: 0 auto;
 }
 
 .page-hero h1 {
     font-size: clamp(48px, 6vw, 82px);
     font-weight: 800;
-
     letter-spacing: -4px;
     line-height: 1;
 }
@@ -320,7 +313,6 @@ nav a.active::after {
 
 .professor-photo {
     width: 100%;
-
     aspect-ratio: 4 / 5;
 }
 
@@ -401,10 +393,10 @@ nav a.active::after {
 .student-group h3 {
     color: #0b4a8b;
 
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
 
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
 .student-grid {
@@ -420,44 +412,58 @@ nav a.active::after {
     min-width: 0;
 }
 
+
+/* MEMBER PHOTO */
+
 .student-photo {
-    width: 100%;
+    width: 88%;
 
     aspect-ratio: 4 / 4.8;
 
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
+
+
+/* MEMBER NAME */
 
 .member-name {
     color: #111;
 
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
 
     line-height: 1.35;
 
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
+
+
+/* DEGREE */
 
 .degree {
     color: #0b4a8b;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
+
+
+/* EMAIL */
 
 .email {
     display: inline-block;
 
     color: #69737d;
 
-    font-size: 11px;
+    font-size: 12.5px;
+
+    line-height: 1.5;
 
     text-decoration: none;
 
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 
     word-break: break-all;
 }
@@ -466,25 +472,28 @@ nav a.active::after {
     color: #0b4a8b;
 }
 
+
+/* RESEARCH */
+
 .research-label {
     color: #9aa1a8;
 
-    font-size: 9px;
+    font-size: 10.5px;
     font-weight: 700;
 
     letter-spacing: 0.8px;
 
     text-transform: uppercase;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .research-area {
     color: #59636d;
 
-    font-size: 12px;
+    font-size: 13.5px;
 
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 
@@ -495,10 +504,9 @@ nav a.active::after {
 .alumni-grid {
     display: grid;
 
-    /* 한 줄에 한 명 */
     grid-template-columns: 1fr;
 
-    gap: 22px;
+    gap: 24px;
 }
 
 .alumni-card {
@@ -506,10 +514,9 @@ nav a.active::after {
 
     display: grid;
 
-    /* 사진 / 정보 */
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 220px minmax(0, 1fr);
 
-    gap: 38px;
+    gap: 42px;
 
     padding: 32px;
 
@@ -520,6 +527,9 @@ nav a.active::after {
     background: #fff;
 }
 
+
+/* LEFT SIDE */
+
 .alumni-top {
     display: block;
 
@@ -527,10 +537,10 @@ nav a.active::after {
 }
 
 .alumni-photo {
-    width: 190px;
-    height: 235px;
+    width: 220px;
+    height: 270px;
 
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .alumni-name {
@@ -570,6 +580,9 @@ nav a.active::after {
 .alumni-email:hover {
     color: #0b4a8b;
 }
+
+
+/* RIGHT SIDE */
 
 .alumni-history-area {
     display: flex;
@@ -722,6 +735,9 @@ footer {
         padding-right: 30px;
     }
 
+
+    /* PROFESSOR */
+
     .professor-card {
         grid-template-columns: 220px 1fr;
 
@@ -730,13 +746,23 @@ footer {
         padding: 28px;
     }
 
+
+    /* MEMBERS */
+
     .student-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+    .student-photo {
+        width: 90%;
+    }
+
+
+    /* ALUMNI */
+
     .alumni-card {
-        grid-template-columns: 160px minmax(0, 1fr);
+        grid-template-columns: 180px minmax(0, 1fr);
 
         gap: 28px;
 
@@ -744,8 +770,8 @@ footer {
     }
 
     .alumni-photo {
-        width: 160px;
-        height: 200px;
+        width: 180px;
+        height: 220px;
     }
 
 }
@@ -907,8 +933,38 @@ footer {
         gap: 35px 15px;
     }
 
+    .student-photo {
+        width: 92%;
+
+        margin-bottom: 14px;
+    }
+
     .member-name {
         font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .degree {
+        font-size: 12px;
+
+        margin-bottom: 8px;
+    }
+
+    .email {
+        font-size: 11.5px;
+
+        margin-bottom: 12px;
+    }
+
+    .research-label {
+        font-size: 9.5px;
+    }
+
+    .research-area {
+        font-size: 12px;
+
+        line-height: 1.55;
     }
 
 
@@ -927,18 +983,18 @@ footer {
     .alumni-top {
         display: grid;
 
-        grid-template-columns: 105px minmax(0, 1fr);
+        grid-template-columns: 120px minmax(0, 1fr);
 
         gap: 18px;
 
         align-items: center;
 
-        margin-bottom: 23px;
+        margin-bottom: 25px;
     }
 
     .alumni-photo {
-        width: 105px;
-        height: 130px;
+        width: 120px;
+        height: 150px;
 
         margin-bottom: 0;
     }
@@ -948,7 +1004,7 @@ footer {
     }
 
     .alumni-degree {
-        font-size: 11px;
+        font-size: 11.5px;
     }
 
     .alumni-email {
@@ -1033,15 +1089,19 @@ footer {
         gap: 30px 12px;
     }
 
+    .student-photo {
+        width: 94%;
+    }
+
     .alumni-top {
-        grid-template-columns: 95px minmax(0, 1fr);
+        grid-template-columns: 110px minmax(0, 1fr);
 
         gap: 14px;
     }
 
     .alumni-photo {
-        width: 95px;
-        height: 120px;
+        width: 110px;
+        height: 138px;
     }
 
 }
@@ -1243,12 +1303,15 @@ function createPhoto(image, className, altText) {
 
             this.remove();
 
-            photo.textContent = "Photo";
+            photo.textContent =
+                "Photo";
 
         };
 
 
-        photo.appendChild(img);
+        photo.appendChild(
+            img
+        );
 
     }
 
@@ -1853,9 +1916,7 @@ function renderPeople(category) {
     }
 
 
-    if (
-        category === "professor"
-    ) {
+    if (category === "professor") {
 
         renderProfessor(
             selected.data,
@@ -1864,9 +1925,7 @@ function renderPeople(category) {
 
     }
 
-    else if (
-        category === "members"
-    ) {
+    else if (category === "members") {
 
         renderMembers(
             selected.data,
@@ -1875,9 +1934,7 @@ function renderPeople(category) {
 
     }
 
-    else if (
-        category === "alumni"
-    ) {
+    else if (category === "alumni") {
 
         renderAlumni(
             selected.data,
