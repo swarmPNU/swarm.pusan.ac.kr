@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>People | SWARM Laboratory</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    color: #111;
+    background: #fff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    width: 100%;
+    height: 90px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+
+    border-bottom: 1px solid #eee;
+
+    position: relative;
+    z-index: 9999;
+}
+
+.pnu-name {
+    color: #0b4a8b;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #0b4a8b;
+}
+
+nav a.active {
+    color: #0b4a8b;
+
+    font-weight: 600;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    padding: 76px 6% 70px;
+
+    background:
+        linear-gradient(
+            115deg,
+            #ffffff 0%,
+            #f6faff 48%,
+            #eaf4fd 100%
+        );
+}
+
+.hero-inner {
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+.page-hero h1 {
+    font-size: clamp(48px, 6vw, 82px);
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 1;
+}
+
+.title-line {
+    width: 70px;
+    height: 4px;
+
+    margin-top: 24px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   PEOPLE
+========================================================= */
+
+.people {
+    padding: 0 6% 100px;
+}
+
+.people-container {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.tabs {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 42px;
+
+    border-bottom: 1px solid #e1e5e9;
+
+    margin-bottom: 55px;
+}
+
+.tab {
+    position: relative;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #727b84;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.tab:hover {
+    color: #0b4a8b;
+}
+
+.tab.active {
+    color: #0b4a8b;
+}
+
+.tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 3px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   CONTENT TITLE
+========================================================= */
+
+.content-title {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.content-title h2 {
+    font-size: 30px;
+    font-weight: 750;
+
+    letter-spacing: -1px;
+
+    white-space: nowrap;
+}
+
+.content-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: #dfe4e8;
+}
+
+
+/* =========================================================
+   PHOTO PLACEHOLDER
+========================================================= */
+
+.photo {
+    background:
+        linear-gradient(
+            135deg,
+            #e8edf2,
+            #dce5ed
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9ca6af;
+
+    font-size: 12px;
+
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   PROFESSOR
+========================================================= */
+
+.professor-card {
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    gap: 50px;
+
+    padding: 38px;
+
+    background: #f7f9fb;
+
+    border-radius: 6px;
+}
+
+.professor-photo {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+}
+
+.position {
+    color: #0b4a8b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 9px;
+}
+
+.professor-name {
+    font-size: 34px;
+    font-weight: 750;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+}
+
+.professor-korean {
+    color: #8a929b;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.info-block {
+    margin-top: 23px;
+}
+
+.info-block h3 {
+    color: #0b4a8b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+}
+
+.info-block p {
+    color: #555f69;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+.info-block a {
+    color: #0b4a8b;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.student-group {
+    margin-bottom: 65px;
+}
+
+.student-group:last-child {
+    margin-bottom: 0;
+}
+
+.student-group h3 {
+    color: #0b4a8b;
+
+    font-size: 19px;
+
+    margin-bottom: 24px;
+}
+
+.student-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 42px 25px;
+}
+
+.student-photo {
+    width: 100%;
+
+    aspect-ratio: 4 / 4.8;
+
+    margin-bottom: 16px;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.korean-name {
+    color: #8a929b;
+
+    font-size: 12px;
+
+    margin-left: 5px;
+}
+
+.degree {
+    color: #0b4a8b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.email {
+    display: block;
+
+    color: #69737d;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+}
+
+.email:hover {
+    color: #0b4a8b;
+}
+
+.research-label {
+    color: #9aa1a8;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+.research-area {
+    color: #59636d;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   ALUMNI
+========================================================= */
+
+.alumni-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.alumni-card {
+    padding: 25px;
+
+    border: 1px solid #e2e6ea;
+
+    border-radius: 5px;
+}
+
+.alumni-top {
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 18px;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.alumni-photo {
+    width: 90px;
+    height: 110px;
+}
+
+.alumni-name {
+    font-size: 17px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.alumni-degree {
+    color: #0b4a8b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.history {
+    color: #59636d;
+
+    font-size: 11.5px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 32px 6%;
+
+    background: #f6f7f8;
+
+    border-top: 1px solid #e8eaed;
+}
+
+.footer-inner {
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer-lab {
+    color: #0b4a8b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-copy {
+    color: #8a929b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .student-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .alumni-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    header {
+        padding: 0 30px;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    .professor-card {
+        grid-template-columns: 220px 1fr;
+    }
+
+    .student-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        height: auto;
+        min-height: 104px;
+
+        padding: 17px 20px 12px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+
+    .pnu-name {
+        font-size: 16px;
+    }
+
+    nav {
+        width: 100%;
+
+        gap: 0;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    nav a {
+        flex: 0 0 auto;
+
+        font-size: 12px;
+
+        margin-right: 22px;
+    }
+
+
+    .page-hero {
+        padding: 52px 20px 50px;
+    }
+
+    .page-hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .people {
+        padding: 0 20px 65px;
+    }
+
+
+    .tabs {
+        gap: 28px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+        margin-bottom: 40px;
+    }
+
+    .tab {
+        flex: 0 0 auto;
+
+        font-size: 14px;
+    }
+
+
+    .professor-card {
+        display: block;
+
+        padding: 20px;
+    }
+
+    .professor-photo {
+        max-width: 280px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .student-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 35px 15px;
+    }
+
+
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-inner {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="pnu-name">
+        Pusan National University
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#research">
+            Research
+        </a>
+
+        <a href="people.html" class="active">
+            People
+        </a>
+
+        <a href="publications.html">
+            Publications
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section class="page-hero">
+
+    <div class="hero-inner">
+
+        <h1>
+            People
+        </h1>
+
+        <div class="title-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<section class="people">
+
+<div class="people-container">
+
+
+    <!-- TABS -->
+
+    <div class="tabs">
+
+        <button
+            class="tab active"
+            data-category="professor">
+            Professor
+        </button>
+
+        <button
+            class="tab"
+            data-category="students">
+            Current Members
+        </button>
+
+        <button
+            class="tab"
+            data-category="alumni">
+            Alumni
+        </button>
+
+    </div>
+
+
+    <!-- JS RENDER AREA -->
+
+    <div id="people-content"></div>
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-lab">
+            SWARM Laboratory
+        </div>
+
+        <div class="footer-copy">
+            © 2026 SWARM Laboratory,
+            Pusan National University
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     DATA FILES
+========================================================= -->
+
+<script src="people/professor.js"></script>
+<script src="people/students.js"></script>
+<script src="people/alumni.js"></script>
+
+
+<script>
+
+/* =========================================================
+   DATA
+========================================================= */
+
+const peopleData = {
+
+    professor: {
+        title: "Professor",
+        data: professorData
+    },
+
+    students: {
+        title: "Current Members",
+        data: studentData
+    },
+
+    alumni: {
+        title: "Alumni",
+        data: alumniData
+    }
+
+};
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+function createPhoto(image, className) {
+
+    const photo = document.createElement("div");
+
+    photo.className = "photo " + className;
+
+
+    if (image) {
+
+        const img = document.createElement("img");
+
+        img.src = image;
+
+        photo.appendChild(img);
+
+    } else {
+
+        photo.textContent = "Photo";
+
+    }
+
+
+    return photo;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+function createTitle(title) {
+
+    const wrapper = document.createElement("div");
+
+    wrapper.className = "content-title";
+
+
+    const h2 = document.createElement("h2");
+
+    h2.textContent = title;
+
+
+    const line = document.createElement("div");
+
+    line.className = "content-line";
+
+
+    wrapper.appendChild(h2);
+
+    wrapper.appendChild(line);
+
+
+    return wrapper;
+}
+
+
+/* =========================================================
+   PROFESSOR
+========================================================= */
+
+function renderProfessor(data, container) {
+
+    container.appendChild(
+        createTitle("Professor")
+    );
+
+
+    data.forEach(p => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "professor-card";
+
+
+        card.appendChild(
+            createPhoto(
+                p.image,
+                "professor-photo"
+            )
+        );
+
+
+        const info =
+            document.createElement("div");
+
+
+        info.innerHTML = `
+
+            <div class="position">
+                ${p.position}
+            </div>
+
+            <div class="professor-name">
+
+                ${p.name}
+
+                <span class="professor-korean">
+                    ${p.koreanName || ""}
+                </span>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <h3>
+                    Affiliation
+                </h3>
+
+                <p>
+                    ${p.affiliation.join("<br>")}
+                </p>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    ${p.education.join("<br>")}
+                </p>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <h3>
+                    Professional Experience
+                </h3>
+
+                <p>
+                    ${p.experience.join("<br>")}
+                </p>
+
+            </div>
+
+
+            <div class="info-block">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+
+                    <a href="mailto:${p.email}">
+                        ${p.email}
+                    </a>
+
+                    <br>
+
+                    ${p.tel}
+
+                </p>
+
+            </div>
+
+        `;
+
+
+        card.appendChild(info);
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+function renderStudents(data, container) {
+
+    container.appendChild(
+        createTitle("Current Members")
+    );
+
+
+    const groups = [
+        "Ph.D. Students",
+        "M.S. Students"
+    ];
+
+
+    groups.forEach(groupName => {
+
+        const members =
+            data.filter(
+                p => p.group === groupName
+            );
+
+
+        if (!members.length) return;
+
+
+        const group =
+            document.createElement("div");
+
+        group.className = "student-group";
+
+
+        const h3 =
+            document.createElement("h3");
+
+        h3.textContent = groupName;
+
+
+        const grid =
+            document.createElement("div");
+
+        grid.className = "student-grid";
+
+
+        members.forEach(p => {
+
+            const card =
+                document.createElement("div");
+
+
+            card.appendChild(
+                createPhoto(
+                    p.image,
+                    "student-photo"
+                )
+            );
+
+
+            const info =
+                document.createElement("div");
+
+
+            info.innerHTML = `
+
+                <div class="member-name">
+
+                    ${p.name}
+
+                    <span class="korean-name">
+                        ${p.koreanName || ""}
+                    </span>
+
+                </div>
+
+
+                <div class="degree">
+                    ${p.degree}
+                </div>
+
+
+                <a
+                    class="email"
+                    href="mailto:${p.email}">
+                    ${p.email}
+                </a>
+
+
+                <div class="research-label">
+                    Research Area
+                </div>
+
+
+                <div class="research-area">
+                    ${p.research}
+                </div>
+
+            `;
+
+
+            card.appendChild(info);
+
+            grid.appendChild(card);
+
+        });
+
+
+        group.appendChild(h3);
+
+        group.appendChild(grid);
+
+        container.appendChild(group);
+
+    });
+
+}
+
+
+/* =========================================================
+   ALUMNI
+========================================================= */
+
+function renderAlumni(data, container) {
+
+    container.appendChild(
+        createTitle("Alumni")
+    );
+
+
+    const grid =
+        document.createElement("div");
+
+    grid.className = "alumni-grid";
+
+
+    data.forEach(p => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "alumni-card";
+
+
+        const top =
+            document.createElement("div");
+
+        top.className = "alumni-top";
+
+
+        top.appendChild(
+            createPhoto(
+                p.image,
+                "alumni-photo"
+            )
+        );
+
+
+        const name =
+            document.createElement("div");
+
+
+        name.innerHTML = `
+
+            <div class="alumni-name">
+
+                ${p.name}
+
+                ${
+                    p.koreanName
+                    ? `<span class="korean-name">${p.koreanName}</span>`
+                    : ""
+                }
+
+            </div>
+
+            <div class="alumni-degree">
+                ${p.degree || ""}
+            </div>
+
+        `;
+
+
+        top.appendChild(name);
+
+
+        const history =
+            document.createElement("div");
+
+        history.className = "history";
+
+        history.innerHTML =
+            p.history.join("<br>");
+
+
+        card.appendChild(top);
+
+        card.appendChild(history);
+
+        grid.appendChild(card);
+
+    });
+
+
+    container.appendChild(grid);
+
+}
+
+
+/* =========================================================
+   MAIN RENDER
+========================================================= */
+
+function renderPeople(category) {
+
+    const container =
+        document.getElementById(
+            "people-content"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const selected =
+        peopleData[category];
+
+
+    if (category === "professor") {
+
+        renderProfessor(
+            selected.data,
+            container
+        );
+
+    }
+
+
+    if (category === "students") {
+
+        renderStudents(
+            selected.data,
+            container
+        );
+
+    }
+
+
+    if (category === "alumni") {
+
+        renderAlumni(
+            selected.data,
+            container
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   TAB CLICK
+========================================================= */
+
+document
+    .querySelectorAll(".tab")
+    .forEach(tab => {
+
+        tab.addEventListener(
+            "click",
+            function () {
+
+                document
+                    .querySelectorAll(".tab")
+                    .forEach(
+                        t =>
+                            t.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                renderPeople(
+                    this.dataset.category
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   DEFAULT
+========================================================= */
+
+renderPeople("professor");
+
+</script>
+
+
+</body>
+
+</html>
