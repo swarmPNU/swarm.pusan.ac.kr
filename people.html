@@ -5,24 +5,18 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- 사이트 완성 전 검색엔진 노출 방지 -->
 <meta name="robots" content="noindex, nofollow">
 
 <title>People | SWARM Laboratory</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================================================
-   BASIC
+   RESET
 ========================================================= */
 
 * {
@@ -42,6 +36,11 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 
 /* =========================================================
    HEADER
@@ -50,6 +49,7 @@ body {
 header {
     width: 100%;
     height: 90px;
+
     padding: 0 6%;
 
     display: flex;
@@ -57,6 +57,7 @@ header {
     justify-content: space-between;
 
     background: #fff;
+
     border-bottom: 1px solid #eee;
 
     position: relative;
@@ -65,15 +66,19 @@ header {
 
 .pnu-name {
     color: #0b4a8b;
+
     font-size: 20px;
     font-weight: 700;
+
     letter-spacing: -0.4px;
+
     white-space: nowrap;
 }
 
 nav {
     display: flex;
     align-items: center;
+
     gap: 48px;
 }
 
@@ -81,6 +86,7 @@ nav a {
     position: relative;
 
     color: #111;
+
     text-decoration: none;
 
     font-size: 15px;
@@ -97,6 +103,7 @@ nav a:hover {
 
 nav a.active {
     color: #0b4a8b;
+
     font-weight: 600;
 }
 
@@ -104,6 +111,7 @@ nav a.active::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 0;
 
@@ -133,13 +141,16 @@ nav a.active::after {
 .hero-inner {
     width: 100%;
     max-width: 1450px;
+
     margin: 0 auto;
 }
 
 .page-hero h1 {
     font-size: clamp(48px, 6vw, 82px);
     font-weight: 800;
+
     letter-spacing: -4px;
+
     line-height: 1;
 }
 
@@ -154,11 +165,11 @@ nav a.active::after {
 
 
 /* =========================================================
-   PEOPLE
+   PEOPLE SECTION
 ========================================================= */
 
-.people {
-    padding: 0 6% 100px;
+.people-section {
+    padding: 60px 6% 110px;
 }
 
 .people-container {
@@ -173,33 +184,29 @@ nav a.active::after {
    TABS
 ========================================================= */
 
-.tabs {
-    height: 80px;
-
+.people-tabs {
     display: flex;
     align-items: center;
 
-    gap: 42px;
+    gap: 38px;
 
-    border-bottom: 1px solid #e1e5e9;
+    margin-bottom: 60px;
 
-    margin-bottom: 55px;
+    border-bottom: 1px solid #dfe4e8;
 }
 
-.tab {
+.people-tab {
     position: relative;
 
-    height: 80px;
-
-    display: flex;
-    align-items: center;
+    padding: 0 0 17px;
 
     border: 0;
-    background: transparent;
+    background: none;
 
-    color: #727b84;
+    color: #7b848d;
 
     font-family: 'Inter', sans-serif;
+
     font-size: 16px;
     font-weight: 600;
 
@@ -208,89 +215,26 @@ nav a.active::after {
     white-space: nowrap;
 }
 
-.tab:hover {
+.people-tab:hover {
     color: #0b4a8b;
 }
 
-.tab.active {
+.people-tab.active {
     color: #0b4a8b;
 }
 
-.tab.active::after {
+.people-tab.active::after {
     content: "";
 
     position: absolute;
 
     left: 0;
-    right: 0;
     bottom: -1px;
 
+    width: 100%;
     height: 3px;
 
     background: #0b4a8b;
-}
-
-
-/* =========================================================
-   CONTENT TITLE
-========================================================= */
-
-.content-title {
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-
-    margin-bottom: 35px;
-}
-
-.content-title h2 {
-    font-size: 30px;
-    font-weight: 700;
-
-    letter-spacing: -1px;
-
-    white-space: nowrap;
-}
-
-.content-line {
-    flex: 1;
-
-    height: 1px;
-
-    background: #dfe4e8;
-}
-
-
-/* =========================================================
-   PHOTO
-========================================================= */
-
-.photo {
-    background:
-        linear-gradient(
-            135deg,
-            #e8edf2,
-            #dce5ed
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #9ca6af;
-    font-size: 12px;
-
-    overflow: hidden;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
 }
 
 
@@ -301,82 +245,172 @@ nav a.active::after {
 .professor-card {
     display: grid;
 
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 300px minmax(0, 1fr);
 
-    gap: 50px;
+    gap: 55px;
 
-    padding: 38px;
+    align-items: start;
 
-    background: #f7f9fb;
+    max-width: 1100px;
 
-    border-radius: 6px;
+    padding: 0 0 70px;
 }
 
 .professor-photo {
-    width: 100%;
+    width: 300px;
 
     aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #f4f6f8;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 4px;
 }
 
-.position {
-    color: #0b4a8b;
+.professor-photo img {
+    width: 100%;
+    height: 100%;
 
-    font-size: 12px;
-    font-weight: 700;
+    object-fit: cover;
+    object-position: center top;
+}
 
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 9px;
+.professor-info {
+    padding-top: 3px;
 }
 
 .professor-name {
-    font-size: 34px;
+    color: #111;
+
+    font-size: 36px;
     font-weight: 700;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
 
-    margin-bottom: 25px;
+    margin-bottom: 7px;
 }
 
-.info-block {
-    margin-top: 23px;
-}
-
-.info-block:first-of-type {
-    margin-top: 0;
-}
-
-.info-block h3 {
+.professor-position {
     color: #0b4a8b;
 
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.professor-affiliation {
+    color: #5d6771;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    margin-bottom: 22px;
+}
+
+.professor-contact {
+    margin-bottom: 30px;
+}
+
+.professor-contact-row {
+    display: flex;
+    align-items: baseline;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+}
+
+.professor-contact-label {
+    width: 50px;
+
+    color: #8a949e;
+
+    font-size: 10px;
     font-weight: 700;
 
     letter-spacing: 0.8px;
 
     text-transform: uppercase;
-
-    margin-bottom: 7px;
 }
 
-.info-block p {
-    color: #555f69;
+.professor-contact-value {
+    color: #333;
 
-    font-size: 13px;
-
-    line-height: 1.8;
+    font-size: 13.5px;
 }
 
-.info-block a {
+.professor-contact-value a {
     color: #0b4a8b;
 
     text-decoration: none;
 }
 
-.info-block a:hover {
+.professor-contact-value a:hover {
     text-decoration: underline;
+}
+
+
+/* PROFESSOR DETAILS */
+
+.professor-detail {
+    padding-top: 22px;
+
+    border-top: 1px solid #e2e6ea;
+}
+
+.professor-detail + .professor-detail {
+    margin-top: 25px;
+}
+
+.detail-title {
+    color: #111;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 13px;
+}
+
+.detail-list {
+    list-style: none;
+}
+
+.detail-list li {
+    position: relative;
+
+    color: #555f69;
+
+    font-size: 13.5px;
+
+    line-height: 1.7;
+
+    padding-left: 14px;
+
+    margin-bottom: 5px;
+}
+
+.detail-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 9px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #0b4a8b;
 }
 
 
@@ -384,38 +418,36 @@ nav a.active::after {
    MEMBERS
 ========================================================= */
 
-.student-group {
-    margin-bottom: 65px;
+.member-group {
+    margin-bottom: 70px;
 }
 
-.student-group:last-child {
-    margin-bottom: 0;
-}
+.group-title {
+    color: #111;
 
-.student-group h3 {
-    color: #0b4a8b;
-
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 700;
 
-    margin-bottom: 26px;
+    letter-spacing: -0.7px;
+
+    margin-bottom: 32px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #e1e5e9;
 }
 
-.student-grid {
+.member-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    gap: 45px 25px;
+    gap: 48px 34px;
 }
 
-.student-card {
+.member-card {
     min-width: 0;
 }
-
-
-/* MEMBER PHOTO */
 
 .student-photo {
     width: 82%;
@@ -423,10 +455,38 @@ nav a.active::after {
     aspect-ratio: 4 / 4.8;
 
     margin-bottom: 18px;
+
+    overflow: hidden;
+
+    background: #f2f4f6;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 3px;
 }
 
+.student-photo img {
+    width: 100%;
+    height: 100%;
 
-/* MEMBER NAME */
+    object-fit: cover;
+    object-position: center top;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #a1aab3;
+
+    background: #f2f4f6;
+
+    font-size: 12px;
+    font-weight: 500;
+}
 
 .member-name {
     color: #111;
@@ -434,47 +494,40 @@ nav a.active::after {
     font-size: 19px;
     font-weight: 700;
 
-    line-height: 1.35;
+    letter-spacing: -0.4px;
 
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
-
-
-/* DEGREE */
 
 .degree {
-    color: #0b4a8b;
+    color: #777f88;
 
     font-size: 13px;
-    font-weight: 600;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
+.member-email {
+    display: block;
 
-/* EMAIL */
+    width: fit-content;
 
-.email {
-    display: inline-block;
-
-    color: #69737d;
+    color: #0b4a8b;
 
     font-size: 12.5px;
+
     line-height: 1.5;
 
     text-decoration: none;
 
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 
-    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
-.email:hover {
-    color: #0b4a8b;
+.member-email:hover {
+    text-decoration: underline;
 }
-
-
-/* PERSONAL WEBSITE */
 
 .personal-website {
     display: block;
@@ -497,31 +550,24 @@ nav a.active::after {
     text-decoration: underline;
 }
 
-
-/* EMAIL만 있고 WEBSITE가 없는 사람 */
-
-.email:last-child {
-    margin-bottom: 15px;
-}
-
-
-/* RESEARCH */
-
 .research-label {
-    color: #9aa1a8;
+    color: #8b949d;
 
     font-size: 10.5px;
     font-weight: 700;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
 
     text-transform: uppercase;
 
+    margin-top: 13px;
     margin-bottom: 5px;
 }
 
 .research-area {
-    color: #59636d;
+    max-width: 250px;
+
+    color: #4e5963;
 
     font-size: 13.5px;
 
@@ -533,152 +579,140 @@ nav a.active::after {
    ALUMNI
 ========================================================= */
 
-.alumni-grid {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 24px;
+.alumni-list {
+    width: 100%;
 }
 
 .alumni-card {
-    width: 100%;
-
     display: grid;
 
     grid-template-columns: 220px minmax(0, 1fr);
 
-    gap: 42px;
+    gap: 38px;
 
-    padding: 32px;
+    align-items: start;
 
-    border: 1px solid #e2e6ea;
+    padding: 35px 0;
 
-    border-radius: 6px;
-
-    background: #fff;
+    border-top: 1px solid #e1e5e9;
 }
 
-
-/* ALUMNI LEFT */
-
-.alumni-top {
-    display: block;
-
-    margin: 0;
+.alumni-card:last-child {
+    border-bottom: 1px solid #e1e5e9;
 }
 
 .alumni-photo {
     width: 220px;
     height: 270px;
 
-    margin-bottom: 19px;
+    overflow: hidden;
+
+    background: #f2f4f6;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 3px;
+}
+
+.alumni-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+.alumni-info {
+    padding-top: 2px;
+}
+
+.alumni-name-row {
+    display: flex;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
 }
 
 .alumni-name {
     color: #111;
 
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 700;
 
-    line-height: 1.35;
-
-    margin-bottom: 8px;
+    letter-spacing: -0.5px;
 }
 
 .alumni-degree {
     color: #0b4a8b;
 
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
-
-    margin-bottom: 9px;
 }
 
 .alumni-email {
     display: inline-block;
 
-    color: #69737d;
+    color: #0b4a8b;
 
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 12.5px;
 
     text-decoration: none;
 
-    word-break: break-all;
+    margin-bottom: 19px;
+
+    overflow-wrap: anywhere;
 }
 
 .alumni-email:hover {
-    color: #0b4a8b;
+    text-decoration: underline;
 }
 
-
-/* =========================================================
-   ALUMNI HISTORY
-========================================================= */
-
-.alumni-history-area {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    min-width: 0;
+.history-list {
+    list-style: none;
 }
 
-.history {
-    color: #111;
-
-    font-size: 14px;
-
-    line-height: 2;
-}
-
-.history-item {
+.history-list li {
     position: relative;
 
-    padding-left: 18px;
+    color: #4e5963;
+
+    font-size: 13.5px;
+
+    line-height: 1.65;
+
+    padding-left: 15px;
 
     margin-bottom: 7px;
 }
 
-.history-item:last-child {
-    margin-bottom: 0;
-}
-
-.history-item::before {
+.history-list li::before {
     content: "";
 
     position: absolute;
 
     left: 0;
-    top: 11px;
+    top: 9px;
 
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
 
     border-radius: 50%;
 
-    background: #0b4a8b;
+    background: #b3bac1;
 }
 
 .history-date {
     color: #0b4a8b;
 
-    font-weight: 700;
-
-    margin-right: 7px;
+    font-weight: 600;
 }
 
-.history-text {
-    color: #111;
-
-    font-weight: 400;
-}
-
-.no-history {
-    color: #9aa1a8;
+.empty-history {
+    color: #969da4;
 
     font-size: 13px;
 
@@ -732,9 +766,8 @@ footer {
 
 @media (max-width: 1100px) {
 
-    .student-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+    .member-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
 }
@@ -764,43 +797,38 @@ footer {
         padding: 65px 30px 60px;
     }
 
-    .people {
-        padding-left: 30px;
-        padding-right: 30px;
+    .people-section {
+        padding: 55px 30px 85px;
     }
-
-
-    /* PROFESSOR */
 
     .professor-card {
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 240px minmax(0, 1fr);
 
-        gap: 30px;
-
-        padding: 28px;
+        gap: 40px;
     }
 
+    .professor-photo {
+        width: 240px;
+    }
 
-    /* MEMBERS */
+    .professor-name {
+        font-size: 31px;
+    }
 
-    .student-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    .member-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 42px 25px;
     }
 
     .student-photo {
         width: 84%;
     }
 
-
-    /* ALUMNI */
-
     .alumni-card {
         grid-template-columns: 180px minmax(0, 1fr);
 
-        gap: 28px;
-
-        padding: 26px;
+        gap: 30px;
     }
 
     .alumni-photo {
@@ -869,8 +897,6 @@ footer {
     }
 
 
-    /* HERO */
-
     .page-hero {
         padding: 52px 20px 50px;
     }
@@ -889,80 +915,99 @@ footer {
     }
 
 
-    /* PEOPLE */
-
-    .people {
-        padding: 0 20px 65px;
+    .people-section {
+        padding: 42px 20px 70px;
     }
 
-
-    /* TABS */
-
-    .tabs {
-        width: 100%;
-
-        height: 67px;
-
-        gap: 28px;
+    .people-tabs {
+        gap: 27px;
 
         overflow-x: auto;
-        overflow-y: hidden;
 
-        white-space: nowrap;
-
-        margin-bottom: 40px;
+        margin-bottom: 45px;
 
         scrollbar-width: none;
-
-        -webkit-overflow-scrolling: touch;
     }
 
-    .tabs::-webkit-scrollbar {
+    .people-tabs::-webkit-scrollbar {
         display: none;
     }
 
-    .tab {
+    .people-tab {
         flex: 0 0 auto;
 
-        height: 67px;
-
         font-size: 14px;
+
+        padding-bottom: 14px;
     }
 
 
-    /* TITLE */
-
-    .content-title h2 {
-        font-size: 25px;
-    }
-
-
-    /* PROFESSOR */
+    /* PROFESSOR MOBILE */
 
     .professor-card {
         display: block;
 
-        padding: 20px;
+        padding-bottom: 40px;
     }
 
     .professor-photo {
-        max-width: 280px;
+        width: min(72%, 270px);
 
         margin-bottom: 28px;
     }
 
     .professor-name {
-        font-size: 28px;
+        font-size: 29px;
+
+        margin-bottom: 5px;
+    }
+
+    .professor-position {
+        font-size: 14px;
+
+        margin-bottom: 17px;
+    }
+
+    .professor-affiliation {
+        font-size: 13px;
+
+        margin-bottom: 19px;
+    }
+
+    .professor-contact-row {
+        gap: 10px;
+    }
+
+    .professor-contact-label {
+        width: 44px;
+    }
+
+    .professor-contact-value {
+        font-size: 12.5px;
+    }
+
+    .detail-list li {
+        font-size: 12.5px;
     }
 
 
-    /* MEMBERS */
+    /* MEMBERS MOBILE */
 
-    .student-grid {
+    .member-group {
+        margin-bottom: 55px;
+    }
+
+    .group-title {
+        font-size: 22px;
+
+        margin-bottom: 25px;
+    }
+
+    .member-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
 
-        gap: 35px 15px;
+        gap: 38px 18px;
     }
 
     .student-photo {
@@ -972,21 +1017,15 @@ footer {
     }
 
     .member-name {
-        font-size: 16px;
-
-        margin-bottom: 5px;
+        font-size: 17px;
     }
 
     .degree {
         font-size: 12px;
-
-        margin-bottom: 8px;
     }
 
-    .email {
+    .member-email {
         font-size: 11.5px;
-
-        margin-bottom: 6px;
     }
 
     .personal-website {
@@ -1006,76 +1045,45 @@ footer {
     }
 
 
-    /* ALUMNI */
-
-    .alumni-grid {
-        gap: 18px;
-    }
+    /* ALUMNI MOBILE */
 
     .alumni-card {
-        display: block;
-
-        padding: 20px;
-    }
-
-    .alumni-top {
-        display: grid;
-
         grid-template-columns: 120px minmax(0, 1fr);
 
-        gap: 18px;
+        gap: 20px;
 
-        align-items: center;
-
-        margin-bottom: 25px;
+        padding: 28px 0;
     }
 
     .alumni-photo {
         width: 120px;
         height: 150px;
-
-        margin-bottom: 0;
     }
 
     .alumni-name {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .alumni-degree {
-        font-size: 13px;
-
-        margin-bottom: 7px;
+        font-size: 11px;
     }
 
     .alumni-email {
-        font-size: 12px;
+        font-size: 11.5px;
+
+        margin-bottom: 13px;
     }
 
-    .alumni-history-area {
-        display: block;
+    .history-list li {
+        font-size: 11.5px;
+
+        line-height: 1.55;
+
+        padding-left: 12px;
+
+        margin-bottom: 6px;
     }
 
-    .history {
-        font-size: 12px;
-
-        line-height: 1.75;
-    }
-
-    .history-item {
-        padding-left: 15px;
-
-        margin-bottom: 8px;
-    }
-
-    .history-item::before {
-        top: 8px;
-
-        width: 4px;
-        height: 4px;
-    }
-
-
-    /* FOOTER */
 
     footer {
         padding: 27px 20px;
@@ -1109,28 +1117,20 @@ footer {
         margin-right: 17px;
     }
 
-    .page-hero {
+    .page-hero,
+    .people-section {
         padding-left: 16px;
         padding-right: 16px;
     }
 
-    .people {
-        padding-left: 16px;
-        padding-right: 16px;
+    .member-grid {
+        gap: 32px 14px;
     }
 
-    .student-grid {
-        gap: 30px 12px;
-    }
-
-    .student-photo {
-        width: 84%;
-    }
-
-    .alumni-top {
+    .alumni-card {
         grid-template-columns: 110px minmax(0, 1fr);
 
-        gap: 14px;
+        gap: 16px;
     }
 
     .alumni-photo {
@@ -1164,7 +1164,7 @@ footer {
             Home
         </a>
 
-        <a href="index.html#research">
+        <a href="research.html">
             Research
         </a>
 
@@ -1185,7 +1185,6 @@ footer {
 </header>
 
 
-
 <!-- =========================================================
      HERO
 ========================================================= -->
@@ -1194,7 +1193,9 @@ footer {
 
     <div class="hero-inner">
 
-        <h1>People</h1>
+        <h1>
+            People
+        </h1>
 
         <div class="title-line"></div>
 
@@ -1203,46 +1204,51 @@ footer {
 </section>
 
 
-
 <!-- =========================================================
      PEOPLE
 ========================================================= -->
 
-<section class="people">
+<section class="people-section">
 
-<div class="people-container">
+    <div class="people-container">
 
 
-    <div class="tabs">
+        <!-- TABS -->
 
-        <button
-            class="tab active"
-            data-category="professor">
-            Professor
-        </button>
+        <div class="people-tabs">
 
-        <button
-            class="tab"
-            data-category="members">
-            Members
-        </button>
+            <button
+                class="people-tab active"
+                data-category="professor"
+            >
+                Professor
+            </button>
 
-        <button
-            class="tab"
-            data-category="alumni">
-            Alumni
-        </button>
+            <button
+                class="people-tab"
+                data-category="members"
+            >
+                Members
+            </button>
+
+            <button
+                class="people-tab"
+                data-category="alumni"
+            >
+                Alumni
+            </button>
+
+        </div>
+
+
+        <!-- DYNAMIC CONTENT -->
+
+        <div id="people-content"></div>
+
 
     </div>
 
-
-    <div id="people-content"></div>
-
-
-</div>
-
 </section>
-
 
 
 <!-- =========================================================
@@ -1258,8 +1264,7 @@ footer {
         </div>
 
         <div class="footer-copy">
-            © 2026 SWARM Laboratory,
-            Pusan National University
+            © 2026 SWARM Laboratory, Pusan National University
         </div>
 
     </div>
@@ -1267,9 +1272,8 @@ footer {
 </footer>
 
 
-
 <!-- =========================================================
-     DATA FILES
+     DATA
 ========================================================= -->
 
 <script src="people/professor.js"></script>
@@ -1280,272 +1284,202 @@ footer {
 <script>
 
 /* =========================================================
-   DATA
-========================================================= */
-
-const peopleData = {
-
-    professor: {
-        title: "Professor",
-        data: professorData
-    },
-
-    members: {
-        title: "Members",
-        data: studentData
-    },
-
-    alumni: {
-        title: "Alumni",
-        data: alumniData
-    }
-
-};
-
-
-/* =========================================================
-   PHOTO
-========================================================= */
-
-function createPhoto(image, className, altText) {
-
-    const photo =
-        document.createElement("div");
-
-    photo.className =
-        "photo " + className;
-
-
-    if (image) {
-
-        const img =
-            document.createElement("img");
-
-        img.src = image;
-
-        img.alt =
-            altText || "Profile photo";
-
-
-        img.onerror = function () {
-
-            this.remove();
-
-            photo.textContent =
-                "Photo";
-
-        };
-
-
-        photo.appendChild(img);
-
-    }
-
-    else {
-
-        photo.textContent =
-            "Photo";
-
-    }
-
-
-    return photo;
-}
-
-
-/* =========================================================
-   TITLE
-========================================================= */
-
-function createTitle(title) {
-
-    const wrapper =
-        document.createElement("div");
-
-    wrapper.className =
-        "content-title";
-
-
-    const heading =
-        document.createElement("h2");
-
-    heading.textContent =
-        title;
-
-
-    const line =
-        document.createElement("div");
-
-    line.className =
-        "content-line";
-
-
-    wrapper.appendChild(heading);
-
-    wrapper.appendChild(line);
-
-
-    return wrapper;
-}
-
-
-/* =========================================================
    PROFESSOR
 ========================================================= */
 
-function renderProfessor(data, container) {
+function renderProfessor() {
 
-    container.appendChild(
-        createTitle("Professor")
-    );
+    const container =
+        document.getElementById("people-content");
+
+    container.innerHTML = "";
 
 
-    data.forEach(p => {
+    professorData.forEach(professor => {
 
         const card =
             document.createElement("div");
 
-        card.className =
-            "professor-card";
+        card.className = "professor-card";
 
 
-        card.appendChild(
-            createPhoto(
-                p.image,
-                "professor-photo",
-                p.name
-            )
-        );
+        /* PHOTO */
 
+        const photo =
+            document.createElement("div");
+
+        photo.className = "professor-photo";
+
+
+        if (professor.image) {
+
+            const img =
+                document.createElement("img");
+
+            img.src = professor.image;
+            img.alt = professor.name;
+
+            photo.appendChild(img);
+
+        } else {
+
+            const placeholder =
+                document.createElement("div");
+
+            placeholder.className =
+                "photo-placeholder";
+
+            placeholder.textContent =
+                "Photo";
+
+            photo.appendChild(placeholder);
+
+        }
+
+
+        /* INFO */
 
         const info =
             document.createElement("div");
 
+        info.className =
+            "professor-info";
 
-        info.innerHTML = `
 
-            <div class="position">
-                ${p.position || ""}
+        const name =
+            document.createElement("h2");
+
+        name.className =
+            "professor-name";
+
+        name.textContent =
+            professor.name;
+
+
+        const position =
+            document.createElement("div");
+
+        position.className =
+            "professor-position";
+
+        position.textContent =
+            professor.position;
+
+
+        const affiliation =
+            document.createElement("div");
+
+        affiliation.className =
+            "professor-affiliation";
+
+        affiliation.innerHTML =
+            professor.affiliation.join("<br>");
+
+
+        /* CONTACT */
+
+        const contact =
+            document.createElement("div");
+
+        contact.className =
+            "professor-contact";
+
+
+        const emailRow =
+            document.createElement("div");
+
+        emailRow.className =
+            "professor-contact-row";
+
+        emailRow.innerHTML = `
+            <div class="professor-contact-label">
+                Email
             </div>
 
-            <div class="professor-name">
-                ${p.name}
+            <div class="professor-contact-value">
+                <a href="mailto:${professor.email}">
+                    ${professor.email}
+                </a>
             </div>
-
-
-            ${
-                p.affiliation &&
-                p.affiliation.length
-
-                ? `
-                    <div class="info-block">
-
-                        <h3>
-                            Affiliation
-                        </h3>
-
-                        <p>
-                            ${p.affiliation.join("<br>")}
-                        </p>
-
-                    </div>
-                `
-
-                : ""
-            }
-
-
-            ${
-                p.education &&
-                p.education.length
-
-                ? `
-                    <div class="info-block">
-
-                        <h3>
-                            Education
-                        </h3>
-
-                        <p>
-                            ${p.education.join("<br>")}
-                        </p>
-
-                    </div>
-                `
-
-                : ""
-            }
-
-
-            ${
-                p.experience &&
-                p.experience.length
-
-                ? `
-                    <div class="info-block">
-
-                        <h3>
-                            Professional Experience
-                        </h3>
-
-                        <p>
-                            ${p.experience.join("<br>")}
-                        </p>
-
-                    </div>
-                `
-
-                : ""
-            }
-
-
-            ${
-                p.email || p.tel
-
-                ? `
-                    <div class="info-block">
-
-                        <h3>
-                            Contact
-                        </h3>
-
-                        <p>
-
-                            ${
-                                p.email
-
-                                ? `
-                                    <a href="mailto:${p.email}">
-                                        ${p.email}
-                                    </a>
-                                `
-
-                                : ""
-                            }
-
-                            ${
-                                p.email && p.tel
-                                ? "<br>"
-                                : ""
-                            }
-
-                            ${
-                                p.tel
-                                ? p.tel
-                                : ""
-                            }
-
-                        </p>
-
-                    </div>
-                `
-
-                : ""
-            }
-
         `;
 
 
+        const telRow =
+            document.createElement("div");
+
+        telRow.className =
+            "professor-contact-row";
+
+        const telLink =
+            professor.tel.replace(/-/g, "");
+
+        telRow.innerHTML = `
+            <div class="professor-contact-label">
+                Tel
+            </div>
+
+            <div class="professor-contact-value">
+                <a href="tel:${telLink}">
+                    ${professor.tel}
+                </a>
+            </div>
+        `;
+
+
+        contact.appendChild(emailRow);
+        contact.appendChild(telRow);
+
+
+        /* EDUCATION */
+
+        const education =
+            document.createElement("div");
+
+        education.className =
+            "professor-detail";
+
+        education.innerHTML = `
+            <div class="detail-title">
+                Education
+            </div>
+
+            <ul class="detail-list">
+                ${professor.education
+                    .map(item => `<li>${item}</li>`)
+                    .join("")}
+            </ul>
+        `;
+
+
+        /* EXPERIENCE */
+
+        const experience =
+            document.createElement("div");
+
+        experience.className =
+            "professor-detail";
+
+        experience.innerHTML = `
+            <div class="detail-title">
+                Experience
+            </div>
+
+            <ul class="detail-list">
+                ${professor.experience
+                    .map(item => `<li>${item}</li>`)
+                    .join("")}
+            </ul>
+        `;
+
+
+        info.appendChild(name);
+        info.appendChild(position);
+        info.appendChild(affiliation);
+        info.appendChild(contact);
+        info.appendChild(education);
+        info.appendChild(experience);
+
+        card.appendChild(photo);
         card.appendChild(info);
 
         container.appendChild(card);
@@ -1559,25 +1493,26 @@ function renderProfessor(data, container) {
    MEMBERS
 ========================================================= */
 
-function renderMembers(data, container) {
+function renderMembers() {
 
-    container.appendChild(
-        createTitle("Members")
-    );
+    const container =
+        document.getElementById("people-content");
+
+    container.innerHTML = "";
 
 
-    const groupOrder = [
+    const groups = [
         "Ph.D. Students",
         "M.S. Students"
     ];
 
 
-    groupOrder.forEach(groupName => {
+    groups.forEach(groupName => {
 
         const members =
-            data.filter(
-                member =>
-                    member.group === groupName
+            studentData.filter(
+                student =>
+                    student.group === groupName
             );
 
 
@@ -1587,16 +1522,19 @@ function renderMembers(data, container) {
 
 
         const group =
-            document.createElement("div");
+            document.createElement("section");
 
         group.className =
-            "student-group";
+            "member-group";
 
 
-        const heading =
-            document.createElement("h3");
+        const title =
+            document.createElement("h2");
 
-        heading.textContent =
+        title.className =
+            "group-title";
+
+        title.textContent =
             groupName;
 
 
@@ -1604,111 +1542,173 @@ function renderMembers(data, container) {
             document.createElement("div");
 
         grid.className =
-            "student-grid";
+            "member-grid";
 
 
-        members.forEach(p => {
+        members.forEach(member => {
 
             const card =
                 document.createElement("div");
 
             card.className =
-                "student-card";
+                "member-card";
 
 
-            card.appendChild(
-                createPhoto(
-                    p.image,
-                    "student-photo",
-                    p.name
-                )
-            );
+            /* PHOTO */
 
-
-            const info =
+            const photo =
                 document.createElement("div");
 
-
-            info.innerHTML = `
-
-                <div class="member-name">
-                    ${p.name}
-                </div>
+            photo.className =
+                "student-photo";
 
 
-                ${
-                    p.degree
+            if (member.image) {
 
-                    ? `
-                        <div class="degree">
-                            ${p.degree}
-                        </div>
-                    `
+                const img =
+                    document.createElement("img");
 
-                    : ""
-                }
+                img.src =
+                    member.image;
 
+                img.alt =
+                    member.name;
 
-                ${
-                    p.email
+                photo.appendChild(img);
 
-                    ? `
-                        <a
-                            class="email"
-                            href="mailto:${p.email}">
-                            ${p.email}
-                        </a>
-                    `
+            } else {
 
-                    : ""
-                }
+                const placeholder =
+                    document.createElement("div");
 
+                placeholder.className =
+                    "photo-placeholder";
 
-                ${
-                    p.website
+                placeholder.textContent =
+                    "Photo";
 
-                    ? `
-                        <a
-                            class="personal-website"
-                            href="${p.website}"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Personal Website ↗
-                        </a>
-                    `
+                photo.appendChild(
+                    placeholder
+                );
 
-                    : ""
-                }
+            }
 
 
-                ${
-                    p.research
+            /* NAME */
 
-                    ? `
-                        <div class="research-label">
-                            Research Area
-                        </div>
+            const name =
+                document.createElement("div");
 
-                        <div class="research-area">
-                            ${p.research}
-                        </div>
-                    `
+            name.className =
+                "member-name";
 
-                    : ""
-                }
-
-            `;
+            name.textContent =
+                member.name;
 
 
-            card.appendChild(info);
+            /* DEGREE */
+
+            const degree =
+                document.createElement("div");
+
+            degree.className =
+                "degree";
+
+            degree.textContent =
+                member.degree;
+
+
+            /* EMAIL */
+
+            const email =
+                document.createElement("a");
+
+            email.className =
+                "member-email";
+
+            email.href =
+                `mailto:${member.email}`;
+
+            email.textContent =
+                member.email;
+
+
+            card.appendChild(photo);
+            card.appendChild(name);
+            card.appendChild(degree);
+            card.appendChild(email);
+
+
+            /* WEBSITE */
+
+            if (member.website) {
+
+                const website =
+                    document.createElement("a");
+
+                website.className =
+                    "personal-website";
+
+                website.href =
+                    member.website;
+
+                website.target =
+                    "_blank";
+
+                website.rel =
+                    "noopener noreferrer";
+
+                website.textContent =
+                    "Personal Website ↗";
+
+                card.appendChild(
+                    website
+                );
+
+            }
+
+
+            /* RESEARCH */
+
+            if (member.research) {
+
+                const researchLabel =
+                    document.createElement("div");
+
+                researchLabel.className =
+                    "research-label";
+
+                researchLabel.textContent =
+                    "Research Interests";
+
+
+                const research =
+                    document.createElement("div");
+
+                research.className =
+                    "research-area";
+
+                research.textContent =
+                    member.research;
+
+
+                card.appendChild(
+                    researchLabel
+                );
+
+                card.appendChild(
+                    research
+                );
+
+            }
+
 
             grid.appendChild(card);
 
         });
 
 
-        group.appendChild(heading);
-
+        group.appendChild(title);
         group.appendChild(grid);
 
         container.appendChild(group);
@@ -1722,21 +1722,22 @@ function renderMembers(data, container) {
    ALUMNI
 ========================================================= */
 
-function renderAlumni(data, container) {
+function renderAlumni() {
 
-    container.appendChild(
-        createTitle("Alumni")
-    );
+    const container =
+        document.getElementById("people-content");
+
+    container.innerHTML = "";
 
 
-    const grid =
+    const list =
         document.createElement("div");
 
-    grid.className =
-        "alumni-grid";
+    list.className =
+        "alumni-list";
 
 
-    data.forEach(p => {
+    alumniData.forEach(alumni => {
 
         const card =
             document.createElement("div");
@@ -1745,94 +1746,135 @@ function renderAlumni(data, container) {
             "alumni-card";
 
 
-        const top =
+        /* PHOTO */
+
+        const photo =
             document.createElement("div");
 
-        top.className =
-            "alumni-top";
+        photo.className =
+            "alumni-photo";
 
 
-        top.appendChild(
-            createPhoto(
-                p.image,
-                "alumni-photo",
-                p.name
-            )
-        );
+        if (alumni.image) {
 
+            const img =
+                document.createElement("img");
 
-        const identity =
-            document.createElement("div");
+            img.src =
+                alumni.image;
 
+            img.alt =
+                alumni.name;
 
-        identity.innerHTML = `
+            photo.appendChild(img);
 
-            <div class="alumni-name">
-                ${p.name}
-            </div>
+        } else {
 
-
-            ${
-                p.degree
-
-                ? `
-                    <div class="alumni-degree">
-                        ${p.degree}
-                    </div>
-                `
-
-                : ""
-            }
-
-
-            ${
-                p.email
-
-                ? `
-                    <a
-                        class="alumni-email"
-                        href="mailto:${p.email}">
-                        ${p.email}
-                    </a>
-                `
-
-                : ""
-            }
-
-        `;
-
-
-        top.appendChild(identity);
-
-        card.appendChild(top);
-
-
-        const historyArea =
-            document.createElement("div");
-
-        historyArea.className =
-            "alumni-history-area";
-
-
-        if (
-            p.history &&
-            p.history.length > 0
-        ) {
-
-            const history =
+            const placeholder =
                 document.createElement("div");
 
-            history.className =
-                "history";
+            placeholder.className =
+                "photo-placeholder";
+
+            placeholder.textContent =
+                "Photo";
+
+            photo.appendChild(
+                placeholder
+            );
+
+        }
 
 
-            p.history.forEach(item => {
+        /* INFO */
 
-                const historyItem =
-                    document.createElement("div");
+        const info =
+            document.createElement("div");
 
-                historyItem.className =
-                    "history-item";
+        info.className =
+            "alumni-info";
+
+
+        const nameRow =
+            document.createElement("div");
+
+        nameRow.className =
+            "alumni-name-row";
+
+
+        const name =
+            document.createElement("div");
+
+        name.className =
+            "alumni-name";
+
+        name.textContent =
+            alumni.name;
+
+
+        nameRow.appendChild(name);
+
+
+        if (alumni.degree) {
+
+            const degree =
+                document.createElement("div");
+
+            degree.className =
+                "alumni-degree";
+
+            degree.textContent =
+                alumni.degree;
+
+            nameRow.appendChild(
+                degree
+            );
+
+        }
+
+
+        info.appendChild(nameRow);
+
+
+        /* EMAIL */
+
+        if (alumni.email) {
+
+            const email =
+                document.createElement("a");
+
+            email.className =
+                "alumni-email";
+
+            email.href =
+                `mailto:${alumni.email}`;
+
+            email.textContent =
+                alumni.email;
+
+            info.appendChild(email);
+
+        }
+
+
+        /* HISTORY */
+
+        if (
+            alumni.history &&
+            alumni.history.length > 0
+        ) {
+
+            const historyList =
+                document.createElement("ul");
+
+            historyList.className =
+                "history-list";
+
+
+            alumni.history.forEach(item => {
+
+                const li =
+                    document.createElement("li");
 
 
                 const dateMatch =
@@ -1844,199 +1886,152 @@ function renderAlumni(data, container) {
                 if (dateMatch) {
 
                     const date =
-                        document.createElement("span");
-
-                    date.className =
-                        "history-date";
-
-                    date.textContent =
                         dateMatch[1];
 
-
-                    const text =
-                        document.createElement("span");
-
-                    text.className =
-                        "history-text";
-
-                    text.textContent =
+                    const rest =
                         item.slice(
                             dateMatch[0].length
                         );
 
 
-                    historyItem.appendChild(date);
-
-                    historyItem.appendChild(text);
-
-                }
-
-                else {
-
-                    const text =
+                    const dateSpan =
                         document.createElement("span");
 
-                    text.className =
-                        "history-text";
+                    dateSpan.className =
+                        "history-date";
 
-                    text.textContent =
+                    dateSpan.textContent =
+                        date;
+
+
+                    li.appendChild(
+                        dateSpan
+                    );
+
+                    li.appendChild(
+                        document.createTextNode(
+                            " " + rest
+                        )
+                    );
+
+                } else {
+
+                    li.textContent =
                         item;
-
-
-                    historyItem.appendChild(text);
 
                 }
 
 
-                history.appendChild(
-                    historyItem
+                historyList.appendChild(
+                    li
                 );
 
             });
 
 
-            historyArea.appendChild(
-                history
+            info.appendChild(
+                historyList
             );
 
-        }
-
-        else {
+        } else {
 
             const empty =
                 document.createElement("div");
 
             empty.className =
-                "no-history";
+                "empty-history";
 
             empty.textContent =
                 "Additional information will be updated.";
 
-
-            historyArea.appendChild(
-                empty
-            );
+            info.appendChild(empty);
 
         }
 
 
-        card.appendChild(
-            historyArea
-        );
+        card.appendChild(photo);
+        card.appendChild(info);
 
-
-        grid.appendChild(
-            card
-        );
+        list.appendChild(card);
 
     });
 
 
-    container.appendChild(
-        grid
+    container.appendChild(list);
+
+}
+
+
+/* =========================================================
+   TAB CONTROL
+========================================================= */
+
+const tabs =
+    document.querySelectorAll(
+        ".people-tab"
     );
 
-}
 
+tabs.forEach(tab => {
 
-/* =========================================================
-   MAIN RENDER
-========================================================= */
+    tab.addEventListener(
+        "click",
+        function() {
 
-function renderPeople(category) {
-
-    const container =
-        document.getElementById(
-            "people-content"
-        );
-
-
-    container.innerHTML =
-        "";
-
-
-    const selected =
-        peopleData[category];
-
-
-    if (!selected) {
-        return;
-    }
-
-
-    if (category === "professor") {
-
-        renderProfessor(
-            selected.data,
-            container
-        );
-
-    }
-
-    else if (category === "members") {
-
-        renderMembers(
-            selected.data,
-            container
-        );
-
-    }
-
-    else if (category === "alumni") {
-
-        renderAlumni(
-            selected.data,
-            container
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   TAB CLICK
-========================================================= */
-
-document
-    .querySelectorAll(".tab")
-    .forEach(tab => {
-
-        tab.addEventListener(
-            "click",
-            function () {
-
-                document
-                    .querySelectorAll(".tab")
-                    .forEach(t => {
-
-                        t.classList.remove(
-                            "active"
-                        );
-
-                    });
-
-
-                this.classList.add(
+            tabs.forEach(item =>
+                item.classList.remove(
                     "active"
-                );
+                )
+            );
 
 
-                renderPeople(
-                    this.dataset.category
-                );
+            this.classList.add(
+                "active"
+            );
+
+
+            const category =
+                this.dataset.category;
+
+
+            if (
+                category ===
+                "professor"
+            ) {
+
+                renderProfessor();
 
             }
-        );
-
-    });
 
 
-/* =========================================================
-   DEFAULT
-========================================================= */
+            if (
+                category ===
+                "members"
+            ) {
 
-renderPeople("professor");
+                renderMembers();
+
+            }
+
+
+            if (
+                category ===
+                "alumni"
+            ) {
+
+                renderAlumni();
+
+            }
+
+        }
+    );
+
+});
+
+
+/* DEFAULT */
+
+renderProfessor();
 
 </script>
 
