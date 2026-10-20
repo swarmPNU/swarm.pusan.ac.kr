@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 사이트 완성 전 검색엔진 노출 방지 -->
+<meta name="robots" content="noindex, nofollow">
+
+<title>Research | SWARM Laboratory</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    width: 100%;
+    height: 90px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+    position: relative;
+    z-index: 9999;
+}
+
+.pnu-name {
+    color: #0b4a8b;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #0b4a8b;
+}
+
+nav a.active {
+    color: #0b4a8b;
+
+    font-weight: 600;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    padding: 76px 6% 70px;
+
+    background:
+        linear-gradient(
+            115deg,
+            #ffffff 0%,
+            #f6faff 48%,
+            #eaf4fd 100%
+        );
+}
+
+.hero-inner {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+.page-hero h1 {
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    line-height: 1;
+}
+
+.title-line {
+    width: 70px;
+    height: 4px;
+
+    margin-top: 24px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.research-intro {
+    padding: 70px 6% 75px;
+}
+
+.intro-inner {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.intro-label {
+    color: #0b4a8b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.intro-inner h2 {
+    max-width: 900px;
+
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -1.4px;
+
+    margin-bottom: 25px;
+}
+
+.intro-inner p {
+    max-width: 1000px;
+
+    color: #5f6872;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   RESEARCH AREAS
+========================================================= */
+
+.research-areas {
+    padding: 0 6% 110px;
+}
+
+.research-container {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   RESEARCH ITEM
+========================================================= */
+
+.research-item {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 85px 0;
+
+    border-top: 1px solid #e1e5e9;
+
+    scroll-margin-top: 40px;
+}
+
+.research-item:last-child {
+    border-bottom: 1px solid #e1e5e9;
+}
+
+
+/* alternating layout */
+
+.research-item.reverse .research-visual {
+    order: 2;
+}
+
+.research-item.reverse .research-info {
+    order: 1;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.research-visual {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #f4f7fa;
+
+    border: 1px solid #e5e9ed;
+
+    border-radius: 5px;
+}
+
+.research-visual img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #fff;
+}
+
+.research-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf4fa,
+            #d8e7f4
+        );
+
+    color: #8ca3b7;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RESEARCH INFO
+========================================================= */
+
+.research-number {
+    color: #0b4a8b;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 15px;
+}
+
+.research-info h2 {
+    max-width: 620px;
+
+    color: #111;
+
+    font-size: clamp(29px, 3vw, 43px);
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 22px;
+}
+
+.research-description {
+    max-width: 650px;
+
+    color: #606a74;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   KEY TOPICS
+========================================================= */
+
+.topic-title {
+    color: #111;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+.topic-list {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px 20px;
+}
+
+.topic-list li {
+    position: relative;
+
+    color: #4f5963;
+
+    font-size: 13.5px;
+
+    line-height: 1.5;
+
+    padding-left: 16px;
+}
+
+.topic-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 8px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 32px 6%;
+
+    background: #f6f7f8;
+
+    border-top: 1px solid #e8eaed;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-lab {
+    color: #0b4a8b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-copy {
+    color: #8a929b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .research-item {
+        gap: 45px;
+
+        padding: 65px 0;
+    }
+
+    .research-info h2 {
+        font-size: 32px;
+    }
+
+    .topic-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        height: 80px;
+
+        padding: 0 30px;
+    }
+
+    .pnu-name {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .page-hero {
+        padding: 65px 30px 60px;
+    }
+
+    .research-intro {
+        padding:
+            55px 30px
+            60px;
+    }
+
+    .research-areas {
+        padding:
+            0 30px
+            80px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    header {
+        height: auto;
+        min-height: 104px;
+
+        padding: 17px 20px 12px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 11px;
+    }
+
+    .pnu-name {
+        font-size: 16px;
+    }
+
+    nav {
+        width: 100%;
+
+        gap: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        white-space: nowrap;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex: 0 0 auto;
+
+        font-size: 12px;
+
+        padding: 5px 0 7px;
+
+        margin-right: 22px;
+    }
+
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+
+    /* HERO */
+
+    .page-hero {
+        padding: 52px 20px 50px;
+    }
+
+    .page-hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .title-line {
+        width: 55px;
+        height: 3px;
+
+        margin-top: 18px;
+    }
+
+
+    /* INTRO */
+
+    .research-intro {
+        padding:
+            45px 20px
+            50px;
+    }
+
+    .intro-inner h2 {
+        font-size: 27px;
+
+        letter-spacing: -1px;
+    }
+
+    .intro-inner p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* RESEARCH */
+
+    .research-areas {
+        padding:
+            0 20px
+            65px;
+    }
+
+    .research-item {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        align-items: stretch;
+
+        padding: 55px 0;
+    }
+
+    .research-item.reverse .research-visual,
+    .research-item.reverse .research-info {
+        order: initial;
+    }
+
+    .research-visual {
+        aspect-ratio: 16 / 11;
+    }
+
+    .research-info h2 {
+        font-size: 28px;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 18px;
+    }
+
+    .research-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+    .topic-list {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .topic-list li {
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 27px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    nav a {
+        font-size: 11.5px;
+
+        margin-right: 17px;
+    }
+
+    .page-hero,
+    .research-intro,
+    .research-areas {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="pnu-name">
+        Pusan National University
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="research.html" class="active">
+            Research
+        </a>
+
+        <a href="people.html">
+            People
+        </a>
+
+        <a href="publications.html">
+            Publications
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+    <div class="hero-inner">
+
+        <h1>
+            Research
+        </h1>
+
+        <div class="title-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="research-intro">
+
+    <div class="intro-inner">
+
+        <div class="intro-label">
+            Research at SWARM
+        </div>
+
+        <h2>
+            Advanced electromagnetic technologies
+            for next-generation wireless systems.
+        </h2>
+
+        <p>
+            The Smart Wireless Antenna, Radiation, and Microwave
+            (SWARM) Laboratory conducts research in applied
+            electromagnetics, wireless technologies, RF, and
+            millimeter-wave systems. Our research focuses on
+            advanced antenna and electromagnetic technologies
+            for next-generation communication, sensing, and
+            integrated wireless systems.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH AREAS
+========================================================= -->
+
+<section class="research-areas">
+
+<div class="research-container">
+
+
+    <!-- =====================================================
+         01 PHASED ARRAY
+    ====================================================== -->
+
+    <article
+        class="research-item"
+        id="phased-array"
+    >
+
+        <div class="research-visual">
+
+            <div class="research-placeholder">
+                Phased Array Image
+            </div>
+
+        </div>
+
+
+        <div class="research-info">
+
+            <div class="research-number">
+                01 / PHASED ARRAY
+            </div>
+
+            <h2>
+                Phased Array
+            </h2>
+
+            <p class="research-description">
+                We investigate phased-array antenna technologies
+                for high-performance wireless systems requiring
+                electronic beam steering and adaptive radiation
+                control. Our research includes array antenna
+                design, beamforming architectures, reconfigurable
+                antenna systems, and RF front-end integration for
+                microwave and millimeter-wave applications.
+            </p>
+
+            <div class="topic-title">
+                Research Topics
+            </div>
+
+            <ul class="topic-list">
+
+                <li>
+                    Phased-array antennas
+                </li>
+
+                <li>
+                    Electronic beam steering
+                </li>
+
+                <li>
+                    Beamforming systems
+                </li>
+
+                <li>
+                    Reconfigurable antennas
+                </li>
+
+                <li>
+                    Wide-angle scanning
+                </li>
+
+                <li>
+                    Microwave &amp; mmWave arrays
+                </li>
+
+            </ul>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         02 FULL-DUPLEX BACKCOM
+    ====================================================== -->
+
+    <article
+        class="research-item reverse"
+        id="backcom"
+    >
+
+        <div class="research-visual">
+
+            <img
+                src="backcom1.png"
+                alt="Full-Duplex Backscatter Communication"
+            >
+
+        </div>
+
+
+        <div class="research-info">
+
+            <div class="research-number">
+                02 / FULL-DUPLEX BACKCOM
+            </div>
+
+            <h2>
+                Full-Duplex BackCom
+            </h2>
+
+            <p class="research-description">
+                We develop low-power and self-sustainable wireless
+                communication technologies based on backscatter
+                communication. Our research explores full-duplex
+                backscatter architectures, channel estimation,
+                interference management, sensing and communication,
+                and intelligent signal processing for future
+                Internet-of-Things systems.
+            </p>
+
+            <div class="topic-title">
+                Research Topics
+            </div>
+
+            <ul class="topic-list">
+
+                <li>
+                    Backscatter communication
+                </li>
+
+                <li>
+                    Full-duplex BackCom
+                </li>
+
+                <li>
+                    Self-sustainable wireless systems
+                </li>
+
+                <li>
+                    Channel estimation
+                </li>
+
+                <li>
+                    Integrated sensing &amp; communication
+                </li>
+
+                <li>
+                    AI/ML-assisted communication
+                </li>
+
+            </ul>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         03 METASURFACE
+    ====================================================== -->
+
+    <article
+        class="research-item"
+        id="metasurface"
+    >
+
+        <div class="research-visual">
+
+            <img
+                src="meta1.png"
+                alt="Magnetic Materials-Based Absorber and Metasurface"
+            >
+
+        </div>
+
+
+        <div class="research-info">
+
+            <div class="research-number">
+                03 / ABSORBER &amp; METASURFACE
+            </div>
+
+            <h2>
+                Magnetic Materials-Based
+                Absorber &amp; Metasurface
+            </h2>
+
+            <p class="research-description">
+                We investigate magnetic materials and engineered
+                electromagnetic surfaces for controlling the
+                propagation, reflection, transmission, and
+                absorption of electromagnetic waves. Our research
+                includes broadband absorbers, multifunctional
+                metasurfaces, and reconfigurable electromagnetic
+                structures for microwave and millimeter-wave
+                applications.
+            </p>
+
+            <div class="topic-title">
+                Research Topics
+            </div>
+
+            <ul class="topic-list">
+
+                <li>
+                    Magnetic microwave absorbers
+                </li>
+
+                <li>
+                    Broadband EM absorption
+                </li>
+
+                <li>
+                    Multifunctional metasurfaces
+                </li>
+
+                <li>
+                    Reconfigurable reflectarrays
+                </li>
+
+                <li>
+                    Polarization control
+                </li>
+
+                <li>
+                    EM-wave manipulation
+                </li>
+
+            </ul>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         04 ANTENNA-IN-PACKAGE
+    ====================================================== -->
+
+    <article
+        class="research-item reverse"
+        id="aip"
+    >
+
+        <div class="research-visual">
+
+            <img
+                src="AIP1.png"
+                alt="Antenna-in-Package"
+            >
+
+        </div>
+
+
+        <div class="research-info">
+
+            <div class="research-number">
+                04 / ANTENNA-IN-PACKAGE
+            </div>
+
+            <h2>
+                Antenna-in-Package
+                (AiP)
+            </h2>
+
+            <p class="research-description">
+                We develop highly integrated antenna-in-package
+                technologies for compact RF front-end systems.
+                Our research focuses on the integration of antenna
+                arrays, passive RF components, beamforming circuits,
+                and multilayer packaging technologies for
+                next-generation wireless applications.
+            </p>
+
+            <div class="topic-title">
+                Research Topics
+            </div>
+
+            <ul class="topic-list">
+
+                <li>
+                    Antenna-in-Package
+                </li>
+
+                <li>
+                    LTCC RF packaging
+                </li>
+
+                <li>
+                    RF front-end integration
+                </li>
+
+                <li>
+                    Beam-steering antenna arrays
+                </li>
+
+                <li>
+                    Integrated passive components
+                </li>
+
+                <li>
+                    Thermal management
+                </li>
+
+            </ul>
+
+        </div>
+
+    </article>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-lab">
+            SWARM Laboratory
+        </div>
+
+        <div class="footer-copy">
+            © 2026 SWARM Laboratory,
+            Pusan National University
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
