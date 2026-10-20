@@ -14,10 +14,6 @@
 
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -231,11 +227,6 @@ nav a.active::after {
     border-top: 1px solid #dfe4e8;
 }
 
-
-/* =========================================================
-   RESEARCH AREA
-========================================================= */
-
 .research-area {
     padding: 75px 0 85px;
 
@@ -244,7 +235,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   AREA TITLE
+   TITLE
 ========================================================= */
 
 .area-header {
@@ -264,7 +255,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   AREA BODY
+   BODY
 ========================================================= */
 
 .area-body {
@@ -276,11 +267,6 @@ nav a.active::after {
 
     gap: 70px;
 }
-
-
-/* =========================================================
-   REVERSED
-========================================================= */
 
 .research-area.reverse .area-body {
     grid-template-columns: 0.92fr 1.08fr;
@@ -296,7 +282,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   SLIDER / IMAGE
+   IMAGE / SLIDER
 ========================================================= */
 
 .research-visual {
@@ -346,7 +332,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   SLIDER DOTS
+   DOTS
 ========================================================= */
 
 .slider-dots {
@@ -395,7 +381,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   PHASED ARRAY PLACEHOLDER
+   PLACEHOLDER
 ========================================================= */
 
 .phased-placeholder {
@@ -425,17 +411,12 @@ nav a.active::after {
 
 
 /* =========================================================
-   RESEARCH INFO
+   KEYWORDS
 ========================================================= */
 
 .research-info {
     width: 100%;
 }
-
-
-/* =========================================================
-   KEYWORDS
-========================================================= */
 
 .keyword-list {
     width: 100%;
@@ -591,7 +572,6 @@ footer {
         white-space: nowrap;
 
         scrollbar-width: none;
-
         -webkit-overflow-scrolling: touch;
     }
 
@@ -614,8 +594,6 @@ footer {
     }
 
 
-    /* HERO */
-
     .page-hero {
         padding: 52px 20px 50px;
     }
@@ -633,8 +611,6 @@ footer {
         margin-top: 18px;
     }
 
-
-    /* INTRO */
 
     .research-intro {
         padding: 48px 20px 45px;
@@ -663,8 +639,6 @@ footer {
     }
 
 
-    /* RESEARCH */
-
     .research-section {
         padding: 0 20px 75px;
     }
@@ -692,9 +666,6 @@ footer {
         gap: 30px;
     }
 
-
-    /* MOBILE ALWAYS IMAGE FIRST */
-
     .research-area.reverse .research-visual {
         order: 1;
     }
@@ -702,7 +673,6 @@ footer {
     .research-area.reverse .research-info {
         order: 2;
     }
-
 
     .research-visual {
         aspect-ratio: 16 / 11;
@@ -722,8 +692,6 @@ footer {
         bottom: 13px;
     }
 
-
-    /* KEYWORDS */
 
     .keyword-item {
         padding: 19px 0;
@@ -753,8 +721,6 @@ footer {
     }
 
 
-    /* FOOTER */
-
     footer {
         padding: 27px 20px;
     }
@@ -770,7 +736,7 @@ footer {
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   VERY SMALL
 ========================================================= */
 
 @media (max-width: 390px) {
@@ -803,9 +769,7 @@ footer {
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -814,43 +778,23 @@ footer {
     </div>
 
     <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="research.html" class="active">
-            Research
-        </a>
-
-        <a href="people.html">
-            People
-        </a>
-
-        <a href="publications.html">
-            Publications
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
 </header>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- HERO -->
 
 <section class="page-hero">
 
     <div class="hero-inner">
 
-        <h1>
-            Research
-        </h1>
+        <h1>Research</h1>
 
         <div class="title-line"></div>
 
@@ -859,9 +803,7 @@ footer {
 </section>
 
 
-<!-- =========================================================
-     INTRO
-========================================================= -->
+<!-- INTRO -->
 
 <section class="research-intro">
 
@@ -872,8 +814,8 @@ footer {
         </div>
 
         <h2>
-            Advanced electromagnetic technologies
-            for next-generation wireless systems.
+            Advanced electromagnetic technologies for
+            next-generation wireless systems.
         </h2>
 
         <p>
@@ -891,9 +833,7 @@ footer {
 </section>
 
 
-<!-- =========================================================
-     RESEARCH
-========================================================= -->
+<!-- RESEARCH -->
 
 <section class="research-section">
 
@@ -918,8 +858,6 @@ footer {
     <div class="area-body">
 
 
-        <!-- IMAGE -->
-
         <div class="research-visual">
 
             <div class="phased-placeholder">
@@ -932,8 +870,6 @@ footer {
 
         </div>
 
-
-        <!-- KEYWORDS -->
 
         <div class="research-info">
 
@@ -1013,8 +949,6 @@ footer {
     <div class="area-body">
 
 
-        <!-- SLIDER -->
-
         <div
             class="research-visual research-slider"
             data-slider="backcom"
@@ -1040,17 +974,13 @@ footer {
 
 
             <div class="slider-dots">
-
                 <span class="slider-dot active"></span>
                 <span class="slider-dot"></span>
                 <span class="slider-dot"></span>
-
             </div>
 
         </div>
 
-
-        <!-- KEYWORDS -->
 
         <div class="research-info">
 
@@ -1131,8 +1061,6 @@ footer {
     <div class="area-body">
 
 
-        <!-- SLIDER -->
-
         <div
             class="research-visual research-slider"
             data-slider="meta"
@@ -1156,24 +1084,22 @@ footer {
                 alt="Multifunctional Ferrite-Based Metasurface"
             >
 
-           <img
-                 src="meta4.png"
-                 class="research-slide"
-                 alt="Magnetic Materials-Based Absorber and Metasurface"
-             >
+            <img
+                src="meta4.png"
+                class="research-slide"
+                alt="Magnetic Materials-Based Absorber and Metasurface"
+            >
+
 
             <div class="slider-dots">
-
                 <span class="slider-dot active"></span>
                 <span class="slider-dot"></span>
                 <span class="slider-dot"></span>
-
+                <span class="slider-dot"></span>
             </div>
 
         </div>
 
-
-        <!-- KEYWORDS -->
 
         <div class="research-info">
 
@@ -1254,8 +1180,6 @@ footer {
     <div class="area-body">
 
 
-        <!-- SLIDER -->
-
         <div
             class="research-visual research-slider"
             data-slider="aip"
@@ -1281,17 +1205,13 @@ footer {
 
 
             <div class="slider-dots">
-
                 <span class="slider-dot active"></span>
                 <span class="slider-dot"></span>
                 <span class="slider-dot"></span>
-
             </div>
 
         </div>
 
-
-        <!-- KEYWORDS -->
 
         <div class="research-info">
 
@@ -1358,9 +1278,7 @@ footer {
 </section>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1378,10 +1296,6 @@ footer {
 
 </footer>
 
-
-<!-- =========================================================
-     SLIDESHOW
-========================================================= -->
 
 <script>
 
