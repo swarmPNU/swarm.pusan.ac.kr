@@ -10,9 +10,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -31,6 +36,11 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 
 /* =========================================================
    HEADER
@@ -39,6 +49,7 @@ body {
 header {
     width: 100%;
     height: 90px;
+
     padding: 0 6%;
 
     display: flex;
@@ -46,6 +57,7 @@ header {
     justify-content: space-between;
 
     background: #fff;
+
     border-bottom: 1px solid #eee;
 
     position: relative;
@@ -156,7 +168,7 @@ nav a.active::after {
 ========================================================= */
 
 .research-intro {
-    padding: 75px 6% 65px;
+    padding: 72px 6% 65px;
 }
 
 .intro-inner {
@@ -204,7 +216,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   RESEARCH GRID
+   RESEARCH
 ========================================================= */
 
 .research-section {
@@ -216,120 +228,289 @@ nav a.active::after {
     max-width: 1250px;
 
     margin: 0 auto;
-}
-
-.research-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     border-top: 1px solid #dfe4e8;
-    border-left: 1px solid #dfe4e8;
 }
 
 
 /* =========================================================
-   CARD
+   RESEARCH AREA
 ========================================================= */
 
-.research-card {
-    min-height: 390px;
+.research-area {
+    padding: 75px 0 85px;
 
-    padding: 48px 50px 46px;
-
-    display: flex;
-    flex-direction: column;
-
-    border-right: 1px solid #dfe4e8;
     border-bottom: 1px solid #dfe4e8;
-
-    background: #fff;
-
-    transition: background 0.2s ease;
 }
 
-.research-card:hover {
-    background: #f8fbfe;
+
+/* AREA HEADER */
+
+.area-header {
+    display: flex;
+    align-items: baseline;
+
+    gap: 24px;
+
+    margin-bottom: 42px;
 }
 
-.research-number {
+.area-number {
+    flex: 0 0 auto;
+
     color: #0b4a8b;
 
     font-size: 12px;
     font-weight: 700;
 
-    letter-spacing: 1.2px;
-
-    margin-bottom: 33px;
+    letter-spacing: 1.3px;
 }
 
-.research-card h2 {
-    max-width: 520px;
-
+.area-title {
     color: #111;
 
-    font-size: clamp(29px, 2.7vw, 39px);
+    font-size: clamp(31px, 3.2vw, 46px);
     font-weight: 700;
 
-    line-height: 1.15;
+    line-height: 1.12;
 
-    letter-spacing: -1.4px;
-
-    margin-bottom: 22px;
+    letter-spacing: -1.7px;
 }
 
-.research-card p {
-    max-width: 500px;
 
+/* =========================================================
+   AREA BODY
+========================================================= */
+
+.area-body {
+    display: grid;
+
+    grid-template-columns: 1.08fr 0.92fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* REVERSED */
+
+.research-area.reverse .area-body {
+    grid-template-columns: 0.92fr 1.08fr;
+}
+
+.research-area.reverse .research-visual {
+    order: 2;
+}
+
+.research-area.reverse .research-info {
+    order: 1;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.research-visual {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border: 1px solid #e0e5e9;
+
+    border-radius: 6px;
+
+    padding: 12px;
+}
+
+.research-slide {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #fff;
+
+    opacity: 0;
+
+    transition: opacity 0.7s ease;
+}
+
+.research-slide.active {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.slider-dots {
+    position: absolute;
+
+    left: 50%;
+    bottom: 17px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+
+    gap: 7px;
+
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.85);
+
+    backdrop-filter: blur(4px);
+}
+
+.slider-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #b8c3cc;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.slider-dot.active {
+    width: 18px;
+
+    border-radius: 10px;
+
+    background: #0b4a8b;
+}
+
+
+/* =========================================================
+   PHASED ARRAY PLACEHOLDER
+========================================================= */
+
+.phased-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f0fb 0%,
+            #c9def1 100%
+        );
+}
+
+.placeholder-text {
+    color: #0b4a8b;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   RESEARCH INFO
+========================================================= */
+
+.research-info {
+    width: 100%;
+}
+
+.area-description {
     color: #606a74;
 
     font-size: 14.5px;
 
     line-height: 1.8;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 
 /* =========================================================
-   DETAILS
+   KEYWORDS
 ========================================================= */
 
-.detail-link {
-    display: inline-flex;
+.keyword-list {
+    width: 100%;
 
-    width: fit-content;
+    border-top: 1px solid #dfe4e8;
+}
 
-    align-items: center;
+.keyword-item {
+    padding: 20px 0;
 
-    gap: 10px;
+    border-bottom: 1px solid #dfe4e8;
+}
 
-    margin-top: auto;
+.keyword-title {
+    position: relative;
 
-    color: #0b4a8b;
+    color: #111;
 
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
 
-    text-decoration: none;
+    line-height: 1.35;
 
-    padding-bottom: 6px;
+    padding-left: 18px;
 
-    border-bottom: 1px solid #0b4a8b;
-
-    transition:
-        gap 0.2s ease,
-        opacity 0.2s ease;
+    margin-bottom: 7px;
 }
 
-.detail-link:hover {
-    gap: 16px;
-    opacity: 0.75;
+.keyword-title::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 8px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #0b4a8b;
 }
 
-.detail-arrow {
-    font-size: 17px;
-    line-height: 1;
+.keyword-text {
+    color: #707983;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    padding-left: 18px;
 }
 
 
@@ -377,16 +558,17 @@ footer {
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
-    .research-card {
-        min-height: 410px;
-        padding: 40px 35px;
+    .area-body,
+    .research-area.reverse .area-body {
+        gap: 42px;
     }
 
-    .research-card h2 {
-        font-size: 31px;
+    .area-title {
+        font-size: 35px;
     }
+
 }
 
 
@@ -394,7 +576,7 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     header {
         height: auto;
@@ -403,7 +585,9 @@ footer {
         padding: 17px 20px 12px;
 
         flex-direction: column;
+
         align-items: flex-start;
+        justify-content: flex-start;
 
         gap: 11px;
     }
@@ -418,10 +602,13 @@ footer {
         gap: 0;
 
         overflow-x: auto;
+        overflow-y: hidden;
 
         white-space: nowrap;
 
         scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
     }
 
     nav::-webkit-scrollbar {
@@ -438,6 +625,12 @@ footer {
         margin-right: 22px;
     }
 
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+
+    /* HERO */
 
     .page-hero {
         padding: 52px 20px 50px;
@@ -445,6 +638,7 @@ footer {
 
     .page-hero h1 {
         font-size: 48px;
+
         letter-spacing: -2.5px;
     }
 
@@ -455,6 +649,8 @@ footer {
         margin-top: 18px;
     }
 
+
+    /* INTRO */
 
     .research-intro {
         padding: 48px 20px 45px;
@@ -483,46 +679,91 @@ footer {
     }
 
 
+    /* RESEARCH */
+
     .research-section {
         padding: 0 20px 75px;
     }
 
-    .research-grid {
-        grid-template-columns: 1fr;
+    .research-area {
+        padding: 52px 0 58px;
     }
 
-    .research-card {
-        min-height: 0;
+    .area-header {
+        display: block;
 
-        padding: 36px 28px 38px;
+        margin-bottom: 27px;
     }
 
-    .research-number {
+    .area-number {
         font-size: 11px;
 
-        margin-bottom: 23px;
+        margin-bottom: 10px;
     }
 
-    .research-card h2 {
-        font-size: 28px;
+    .area-title {
+        font-size: 29px;
+
+        line-height: 1.18;
 
         letter-spacing: -1px;
-
-        margin-bottom: 17px;
     }
 
-    .research-card p {
+    .area-body,
+    .research-area.reverse .area-body {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .research-area.reverse .research-visual {
+        order: 1;
+    }
+
+    .research-area.reverse .research-info {
+        order: 2;
+    }
+
+    .research-visual {
+        aspect-ratio: 16 / 11;
+
+        padding: 8px;
+    }
+
+    .research-slide {
+        top: 8px;
+        left: 8px;
+
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+    }
+
+    .slider-dots {
+        bottom: 13px;
+    }
+
+    .area-description {
         font-size: 14px;
 
         line-height: 1.7;
 
-        margin-bottom: 28px;
+        margin-bottom: 25px;
     }
 
-    .detail-link {
+    .keyword-item {
+        padding: 17px 0;
+    }
+
+    .keyword-title {
+        font-size: 15px;
+    }
+
+    .keyword-text {
         font-size: 12.5px;
     }
 
+
+    /* FOOTER */
 
     footer {
         padding: 27px 20px;
@@ -535,6 +776,7 @@ footer {
 
         gap: 8px;
     }
+
 }
 
 
@@ -562,9 +804,6 @@ footer {
         padding-right: 16px;
     }
 
-    .research-card {
-        padding: 32px 23px 34px;
-    }
 }
 
 </style>
@@ -574,6 +813,10 @@ footer {
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -608,6 +851,10 @@ footer {
 </header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="page-hero">
 
     <div class="hero-inner">
@@ -622,6 +869,10 @@ footer {
 
 </section>
 
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
 
 <section class="research-intro">
 
@@ -651,142 +902,519 @@ footer {
 </section>
 
 
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
 <section class="research-section">
 
 <div class="research-container">
 
-<div class="research-grid">
 
+<!-- =========================================================
+     01 PHASED ARRAY
+========================================================= -->
 
-    <!-- 01 PHASED ARRAY -->
+<section class="research-area" id="phased-array">
 
-    <article class="research-card" id="phased-array">
+    <div class="area-header">
 
-        <div class="research-number">
+        <div class="area-number">
             01
         </div>
 
-        <h2>
+        <h2 class="area-title">
             Phased Array
         </h2>
 
-        <p>
-            We investigate phased-array antenna technologies
-            for high-performance wireless systems requiring
-            electronic beam steering, wide-angle scanning,
-            and adaptive radiation control.
-        </p>
-
-        <a
-            href="research-phased-array.html"
-            class="detail-link"
-        >
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
-
-    </article>
+    </div>
 
 
-    <!-- 02 BACKSCATTER COMMUNICATION -->
+    <div class="area-body">
 
-    <article class="research-card" id="backcom">
 
-        <div class="research-number">
+        <!-- IMAGE -->
+
+        <div class="research-visual">
+
+            <div class="phased-placeholder">
+
+                <div class="placeholder-text">
+                    Phased Array
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="research-info">
+
+            <p class="area-description">
+                We investigate phased-array antenna technologies
+                for high-performance wireless systems requiring
+                electronic beam steering, wide-angle scanning,
+                and adaptive radiation control.
+            </p>
+
+
+            <div class="keyword-list">
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Beam-Steering Phased Array
+                    </div>
+
+                    <div class="keyword-text">
+                        Electronically controlled antenna arrays
+                        for precise beam steering and radiation
+                        pattern control.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Wide-Angle Scanning Array
+                    </div>
+
+                    <div class="keyword-text">
+                        Array technologies for maintaining stable
+                        radiation performance over a broad
+                        beam-steering range.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Integrated Beamforming System
+                    </div>
+
+                    <div class="keyword-text">
+                        Integrated antenna, RF beamforming, and
+                        control technologies for compact
+                        reconfigurable wireless systems.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 BACKSCATTER COMMUNICATION
+========================================================= -->
+
+<section class="research-area reverse" id="backcom">
+
+    <div class="area-header">
+
+        <div class="area-number">
             02
         </div>
 
-        <h2>
+        <h2 class="area-title">
             Backscatter Communication
         </h2>
 
-        <p>
-            We investigate advanced backscatter communication
-            technologies for high-speed and reliable wireless
-            connectivity, including MIMO backscatter, robust
-            signal processing, and AI-driven intelligent
-            wireless systems.
-        </p>
+    </div>
 
-        <a
-            href="research-backcom.html"
-            class="detail-link"
+
+    <div class="area-body">
+
+
+        <!-- SLIDER -->
+
+        <div
+            class="research-visual research-slider"
+            data-slider="backcom"
         >
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
 
-    </article>
+            <img
+                src="backcom1.png"
+                class="research-slide active"
+                alt="MIMO Backscatter Communication"
+            >
+
+            <img
+                src="backcom2.png"
+                class="research-slide"
+                alt="Reliable Backscatter Signal Processing"
+            >
+
+            <img
+                src="backcom3.png"
+                class="research-slide"
+                alt="AI for Intelligent Wireless Systems"
+            >
 
 
-    <!-- 03 META -->
+            <div class="slider-dots">
 
-    <article class="research-card" id="metasurface">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
 
-        <div class="research-number">
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="research-info">
+
+            <p class="area-description">
+                We investigate advanced backscatter communication
+                technologies for high-speed and reliable wireless
+                connectivity using MIMO techniques, robust signal
+                processing, and intelligent communication methods.
+            </p>
+
+
+            <div class="keyword-list">
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        MIMO Backscatter
+                    </div>
+
+                    <div class="keyword-text">
+                        Multiple-input multiple-output backscatter
+                        techniques for high-speed communication
+                        and massive connectivity of low-power devices.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Reliable Backscatter Signal Processing
+                    </div>
+
+                    <div class="keyword-text">
+                        Robust channel estimation and signal-processing
+                        techniques for reliable backscatter links
+                        under practical wireless-channel variations.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        AI for Intelligent Wireless Systems
+                    </div>
+
+                    <div class="keyword-text">
+                        AI and machine-learning techniques for
+                        adaptive and intelligent wireless
+                        connectivity under changing environments.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 ABSORBER & METASURFACE
+========================================================= -->
+
+<section class="research-area" id="metasurface">
+
+    <div class="area-header">
+
+        <div class="area-number">
             03
         </div>
 
-        <h2>
+        <h2 class="area-title">
             Magnetic Materials-Based<br>
             Absorber &amp; Metasurface
         </h2>
 
-        <p>
-            We investigate ferrite-based absorbers and
-            multifunctional metasurfaces for microwave
-            absorption, reflection, transmission, and
-            electromagnetic-wave control under varying
-            environmental conditions.
-        </p>
+    </div>
 
-        <a
-            href="research-metasurface.html"
-            class="detail-link"
+
+    <div class="area-body">
+
+
+        <!-- SLIDER -->
+
+        <div
+            class="research-visual research-slider"
+            data-slider="meta"
         >
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
 
-    </article>
+            <img
+                src="meta1.png"
+                class="research-slide active"
+                alt="Ferrite-Based Microwave Absorber"
+            >
+
+            <img
+                src="meta2.png"
+                class="research-slide"
+                alt="Temperature-Robust Electromagnetic Performance"
+            >
+
+            <img
+                src="meta3.png"
+                class="research-slide"
+                alt="Multifunctional Ferrite-Based Metasurface"
+            >
 
 
-    <!-- 04 AIP -->
+            <div class="slider-dots">
 
-    <article class="research-card" id="aip">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
 
-        <div class="research-number">
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="research-info">
+
+            <p class="area-description">
+                We investigate magnetic-material-based absorbers
+                and multifunctional metasurfaces for microwave
+                absorption, reflection, transmission, and
+                electromagnetic-wave control.
+            </p>
+
+
+            <div class="keyword-list">
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Ferrite-Based Microwave Absorber
+                    </div>
+
+                    <div class="keyword-text">
+                        Magnetic ferrite materials and
+                        meta-composite structures for effective
+                        microwave absorption and reflection control.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Temperature-Robust Electromagnetic Performance
+                    </div>
+
+                    <div class="keyword-text">
+                        Temperature-dependent electromagnetic
+                        characteristics for stable absorption
+                        and reflection performance under
+                        varying environments.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Multifunctional Ferrite-Based Metasurface
+                    </div>
+
+                    <div class="keyword-text">
+                        W-type ferrite-based metasurfaces for
+                        integrated beam reflection, transmission,
+                        and microwave absorption.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 ANTENNA-IN-PACKAGE
+========================================================= -->
+
+<section class="research-area reverse" id="aip">
+
+    <div class="area-header">
+
+        <div class="area-number">
             04
         </div>
 
-        <h2>
+        <h2 class="area-title">
             Antenna-in-Package (AiP)
         </h2>
 
-        <p>
-            We develop highly integrated antenna and RF
-            front-end technologies using multilayer packaging
-            platforms for compact beamforming and
-            next-generation wireless systems.
-        </p>
+    </div>
 
-        <a
-            href="research-aip.html"
-            class="detail-link"
+
+    <div class="area-body">
+
+
+        <!-- SLIDER -->
+
+        <div
+            class="research-visual research-slider"
+            data-slider="aip"
         >
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
 
-    </article>
+            <img
+                src="AIP1.png"
+                class="research-slide active"
+                alt="LTCC-Based Antenna-in-Package"
+            >
+
+            <img
+                src="AIP2.png"
+                class="research-slide"
+                alt="Integrated RF Front-End Components"
+            >
+
+            <img
+                src="AIP3.png"
+                class="research-slide"
+                alt="Beam-Steering Antenna-in-Package"
+            >
 
 
-</div>
+            <div class="slider-dots">
+
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="research-info">
+
+            <p class="area-description">
+                We develop highly integrated Antenna-in-Package
+                technologies combining antennas, RF front-end
+                components, beamforming circuits, multilayer
+                packaging, and thermal-management structures.
+            </p>
+
+
+            <div class="keyword-list">
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        LTCC-Based Antenna-in-Package
+                    </div>
+
+                    <div class="keyword-text">
+                        Multilayer LTCC platforms for compact
+                        integration of antennas, RF interconnections,
+                        feeding networks, and RF components.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Integrated RF Front-End Components
+                    </div>
+
+                    <div class="keyword-text">
+                        Integrated antennas, filters, filtennas,
+                        and multilayer feeding networks for compact
+                        RF front-end modules.
+                    </div>
+
+                </div>
+
+
+                <div class="keyword-item">
+
+                    <div class="keyword-title">
+                        Beam-Steering Antenna-in-Package
+                    </div>
+
+                    <div class="keyword-text">
+                        Integration of antenna arrays, beamforming
+                        ICs, RF routing, control interfaces, and
+                        thermal structures for compact beam-steering
+                        modules.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 </div>
 
 </section>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -805,5 +1433,48 @@ footer {
 </footer>
 
 
+<!-- =========================================================
+     SLIDESHOW
+========================================================= -->
+
+<script>
+
+document.querySelectorAll(".research-slider").forEach((slider) => {
+
+    const slides = slider.querySelectorAll(".research-slide");
+    const dots = slider.querySelectorAll(".slider-dot");
+
+    if (slides.length <= 1) {
+        return;
+    }
+
+    let current = 0;
+
+    setInterval(() => {
+
+        slides[current].classList.remove("active");
+
+        if (dots[current]) {
+            dots[current].classList.remove("active");
+        }
+
+
+        current = (current + 1) % slides.length;
+
+
+        slides[current].classList.add("active");
+
+        if (dots[current]) {
+            dots[current].classList.add("active");
+        }
+
+    }, 3000);
+
+});
+
+</script>
+
+
 </body>
+
 </html>
