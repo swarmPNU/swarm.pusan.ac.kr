@@ -10,7 +10,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
@@ -119,16 +122,18 @@ nav a.active::after {
    HERO
 ========================================================= */
 
-.page-hero {
-    padding: 76px 6% 70px;
+.hero {
+    padding: 78px 6% 72px;
 
     background:
         linear-gradient(
-            115deg,
+            110deg,
             #ffffff 0%,
-            #f6faff 48%,
-            #eaf4fd 100%
+            #f4f9fd 52%,
+            #e4f1fb 100%
         );
+
+    border-bottom: 1px solid #e5ebef;
 }
 
 .hero-inner {
@@ -138,20 +143,20 @@ nav a.active::after {
     margin: 0 auto;
 }
 
-.page-hero h1 {
-    font-size: clamp(48px, 6vw, 82px);
-    font-weight: 800;
+.hero h1 {
+    color: #111;
 
-    line-height: 1;
+    font-size: 52px;
+    font-weight: 700;
 
-    letter-spacing: -4px;
+    letter-spacing: -2px;
 }
 
-.title-line {
-    width: 70px;
+.hero-line {
+    width: 65px;
     height: 4px;
 
-    margin-top: 24px;
+    margin-top: 20px;
 
     background: #0b4a8b;
 }
@@ -167,7 +172,7 @@ nav a.active::after {
 
     margin: 0 auto;
 
-    padding: 65px 6% 120px;
+    padding: 70px 6% 110px;
 }
 
 
@@ -179,37 +184,35 @@ nav a.active::after {
     display: flex;
     align-items: center;
 
-    gap: 34px;
+    gap: 8px;
+
+    margin-bottom: 55px;
 
     overflow-x: auto;
 
     white-space: nowrap;
 
-    padding-bottom: 17px;
-
-    margin-bottom: 50px;
+    scrollbar-width: none;
 
     border-bottom: 1px solid #dfe4e8;
-
-    scrollbar-width: none;
 }
 
 .publication-tabs::-webkit-scrollbar {
     display: none;
 }
 
-.tab-button {
+.publication-tab {
     position: relative;
 
     flex: 0 0 auto;
 
-    padding: 0 0 13px;
+    padding: 14px 18px 16px;
 
-    border: none;
+    border: 0;
 
-    background: none;
+    background: transparent;
 
-    color: #727b84;
+    color: #737c85;
 
     font-family: 'Inter', sans-serif;
 
@@ -217,25 +220,23 @@ nav a.active::after {
     font-weight: 600;
 
     cursor: pointer;
-
-    transition: color 0.2s ease;
 }
 
-.tab-button:hover {
+.publication-tab:hover {
     color: #0b4a8b;
 }
 
-.tab-button.active {
+.publication-tab.active {
     color: #0b4a8b;
 }
 
-.tab-button.active::after {
+.publication-tab.active::after {
     content: "";
 
     position: absolute;
 
     left: 0;
-    bottom: -18px;
+    bottom: -1px;
 
     width: 100%;
     height: 3px;
@@ -245,38 +246,33 @@ nav a.active::after {
 
 
 /* =========================================================
-   CATEGORY HEADER
+   CATEGORY TITLE
 ========================================================= */
 
 .category-header {
-    display: flex;
+    margin-bottom: 46px;
+}
 
-    align-items: baseline;
-    justify-content: space-between;
+.category-label {
+    color: #0b4a8b;
 
-    gap: 20px;
+    font-size: 12px;
+    font-weight: 700;
 
-    margin-bottom: 45px;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
 }
 
 .category-title {
     color: #111;
 
-    font-size: 31px;
+    font-size: 34px;
     font-weight: 700;
 
     letter-spacing: -1px;
-}
-
-.category-label {
-    color: #9aa1a8;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
 }
 
 
@@ -287,24 +283,34 @@ nav a.active::after {
 .year-section {
     display: grid;
 
-    grid-template-columns: 105px 1fr;
+    grid-template-columns: 105px minmax(0, 1fr);
 
-    gap: 40px;
+    gap: 35px;
 
-    padding: 0 0 55px;
+    padding: 0 0 48px;
+
+    margin-bottom: 48px;
+
+    border-bottom: 1px solid #e3e7ea;
+}
+
+.year-section:last-child {
+    margin-bottom: 0;
+
+    border-bottom: 0;
 }
 
 .year-title {
     color: #0b4a8b;
 
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .year-publications {
-    border-top: 1px solid #dfe4e8;
+    min-width: 0;
 }
 
 
@@ -313,15 +319,32 @@ nav a.active::after {
 ========================================================= */
 
 .publication-item {
-    padding: 24px 0 25px;
+    position: relative;
 
-    border-bottom: 1px solid #e2e6e9;
+    padding-bottom: 30px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #edf0f2;
 }
 
-.paper-title-row {
-    display: flex;
+.publication-item:last-child {
+    padding-bottom: 0;
 
-    align-items: center;
+    margin-bottom: 0;
+
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title-row {
+    display: flex;
+    align-items: flex-start;
+
     flex-wrap: wrap;
 
     gap: 9px;
@@ -335,74 +358,30 @@ nav a.active::after {
     font-size: 17px;
     font-weight: 700;
 
-    line-height: 1.45;
-
-    text-decoration: none;
+    line-height: 1.5;
 
     letter-spacing: -0.25px;
 }
 
-a.paper-title:hover {
-    color: #0b4a8b;
-}
-
-.paper-authors {
-    color: #5f6973;
-
-    font-size: 14px;
-
-    line-height: 1.65;
-
-    margin-bottom: 4px;
-}
-
-.paper-journal {
-    color: #7a838c;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   DOI / ARTICLE
-========================================================= */
-
-.paper-links {
-    display: flex;
-
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 9px;
-}
-
-.paper-link {
-    display: inline-block;
-
-    color: #0b4a8b;
-
-    font-size: 12px;
-    font-weight: 600;
+.paper-title a {
+    color: inherit;
 
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
-.paper-link:hover {
-    text-decoration: underline;
+.paper-title a:hover {
+    color: #0b4a8b;
 }
 
 
 /* =========================================================
-   UNDER REVIEW
+   UNDER REVIEW BADGE
 ========================================================= */
 
 .review-badge {
     display: inline-flex;
-
     align-items: center;
 
     padding: 3px 8px;
@@ -421,6 +400,67 @@ a.paper-title:hover {
     line-height: 1.2;
 
     white-space: nowrap;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   AUTHORS / JOURNAL
+========================================================= */
+
+.paper-authors {
+    color: #4f5962;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    margin-bottom: 4px;
+}
+
+.paper-journal {
+    color: #747d85;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   DOI / ARTICLE
+========================================================= */
+
+.paper-links {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+.paper-links a {
+    display: inline-flex;
+    align-items: center;
+
+    color: #0b4a8b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+
+    transition: border-color 0.2s ease;
+}
+
+.paper-links a:hover {
+    border-bottom-color: #0b4a8b;
 }
 
 
@@ -429,13 +469,13 @@ a.paper-title:hover {
 ========================================================= */
 
 .empty-message {
-    padding: 45px 0;
+    color: #7b848c;
 
-    color: #89929a;
+    font-size: 15px;
 
-    font-size: 14px;
+    line-height: 1.7;
 
-    border-top: 1px solid #dfe4e8;
+    padding: 20px 0 60px;
 }
 
 
@@ -448,19 +488,18 @@ footer {
 
     background: #f6f7f8;
 
-    border-top: 1px solid #e8eaed;
+    border-top: 1px solid #e5e8eb;
 }
 
 .footer-inner {
     width: 100%;
     max-width: 1450px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     gap: 20px;
 }
@@ -483,7 +522,7 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
     header {
         height: auto;
@@ -539,82 +578,76 @@ footer {
 
     /* HERO */
 
-    .page-hero {
-        padding: 52px 20px 50px;
+    .hero {
+        padding: 55px 20px 52px;
     }
 
-    .page-hero h1 {
-        font-size: 48px;
+    .hero h1 {
+        font-size: 40px;
 
-        letter-spacing: -2.5px;
+        letter-spacing: -1.5px;
     }
 
-    .title-line {
-        width: 55px;
+    .hero-line {
+        width: 52px;
         height: 3px;
 
-        margin-top: 18px;
+        margin-top: 16px;
     }
 
 
     /* PUBLICATIONS */
 
     .publications {
-        padding: 45px 20px 75px;
+        padding: 48px 20px 75px;
     }
 
     .publication-tabs {
-        gap: 24px;
+        margin-bottom: 42px;
+    }
+
+    .publication-tab {
+        font-size: 14px;
+
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .category-header {
+        margin-bottom: 36px;
+    }
+
+    .category-title {
+        font-size: 27px;
+    }
+
+    .year-section {
+        display: block;
+
+        padding-bottom: 38px;
 
         margin-bottom: 38px;
     }
 
-    .tab-button {
-        font-size: 14px;
-    }
-
-    .category-header {
-        margin-bottom: 30px;
-    }
-
-    .category-title {
-        font-size: 26px;
-    }
-
-    .category-label {
-        display: none;
-    }
-
-    .year-section {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-        padding-bottom: 45px;
-    }
-
     .year-title {
-        font-size: 20px;
+        font-size: 21px;
+
+        margin-bottom: 24px;
     }
 
     .publication-item {
-        padding: 21px 0;
+        padding-bottom: 25px;
+
+        margin-bottom: 25px;
     }
 
     .paper-title {
-        font-size: 15.5px;
+        font-size: 16px;
     }
 
-    .paper-authors {
-        font-size: 13px;
-    }
-
+    .paper-authors,
     .paper-journal {
         font-size: 13px;
-    }
-
-    .paper-link {
-        font-size: 11.5px;
     }
 
 
@@ -631,6 +664,7 @@ footer {
 
         gap: 8px;
     }
+
 }
 
 
@@ -651,7 +685,7 @@ footer {
         margin-right: 17px;
     }
 
-    .page-hero,
+    .hero,
     .publications {
         padding-left: 16px;
         padding-right: 16px;
@@ -708,7 +742,7 @@ footer {
      HERO
 ========================================================= -->
 
-<section class="page-hero">
+<section class="hero">
 
     <div class="hero-inner">
 
@@ -716,7 +750,7 @@ footer {
             Publications
         </h1>
 
-        <div class="title-line"></div>
+        <div class="hero-line"></div>
 
     </div>
 
@@ -735,41 +769,36 @@ footer {
     <div class="publication-tabs">
 
         <button
-            class="tab-button active"
+            class="publication-tab active"
             data-category="international"
-            type="button"
         >
             International Journals
         </button>
 
         <button
-            class="tab-button"
+            class="publication-tab"
             data-category="domestic"
-            type="button"
         >
             Domestic Journals
         </button>
 
         <button
-            class="tab-button"
+            class="publication-tab"
             data-category="conference"
-            type="button"
         >
             Conference Proceedings
         </button>
 
         <button
-            class="tab-button"
+            class="publication-tab"
             data-category="patents"
-            type="button"
         >
             Patents
         </button>
 
         <button
-            class="tab-button"
+            class="publication-tab"
             data-category="books"
-            type="button"
         >
             Books
         </button>
@@ -777,7 +806,7 @@ footer {
     </div>
 
 
-    <!-- CONTENT -->
+    <!-- DYNAMIC CONTENT -->
 
     <div id="publication-content"></div>
 
@@ -818,7 +847,7 @@ footer {
 
 
 <!-- =========================================================
-     PUBLICATION RENDERER
+     RENDERER
 ========================================================= -->
 
 <script>
@@ -858,45 +887,238 @@ const publicationData = {
 };
 
 
+/* =========================================================
+   CREATE PUBLICATION ITEM
+========================================================= */
+
+function createPublicationItem(p) {
+
+    const item = document.createElement("div");
+    item.className = "publication-item";
+
+
+    /* -----------------------------------------------------
+       TITLE ROW
+    ----------------------------------------------------- */
+
+    const titleRow = document.createElement("div");
+    titleRow.className = "title-row";
+
+
+    const title = document.createElement("div");
+    title.className = "paper-title";
+
+
+    /*
+       DOI가 있으면 제목 → DOI
+       DOI가 없고 URL이 있으면 제목 → URL
+       둘 다 없으면 일반 텍스트
+    */
+
+    if (p.doi) {
+
+        const titleLink = document.createElement("a");
+
+        titleLink.href = "https://doi.org/" + p.doi;
+        titleLink.target = "_blank";
+        titleLink.rel = "noopener noreferrer";
+
+        titleLink.textContent = p.title || "";
+
+        title.appendChild(titleLink);
+
+    } else if (p.url) {
+
+        const titleLink = document.createElement("a");
+
+        titleLink.href = p.url;
+        titleLink.target = "_blank";
+        titleLink.rel = "noopener noreferrer";
+
+        titleLink.textContent = p.title || "";
+
+        title.appendChild(titleLink);
+
+    } else {
+
+        title.textContent = p.title || "";
+
+    }
+
+
+    titleRow.appendChild(title);
+
+
+    /* -----------------------------------------------------
+       UNDER REVIEW
+    ----------------------------------------------------- */
+
+    if (p.underReview) {
+
+        const badge = document.createElement("span");
+
+        badge.className = "review-badge";
+
+        badge.textContent = "Under Review";
+
+        titleRow.appendChild(badge);
+
+    }
+
+
+    item.appendChild(titleRow);
+
+
+    /* -----------------------------------------------------
+       AUTHORS
+    ----------------------------------------------------- */
+
+    if (p.authors) {
+
+        const authors = document.createElement("div");
+
+        authors.className = "paper-authors";
+
+        authors.textContent = p.authors;
+
+        item.appendChild(authors);
+
+    }
+
+
+    /* -----------------------------------------------------
+       JOURNAL / INFORMATION
+    ----------------------------------------------------- */
+
+    if (p.journal) {
+
+        const journal = document.createElement("div");
+
+        journal.className = "paper-journal";
+
+        journal.textContent = p.journal;
+
+        item.appendChild(journal);
+
+    }
+
+
+    /*
+       특허/책 데이터에서 journal 대신
+       다른 정보 필드를 사용하는 경우를 위한 처리
+    */
+
+    if (!p.journal && p.info) {
+
+        const info = document.createElement("div");
+
+        info.className = "paper-journal";
+
+        info.textContent = p.info;
+
+        item.appendChild(info);
+
+    }
+
+
+    /* -----------------------------------------------------
+       DOI / ARTICLE LINK
+    ----------------------------------------------------- */
+
+    if (p.doi || p.url) {
+
+        const links = document.createElement("div");
+
+        links.className = "paper-links";
+
+
+        const link = document.createElement("a");
+
+
+        if (p.doi) {
+
+            link.href = "https://doi.org/" + p.doi;
+
+            link.textContent = "DOI";
+
+        } else {
+
+            link.href = p.url;
+
+            link.textContent = "Article";
+
+        }
+
+
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+
+        links.appendChild(link);
+
+        item.appendChild(links);
+
+    }
+
+
+    return item;
+}
+
+
+/* =========================================================
+   RENDER PUBLICATIONS
+========================================================= */
+
 function renderPublications(category) {
 
     const content = document.getElementById("publication-content");
 
-    const categoryInfo = publicationData[category];
-
     content.innerHTML = "";
 
 
-    /* CATEGORY HEADER */
+    const categoryInfo = publicationData[category];
+
+    if (!categoryInfo) {
+        return;
+    }
+
+
+    /* -----------------------------------------------------
+       CATEGORY HEADER
+    ----------------------------------------------------- */
 
     const categoryHeader = document.createElement("div");
 
     categoryHeader.className = "category-header";
 
 
-    const categoryTitle = document.createElement("h2");
+    const label = document.createElement("div");
 
-    categoryTitle.className = "category-title";
+    label.className = "category-label";
 
-    categoryTitle.textContent = categoryInfo.title;
-
-
-    const categoryLabel = document.createElement("div");
-
-    categoryLabel.className = "category-label";
-
-    categoryLabel.textContent = categoryInfo.label;
+    label.textContent = categoryInfo.label;
 
 
-    categoryHeader.appendChild(categoryTitle);
-    categoryHeader.appendChild(categoryLabel);
+    const title = document.createElement("h2");
+
+    title.className = "category-title";
+
+    title.textContent = categoryInfo.title;
+
+
+    categoryHeader.appendChild(label);
+    categoryHeader.appendChild(title);
 
     content.appendChild(categoryHeader);
 
 
-    /* DATA */
+    /* -----------------------------------------------------
+       DATA
+    ----------------------------------------------------- */
 
-    const data = categoryInfo.data || [];
+    const data = Array.isArray(categoryInfo.data)
+        ? categoryInfo.data
+        : [];
 
 
     if (data.length === 0) {
@@ -905,7 +1127,7 @@ function renderPublications(category) {
 
         empty.className = "empty-message";
 
-        empty.textContent = "Content will be updated.";
+        empty.textContent = "No entries are currently available.";
 
         content.appendChild(empty);
 
@@ -913,23 +1135,62 @@ function renderPublications(category) {
     }
 
 
-    /* GET YEARS */
+    /* -----------------------------------------------------
+       GROUP BY YEAR
+    ----------------------------------------------------- */
 
-    const years = [
-        ...new Set(
-            data
-                .map(item => item.year)
-                .filter(year => year !== undefined && year !== null && year !== "")
-        )
-    ];
+    const grouped = {};
 
 
-    years.sort((a, b) => Number(b) - Number(a));
+    data.forEach((publication) => {
+
+        /*
+           year가 없는 데이터도 버리지 않음.
+           별도의 Other 그룹으로 표시.
+        */
+
+        const year =
+            publication.year !== undefined &&
+            publication.year !== null &&
+            publication.year !== ""
+                ? String(publication.year)
+                : "Other";
 
 
-    /* RENDER EACH YEAR */
+        if (!grouped[year]) {
+            grouped[year] = [];
+        }
 
-    years.forEach(year => {
+
+        grouped[year].push(publication);
+
+    });
+
+
+    /* -----------------------------------------------------
+       SORT YEARS
+    ----------------------------------------------------- */
+
+    const years = Object.keys(grouped).sort((a, b) => {
+
+        if (a === "Other") {
+            return 1;
+        }
+
+        if (b === "Other") {
+            return -1;
+        }
+
+        return Number(b) - Number(a);
+
+    });
+
+
+    /* -----------------------------------------------------
+       YEAR SECTIONS
+    ----------------------------------------------------- */
+
+    years.forEach((year) => {
 
         const yearSection = document.createElement("section");
 
@@ -943,399 +1204,64 @@ function renderPublications(category) {
         yearTitle.textContent = year;
 
 
-        const yearPublications = document.createElement("div");
+        const publicationList = document.createElement("div");
 
-        yearPublications.className = "year-publications";
+        publicationList.className = "year-publications";
 
 
-        const yearItems = data.filter(
-            item => String(item.year) === String(year)
-        );
+        grouped[year].forEach((publication) => {
 
-
-        yearItems.forEach(p => {
-
-            const item = document.createElement("article");
-
-            item.className = "publication-item";
-
-
-            /* TITLE ROW */
-
-            const titleRow = document.createElement("div");
-
-            titleRow.className = "paper-title-row";
-
-
-            let titleElement;
-
-
-            if (p.doi) {
-
-                titleElement = document.createElement("a");
-
-                titleElement.href =
-                    "https://doi.org/" + p.doi;
-
-                titleElement.target = "_blank";
-
-                titleElement.rel = "noopener noreferrer";
-
-            }
-
-            else if (p.url) {
-
-                titleElement = document.createElement("a");
-
-                titleElement.href = p.url;
-
-                titleElement.target = "_blank";
-
-                titleElement.rel = "noopener noreferrer";
-
-            }
-
-            else {
-
-                titleElement = document.createElement("div");
-
-            }
-
-
-            titleElement.className = "paper-title";
-
-            titleElement.textContent = p.title;
-
-            titleRow.appendChild(titleElement);
-
-
-            /* UNDER REVIEW BADGE */
-
-            if (p.underReview) {
-
-                const badge = document.createElement("span");
-
-                badge.className = "review-badge";
-
-                badge.textContent = "Under Review";
-
-                titleRow.appendChild(badge);
-
-            }
-
-
-            item.appendChild(titleRow);
-
-
-            /* AUTHORS */
-
-            if (p.authors) {
-
-                const authors = document.createElement("div");
-
-                authors.className = "paper-authors";
-
-                authors.textContent = p.authors;
-
-                item.appendChild(authors);
-
-            }
-
-
-            /* JOURNAL */
-
-            if (p.journal) {
-
-                const journal = document.createElement("div");
-
-                journal.className = "paper-journal";
-
-                journal.textContent = p.journal;
-
-                item.appendChild(journal);
-
-            }
-
-
-            /* LINKS */
-
-            if (p.doi || p.url) {
-
-                const links = document.createElement("div");
-
-                links.className = "paper-links";
-
-
-                if (p.doi) {
-
-                    const doi = document.createElement("a");
-
-                    doi.className = "paper-link";
-
-                    doi.href =
-                        "https://doi.org/" + p.doi;
-
-                    doi.target = "_blank";
-
-                    doi.rel = "noopener noreferrer";
-
-                    doi.textContent = "DOI";
-
-                    links.appendChild(doi);
-
-                }
-
-
-                if (p.url && !p.doi) {
-
-                    const article = document.createElement("a");
-
-                    article.className = "paper-link";
-
-                    article.href = p.url;
-
-                    article.target = "_blank";
-
-                    article.rel = "noopener noreferrer";
-
-                    article.textContent = "Article";
-
-                    links.appendChild(article);
-
-                }
-
-
-                item.appendChild(links);
-
-            }
-
-
-            yearPublications.appendChild(item);
+            publicationList.appendChild(
+                createPublicationItem(publication)
+            );
 
         });
 
 
         yearSection.appendChild(yearTitle);
-        yearSection.appendChild(yearPublications);
+        yearSection.appendChild(publicationList);
 
         content.appendChild(yearSection);
 
     });
-
-
-    /* ITEMS WITHOUT YEAR */
-
-    const noYearItems = data.filter(
-        item =>
-            item.year === undefined ||
-            item.year === null ||
-            item.year === ""
-    );
-
-
-    if (noYearItems.length > 0) {
-
-        const yearSection = document.createElement("section");
-
-        yearSection.className = "year-section";
-
-
-        const yearTitle = document.createElement("div");
-
-        yearTitle.className = "year-title";
-
-        yearTitle.textContent = "";
-
-
-        const yearPublications = document.createElement("div");
-
-        yearPublications.className = "year-publications";
-
-
-        noYearItems.forEach(p => {
-
-            const item = document.createElement("article");
-
-            item.className = "publication-item";
-
-
-            const titleRow = document.createElement("div");
-
-            titleRow.className = "paper-title-row";
-
-
-            let titleElement;
-
-
-            if (p.doi) {
-
-                titleElement = document.createElement("a");
-
-                titleElement.href =
-                    "https://doi.org/" + p.doi;
-
-                titleElement.target = "_blank";
-
-                titleElement.rel = "noopener noreferrer";
-
-            }
-
-            else if (p.url) {
-
-                titleElement = document.createElement("a");
-
-                titleElement.href = p.url;
-
-                titleElement.target = "_blank";
-
-                titleElement.rel = "noopener noreferrer";
-
-            }
-
-            else {
-
-                titleElement = document.createElement("div");
-
-            }
-
-
-            titleElement.className = "paper-title";
-
-            titleElement.textContent = p.title;
-
-            titleRow.appendChild(titleElement);
-
-
-            if (p.underReview) {
-
-                const badge = document.createElement("span");
-
-                badge.className = "review-badge";
-
-                badge.textContent = "Under Review";
-
-                titleRow.appendChild(badge);
-
-            }
-
-
-            item.appendChild(titleRow);
-
-
-            if (p.authors) {
-
-                const authors = document.createElement("div");
-
-                authors.className = "paper-authors";
-
-                authors.textContent = p.authors;
-
-                item.appendChild(authors);
-
-            }
-
-
-            if (p.journal) {
-
-                const journal = document.createElement("div");
-
-                journal.className = "paper-journal";
-
-                journal.textContent = p.journal;
-
-                item.appendChild(journal);
-
-            }
-
-
-            if (p.doi || p.url) {
-
-                const links = document.createElement("div");
-
-                links.className = "paper-links";
-
-
-                if (p.doi) {
-
-                    const doi = document.createElement("a");
-
-                    doi.className = "paper-link";
-
-                    doi.href =
-                        "https://doi.org/" + p.doi;
-
-                    doi.target = "_blank";
-
-                    doi.rel = "noopener noreferrer";
-
-                    doi.textContent = "DOI";
-
-                    links.appendChild(doi);
-
-                }
-
-
-                if (p.url && !p.doi) {
-
-                    const article = document.createElement("a");
-
-                    article.className = "paper-link";
-
-                    article.href = p.url;
-
-                    article.target = "_blank";
-
-                    article.rel = "noopener noreferrer";
-
-                    article.textContent = "Article";
-
-                    links.appendChild(article);
-
-                }
-
-
-                item.appendChild(links);
-
-            }
-
-
-            yearPublications.appendChild(item);
-
-        });
-
-
-        yearSection.appendChild(yearTitle);
-        yearSection.appendChild(yearPublications);
-
-        content.appendChild(yearSection);
-
-    }
 
 }
 
 
 /* =========================================================
-   TAB EVENTS
+   TABS
 ========================================================= */
 
-document.querySelectorAll(".tab-button").forEach(button => {
+document
+    .querySelectorAll(".publication-tab")
+    .forEach((tab) => {
 
-    button.addEventListener("click", function() {
+        tab.addEventListener("click", function () {
 
-        document
-            .querySelectorAll(".tab-button")
-            .forEach(tab => tab.classList.remove("active"));
+            document
+                .querySelectorAll(".publication-tab")
+                .forEach((button) => {
 
-        this.classList.add("active");
+                    button.classList.remove("active");
 
-        renderPublications(this.dataset.category);
+                });
+
+
+            this.classList.add("active");
+
+
+            renderPublications(
+                this.dataset.category
+            );
+
+        });
 
     });
 
-});
 
-
-/* DEFAULT */
+/* =========================================================
+   DEFAULT
+========================================================= */
 
 renderPublications("international");
 
