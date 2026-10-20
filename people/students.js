@@ -85,7 +85,7 @@ const studentData = [
         email: "exid3165@pusan.ac.kr",
         research:
             "RF Filter, Phased array, Filtenna ",
-        image: "./people/kimsehyun.jpg"
+        image: ""
     },
 
     {
