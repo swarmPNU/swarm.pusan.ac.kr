@@ -455,6 +455,10 @@ nav a.active::after {
 
     font-size: 22px;
 
+    text-decoration: none;
+
+    cursor: pointer;
+
     transition:
         transform 0.2s ease,
         background 0.2s ease;
@@ -832,7 +836,7 @@ footer {
             Home
         </a>
 
-        <a href="#research">
+        <a href="research.html">
             Research
         </a>
 
@@ -925,9 +929,13 @@ footer {
                     beamforming, and high-performance wireless communication systems.
                 </p>
 
-                <div class="card-arrow">
+                <a
+                    href="research.html#phased-array"
+                    class="card-arrow"
+                    aria-label="Learn more about Phased Array"
+                >
                     →
-                </div>
+                </a>
 
             </div>
 
@@ -982,9 +990,13 @@ footer {
                     and low-power wireless connectivity.
                 </p>
 
-                <div class="card-arrow">
+                <a
+                    href="research.html#backcom"
+                    class="card-arrow"
+                    aria-label="Learn more about Full-Duplex BackCom"
+                >
                     →
-                </div>
+                </a>
 
             </div>
 
@@ -1040,9 +1052,13 @@ footer {
                     wireless applications.
                 </p>
 
-                <div class="card-arrow">
+                <a
+                    href="research.html#metasurface"
+                    class="card-arrow"
+                    aria-label="Learn more about Absorber and Metasurface research"
+                >
                     →
-                </div>
+                </a>
 
             </div>
 
@@ -1097,9 +1113,13 @@ footer {
                     packages for next-generation wireless systems.
                 </p>
 
-                <div class="card-arrow">
+                <a
+                    href="research.html#aip"
+                    class="card-arrow"
+                    aria-label="Learn more about Antenna-in-Package research"
+                >
                     →
-                </div>
+                </a>
 
             </div>
 
@@ -1141,11 +1161,6 @@ footer {
 
 <script>
 
-
-/* =========================================================
-   SLIDESHOW FUNCTION
-========================================================= */
-
 function startSlideshow(selector, interval = 3000) {
 
     const slides = document.querySelectorAll(selector);
@@ -1168,16 +1183,14 @@ function startSlideshow(selector, interval = 3000) {
 }
 
 
-/* =========================================================
-   START SLIDESHOWS
-========================================================= */
-
+/* BackCom */
 startSlideshow(".backcom-slide", 3000);
 
+/* Metasurface */
 startSlideshow(".meta-slide", 3000);
 
+/* AiP */
 startSlideshow(".aip-slide", 3000);
-
 
 </script>
 
