@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+
+<title>Phased Array | SWARM Laboratory</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:#111;
+    background:#fff;
+    overflow-x:hidden;
+}
+
+header{
+    width:100%;
+    height:90px;
+    padding:0 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eee;
+}
+
+.pnu-name{
+    color:#0b4a8b;
+    font-size:20px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:48px;
+}
+
+nav a{
+    position:relative;
+    color:#111;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    padding:10px 0;
+    white-space:nowrap;
+}
+
+nav a:hover,
+nav a.active{
+    color:#0b4a8b;
+}
+
+nav a.active{
+    font-weight:600;
+}
+
+nav a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#0b4a8b;
+}
+
+.hero{
+    padding:75px 6% 68px;
+    background:linear-gradient(115deg,#fff 0%,#f6faff 48%,#eaf4fd 100%);
+}
+
+.hero-inner{
+    max-width:1450px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    color:#0b4a8b;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    margin-bottom:24px;
+}
+
+.hero h1{
+    font-size:clamp(42px,5vw,70px);
+    font-weight:800;
+    letter-spacing:-3px;
+}
+
+.title-line{
+    width:70px;
+    height:4px;
+    margin-top:25px;
+    background:#0b4a8b;
+}
+
+.content{
+    padding:75px 6% 110px;
+}
+
+.content-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.section-label{
+    color:#0b4a8b;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.overview{
+    margin-bottom:55px;
+}
+
+.overview h2,
+.topics h2,
+.detail h2{
+    font-size:31px;
+    font-weight:700;
+    letter-spacing:-1px;
+    margin-bottom:20px;
+}
+
+.overview p,
+.detail p{
+    max-width:1050px;
+    color:#5f6973;
+    font-size:15px;
+    line-height:1.85;
+}
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-bottom:75px;
+}
+
+.placeholder{
+    aspect-ratio:4/3;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#edf4fa,#d8e7f4);
+
+    border:1px solid #e4e8ec;
+    border-radius:5px;
+
+    color:#8499ac;
+
+    font-size:13px;
+    font-weight:600;
+}
+
+.topics{
+    margin-bottom:75px;
+}
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:15px;
+}
+
+.topic{
+    padding:20px 22px;
+
+    background:#f7f9fb;
+
+    border:1px solid #e5e9ed;
+    border-radius:5px;
+
+    color:#38434e;
+
+    font-size:14px;
+    font-weight:600;
+
+    line-height:1.45;
+}
+
+.detail{
+    padding-top:65px;
+    border-top:1px solid #e1e5e9;
+}
+
+.detail p+p{
+    margin-top:18px;
+}
+
+footer{
+    padding:32px 6%;
+    background:#f6f7f8;
+    border-top:1px solid #e8eaed;
+}
+
+.footer-inner{
+    max-width:1450px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.footer-lab{
+    color:#0b4a8b;
+    font-size:14px;
+    font-weight:700;
+}
+
+.footer-copy{
+    color:#8a929b;
+    font-size:12px;
+}
+
+@media(max-width:650px){
+
+    header{
+        height:auto;
+        min-height:104px;
+        padding:17px 20px 12px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:11px;
+    }
+
+    .pnu-name{
+        font-size:16px;
+    }
+
+    nav{
+        width:100%;
+        gap:0;
+
+        overflow-x:auto;
+        white-space:nowrap;
+
+        scrollbar-width:none;
+    }
+
+    nav::-webkit-scrollbar{
+        display:none;
+    }
+
+    nav a{
+        flex:0 0 auto;
+
+        font-size:12px;
+
+        margin-right:22px;
+
+        padding:5px 0 7px;
+    }
+
+    .hero{
+        padding:50px 20px;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-2px;
+    }
+
+    .content{
+        padding:55px 20px 75px;
+    }
+
+    .image-grid,
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .placeholder{
+        aspect-ratio:16/11;
+    }
+
+    .overview h2,
+    .topics h2,
+    .detail h2{
+        font-size:26px;
+    }
+
+    .overview p,
+    .detail p{
+        font-size:14px;
+    }
+
+    footer{
+        padding:27px 20px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<div class="pnu-name">
+Pusan National University
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="research.html" class="active">Research</a>
+<a href="people.html">People</a>
+<a href="publications.html">Publications</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<a href="research.html#phased-array" class="back-link">
+← Back to Research
+</a>
+
+<h1>
+Phased Array
+</h1>
+
+<div class="title-line"></div>
+
+</div>
+
+</section>
+
+
+<main class="content">
+
+<div class="content-inner">
+
+
+<section class="overview">
+
+<div class="section-label">
+Overview
+</div>
+
+<h2>
+Electronically steerable antenna systems
+</h2>
+
+<p>
+Our research investigates phased-array antenna technologies
+for electronically controlled radiation and beam steering.
+Array geometry, antenna elements, feeding networks, and
+beamforming architectures are studied together to achieve
+high-performance and reconfigurable wireless systems.
+</p>
+
+</section>
+
+
+<div class="image-grid">
+
+<div class="placeholder">
+Phased Array Image 1
+</div>
+
+<div class="placeholder">
+Phased Array Image 2
+</div>
+
+<div class="placeholder">
+Phased Array Image 3
+</div>
+
+</div>
+
+
+<section class="topics">
+
+<div class="section-label">
+Research Areas
+</div>
+
+<h2>
+Research Topics
+</h2>
+
+<div class="topic-grid">
+
+<div class="topic">
+Phased-Array Antennas
+</div>
+
+<div class="topic">
+Electronic Beam Steering
+</div>
+
+<div class="topic">
+RF Beamforming
+</div>
+
+<div class="topic">
+Wide-Angle Scanning
+</div>
+
+<div class="topic">
+Reconfigurable Antennas
+</div>
+
+<div class="topic">
+Microwave &amp; mmWave Arrays
+</div>
+
+<div class="topic">
+Array Calibration
+</div>
+
+<div class="topic">
+Beamforming IC Control
+</div>
+
+<div class="topic">
+Integrated Array Systems
+</div>
+
+</div>
+
+</section>
+
+
+<section class="detail">
+
+<div class="section-label">
+Research Description
+</div>
+
+<h2>
+Advanced beam-steering antenna technology
+</h2>
+
+<p>
+Phased arrays electronically control the phase and amplitude
+of individual antenna elements to synthesize and steer the
+overall radiation pattern. We investigate antenna elements,
+array configurations, RF feeding structures, and beamforming
+methods for compact and high-performance array systems.
+</p>
+
+<p>
+Our research also considers practical implementation issues
+including beam-steering range, sidelobe characteristics,
+mutual coupling, array calibration, and integration with
+RF beamforming circuits for future wireless communication
+and sensing systems.
+</p>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="footer-inner">
+
+<div class="footer-lab">
+SWARM Laboratory
+</div>
+
+<div class="footer-copy">
+© 2026 SWARM Laboratory, Pusan National University
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
