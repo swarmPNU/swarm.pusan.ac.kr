@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,10 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
     margin: 0;
@@ -49,29 +44,27 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 9999;
 
     width: 100%;
     height: 90px;
 
-    padding: 0 2%;
+    padding: 0 6%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: transparent;
+    background: rgba(255,255,255,0.97);
 
-    z-index: 9999;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .pnu-name {
     color: #0b4a8b;
-
     font-size: 20px;
     font-weight: 700;
-
-    letter-spacing: -0.5px;
-
+    letter-spacing: -0.4px;
     white-space: nowrap;
 }
 
@@ -81,7 +74,6 @@ nav {
 
     display: flex;
     align-items: center;
-
     gap: 48px;
 }
 
@@ -90,7 +82,6 @@ nav a {
     z-index: 10001;
 
     color: #111;
-
     text-decoration: none;
 
     font-size: 15px;
@@ -114,7 +105,6 @@ nav a.active::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 0;
 
@@ -135,18 +125,16 @@ nav a.active::after {
     width: 100%;
     height: 430px;
 
-    display: flex;
-    align-items: center;
+    padding-top: 90px;
 
-    padding: 90px 2% 0;
+    overflow: hidden;
 
     background:
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.98) 0%,
-            rgba(255,255,255,0.90) 33%,
-            rgba(238,247,255,0.70) 60%,
-            rgba(213,234,255,0.55) 100%
+            rgba(7,55,100,0.94) 0%,
+            rgba(11,74,139,0.86) 47%,
+            rgba(11,74,139,0.52) 100%
         ),
         url("blue-bg.png");
 
@@ -154,45 +142,40 @@ nav a.active::after {
     background-position: center;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-
+.hero-inner {
     width: 100%;
     max-width: 1450px;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 6%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
 }
 
 .hero h1 {
-    color: #000;
-
-    font-size: clamp(82px, 8vw, 135px);
+    font-size: clamp(58px, 8vw, 105px);
     font-weight: 800;
 
-    line-height: 0.88;
+    line-height: 0.95;
+    letter-spacing: -5px;
 
-    letter-spacing: -7px;
+    margin-bottom: 22px;
 }
 
-.hero-line {
-    width: 70px;
-    height: 4px;
+.hero p {
+    font-size: clamp(16px, 1.6vw, 22px);
+    font-weight: 400;
 
-    margin: 28px 0 20px;
+    line-height: 1.55;
 
-    background: #0b4a8b;
-}
+    max-width: 750px;
 
-.hero-subtitle {
-    max-width: 650px;
-
-    color: #080808;
-
-    font-size: clamp(25px, 2.1vw, 34px);
-    font-weight: 700;
-
-    line-height: 1.13;
-
-    letter-spacing: -1.3px;
+    color: rgba(255,255,255,0.9);
 }
 
 
@@ -201,21 +184,19 @@ nav a.active::after {
 ========================================================= */
 
 .research-section {
-    padding: 34px 2% 55px;
-
-    background: #f5f6f7;
+    padding: 85px 6% 110px;
 }
 
-.research-container {
+.research-inner {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1450px;
 
     margin: 0 auto;
 }
 
 
 /* =========================================================
-   RESEARCH AREAS TITLE + LINES
+   RESEARCH HEADING
 ========================================================= */
 
 .research-heading {
@@ -266,32 +247,39 @@ nav a.active::after {
 .research-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 16px;
+    gap: 20px;
 }
 
 
 /* =========================================================
-   RESEARCH CARD
+   CARD
 ========================================================= */
 
 .research-card {
     position: relative;
 
-    min-width: 0;
-    min-height: 410px;
-
     display: flex;
     flex-direction: column;
 
-    overflow: hidden;
+    min-width: 0;
 
     background: #fff;
 
-    border-radius: 5px;
+    border: 1px solid #e0e5e9;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.025);
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
 
@@ -303,12 +291,15 @@ nav a.active::after {
     position: relative;
 
     width: 100%;
-
     aspect-ratio: 16 / 10;
 
     overflow: hidden;
 
-    background: #d9eafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
 }
 
 .research-image img {
@@ -323,11 +314,11 @@ nav a.active::after {
     object-fit: contain !important;
     object-position: center;
 
+    background: #fff;
+
     opacity: 0;
 
     transition: opacity 0.7s ease;
-
-    background: #fff;
 }
 
 .research-image img.active {
@@ -336,19 +327,30 @@ nav a.active::after {
 
 
 /* =========================================================
-   PHASED ARRAY PLACEHOLDER
+   PLACEHOLDER
 ========================================================= */
 
-.phased-placeholder {
+.placeholder {
     width: 100%;
     height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background:
         linear-gradient(
             135deg,
-            #dcecfb 0%,
-            #c6ddf1 100%
+            #e3f0fb 0%,
+            #c9def1 100%
         );
+}
+
+.placeholder span {
+    color: #0b4a8b;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 
 
@@ -359,31 +361,72 @@ nav a.active::after {
 .research-number {
     position: absolute;
 
-    top: 14px;
+    top: 15px;
     left: 15px;
 
-    z-index: 20;
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: #0b4a8b;
 
     color: #fff;
 
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
-
-    text-shadow:
-        0 1px 4px rgba(0,0,0,0.35);
 }
 
-.research-number::after {
-    content: "";
 
-    display: block;
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
 
-    width: 22px;
-    height: 1px;
+.slider-dots {
+    position: absolute;
 
-    margin-top: 7px;
+    left: 50%;
+    bottom: 12px;
 
-    background: rgba(255,255,255,0.85);
+    transform: translateX(-50%);
+
+    z-index: 25;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.88);
+}
+
+.slider-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #b8c3cc;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.slider-dot.active {
+    width: 18px;
+
+    border-radius: 10px;
+
+    background: #0b4a8b;
 }
 
 
@@ -391,74 +434,56 @@ nav a.active::after {
    CARD CONTENT
 ========================================================= */
 
-.card-content {
+.research-content {
     position: relative;
 
     flex: 1;
 
-    padding: 15px 15px 53px;
+    padding: 25px 24px 27px;
 }
 
-.card-content h3 {
+.research-content h3 {
     color: #111;
 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
 
-    line-height: 1.12;
+    line-height: 1.35;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.6px;
 
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
-.card-content p {
-    color: #68727c;
+.research-content p {
+    color: #69737d;
 
-    font-size: 12px;
+    font-size: 13.5px;
 
-    line-height: 1.45;
+    line-height: 1.72;
+
+    padding-bottom: 38px;
 }
 
-
-/* =========================================================
-   CARD ARROW
-========================================================= */
-
-.card-arrow {
+.research-arrow {
     position: absolute;
 
-    right: 15px;
-    bottom: 14px;
-
-    width: 34px;
-    height: 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #edf6fd;
+    right: 24px;
+    bottom: 23px;
 
     color: #0b4a8b;
 
-    font-size: 20px;
+    font-size: 22px;
 
     text-decoration: none;
 
-    cursor: pointer;
+    line-height: 1;
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.card-arrow:hover {
-    background: #dceefc;
-
-    transform: translateX(3px);
+.research-arrow:hover {
+    transform: translateX(4px);
 }
 
 
@@ -467,23 +492,23 @@ nav a.active::after {
 ========================================================= */
 
 footer {
-    padding: 30px 2%;
+    padding: 32px 6%;
 
-    background: #fff;
+    background: #f6f7f8;
 
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e8eaed;
 }
 
 .footer-inner {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1450px;
 
     margin: auto;
 
     display: flex;
 
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
     gap: 20px;
 }
@@ -509,17 +534,9 @@ footer {
 @media (max-width: 1200px) {
 
     .research-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
 
-        gap: 18px;
-    }
-
-    .research-card {
-        min-height: 420px;
-    }
-
-    .research-heading {
-        gap: 35px;
+        gap: 24px;
     }
 
 }
@@ -588,47 +605,37 @@ footer {
     .hero {
         height: 400px;
 
-        padding: 115px 20px 25px;
+        padding-top: 104px;
+    }
 
-        align-items: center;
-
-        background-position: center;
+    .hero-inner {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .hero h1 {
-        font-size: 68px;
+        font-size: 62px;
 
-        letter-spacing: -4px;
+        letter-spacing: -3px;
+
+        margin-bottom: 18px;
     }
 
-    .hero-line {
-        width: 55px;
-        height: 3px;
-
-        margin: 23px 0 17px;
-    }
-
-    .hero-subtitle {
-        max-width: 360px;
-
-        font-size: 23px;
-
-        line-height: 1.15;
-
-        letter-spacing: -0.8px;
+    .hero p {
+        font-size: 15px;
     }
 
 
     /* RESEARCH */
 
     .research-section {
-        padding: 38px 20px 55px;
+        padding: 60px 20px 75px;
     }
 
     .research-heading {
         gap: 16px;
 
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }
 
     .research-heading::before,
@@ -645,52 +652,34 @@ footer {
     .research-grid {
         grid-template-columns: 1fr;
 
-        gap: 20px;
-    }
-
-    .research-card {
-        min-height: 0;
+        gap: 24px;
     }
 
     .research-image {
         aspect-ratio: 16 / 13;
     }
 
-    .card-content {
-        min-height: 175px;
-
-        padding: 17px 17px 55px;
+    .research-content {
+        padding: 23px 21px 25px;
     }
 
-    .card-content h3 {
-        font-size: 17px;
-
-        margin-bottom: 9px;
+    .research-content h3 {
+        font-size: 19px;
     }
 
-    .card-content p {
-        font-size: 12.5px;
-
-        line-height: 1.5;
+    .research-content p {
+        font-size: 13.5px;
     }
 
-    .research-number {
-        top: 13px;
-        left: 14px;
-
-        font-size: 15px;
-    }
-
-    .card-arrow {
-        right: 15px;
-        bottom: 14px;
+    .research-arrow {
+        right: 21px;
     }
 
 
     /* FOOTER */
 
     footer {
-        padding: 26px 20px;
+        padding: 27px 20px;
     }
 
     .footer-inner {
@@ -705,7 +694,7 @@ footer {
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   VERY SMALL
 ========================================================= */
 
 @media (max-width: 390px) {
@@ -721,19 +710,7 @@ footer {
         margin-right: 17px;
     }
 
-    .hero {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .hero h1 {
-        font-size: 61px;
-    }
-
-    .hero-subtitle {
-        font-size: 21px;
-    }
-
+    .hero-inner,
     .research-section {
         padding-left: 16px;
         padding-right: 16px;
@@ -750,16 +727,13 @@ footer {
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -768,317 +742,307 @@ footer {
     </div>
 
     <nav>
-
-        <a href="index.html" class="active">
-            Home
-        </a>
-
-        <a href="research.html">
-            Research
-        </a>
-
-        <a href="people.html">
-            People
-        </a>
-
-        <a href="publications.html">
-            Publications
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
 </header>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-        <h1>
-            SWARM
-        </h1>
+        <h1>SWARM</h1>
 
-        <div class="hero-line"></div>
-
-        <div class="hero-subtitle">
-            Smart Wireless Antenna,<br>
-            Radiation, and Microwave Laboratory
-        </div>
+        <p>
+            Smart Wireless Antenna, Radiation, and Microwave Laboratory
+        </p>
 
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     RESEARCH AREAS
-========================================================= -->
+<!-- RESEARCH -->
 
-<section class="research-section" id="research">
+<section class="research-section">
 
-    <div class="research-container">
+<div class="research-inner">
 
 
-        <!-- TITLE WITH LINES -->
+    <div class="research-heading">
 
-        <div class="research-heading">
-
-            <h2 class="research-title">
-                Research Areas
-            </h2>
-
-        </div>
-
-
-        <div class="research-grid">
-
-
-            <!-- =================================================
-                 01 PHASED ARRAY
-            ================================================== -->
-
-            <article class="research-card">
-
-                <div class="research-image">
-
-                    <div class="phased-placeholder"></div>
-
-                    <div class="research-number">
-                        01
-                    </div>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <h3>
-                        Phased Array
-                    </h3>
-
-                    <p>
-                        Phased array antenna technologies for
-                        electronic beam steering, beamforming,
-                        and high-performance wireless communication
-                        systems.
-                    </p>
-
-                    <a
-                        href="research.html#phased-array"
-                        class="card-arrow"
-                        aria-label="View Phased Array research"
-                    >
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 02 BACKSCATTER COMMUNICATION
-            ================================================== -->
-
-            <article class="research-card">
-
-                <div class="research-image">
-
-                    <img
-                        src="backcom1.png"
-                        class="backcom-slide active"
-                        alt="Backscatter Communication research"
-                    >
-
-                    <img
-                        src="backcom2.png"
-                        class="backcom-slide"
-                        alt="Backscatter Communication research"
-                    >
-
-                    <img
-                        src="backcom3.png"
-                        class="backcom-slide"
-                        alt="Backscatter Communication research"
-                    >
-
-                    <div class="research-number">
-                        02
-                    </div>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <h3>
-                        Backscatter Communication
-                    </h3>
-
-                    <p>
-                        Advanced backscatter communication technologies
-                        for high-speed and reliable connectivity,
-                        including MIMO, robust signal processing,
-                        and AI-driven intelligent wireless systems.
-                    </p>
-
-                    <a
-                        href="research.html#backcom"
-                        class="card-arrow"
-                        aria-label="View Backscatter Communication research"
-                    >
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 03 METASURFACE
-            ================================================== -->
-
-            <article class="research-card">
-
-                <div class="research-image">
-
-                    <img
-                        src="meta1.png"
-                        class="meta-slide active"
-                        alt="Magnetic Materials-Based Absorber and Metasurface"
-                    >
-
-                    <img
-                        src="meta2.png"
-                        class="meta-slide"
-                        alt="Magnetic Materials-Based Absorber and Metasurface"
-                    >
-
-                    <img
-                        src="meta3.png"
-                        class="meta-slide"
-                        alt="Magnetic Materials-Based Absorber and Metasurface"
-                    >
-
-                     <img
-                          src="meta4.png"
-                          class="research-slide"
-                          alt="Magnetic Materials-Based Absorber and Metasurface"
-                      >
-
-
-                    <div class="research-number">
-                        03
-                    </div>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <h3>
-                        Magnetic Materials-Based<br>
-                        Absorber &amp; Metasurface
-                    </h3>
-
-                    <p>
-                        Magnetic materials-based absorbers and
-                        metasurfaces for electromagnetic wave
-                        absorption, manipulation, and advanced
-                        wireless applications.
-                    </p>
-
-                    <a
-                        href="research.html#metasurface"
-                        class="card-arrow"
-                        aria-label="View Absorber and Metasurface research"
-                    >
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 04 ANTENNA-IN-PACKAGE
-            ================================================== -->
-
-            <article class="research-card">
-
-                <div class="research-image">
-
-                    <img
-                        src="AIP1.png"
-                        class="aip-slide active"
-                        alt="Antenna-in-Package research"
-                    >
-
-                    <img
-                        src="AIP2.png"
-                        class="aip-slide"
-                        alt="Antenna-in-Package research"
-                    >
-
-                    <img
-                        src="AIP3.png"
-                        class="aip-slide"
-                        alt="Antenna-in-Package research"
-                    >
-
-                    <div class="research-number">
-                        04
-                    </div>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <h3>
-                        Antenna-in-Package (AiP)
-                    </h3>
-
-                    <p>
-                        Antenna-in-package technologies integrating
-                        antennas, RF components, and beamforming
-                        circuits into compact packages for
-                        next-generation wireless systems.
-                    </p>
-
-                    <a
-                        href="research.html#aip"
-                        class="card-arrow"
-                        aria-label="View Antenna-in-Package research"
-                    >
-                        →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </div>
+        <h2 class="research-title">
+            Research Areas
+        </h2>
 
     </div>
+
+
+    <div class="research-grid">
+
+
+        <!-- 01 PHASED ARRAY -->
+
+        <article class="research-card">
+
+            <div class="research-image">
+
+                <div class="placeholder">
+                    <span>Phased Array</span>
+                </div>
+
+                <div class="research-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <div class="research-content">
+
+                <h3>
+                    Phased Array
+                </h3>
+
+                <p>
+                    Phased array antenna technologies for electronic
+                    beam steering, beamforming, and high-performance
+                    wireless communication systems.
+                </p>
+
+                <a
+                    href="research.html#phased-array"
+                    class="research-arrow"
+                    aria-label="View Phased Array research"
+                >
+                    →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 02 BACKSCATTER COMMUNICATION -->
+
+        <article class="research-card">
+
+            <div class="research-image">
+
+                <img
+                    src="backcom1.png"
+                    class="backcom-slide active"
+                    alt="Backscatter Communication"
+                >
+
+                <img
+                    src="backcom2.png"
+                    class="backcom-slide"
+                    alt="Backscatter Communication"
+                >
+
+                <img
+                    src="backcom3.png"
+                    class="backcom-slide"
+                    alt="Backscatter Communication"
+                >
+
+
+                <div class="slider-dots">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+
+
+                <div class="research-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="research-content">
+
+                <h3>
+                    Backscatter Communication
+                </h3>
+
+                <p>
+                    Advanced backscatter communication technologies
+                    for high-speed and reliable connectivity,
+                    including MIMO, robust signal processing, and
+                    AI-driven intelligent wireless systems.
+                </p>
+
+                <a
+                    href="research.html#backcom"
+                    class="research-arrow"
+                    aria-label="View Backscatter Communication research"
+                >
+                    →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 03 MAGNETIC MATERIALS -->
+
+        <article class="research-card">
+
+            <div class="research-image">
+
+                <img
+                    src="meta1.png"
+                    class="meta-slide active"
+                    alt="Magnetic Materials-Based Absorber and Metasurface"
+                >
+
+                <img
+                    src="meta2.png"
+                    class="meta-slide"
+                    alt="Magnetic Materials-Based Absorber and Metasurface"
+                >
+
+                <img
+                    src="meta3.png"
+                    class="meta-slide"
+                    alt="Magnetic Materials-Based Absorber and Metasurface"
+                >
+
+                <img
+                    src="meta4.png"
+                    class="meta-slide"
+                    alt="Magnetic Materials-Based Absorber and Metasurface"
+                >
+
+
+                <div class="slider-dots">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+
+
+                <div class="research-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="research-content">
+
+                <h3>
+                    Magnetic Materials-Based<br>
+                    Absorber &amp; Metasurface
+                </h3>
+
+                <p>
+                    Magnetic materials-based absorbers and
+                    metasurfaces for electromagnetic wave absorption,
+                    manipulation, and advanced wireless applications.
+                </p>
+
+                <a
+                    href="research.html#metasurface"
+                    class="research-arrow"
+                    aria-label="View Absorber and Metasurface research"
+                >
+                    →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 04 ANTENNA-IN-PACKAGE -->
+
+        <article class="research-card">
+
+            <div class="research-image">
+
+                <img
+                    src="AIP1.png"
+                    class="aip-slide active"
+                    alt="Antenna-in-Package"
+                >
+
+                <img
+                    src="AIP2.png"
+                    class="aip-slide"
+                    alt="Antenna-in-Package"
+                >
+
+                <img
+                    src="AIP3.png"
+                    class="aip-slide"
+                    alt="Antenna-in-Package"
+                >
+
+
+                <div class="slider-dots">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+
+
+                <div class="research-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <div class="research-content">
+
+                <h3>
+                    Antenna-in-Package (AiP)
+                </h3>
+
+                <p>
+                    Antenna-in-package technologies integrating
+                    antennas, RF components, and beamforming circuits
+                    into compact packages for next-generation
+                    wireless systems.
+                </p>
+
+                <a
+                    href="research.html#aip"
+                    class="research-arrow"
+                    aria-label="View Antenna-in-Package research"
+                >
+                    →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1097,10 +1061,6 @@ footer {
 </footer>
 
 
-<!-- =========================================================
-     SLIDESHOW
-========================================================= -->
-
 <script>
 
 function startSlideshow(selector, interval = 3000) {
@@ -1109,15 +1069,28 @@ function startSlideshow(selector, interval = 3000) {
 
     if (slides.length <= 1) return;
 
+    const container = slides[0].closest(".research-image");
+    const dots = container
+        ? container.querySelectorAll(".slider-dot")
+        : [];
+
     let current = 0;
 
     setInterval(() => {
 
         slides[current].classList.remove("active");
 
+        if (dots[current]) {
+            dots[current].classList.remove("active");
+        }
+
         current = (current + 1) % slides.length;
 
         slides[current].classList.add("active");
+
+        if (dots[current]) {
+            dots[current].classList.add("active");
+        }
 
     }, interval);
 
@@ -1132,5 +1105,4 @@ startSlideshow(".aip-slide", 3000);
 
 
 </body>
-
 </html>
