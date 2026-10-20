@@ -20,16 +20,20 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     color: #111;
     background: #fff;
     overflow-x: hidden;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* HEADER */
 
 header {
     width: 100%;
@@ -48,12 +52,13 @@ header {
     color: #0b4a8b;
     font-size: 20px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 nav {
     display: flex;
-    gap: 48px;
     align-items: center;
+    gap: 48px;
 }
 
 nav a {
@@ -89,7 +94,7 @@ nav a.active::after {
 /* HERO */
 
 .hero {
-    padding: 75px 6% 68px;
+    padding: 72px 6% 65px;
 
     background:
         linear-gradient(
@@ -101,21 +106,21 @@ nav a.active::after {
 }
 
 .hero-inner {
+    width: 100%;
     max-width: 1450px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .back-link {
     display: inline-block;
 
     color: #0b4a8b;
-
     font-size: 13px;
     font-weight: 600;
 
     text-decoration: none;
 
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 .back-link:hover {
@@ -125,11 +130,11 @@ nav a.active::after {
 .hero h1 {
     max-width: 1000px;
 
-    font-size: clamp(42px, 5vw, 70px);
+    font-size: clamp(43px, 5vw, 70px);
     font-weight: 800;
 
-    letter-spacing: -3px;
     line-height: 1.05;
+    letter-spacing: -3px;
 }
 
 .title-line {
@@ -142,142 +147,132 @@ nav a.active::after {
 }
 
 
-/* CONTENT */
+/* INTRO */
 
-.content {
-    padding: 75px 6% 110px;
+.intro {
+    padding: 65px 6% 35px;
 }
 
-.content-inner {
-    max-width: 1250px;
+.intro-inner {
+    max-width: 1050px;
     margin: auto;
 }
 
-.section-label {
-    color: #0b4a8b;
+.intro-inner p {
+    color: #626c76;
 
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-
-    margin-bottom: 15px;
-}
-
-.overview h2,
-.research-detail h2 {
-    font-size: 31px;
-    font-weight: 700;
-
-    letter-spacing: -1px;
-
-    margin-bottom: 20px;
-}
-
-.overview p,
-.research-detail p {
-    max-width: 1050px;
-
-    color: #5f6973;
-
-    font-size: 15px;
+    font-size: 15.5px;
     line-height: 1.85;
 }
 
-.overview {
-    margin-bottom: 55px;
+
+/* RESEARCH LIST */
+
+.research-list {
+    padding: 20px 6% 110px;
+}
+
+.research-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
 }
 
 
-/* IMAGES */
+/* EACH RESEARCH */
 
-.image-grid {
+.research-item {
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
 
-    gap: 18px;
+    gap: 75px;
 
-    margin-bottom: 75px;
+    align-items: center;
+
+    padding: 80px 0;
+
+    border-top: 1px solid #e1e5e9;
 }
 
-.image-box {
+.research-item:last-child {
+    border-bottom: 1px solid #e1e5e9;
+}
+
+
+/* alternating */
+
+.research-item.reverse {
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+}
+
+.research-item.reverse .research-image {
+    order: 2;
+}
+
+.research-item.reverse .research-text {
+    order: 1;
+}
+
+
+/* IMAGE */
+
+.research-image {
     width: 100%;
-    aspect-ratio: 4 / 3;
+
+    aspect-ratio: 16 / 10;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    overflow: hidden;
 
     background: #fff;
 
     border: 1px solid #e4e8ec;
     border-radius: 5px;
 
-    padding: 10px;
+    padding: 12px;
+
+    overflow: hidden;
 }
 
-.image-box img {
+.research-image img {
     width: 100%;
     height: 100%;
 
     object-fit: contain;
+    object-position: center;
 }
 
 
-/* TOPICS */
+/* TEXT */
 
-.topic-section {
-    margin-bottom: 75px;
-}
+.research-text h2 {
+    max-width: 580px;
 
-.topic-section h2 {
-    font-size: 31px;
+    color: #111;
+
+    font-size: clamp(27px, 3vw, 39px);
     font-weight: 700;
 
-    letter-spacing: -1px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
 
-    margin-bottom: 25px;
+    margin-bottom: 19px;
 }
 
-.topic-grid {
-    display: grid;
+.research-text p {
+    max-width: 580px;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    color: #606a74;
 
-    gap: 15px;
-}
-
-.topic {
-    padding: 20px 22px;
-
-    background: #f7f9fb;
-
-    border: 1px solid #e5e9ed;
-    border-radius: 5px;
-
-    color: #38434e;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    line-height: 1.45;
-}
-
-
-/* DETAIL */
-
-.research-detail {
-    padding-top: 65px;
-
-    border-top: 1px solid #e1e5e9;
-}
-
-.research-detail p + p {
-    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 
@@ -292,23 +287,28 @@ footer {
 }
 
 .footer-inner {
+    width: 100%;
     max-width: 1450px;
+
     margin: auto;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     gap: 20px;
 }
 
 .footer-lab {
     color: #0b4a8b;
+
     font-size: 14px;
     font-weight: 700;
 }
 
 .footer-copy {
     color: #8a929b;
+
     font-size: 12px;
 }
 
@@ -324,6 +324,7 @@ footer {
         padding: 17px 20px 12px;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 11px;
@@ -335,9 +336,11 @@ footer {
 
     nav {
         width: 100%;
+
         gap: 0;
 
         overflow-x: auto;
+
         white-space: nowrap;
 
         scrollbar-width: none;
@@ -352,10 +355,11 @@ footer {
 
         font-size: 12px;
 
-        margin-right: 22px;
-
         padding: 5px 0 7px;
+
+        margin-right: 22px;
     }
+
 
     .hero {
         padding: 50px 20px;
@@ -363,38 +367,69 @@ footer {
 
     .hero h1 {
         font-size: 39px;
+
         letter-spacing: -2px;
     }
 
-    .content {
-        padding: 55px 20px 75px;
+    .title-line {
+        width: 55px;
+        height: 3px;
     }
 
-    .image-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        margin-bottom: 60px;
+
+    .intro {
+        padding: 45px 20px 15px;
     }
 
-    .image-box {
-        aspect-ratio: 16 / 11;
-    }
-
-    .topic-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .overview h2,
-    .topic-section h2,
-    .research-detail h2 {
-        font-size: 26px;
-    }
-
-    .overview p,
-    .research-detail p {
+    .intro-inner p {
         font-size: 14px;
+
         line-height: 1.75;
     }
+
+
+    .research-list {
+        padding: 15px 20px 70px;
+    }
+
+    .research-item,
+    .research-item.reverse {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+
+        align-items: stretch;
+
+        padding: 50px 0;
+    }
+
+    .research-item.reverse .research-image,
+    .research-item.reverse .research-text {
+        order: initial;
+    }
+
+    .research-image {
+        aspect-ratio: 16 / 11;
+
+        padding: 7px;
+    }
+
+    .research-text h2 {
+        font-size: 27px;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 15px;
+    }
+
+    .research-text p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
 
     footer {
         padding: 27px 20px;
@@ -402,7 +437,9 @@ footer {
 
     .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 8px;
     }
 
@@ -413,6 +450,7 @@ footer {
 
 
 <body>
+
 
 <header>
 
@@ -450,125 +488,145 @@ footer {
 </section>
 
 
-<main class="content">
+<section class="intro">
 
-<div class="content-inner">
+    <div class="intro-inner">
 
+        <p>
+            SWARM Laboratory investigates low-power and
+            self-sustainable wireless communication systems based
+            on backscatter communication. Our research covers
+            communication architectures, channel estimation,
+            integrated sensing, and intelligent signal processing
+            for next-generation IoT systems.
+        </p>
 
-<section class="overview">
-
-    <div class="section-label">
-        Overview
     </div>
-
-    <h2>
-        Low-power and self-sustainable wireless communication
-    </h2>
-
-    <p>
-        Our research explores backscatter communication technologies
-        for low-power and self-sustainable wireless systems.
-        By utilizing reflected radio-frequency signals for information
-        transmission, backscatter communication can significantly
-        reduce the power required by conventional active wireless
-        transmitters.
-    </p>
 
 </section>
 
 
-<div class="image-grid">
+<section class="research-list">
 
-    <div class="image-box">
-        <img src="backcom1.png" alt="BackCom research figure 1">
-    </div>
+<div class="research-container">
 
-    <div class="image-box">
-        <img src="backcom2.png" alt="BackCom research figure 2">
-    </div>
 
-    <div class="image-box">
-        <img src="backcom3.png" alt="BackCom research figure 3">
-    </div>
+    <!-- =====================================================
+         BACKCOM 1
+    ====================================================== -->
+
+    <article class="research-item">
+
+        <div class="research-image">
+
+            <img
+                src="backcom1.png"
+                alt="Full-Duplex Backscatter Communication"
+            >
+
+        </div>
+
+
+        <div class="research-text">
+
+            <h2>
+                Full-Duplex Backscatter Communication
+            </h2>
+
+            <p>
+                We investigate full-duplex backscatter communication
+                systems for low-power wireless connectivity. The
+                research focuses on practical communication
+                architectures and signal-processing techniques for
+                improving communication range, reliability, and
+                spectral efficiency while maintaining the low-power
+                characteristics of backscatter devices.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         BACKCOM 2
+    ====================================================== -->
+
+    <article class="research-item reverse">
+
+        <div class="research-image">
+
+            <img
+                src="backcom2.png"
+                alt="Integrated Sensing and Backscatter Communication"
+            >
+
+        </div>
+
+
+        <div class="research-text">
+
+            <h2>
+                Integrated Sensing and
+                Backscatter Communication
+            </h2>
+
+            <p>
+                We explore the integration of sensing and backscatter
+                communication for self-sustainable wireless systems.
+                By combining sensing and communication functions
+                within a low-power platform, the research aims to
+                support autonomous IoT devices capable of acquiring
+                and transmitting information with minimal energy
+                consumption.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         BACKCOM 3
+    ====================================================== -->
+
+    <article class="research-item">
+
+        <div class="research-image">
+
+            <img
+                src="backcom3.png"
+                alt="Intelligent Backscatter Communication"
+            >
+
+        </div>
+
+
+        <div class="research-text">
+
+            <h2>
+                Intelligent Backscatter
+                Communication
+            </h2>
+
+            <p>
+                AI and machine-learning techniques are investigated
+                for intelligent backscatter communication systems.
+                Our research includes phase-aware channel estimation,
+                adaptive signal processing, and data-driven
+                optimization methods for improving communication
+                performance under practical wireless-channel
+                variations.
+            </p>
+
+        </div>
+
+    </article>
+
 
 </div>
 
-
-<section class="topic-section">
-
-    <div class="section-label">
-        Research Areas
-    </div>
-
-    <h2>
-        Research Topics
-    </h2>
-
-    <div class="topic-grid">
-
-        <div class="topic">
-            Full-Duplex Backscatter Communication
-        </div>
-
-        <div class="topic">
-            Self-Sustainable Wireless Systems
-        </div>
-
-        <div class="topic">
-            Phase-Aware Channel Estimation
-        </div>
-
-        <div class="topic">
-            Integrated Sensing and Backscatter Communication
-        </div>
-
-        <div class="topic">
-            AI/ML-Assisted Signal Processing
-        </div>
-
-        <div class="topic">
-            Low-Power IoT Systems
-        </div>
-
-    </div>
-
 </section>
-
-
-<section class="research-detail">
-
-    <div class="section-label">
-        Research Description
-    </div>
-
-    <h2>
-        Intelligent backscatter communication systems
-    </h2>
-
-    <p>
-        We investigate full-duplex backscatter architectures that
-        enable simultaneous wireless operation while addressing
-        challenges associated with interference, channel variation,
-        and phase uncertainty. System-level approaches are studied
-        to improve communication reliability and extend the practical
-        operating range of backscatter links.
-    </p>
-
-    <p>
-        Our research also combines backscatter communication with
-        sensing and intelligent signal processing. AI and machine
-        learning techniques are investigated for channel estimation,
-        signal processing, and adaptive wireless operation, with the
-        goal of realizing energy-efficient and autonomous IoT
-        communication and sensing platforms.
-    </p>
-
-</section>
-
-
-</div>
-
-</main>
 
 
 <footer>
@@ -586,6 +644,7 @@ footer {
     </div>
 
 </footer>
+
 
 </body>
 </html>
