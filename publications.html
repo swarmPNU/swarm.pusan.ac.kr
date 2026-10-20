@@ -246,7 +246,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   CATEGORY TITLE
+   CATEGORY HEADER
 ========================================================= */
 
 .category-header {
@@ -287,8 +287,7 @@ nav a.active::after {
 
     gap: 35px;
 
-    padding: 0 0 48px;
-
+    padding-bottom: 48px;
     margin-bottom: 48px;
 
     border-bottom: 1px solid #e3e7ea;
@@ -322,7 +321,6 @@ nav a.active::after {
     position: relative;
 
     padding-bottom: 30px;
-
     margin-bottom: 30px;
 
     border-bottom: 1px solid #edf0f2;
@@ -330,7 +328,6 @@ nav a.active::after {
 
 .publication-item:last-child {
     padding-bottom: 0;
-
     margin-bottom: 0;
 
     border-bottom: 0;
@@ -377,7 +374,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   UNDER REVIEW BADGE
+   UNDER REVIEW
 ========================================================= */
 
 .review-badge {
@@ -406,7 +403,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   AUTHORS / JOURNAL
+   AUTHORS
 ========================================================= */
 
 .paper-authors {
@@ -419,6 +416,11 @@ nav a.active::after {
     margin-bottom: 4px;
 }
 
+
+/* =========================================================
+   JOURNAL / INFO
+========================================================= */
+
 .paper-journal {
     color: #747d85;
 
@@ -429,12 +431,13 @@ nav a.active::after {
 
 
 /* =========================================================
-   DOI / ARTICLE
+   DOI / ARTICLE LINKS
 ========================================================= */
 
 .paper-links {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     gap: 12px;
 
@@ -442,25 +445,20 @@ nav a.active::after {
 }
 
 .paper-links a {
-    display: inline-flex;
-    align-items: center;
-
     color: #0b4a8b;
 
     font-size: 12px;
     font-weight: 600;
 
-    line-height: 1.4;
+    line-height: 1.5;
 
     text-decoration: none;
 
-    border-bottom: 1px solid transparent;
-
-    transition: border-color 0.2s ease;
+    word-break: break-all;
 }
 
 .paper-links a:hover {
-    border-bottom-color: #0b4a8b;
+    text-decoration: underline;
 }
 
 
@@ -625,7 +623,6 @@ footer {
         display: block;
 
         padding-bottom: 38px;
-
         margin-bottom: 38px;
     }
 
@@ -637,7 +634,6 @@ footer {
 
     .publication-item {
         padding-bottom: 25px;
-
         margin-bottom: 25px;
     }
 
@@ -648,6 +644,10 @@ footer {
     .paper-authors,
     .paper-journal {
         font-size: 13px;
+    }
+
+    .paper-links a {
+        font-size: 11.5px;
     }
 
 
@@ -836,7 +836,7 @@ footer {
 
 
 <!-- =========================================================
-     PUBLICATION DATA
+     DATA FILES
 ========================================================= -->
 
 <script src="publications/international.js"></script>
@@ -847,7 +847,7 @@ footer {
 
 
 <!-- =========================================================
-     RENDERER
+     PUBLICATION RENDERER
 ========================================================= -->
 
 <script>
@@ -888,7 +888,7 @@ const publicationData = {
 
 
 /* =========================================================
-   CREATE PUBLICATION ITEM
+   CREATE ITEM
 ========================================================= */
 
 function createPublicationItem(p) {
@@ -897,9 +897,9 @@ function createPublicationItem(p) {
     item.className = "publication-item";
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        TITLE ROW
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const titleRow = document.createElement("div");
     titleRow.className = "title-row";
@@ -910,9 +910,8 @@ function createPublicationItem(p) {
 
 
     /*
-       DOI가 있으면 제목 → DOI
-       DOI가 없고 URL이 있으면 제목 → URL
-       둘 다 없으면 일반 텍스트
+        DOI 존재
+        → 제목 자체를 DOI 링크로 연결
     */
 
     if (p.doi) {
@@ -920,6 +919,7 @@ function createPublicationItem(p) {
         const titleLink = document.createElement("a");
 
         titleLink.href = "https://doi.org/" + p.doi;
+
         titleLink.target = "_blank";
         titleLink.rel = "noopener noreferrer";
 
@@ -927,11 +927,20 @@ function createPublicationItem(p) {
 
         title.appendChild(titleLink);
 
-    } else if (p.url) {
+    }
+
+
+    /*
+        DOI 없음 + URL 존재
+        → 제목을 Article URL로 연결
+    */
+
+    else if (p.url) {
 
         const titleLink = document.createElement("a");
 
         titleLink.href = p.url;
+
         titleLink.target = "_blank";
         titleLink.rel = "noopener noreferrer";
 
@@ -939,7 +948,14 @@ function createPublicationItem(p) {
 
         title.appendChild(titleLink);
 
-    } else {
+    }
+
+
+    /*
+        링크 없음
+    */
+
+    else {
 
         title.textContent = p.title || "";
 
@@ -949,11 +965,11 @@ function createPublicationItem(p) {
     titleRow.appendChild(title);
 
 
-    /* -----------------------------------------------------
-       UNDER REVIEW
-    ----------------------------------------------------- */
+    /* =====================================================
+       UNDER REVIEW BADGE
+    ===================================================== */
 
-    if (p.underReview) {
+    if (p.underReview === true) {
 
         const badge = document.createElement("span");
 
@@ -969,9 +985,9 @@ function createPublicationItem(p) {
     item.appendChild(titleRow);
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        AUTHORS
-    ----------------------------------------------------- */
+    ===================================================== */
 
     if (p.authors) {
 
@@ -986,9 +1002,9 @@ function createPublicationItem(p) {
     }
 
 
-    /* -----------------------------------------------------
-       JOURNAL / INFORMATION
-    ----------------------------------------------------- */
+    /* =====================================================
+       JOURNAL
+    ===================================================== */
 
     if (p.journal) {
 
@@ -1003,10 +1019,10 @@ function createPublicationItem(p) {
     }
 
 
-    /*
-       특허/책 데이터에서 journal 대신
-       다른 정보 필드를 사용하는 경우를 위한 처리
-    */
+    /* =====================================================
+       INFO
+       patents / books 등에서 journal 대신 info 사용 가능
+    ===================================================== */
 
     if (!p.journal && p.info) {
 
@@ -1021,40 +1037,57 @@ function createPublicationItem(p) {
     }
 
 
-    /* -----------------------------------------------------
-       DOI / ARTICLE LINK
-    ----------------------------------------------------- */
+    /* =====================================================
+       DOI LINK
+    ===================================================== */
 
-    if (p.doi || p.url) {
+    if (p.doi) {
 
         const links = document.createElement("div");
 
         links.className = "paper-links";
 
 
-        const link = document.createElement("a");
+        const doiLink = document.createElement("a");
+
+        doiLink.href = "https://doi.org/" + p.doi;
+
+        doiLink.target = "_blank";
+        doiLink.rel = "noopener noreferrer";
+
+        doiLink.textContent = "DOI: " + p.doi;
 
 
-        if (p.doi) {
+        links.appendChild(doiLink);
 
-            link.href = "https://doi.org/" + p.doi;
+        item.appendChild(links);
 
-            link.textContent = "DOI";
-
-        } else {
-
-            link.href = p.url;
-
-            link.textContent = "Article";
-
-        }
+    }
 
 
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
+    /* =====================================================
+       ARTICLE LINK
+       DOI가 없는 경우에만 표시
+    ===================================================== */
+
+    else if (p.url) {
+
+        const links = document.createElement("div");
+
+        links.className = "paper-links";
 
 
-        links.appendChild(link);
+        const articleLink = document.createElement("a");
+
+        articleLink.href = p.url;
+
+        articleLink.target = "_blank";
+        articleLink.rel = "noopener noreferrer";
+
+        articleLink.textContent = "Article";
+
+
+        links.appendChild(articleLink);
 
         item.appendChild(links);
 
@@ -1066,68 +1099,85 @@ function createPublicationItem(p) {
 
 
 /* =========================================================
-   RENDER PUBLICATIONS
+   RENDER CATEGORY
 ========================================================= */
 
 function renderPublications(category) {
 
-    const content = document.getElementById("publication-content");
+    const content =
+        document.getElementById("publication-content");
+
 
     content.innerHTML = "";
 
 
-    const categoryInfo = publicationData[category];
+    const categoryInfo =
+        publicationData[category];
+
 
     if (!categoryInfo) {
         return;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        CATEGORY HEADER
-    ----------------------------------------------------- */
+    ===================================================== */
 
-    const categoryHeader = document.createElement("div");
+    const categoryHeader =
+        document.createElement("div");
 
-    categoryHeader.className = "category-header";
-
-
-    const label = document.createElement("div");
-
-    label.className = "category-label";
-
-    label.textContent = categoryInfo.label;
+    categoryHeader.className =
+        "category-header";
 
 
-    const title = document.createElement("h2");
+    const label =
+        document.createElement("div");
 
-    title.className = "category-title";
+    label.className =
+        "category-label";
 
-    title.textContent = categoryInfo.title;
+    label.textContent =
+        categoryInfo.label;
+
+
+    const categoryTitle =
+        document.createElement("h2");
+
+    categoryTitle.className =
+        "category-title";
+
+    categoryTitle.textContent =
+        categoryInfo.title;
 
 
     categoryHeader.appendChild(label);
-    categoryHeader.appendChild(title);
+    categoryHeader.appendChild(categoryTitle);
 
     content.appendChild(categoryHeader);
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        DATA
-    ----------------------------------------------------- */
+    ===================================================== */
 
-    const data = Array.isArray(categoryInfo.data)
-        ? categoryInfo.data
-        : [];
+    const data =
+        Array.isArray(categoryInfo.data)
+            ? categoryInfo.data
+            : [];
 
 
     if (data.length === 0) {
 
-        const empty = document.createElement("div");
+        const empty =
+            document.createElement("div");
 
-        empty.className = "empty-message";
+        empty.className =
+            "empty-message";
 
-        empty.textContent = "No entries are currently available.";
+        empty.textContent =
+            "No entries are currently available.";
+
 
         content.appendChild(empty);
 
@@ -1135,19 +1185,14 @@ function renderPublications(category) {
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        GROUP BY YEAR
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const grouped = {};
 
 
     data.forEach((publication) => {
-
-        /*
-           year가 없는 데이터도 버리지 않음.
-           별도의 Other 그룹으로 표시.
-        */
 
         const year =
             publication.year !== undefined &&
@@ -1167,61 +1212,81 @@ function renderPublications(category) {
     });
 
 
-    /* -----------------------------------------------------
-       SORT YEARS
-    ----------------------------------------------------- */
+    /* =====================================================
+       YEAR SORT
+    ===================================================== */
 
-    const years = Object.keys(grouped).sort((a, b) => {
+    const years =
+        Object.keys(grouped).sort((a, b) => {
 
-        if (a === "Other") {
-            return 1;
-        }
+            if (a === "Other") {
+                return 1;
+            }
 
-        if (b === "Other") {
-            return -1;
-        }
+            if (b === "Other") {
+                return -1;
+            }
 
-        return Number(b) - Number(a);
+            return Number(b) - Number(a);
 
-    });
+        });
 
 
-    /* -----------------------------------------------------
-       YEAR SECTIONS
-    ----------------------------------------------------- */
+    /* =====================================================
+       CREATE YEAR SECTIONS
+    ===================================================== */
 
     years.forEach((year) => {
 
-        const yearSection = document.createElement("section");
+        const yearSection =
+            document.createElement("section");
 
-        yearSection.className = "year-section";
-
-
-        const yearTitle = document.createElement("div");
-
-        yearTitle.className = "year-title";
-
-        yearTitle.textContent = year;
+        yearSection.className =
+            "year-section";
 
 
-        const publicationList = document.createElement("div");
+        const yearTitle =
+            document.createElement("div");
 
-        publicationList.className = "year-publications";
+        yearTitle.className =
+            "year-title";
+
+        yearTitle.textContent =
+            year;
+
+
+        const publicationList =
+            document.createElement("div");
+
+        publicationList.className =
+            "year-publications";
 
 
         grouped[year].forEach((publication) => {
 
+            const publicationItem =
+                createPublicationItem(publication);
+
+
             publicationList.appendChild(
-                createPublicationItem(publication)
+                publicationItem
             );
 
         });
 
 
-        yearSection.appendChild(yearTitle);
-        yearSection.appendChild(publicationList);
+        yearSection.appendChild(
+            yearTitle
+        );
 
-        content.appendChild(yearSection);
+        yearSection.appendChild(
+            publicationList
+        );
+
+
+        content.appendChild(
+            yearSection
+        );
 
     });
 
@@ -1229,38 +1294,45 @@ function renderPublications(category) {
 
 
 /* =========================================================
-   TABS
+   TAB EVENTS
 ========================================================= */
 
 document
     .querySelectorAll(".publication-tab")
     .forEach((tab) => {
 
-        tab.addEventListener("click", function () {
+        tab.addEventListener(
+            "click",
+            function () {
 
-            document
-                .querySelectorAll(".publication-tab")
-                .forEach((button) => {
+                document
+                    .querySelectorAll(".publication-tab")
+                    .forEach((button) => {
 
-                    button.classList.remove("active");
+                        button.classList.remove(
+                            "active"
+                        );
 
-                });
+                    });
 
 
-            this.classList.add("active");
+                this.classList.add(
+                    "active"
+                );
 
 
-            renderPublications(
-                this.dataset.category
-            );
+                renderPublications(
+                    this.dataset.category
+                );
 
-        });
+            }
+        );
 
     });
 
 
 /* =========================================================
-   DEFAULT
+   INITIAL PAGE
 ========================================================= */
 
 renderPublications("international");
