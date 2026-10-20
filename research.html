@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
@@ -13,6 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -31,17 +36,15 @@ body {
     overflow-x: hidden;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
 
-
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
     width: 100%;
     height: 90px;
+
     padding: 0 6%;
 
     display: flex;
@@ -49,6 +52,7 @@ header {
     justify-content: space-between;
 
     background: #fff;
+
     border-bottom: 1px solid #eee;
 
     position: relative;
@@ -57,25 +61,34 @@ header {
 
 .pnu-name {
     color: #0b4a8b;
+
     font-size: 20px;
     font-weight: 700;
+
     letter-spacing: -0.4px;
+
     white-space: nowrap;
 }
 
 nav {
     display: flex;
     align-items: center;
+
     gap: 48px;
 }
 
 nav a {
     position: relative;
+
     color: #111;
+
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 500;
+
     padding: 10px 0;
+
     white-space: nowrap;
 }
 
@@ -85,21 +98,28 @@ nav a:hover {
 
 nav a.active {
     color: #0b4a8b;
+
     font-weight: 600;
 }
 
 nav a.active::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: 0;
+
     width: 100%;
     height: 2px;
+
     background: #0b4a8b;
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .page-hero {
     padding: 76px 6% 70px;
@@ -116,253 +136,243 @@ nav a.active::after {
 .hero-inner {
     width: 100%;
     max-width: 1450px;
+
     margin: 0 auto;
 }
 
 .page-hero h1 {
     font-size: clamp(48px, 6vw, 82px);
     font-weight: 800;
+
     letter-spacing: -4px;
+
     line-height: 1;
 }
 
 .title-line {
     width: 70px;
     height: 4px;
+
     margin-top: 24px;
+
     background: #0b4a8b;
 }
 
 
-/* INTRO */
+/* =========================================================
+   INTRO
+========================================================= */
 
 .research-intro {
-    padding: 70px 6% 75px;
+    padding: 75px 6% 70px;
 }
 
 .intro-inner {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1250px;
+
     margin: 0 auto;
 }
 
 .intro-label {
     color: #0b4a8b;
+
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 1.4px;
+
+    letter-spacing: 1.3px;
+
     text-transform: uppercase;
+
     margin-bottom: 15px;
 }
 
 .intro-inner h2 {
     max-width: 900px;
-    font-size: clamp(28px, 3vw, 42px);
+
+    font-size: clamp(30px, 3vw, 43px);
     font-weight: 700;
+
     line-height: 1.25;
-    letter-spacing: -1.4px;
-    margin-bottom: 25px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 24px;
 }
 
 .intro-inner p {
     max-width: 1000px;
-    color: #5f6872;
-    font-size: 16px;
-    line-height: 1.85;
+
+    color: #626c76;
+
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 
-/* RESEARCH */
+/* =========================================================
+   RESEARCH AREAS
+========================================================= */
 
-.research-areas {
-    padding: 0 6% 110px;
+.research-section {
+    padding: 0 6% 120px;
 }
 
 .research-container {
     width: 100%;
-    max-width: 1450px;
+    max-width: 1250px;
+
     margin: 0 auto;
 }
 
+
+/* =========================================================
+   RESEARCH ITEM
+========================================================= */
+
 .research-item {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 70px;
+
+    grid-template-columns:
+        100px
+        minmax(0, 1fr)
+        170px;
+
+    gap: 45px;
+
     align-items: center;
 
-    padding: 85px 0;
+    min-height: 270px;
 
-    border-top: 1px solid #e1e5e9;
+    padding: 55px 0;
 
-    scroll-margin-top: 40px;
+    border-top: 1px solid #dfe4e8;
+
+    scroll-margin-top: 30px;
 }
 
 .research-item:last-child {
-    border-bottom: 1px solid #e1e5e9;
-}
-
-.research-item.reverse .research-visual {
-    order: 2;
-}
-
-.research-item.reverse .research-info {
-    order: 1;
+    border-bottom: 1px solid #dfe4e8;
 }
 
 
-/* IMAGE */
+/* =========================================================
+   NUMBER
+========================================================= */
 
-.research-visual {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 10;
+.research-number {
+    align-self: start;
 
-    overflow: hidden;
-
-    background: #fff;
-    border: 1px solid #e5e9ed;
-    border-radius: 5px;
-}
-
-.research-visual img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-    object-position: center;
-
-    background: #fff;
-}
-
-.research-placeholder {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(135deg, #edf4fa, #d8e7f4);
-
-    color: #8ca3b7;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-/* INFO */
-
-.research-info h2 {
-    max-width: 650px;
-
-    color: #111;
-
-    font-size: clamp(29px, 3vw, 43px);
-    font-weight: 700;
-
-    line-height: 1.12;
-    letter-spacing: -1.5px;
-
-    margin-bottom: 22px;
-}
-
-.research-description {
-    max-width: 650px;
-
-    color: #606a74;
-
-    font-size: 15px;
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-}
-
-
-/* TOPICS */
-
-.topic-title {
-    color: #111;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    margin-bottom: 14px;
-}
-
-.topic-list {
-    list-style: none;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 10px 20px;
-
-    margin-bottom: 34px;
-}
-
-.topic-list li {
-    position: relative;
-
-    color: #4f5963;
-
-    font-size: 13.5px;
-    line-height: 1.5;
-
-    padding-left: 16px;
-}
-
-.topic-list li::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 8px;
-
-    width: 5px;
-    height: 5px;
-
-    border-radius: 50%;
-
-    background: #0b4a8b;
-}
-
-
-/* DETAIL LINK */
-
-.detail-link {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 10px;
+    padding-top: 7px;
 
     color: #0b4a8b;
 
     font-size: 14px;
     font-weight: 700;
 
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.research-content {
+    max-width: 780px;
+}
+
+.research-content h2 {
+    color: #111;
+
+    font-size: clamp(31px, 3.2vw, 45px);
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.7px;
+
+    margin-bottom: 20px;
+}
+
+.research-content p {
+    max-width: 720px;
+
+    color: #606a74;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   VIEW DETAILS
+========================================================= */
+
+.research-action {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+.detail-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #0b4a8b;
+
+    font-size: 13px;
+    font-weight: 700;
+
     text-decoration: none;
 
-    padding-bottom: 6px;
+    white-space: nowrap;
+
+    padding: 12px 0;
 
     border-bottom: 1px solid #0b4a8b;
 
-    transition: gap 0.2s ease;
+    transition:
+        gap 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .detail-link:hover {
-    gap: 16px;
+    gap: 17px;
+
+    opacity: 0.75;
 }
 
 .detail-arrow {
-    font-size: 18px;
+    font-size: 17px;
+
+    line-height: 1;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   OPTIONAL HOVER
+========================================================= */
+
+.research-item {
+    transition: background 0.2s ease;
+}
+
+.research-item:hover {
+    background: #fbfdff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
     padding: 32px 6%;
@@ -379,6 +389,7 @@ footer {
     margin: auto;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -387,33 +398,45 @@ footer {
 
 .footer-lab {
     color: #0b4a8b;
+
     font-size: 14px;
     font-weight: 700;
 }
 
 .footer-copy {
     color: #8a929b;
+
     font-size: 12px;
 }
 
 
-/* TABLET */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 950px) {
 
     .research-item {
-        gap: 45px;
-        padding: 65px 0;
+        grid-template-columns:
+            70px
+            minmax(0, 1fr)
+            140px;
+
+        gap: 28px;
+
+        min-height: 240px;
     }
 
-    .research-info h2 {
-        font-size: 32px;
+    .research-content h2 {
+        font-size: 34px;
     }
 
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
 
@@ -424,6 +447,7 @@ footer {
         padding: 17px 20px 12px;
 
         flex-direction: column;
+
         align-items: flex-start;
         justify-content: flex-start;
 
@@ -445,6 +469,7 @@ footer {
         white-space: nowrap;
 
         scrollbar-width: none;
+
         -webkit-overflow-scrolling: touch;
     }
 
@@ -466,80 +491,110 @@ footer {
         margin-right: 0;
     }
 
+
+    /* HERO */
+
     .page-hero {
         padding: 52px 20px 50px;
     }
 
     .page-hero h1 {
         font-size: 48px;
+
         letter-spacing: -2.5px;
     }
 
     .title-line {
         width: 55px;
         height: 3px;
+
         margin-top: 18px;
     }
 
+
+    /* INTRO */
+
     .research-intro {
-        padding: 45px 20px 50px;
+        padding: 48px 20px 45px;
+    }
+
+    .intro-label {
+        font-size: 10px;
+
+        margin-bottom: 12px;
     }
 
     .intro-inner h2 {
         font-size: 27px;
+
         letter-spacing: -1px;
+
+        line-height: 1.3;
+
+        margin-bottom: 18px;
     }
 
     .intro-inner p {
         font-size: 14px;
+
         line-height: 1.75;
     }
 
-    .research-areas {
-        padding: 0 20px 65px;
+
+    /* RESEARCH */
+
+    .research-section {
+        padding: 0 20px 75px;
     }
 
     .research-item {
-        display: flex;
-        flex-direction: column;
+        display: block;
 
-        gap: 30px;
+        min-height: 0;
 
-        align-items: stretch;
-
-        padding: 55px 0;
+        padding: 43px 0;
     }
 
-    .research-item.reverse .research-visual,
-    .research-item.reverse .research-info {
-        order: initial;
+    .research-number {
+        padding: 0;
+
+        font-size: 11px;
+
+        margin-bottom: 16px;
     }
 
-    .research-visual {
-        aspect-ratio: 16 / 11;
+    .research-content {
+        max-width: none;
     }
 
-    .research-info h2 {
-        font-size: 28px;
-        letter-spacing: -1px;
-        margin-bottom: 18px;
+    .research-content h2 {
+        font-size: 29px;
+
+        letter-spacing: -1.1px;
+
+        margin-bottom: 16px;
     }
 
-    .research-description {
+    .research-content p {
         font-size: 14px;
+
         line-height: 1.7;
-        margin-bottom: 25px;
     }
 
-    .topic-list {
-        grid-template-columns: 1fr;
-        gap: 9px;
-        margin-bottom: 28px;
+    .research-action {
+        justify-content: flex-start;
+
+        margin-top: 25px;
     }
 
-    .topic-list li {
-        font-size: 13px;
+    .detail-link {
+        font-size: 12.5px;
+
+        padding-bottom: 6px;
     }
+
+
+    /* FOOTER */
 
     footer {
         padding: 27px 20px;
@@ -547,17 +602,52 @@ footer {
 
     .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 8px;
     }
 
 }
 
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    nav a {
+        font-size: 11.5px;
+
+        margin-right: 17px;
+    }
+
+    .page-hero,
+    .research-intro,
+    .research-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}
+
 </style>
+
 </head>
 
 
 <body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -566,21 +656,43 @@ footer {
     </div>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="people.html">People</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="research.html" class="active">
+            Research
+        </a>
+
+        <a href="people.html">
+            People
+        </a>
+
+        <a href="publications.html">
+            Publications
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
     </nav>
 
 </header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="page-hero">
 
     <div class="hero-inner">
 
-        <h1>Research</h1>
+        <h1>
+            Research
+        </h1>
 
         <div class="title-line"></div>
 
@@ -588,6 +700,10 @@ footer {
 
 </section>
 
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
 
 <section class="research-intro">
 
@@ -617,203 +733,204 @@ footer {
 </section>
 
 
-<section class="research-areas">
+<!-- =========================================================
+     RESEARCH AREAS
+========================================================= -->
+
+<section class="research-section">
 
 <div class="research-container">
 
 
-<!-- PHASED ARRAY -->
+    <!-- =====================================================
+         01 PHASED ARRAY
+    ====================================================== -->
 
-<article class="research-item" id="phased-array">
+    <article
+        class="research-item"
+        id="phased-array"
+    >
 
-    <div class="research-visual">
-
-        <div class="research-placeholder">
-            Phased Array Image
+        <div class="research-number">
+            01
         </div>
 
-    </div>
 
-    <div class="research-info">
+        <div class="research-content">
 
-        <h2>Phased Array</h2>
+            <h2>
+                Phased Array
+            </h2>
 
-        <p class="research-description">
-            We investigate phased-array antenna technologies
-            for high-performance wireless systems requiring
-            electronic beam steering and adaptive radiation control.
-        </p>
+            <p>
+                We investigate phased-array antenna technologies
+                for high-performance wireless systems requiring
+                electronic beam steering, wide-angle scanning,
+                and adaptive radiation control.
+            </p>
 
-        <div class="topic-title">
-            Research Topics
         </div>
 
-        <ul class="topic-list">
-            <li>Phased-array antennas</li>
-            <li>Electronic beam steering</li>
-            <li>Beamforming systems</li>
-            <li>Reconfigurable antennas</li>
-            <li>Wide-angle scanning</li>
-            <li>Microwave &amp; mmWave arrays</li>
-        </ul>
 
-        <a href="research-phased-array.html" class="detail-link">
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
+        <div class="research-action">
 
-    </div>
+            <a
+                href="research-phased-array.html"
+                class="detail-link"
+            >
+                View Details
+                <span class="detail-arrow">→</span>
+            </a>
 
-</article>
-
-
-<!-- BACKCOM -->
-
-<article class="research-item reverse" id="backcom">
-
-    <div class="research-visual">
-
-        <img
-            src="backcom1.png"
-            alt="Full-Duplex Backscatter Communication"
-        >
-
-    </div>
-
-    <div class="research-info">
-
-        <h2>Full-Duplex BackCom</h2>
-
-        <p class="research-description">
-            We develop low-power and self-sustainable wireless
-            communication technologies based on backscatter
-            communication.
-        </p>
-
-        <div class="topic-title">
-            Research Topics
         </div>
 
-        <ul class="topic-list">
-            <li>Backscatter communication</li>
-            <li>Full-duplex BackCom</li>
-            <li>Self-sustainable wireless systems</li>
-            <li>Channel estimation</li>
-            <li>Integrated sensing &amp; communication</li>
-            <li>AI/ML-assisted communication</li>
-        </ul>
-
-        <a href="research-backcom.html" class="detail-link">
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
-
-    </div>
-
-</article>
+    </article>
 
 
-<!-- METASURFACE -->
+    <!-- =====================================================
+         02 FULL-DUPLEX BACKCOM
+    ====================================================== -->
 
-<article class="research-item" id="metasurface">
+    <article
+        class="research-item"
+        id="backcom"
+    >
 
-    <div class="research-visual">
-
-        <img
-            src="meta1.png"
-            alt="Magnetic Materials-Based Absorber and Metasurface"
-        >
-
-    </div>
-
-    <div class="research-info">
-
-        <h2>
-            Magnetic Materials-Based<br>
-            Absorber &amp; Metasurface
-        </h2>
-
-        <p class="research-description">
-            We investigate magnetic materials and engineered
-            electromagnetic surfaces for controlling the propagation,
-            reflection, transmission, and absorption of
-            electromagnetic waves.
-        </p>
-
-        <div class="topic-title">
-            Research Topics
+        <div class="research-number">
+            02
         </div>
 
-        <ul class="topic-list">
-            <li>Magnetic microwave absorbers</li>
-            <li>Broadband EM absorption</li>
-            <li>Multifunctional metasurfaces</li>
-            <li>Reconfigurable reflectarrays</li>
-            <li>Polarization control</li>
-            <li>EM-wave manipulation</li>
-        </ul>
 
-        <a href="research-metasurface.html" class="detail-link">
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
+        <div class="research-content">
 
-    </div>
+            <h2>
+                Full-Duplex BackCom
+            </h2>
 
-</article>
+            <p>
+                We develop low-power and self-sustainable wireless
+                communication technologies based on backscatter
+                communication, integrated sensing, and intelligent
+                signal processing.
+            </p>
 
-
-<!-- AIP -->
-
-<article class="research-item reverse" id="aip">
-
-    <div class="research-visual">
-
-        <img
-            src="AIP1.png"
-            alt="Antenna-in-Package"
-        >
-
-    </div>
-
-    <div class="research-info">
-
-        <h2>
-            Antenna-in-Package (AiP)
-        </h2>
-
-        <p class="research-description">
-            We develop highly integrated antenna-in-package
-            technologies for compact RF front-end systems
-            and next-generation wireless applications.
-        </p>
-
-        <div class="topic-title">
-            Research Topics
         </div>
 
-        <ul class="topic-list">
-            <li>Antenna-in-Package</li>
-            <li>LTCC RF packaging</li>
-            <li>RF front-end integration</li>
-            <li>Beam-steering antenna arrays</li>
-            <li>Integrated passive components</li>
-            <li>Thermal management</li>
-        </ul>
 
-        <a href="research-aip.html" class="detail-link">
-            View Details
-            <span class="detail-arrow">→</span>
-        </a>
+        <div class="research-action">
 
-    </div>
+            <a
+                href="research-backcom.html"
+                class="detail-link"
+            >
+                View Details
+                <span class="detail-arrow">→</span>
+            </a>
 
-</article>
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         03 ABSORBER & METASURFACE
+    ====================================================== -->
+
+    <article
+        class="research-item"
+        id="metasurface"
+    >
+
+        <div class="research-number">
+            03
+        </div>
+
+
+        <div class="research-content">
+
+            <h2>
+                Magnetic Materials-Based<br>
+                Absorber &amp; Metasurface
+            </h2>
+
+            <p>
+                We investigate magnetic materials and engineered
+                electromagnetic surfaces for broadband absorption,
+                wave manipulation, polarization control, and
+                reconfigurable wireless systems.
+            </p>
+
+        </div>
+
+
+        <div class="research-action">
+
+            <a
+                href="research-metasurface.html"
+                class="detail-link"
+            >
+                View Details
+                <span class="detail-arrow">→</span>
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         04 ANTENNA-IN-PACKAGE
+    ====================================================== -->
+
+    <article
+        class="research-item"
+        id="aip"
+    >
+
+        <div class="research-number">
+            04
+        </div>
+
+
+        <div class="research-content">
+
+            <h2>
+                Antenna-in-Package (AiP)
+            </h2>
+
+            <p>
+                We develop highly integrated antenna and RF
+                front-end technologies using multilayer packaging
+                platforms for compact beamforming and
+                next-generation wireless systems.
+            </p>
+
+        </div>
+
+
+        <div class="research-action">
+
+            <a
+                href="research-aip.html"
+                class="detail-link"
+            >
+                View Details
+                <span class="detail-arrow">→</span>
+            </a>
+
+        </div>
+
+    </article>
 
 
 </div>
+
 </section>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -831,5 +948,7 @@ footer {
 
 </footer>
 
+
 </body>
+
 </html>
