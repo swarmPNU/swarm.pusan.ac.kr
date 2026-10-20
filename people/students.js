@@ -74,8 +74,8 @@ const studentData = [
         degree: "M.S. Student",
         email: "tjddns2214@pusan.ac.kr",
         research:
-            "FSS, Radar",
-        image: ""
+            "RF Front-End Module, Sensing and Communication System",
+        image: "./people/seongunchoi.jpg"
     },
 
     {
