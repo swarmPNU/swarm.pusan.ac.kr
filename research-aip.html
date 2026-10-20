@@ -14,488 +14,550 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-    font-family:'Inter',sans-serif;
-    color:#111;
-    background:#fff;
-    overflow-x:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    width:100%;
-    height:90px;
-    padding:0 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #eee;
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
 }
 
-.pnu-name{
-    color:#0b4a8b;
-    font-size:20px;
-    font-weight:700;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-nav{
-    display:flex;
-    gap:48px;
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-nav a{
-    position:relative;
-    color:#111;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
-    padding:10px 0;
-    white-space:nowrap;
+.pnu-name {
+    color: #0b4a8b;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+    white-space: nowrap;
 }
 
 nav a:hover,
-nav a.active{
-    color:#0b4a8b;
+nav a.active {
+    color: #0b4a8b;
 }
 
-nav a.active{
-    font-weight:600;
+nav a.active {
+    font-weight: 600;
 }
 
-nav a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:2px;
-    background:#0b4a8b;
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0b4a8b;
 }
 
-.hero{
-    padding:75px 6% 68px;
-    background:linear-gradient(115deg,#fff 0%,#f6faff 48%,#eaf4fd 100%);
+
+/* HERO */
+
+.hero {
+    padding: 72px 6% 65px;
+
+    background: linear-gradient(
+        115deg,
+        #ffffff 0%,
+        #f6faff 48%,
+        #eaf4fd 100%
+    );
 }
 
-.hero-inner{
-    max-width:1450px;
-    margin:auto;
+.hero-inner {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
-.back-link{
-    display:inline-block;
-    color:#0b4a8b;
-    font-size:13px;
-    font-weight:600;
-    text-decoration:none;
-    margin-bottom:24px;
+.back-link {
+    display: inline-block;
+    color: #0b4a8b;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 25px;
 }
 
-.hero h1{
-    font-size:clamp(42px,5vw,70px);
-    font-weight:800;
-    line-height:1.05;
-    letter-spacing:-3px;
+.back-link:hover {
+    text-decoration: underline;
 }
 
-.title-line{
-    width:70px;
-    height:4px;
-    margin-top:25px;
-    background:#0b4a8b;
+.hero h1 {
+    max-width: 1000px;
+    font-size: clamp(43px, 5vw, 70px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -3px;
 }
 
-.content{
-    padding:75px 6% 110px;
+.title-line {
+    width: 70px;
+    height: 4px;
+    margin-top: 25px;
+    background: #0b4a8b;
 }
 
-.content-inner{
-    max-width:1250px;
-    margin:auto;
+
+/* INTRO */
+
+.intro {
+    padding: 65px 6% 35px;
 }
 
-.section-label{
-    color:#0b4a8b;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+.intro-inner {
+    max-width: 1050px;
+    margin: auto;
 }
 
-.overview{
-    margin-bottom:55px;
+.intro-inner p {
+    color: #626c76;
+    font-size: 15.5px;
+    line-height: 1.85;
 }
 
-.overview h2,
-.topics h2,
-.detail h2{
-    font-size:31px;
-    font-weight:700;
-    letter-spacing:-1px;
-    margin-bottom:20px;
+
+/* RESEARCH */
+
+.research-list {
+    padding: 20px 6% 110px;
 }
 
-.overview p,
-.detail p{
-    max-width:1050px;
-    color:#5f6973;
-    font-size:15px;
-    line-height:1.85;
+.research-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
 }
 
-.image-grid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-    margin-bottom:75px;
+.research-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 75px;
+    align-items: center;
+    padding: 80px 0;
+    border-top: 1px solid #e1e5e9;
 }
 
-.image-box{
-    aspect-ratio:4/3;
-    padding:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    background:#fff;
-    border:1px solid #e4e8ec;
-    border-radius:5px;
+.research-item:last-child {
+    border-bottom: 1px solid #e1e5e9;
 }
 
-.image-box img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+.research-item.reverse {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 }
 
-.topics{
-    margin-bottom:75px;
+.research-item.reverse .research-image {
+    order: 2;
 }
 
-.topic-grid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:15px;
+.research-item.reverse .research-text {
+    order: 1;
 }
 
-.topic{
-    padding:20px 22px;
-    background:#f7f9fb;
-    border:1px solid #e5e9ed;
-    border-radius:5px;
-    color:#38434e;
-    font-size:14px;
-    font-weight:600;
-    line-height:1.45;
+
+/* IMAGE */
+
+.research-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #e4e8ec;
+    border-radius: 5px;
+    padding: 12px;
+    overflow: hidden;
 }
 
-.detail{
-    padding-top:65px;
-    border-top:1px solid #e1e5e9;
+.research-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
-.detail p+p{
-    margin-top:18px;
+
+/* TEXT */
+
+.research-text h2 {
+    max-width: 580px;
+    color: #111;
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin-bottom: 19px;
 }
 
-footer{
-    padding:32px 6%;
-    background:#f6f7f8;
-    border-top:1px solid #e8eaed;
+.research-text p {
+    max-width: 580px;
+    color: #606a74;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.footer-inner{
-    max-width:1450px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
+
+/* FOOTER */
+
+footer {
+    padding: 32px 6%;
+    background: #f6f7f8;
+    border-top: 1px solid #e8eaed;
 }
 
-.footer-lab{
-    color:#0b4a8b;
-    font-size:14px;
-    font-weight:700;
+.footer-inner {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.footer-copy{
-    color:#8a929b;
-    font-size:12px;
+.footer-lab {
+    color: #0b4a8b;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-@media(max-width:650px){
+.footer-copy {
+    color: #8a929b;
+    font-size: 12px;
+}
 
-    header{
-        height:auto;
-        min-height:104px;
-        padding:17px 20px 12px;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:11px;
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    header {
+        height: auto;
+        min-height: 104px;
+        padding: 17px 20px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11px;
     }
 
-    .pnu-name{font-size:16px}
-
-    nav{
-        width:100%;
-        gap:0;
-        overflow-x:auto;
-        white-space:nowrap;
-        scrollbar-width:none;
+    .pnu-name {
+        font-size: 16px;
     }
 
-    nav::-webkit-scrollbar{display:none}
-
-    nav a{
-        flex:0 0 auto;
-        font-size:12px;
-        margin-right:22px;
-        padding:5px 0 7px;
+    nav {
+        width: 100%;
+        gap: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
     }
 
-    .hero{
-        padding:50px 20px;
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
-    .hero h1{
-        font-size:38px;
-        letter-spacing:-2px;
+    nav a {
+        flex: 0 0 auto;
+        font-size: 12px;
+        padding: 5px 0 7px;
+        margin-right: 22px;
     }
 
-    .content{
-        padding:55px 20px 75px;
+    .hero {
+        padding: 50px 20px;
     }
 
-    .image-grid,
-    .topic-grid{
-        grid-template-columns:1fr;
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: -2px;
     }
 
-    .image-box{
-        aspect-ratio:16/11;
+    .title-line {
+        width: 55px;
+        height: 3px;
     }
 
-    .overview h2,
-    .topics h2,
-    .detail h2{
-        font-size:26px;
+    .intro {
+        padding: 45px 20px 15px;
     }
 
-    .overview p,
-    .detail p{
-        font-size:14px;
+    .intro-inner p {
+        font-size: 14px;
+        line-height: 1.75;
     }
 
-    footer{
-        padding:27px 20px;
+    .research-list {
+        padding: 15px 20px 70px;
     }
 
-    .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
+    .research-item,
+    .research-item.reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: stretch;
+        padding: 50px 0;
+    }
+
+    .research-item.reverse .research-image,
+    .research-item.reverse .research-text {
+        order: initial;
+    }
+
+    .research-image {
+        aspect-ratio: 16 / 11;
+        padding: 7px;
+    }
+
+    .research-text h2 {
+        font-size: 27px;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .research-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    footer {
+        padding: 27px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
 
 </style>
 </head>
 
+
 <body>
+
 
 <header>
 
-<div class="pnu-name">
-Pusan National University
-</div>
+    <div class="pnu-name">
+        Pusan National University
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="research.html" class="active">Research</a>
-<a href="people.html">People</a>
-<a href="publications.html">Publications</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
 
 <section class="hero">
 
-<div class="hero-inner">
+    <div class="hero-inner">
 
-<a href="research.html#aip" class="back-link">
-← Back to Research
-</a>
+        <a href="research.html#aip" class="back-link">
+            ← Back to Research
+        </a>
 
-<h1>
-Antenna-in-Package (AiP)
-</h1>
+        <h1>
+            Antenna-in-Package (AiP)
+        </h1>
 
-<div class="title-line"></div>
+        <div class="title-line"></div>
 
-</div>
-
-</section>
-
-
-<main class="content">
-
-<div class="content-inner">
-
-
-<section class="overview">
-
-<div class="section-label">
-Overview
-</div>
-
-<h2>
-Highly integrated RF front-end and antenna systems
-</h2>
-
-<p>
-Our research investigates antenna-in-package technologies
-for compact and highly integrated next-generation wireless
-systems. Antennas, RF passive components, beamforming
-circuits, signal-routing networks, and package structures are
-co-designed to realize high-performance RF front-end modules
-within a compact form factor.
-</p>
+    </div>
 
 </section>
 
 
-<div class="image-grid">
+<section class="intro">
 
-<div class="image-box">
-<img src="AIP1.png" alt="Antenna-in-Package research figure 1">
-</div>
+    <div class="intro-inner">
 
-<div class="image-box">
-<img src="AIP2.png" alt="Antenna-in-Package research figure 2">
-</div>
+        <p>
+            SWARM Laboratory develops highly integrated
+            Antenna-in-Package technologies for next-generation
+            wireless systems. Our research combines antenna arrays,
+            RF front-end components, beamforming ICs, multilayer
+            packaging, and thermal-management technologies within
+            compact RF modules.
+        </p>
 
-<div class="image-box">
-<img src="AIP3.png" alt="Antenna-in-Package research figure 3">
-</div>
-
-</div>
-
-
-<section class="topics">
-
-<div class="section-label">
-Research Areas
-</div>
-
-<h2>
-Research Topics
-</h2>
-
-<div class="topic-grid">
-
-<div class="topic">
-LTCC-Based Antenna-in-Package
-</div>
-
-<div class="topic">
-Upper Mid-Band Antenna Arrays
-</div>
-
-<div class="topic">
-RF Front-End Integration
-</div>
-
-<div class="topic">
-Beamforming IC Integration
-</div>
-
-<div class="topic">
-Integrated Passive Components
-</div>
-
-<div class="topic">
-Multilayer RF Packaging
-</div>
-
-<div class="topic">
-Beam-Steering Antenna Arrays
-</div>
-
-<div class="topic">
-BGA &amp; Control-Board Integration
-</div>
-
-<div class="topic">
-Thermal Management
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<section class="detail">
+<section class="research-list">
 
-<div class="section-label">
-Research Description
+<div class="research-container">
+
+
+    <!-- AIP 1 -->
+
+    <article class="research-item">
+
+        <div class="research-image">
+
+            <img
+                src="AIP1.png"
+                alt="LTCC-Based Antenna-in-Package"
+            >
+
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                LTCC-Based
+                Antenna-in-Package
+            </h2>
+
+            <p>
+                We develop multilayer Antenna-in-Package structures
+                using low-temperature co-fired ceramic technology.
+                The multilayer platform enables compact integration
+                of antennas, RF interconnections, feeding networks,
+                and other RF front-end components.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- AIP 2 -->
+
+    <article class="research-item reverse">
+
+        <div class="research-image">
+
+            <img
+                src="AIP2.png"
+                alt="Integrated RF Front-End Components"
+            >
+
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                Integrated RF
+                Front-End Components
+            </h2>
+
+            <p>
+                RF front-end components including antennas,
+                filters, filtennas, and multilayer feeding
+                networks are investigated for highly integrated
+                wireless modules. The research focuses on compact
+                integration while maintaining RF and radiation
+                performance.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- AIP 3 -->
+
+    <article class="research-item">
+
+        <div class="research-image">
+
+            <img
+                src="AIP3.png"
+                alt="Beam-Steering Antenna-in-Package"
+            >
+
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                Beam-Steering
+                Antenna-in-Package
+            </h2>
+
+            <p>
+                We integrate antenna arrays, beamforming ICs,
+                RF routing, control interfaces, and thermal
+                structures within a multilayer package to realize
+                compact beam-steering RF front-end modules for
+                upper-mid-band and next-generation wireless
+                applications.
+            </p>
+
+        </div>
+
+    </article>
+
+
 </div>
-
-<h2>
-Multilayer integration for next-generation wireless modules
-</h2>
-
-<p>
-We investigate multilayer RF packaging technologies including
-low-temperature co-fired ceramic (LTCC) platforms for
-integrating antenna arrays and RF front-end components.
-Multilayer structures enable compact vertical integration of
-antennas, ground planes, RF transmission lines, DC routing,
-and interconnection structures within a single package.
-</p>
-
-<p>
-Our research includes the integration of beamforming ICs with
-antenna arrays and passive RF networks to realize electronically
-steerable antenna modules. RF signal distribution, package
-interconnection, and control-board interfaces are considered
-together to improve the electrical performance and integration
-density of the overall system.
-</p>
-
-<p>
-Thermal management is also investigated for highly integrated
-RF modules. Thermal vias and internal metal structures can
-provide heat-conduction and spreading paths through multilayer
-packages, helping reduce localized heat accumulation around
-active RF components.
-</p>
 
 </section>
-
-
-</div>
-
-</main>
 
 
 <footer>
 
-<div class="footer-inner">
+    <div class="footer-inner">
 
-<div class="footer-lab">
-SWARM Laboratory
-</div>
+        <div class="footer-lab">
+            SWARM Laboratory
+        </div>
 
-<div class="footer-copy">
-© 2026 SWARM Laboratory, Pusan National University
-</div>
+        <div class="footer-copy">
+            © 2026 SWARM Laboratory, Pusan National University
+        </div>
 
-</div>
+    </div>
 
 </footer>
+
 
 </body>
 </html>
