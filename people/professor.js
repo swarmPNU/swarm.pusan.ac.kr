@@ -2,7 +2,8 @@ const professorData = [
     {
         name: "Sangkil Kim",
         position: "Professor",
-        image: "",
+
+        image: "./people/prof.png",
 
         affiliation: [
             "Department of Electronics Engineering",
