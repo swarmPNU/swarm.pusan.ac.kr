@@ -14,10 +14,6 @@
 
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -66,12 +62,9 @@ header {
 
 .pnu-name {
     color: #0b4a8b;
-
     font-size: 20px;
     font-weight: 700;
-
     letter-spacing: -0.5px;
-
     white-space: nowrap;
 }
 
@@ -81,7 +74,6 @@ nav {
 
     display: flex;
     align-items: center;
-
     gap: 48px;
 }
 
@@ -90,7 +82,6 @@ nav a {
     z-index: 10001;
 
     color: #111;
-
     text-decoration: none;
 
     font-size: 15px;
@@ -114,7 +105,6 @@ nav a.active::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 0;
 
@@ -213,9 +203,6 @@ nav a.active::after {
     margin: 0 auto;
 }
 
-
-/* Research Areas - NAVY + CENTER */
-
 .research-title {
     color: #0b4a8b;
 
@@ -292,7 +279,6 @@ nav a.active::after {
     height: 100%;
 
     object-fit: contain !important;
-
     object-position: center;
 
     opacity: 0;
@@ -305,9 +291,6 @@ nav a.active::after {
 .research-image img.active {
     opacity: 1;
 }
-
-
-/* PHASED ARRAY PLACEHOLDER */
 
 .phased-placeholder {
     width: 100%;
@@ -415,9 +398,6 @@ nav a.active::after {
     color: #0b4a8b;
 
     font-size: 20px;
-    font-weight: 400;
-
-    line-height: 1;
 
     text-decoration: none;
 
@@ -454,7 +434,6 @@ footer {
     margin: auto;
 
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 
@@ -552,8 +531,6 @@ footer {
     }
 
 
-    /* HERO */
-
     .hero {
         height: 400px;
 
@@ -587,8 +564,6 @@ footer {
         letter-spacing: -0.8px;
     }
 
-
-    /* RESEARCH */
 
     .research-section {
         padding: 38px 20px 55px;
@@ -646,8 +621,6 @@ footer {
         bottom: 14px;
     }
 
-
-    /* FOOTER */
 
     footer {
         padding: 26px 20px;
@@ -708,10 +681,6 @@ footer {
 
 <body>
 
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
 <header>
 
@@ -786,9 +755,7 @@ footer {
         <div class="research-grid">
 
 
-            <!-- =================================================
-                 01 PHASED ARRAY
-            ================================================== -->
+            <!-- 01 PHASED ARRAY -->
 
             <article class="research-card">
 
@@ -829,9 +796,7 @@ footer {
             </article>
 
 
-            <!-- =================================================
-                 02 FULL-DUPLEX BACKCOM
-            ================================================== -->
+            <!-- 02 BACKSCATTER COMMUNICATION -->
 
             <article class="research-card">
 
@@ -840,19 +805,19 @@ footer {
                     <img
                         src="backcom1.png"
                         class="backcom-slide active"
-                        alt="Full-Duplex BackCom research"
+                        alt="Backscatter Communication research"
                     >
 
                     <img
                         src="backcom2.png"
                         class="backcom-slide"
-                        alt="Full-Duplex BackCom research"
+                        alt="Backscatter Communication research"
                     >
 
                     <img
                         src="backcom3.png"
                         class="backcom-slide"
-                        alt="Full-Duplex BackCom research"
+                        alt="Backscatter Communication research"
                     >
 
                     <div class="research-number">
@@ -865,20 +830,20 @@ footer {
                 <div class="card-content">
 
                     <h3>
-                        Full-Duplex BackCom
+                        Backscatter Communication
                     </h3>
 
                     <p>
-                        Full-duplex backscatter communication
-                        technologies for simultaneous transmission
-                        and reception, enabling efficient and
-                        low-power wireless connectivity.
+                        Advanced backscatter communication technologies
+                        for high-speed and reliable connectivity,
+                        including MIMO, robust signal processing,
+                        and AI-driven intelligent wireless systems.
                     </p>
 
                     <a
                         href="research.html#backcom"
                         class="card-arrow"
-                        aria-label="View Full-Duplex BackCom research"
+                        aria-label="View Backscatter Communication research"
                     >
                         →
                     </a>
@@ -888,9 +853,7 @@ footer {
             </article>
 
 
-            <!-- =================================================
-                 03 METASURFACE
-            ================================================== -->
+            <!-- 03 METASURFACE -->
 
             <article class="research-card">
 
@@ -948,9 +911,7 @@ footer {
             </article>
 
 
-            <!-- =================================================
-                 04 ANTENNA-IN-PACKAGE
-            ================================================== -->
+            <!-- 04 AIP -->
 
             <article class="research-card">
 
@@ -1014,10 +975,6 @@ footer {
 </section>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
 <footer>
 
     <div class="footer-inner">
@@ -1034,10 +991,6 @@ footer {
 
 </footer>
 
-
-<!-- =========================================================
-     SLIDESHOW
-========================================================= -->
 
 <script>
 
@@ -1061,7 +1014,6 @@ function startSlideshow(selector, interval = 3000) {
 
 }
 
-
 startSlideshow(".backcom-slide", 3000);
 startSlideshow(".meta-slide", 3000);
 startSlideshow(".aip-slide", 3000);
@@ -1070,5 +1022,4 @@ startSlideshow(".aip-slide", 3000);
 
 
 </body>
-
 </html>
