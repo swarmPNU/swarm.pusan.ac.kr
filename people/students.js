@@ -123,7 +123,7 @@ const studentData = [
     degree: "M.S. Student",
     email: "9lo522@pusan.ac.kr",
     website: "https://hyrecon.github.io/",
-    research: "Self-Sustainable Wireless Communication and Sensing Systems, AI/ML",
+    research: "Backscatter Communication, Physical-Layer Signal Processing, AI/ML",
     image: "./people/ryuHanyeol.png"
 }
 
