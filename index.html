@@ -44,7 +44,6 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
 
     width: 100%;
     height: 90px;
@@ -55,33 +54,40 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(255,255,255,0.97);
+    background: #fff;
 
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid #eee;
+
+    z-index: 9999;
 }
 
 .pnu-name {
     color: #0b4a8b;
+
     font-size: 20px;
     font-weight: 700;
+
     letter-spacing: -0.4px;
+
     white-space: nowrap;
 }
 
 nav {
     position: relative;
-    z-index: 10000;
 
     display: flex;
     align-items: center;
+
     gap: 48px;
+
+    z-index: 10000;
 }
 
 nav a {
     position: relative;
-    z-index: 10001;
 
     color: #111;
+
     text-decoration: none;
 
     font-size: 15px;
@@ -90,6 +96,8 @@ nav a {
     padding: 10px 0;
 
     white-space: nowrap;
+
+    z-index: 10001;
 }
 
 nav a:hover {
@@ -105,6 +113,7 @@ nav a.active::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 0;
 
@@ -129,12 +138,12 @@ nav a.active::after {
 
     overflow: hidden;
 
-    background:
+    background-image:
         linear-gradient(
             90deg,
-            rgba(7,55,100,0.94) 0%,
-            rgba(11,74,139,0.86) 47%,
-            rgba(11,74,139,0.52) 100%
+            rgba(6, 48, 90, 0.82) 0%,
+            rgba(11, 74, 139, 0.68) 50%,
+            rgba(11, 74, 139, 0.34) 100%
         ),
         url("blue-bg.png");
 
@@ -162,20 +171,21 @@ nav a.active::after {
     font-weight: 800;
 
     line-height: 0.95;
+
     letter-spacing: -5px;
 
     margin-bottom: 22px;
 }
 
 .hero p {
+    max-width: 760px;
+
+    color: rgba(255,255,255,0.92);
+
     font-size: clamp(16px, 1.6vw, 22px);
     font-weight: 400;
 
     line-height: 1.55;
-
-    max-width: 750px;
-
-    color: rgba(255,255,255,0.9);
 }
 
 
@@ -241,7 +251,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   RESEARCH GRID
+   GRID
 ========================================================= */
 
 .research-grid {
@@ -291,6 +301,7 @@ nav a.active::after {
     position: relative;
 
     width: 100%;
+
     aspect-ratio: 16 / 10;
 
     overflow: hidden;
@@ -355,7 +366,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   NUMBER
+   CARD NUMBER
 ========================================================= */
 
 .research-number {
@@ -364,7 +375,7 @@ nav a.active::after {
     top: 15px;
     left: 15px;
 
-    z-index: 30;
+    z-index: 20;
 
     display: flex;
     align-items: center;
@@ -379,54 +390,6 @@ nav a.active::after {
 
     font-size: 12px;
     font-weight: 700;
-}
-
-
-/* =========================================================
-   SLIDER DOTS
-========================================================= */
-
-.slider-dots {
-    position: absolute;
-
-    left: 50%;
-    bottom: 12px;
-
-    transform: translateX(-50%);
-
-    z-index: 25;
-
-    display: flex;
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 6px 9px;
-
-    border-radius: 20px;
-
-    background: rgba(255,255,255,0.88);
-}
-
-.slider-dot {
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background: #b8c3cc;
-
-    transition:
-        width 0.3s ease,
-        background 0.3s ease;
-}
-
-.slider-dot.active {
-    width: 18px;
-
-    border-radius: 10px;
-
-    background: #0b4a8b;
 }
 
 
@@ -506,7 +469,6 @@ footer {
     margin: auto;
 
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -600,8 +562,6 @@ footer {
     }
 
 
-    /* HERO */
-
     .hero {
         height: 400px;
 
@@ -625,8 +585,6 @@ footer {
         font-size: 15px;
     }
 
-
-    /* RESEARCH */
 
     .research-section {
         padding: 60px 20px 75px;
@@ -675,8 +633,6 @@ footer {
         right: 21px;
     }
 
-
-    /* FOOTER */
 
     footer {
         padding: 27px 20px;
@@ -733,7 +689,9 @@ footer {
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -752,7 +710,9 @@ footer {
 </header>
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
@@ -769,7 +729,9 @@ footer {
 </section>
 
 
-<!-- RESEARCH -->
+<!-- =========================================================
+     RESEARCH AREAS
+========================================================= -->
 
 <section class="research-section">
 
@@ -788,7 +750,9 @@ footer {
     <div class="research-grid">
 
 
-        <!-- 01 PHASED ARRAY -->
+        <!-- =================================================
+             01 PHASED ARRAY
+        ================================================== -->
 
         <article class="research-card">
 
@@ -831,7 +795,9 @@ footer {
 
 
 
-        <!-- 02 BACKSCATTER COMMUNICATION -->
+        <!-- =================================================
+             02 BACKSCATTER COMMUNICATION
+        ================================================== -->
 
         <article class="research-card">
 
@@ -854,14 +820,6 @@ footer {
                     class="backcom-slide"
                     alt="Backscatter Communication"
                 >
-
-
-                <div class="slider-dots">
-                    <span class="slider-dot active"></span>
-                    <span class="slider-dot"></span>
-                    <span class="slider-dot"></span>
-                </div>
-
 
                 <div class="research-number">
                     02
@@ -897,7 +855,9 @@ footer {
 
 
 
-        <!-- 03 MAGNETIC MATERIALS -->
+        <!-- =================================================
+             03 MAGNETIC MATERIALS
+        ================================================== -->
 
         <article class="research-card">
 
@@ -927,15 +887,6 @@ footer {
                     alt="Magnetic Materials-Based Absorber and Metasurface"
                 >
 
-
-                <div class="slider-dots">
-                    <span class="slider-dot active"></span>
-                    <span class="slider-dot"></span>
-                    <span class="slider-dot"></span>
-                    <span class="slider-dot"></span>
-                </div>
-
-
                 <div class="research-number">
                     03
                 </div>
@@ -951,9 +902,9 @@ footer {
                 </h3>
 
                 <p>
-                    Magnetic materials-based absorbers and
-                    metasurfaces for electromagnetic wave absorption,
-                    manipulation, and advanced wireless applications.
+                    Magnetic materials-based absorbers and metasurfaces
+                    for electromagnetic wave absorption, manipulation,
+                    and advanced wireless applications.
                 </p>
 
                 <a
@@ -970,7 +921,9 @@ footer {
 
 
 
-        <!-- 04 ANTENNA-IN-PACKAGE -->
+        <!-- =================================================
+             04 ANTENNA-IN-PACKAGE
+        ================================================== -->
 
         <article class="research-card">
 
@@ -993,14 +946,6 @@ footer {
                     class="aip-slide"
                     alt="Antenna-in-Package"
                 >
-
-
-                <div class="slider-dots">
-                    <span class="slider-dot active"></span>
-                    <span class="slider-dot"></span>
-                    <span class="slider-dot"></span>
-                </div>
-
 
                 <div class="research-number">
                     04
@@ -1042,7 +987,9 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -1061,18 +1008,19 @@ footer {
 </footer>
 
 
+<!-- =========================================================
+     SLIDESHOW
+========================================================= -->
+
 <script>
 
 function startSlideshow(selector, interval = 3000) {
 
     const slides = document.querySelectorAll(selector);
 
-    if (slides.length <= 1) return;
-
-    const container = slides[0].closest(".research-image");
-    const dots = container
-        ? container.querySelectorAll(".slider-dot")
-        : [];
+    if (slides.length <= 1) {
+        return;
+    }
 
     let current = 0;
 
@@ -1080,17 +1028,9 @@ function startSlideshow(selector, interval = 3000) {
 
         slides[current].classList.remove("active");
 
-        if (dots[current]) {
-            dots[current].classList.remove("active");
-        }
-
         current = (current + 1) % slides.length;
 
         slides[current].classList.add("active");
-
-        if (dots[current]) {
-            dots[current].classList.add("active");
-        }
 
     }, interval);
 
