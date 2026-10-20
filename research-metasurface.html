@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,94 +22,137 @@
 
 body {
     font-family: 'Inter', sans-serif;
+
     color: #111;
+
     background: #fff;
+
     overflow-x: hidden;
 }
 
 img {
     display: block;
+
     max-width: 100%;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
     width: 100%;
     height: 90px;
+
     padding: 0 6%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     background: #fff;
+
     border-bottom: 1px solid #eee;
+
+    position: relative;
+
+    z-index: 9999;
 }
 
 .pnu-name {
     color: #0b4a8b;
+
     font-size: 20px;
     font-weight: 700;
+
+    letter-spacing: -0.4px;
+
     white-space: nowrap;
 }
 
 nav {
     display: flex;
+
     align-items: center;
+
     gap: 48px;
 }
 
 nav a {
     position: relative;
+
     color: #111;
+
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 500;
+
     padding: 10px 0;
+
     white-space: nowrap;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
     color: #0b4a8b;
 }
 
 nav a.active {
+    color: #0b4a8b;
+
     font-weight: 600;
 }
 
 nav a.active::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: 0;
+
     width: 100%;
     height: 2px;
+
     background: #0b4a8b;
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
     padding: 72px 6% 65px;
-    background: linear-gradient(
-        115deg,
-        #ffffff 0%,
-        #f6faff 48%,
-        #eaf4fd 100%
-    );
+
+    background:
+        linear-gradient(
+            115deg,
+            #ffffff 0%,
+            #f6faff 48%,
+            #eaf4fd 100%
+        );
 }
 
 .hero-inner {
     width: 100%;
+
     max-width: 1450px;
+
     margin: 0 auto;
 }
 
 .back-link {
     display: inline-block;
+
     color: #0b4a8b;
+
     font-size: 13px;
     font-weight: 600;
+
     text-decoration: none;
+
     margin-bottom: 25px;
 }
 
@@ -117,154 +161,242 @@ nav a.active::after {
 }
 
 .hero h1 {
-    max-width: 1100px;
+    max-width: 1150px;
+
     font-size: clamp(40px, 5vw, 67px);
+
     font-weight: 800;
+
     line-height: 1.08;
+
     letter-spacing: -3px;
 }
 
 .title-line {
     width: 70px;
     height: 4px;
+
     margin-top: 25px;
+
     background: #0b4a8b;
 }
 
 
-/* INTRO */
+/* =========================================================
+   INTRO
+========================================================= */
 
 .intro {
-    padding: 65px 6% 35px;
+    padding: 65px 6% 50px;
 }
 
 .intro-inner {
-    max-width: 1050px;
+    max-width: 1100px;
+
     margin: auto;
 }
 
 .intro-inner p {
     color: #626c76;
+
     font-size: 15.5px;
+
     line-height: 1.85;
 }
 
 
-/* RESEARCH */
+/* =========================================================
+   RESEARCH ITEMS
+========================================================= */
 
-.research-list {
-    padding: 20px 6% 110px;
+.research-section {
+    padding: 10px 6% 110px;
 }
 
-.research-container {
+.research-list {
     width: 100%;
+
     max-width: 1250px;
+
     margin: auto;
+
+    border-top: 1px solid #e1e5e9;
 }
 
 .research-item {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: 75px;
-    align-items: center;
-    padding: 80px 0;
-    border-top: 1px solid #e1e5e9;
-}
 
-.research-item:last-child {
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 75px;
+
+    padding: 80px 0;
+
     border-bottom: 1px solid #e1e5e9;
 }
 
 .research-item.reverse {
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    grid-template-columns: 0.95fr 1.05fr;
 }
 
 .research-item.reverse .research-image {
     order: 2;
 }
 
-.research-item.reverse .research-text {
+.research-item.reverse .research-content {
     order: 1;
 }
 
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
 .research-image {
     width: 100%;
+
     aspect-ratio: 16 / 10;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border: 1px solid #e4e8ec;
-    border-radius: 5px;
-    padding: 12px;
+
     overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #e1e6ea;
+
+    border-radius: 5px;
+
+    padding: 12px;
 }
 
 .research-image img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
+
     object-position: center;
 }
 
-.research-text h2 {
-    max-width: 580px;
-    color: #111;
-    font-size: clamp(27px, 3vw, 39px);
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.item-number {
+    color: #0b4a8b;
+
+    font-size: 11px;
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -1.2px;
-    margin-bottom: 19px;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 17px;
 }
 
-.research-text p {
-    max-width: 580px;
+.research-content h2 {
+    color: #111;
+
+    font-size: clamp(27px, 2.5vw, 37px);
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -1.2px;
+
+    margin-bottom: 20px;
+}
+
+.research-content p {
     color: #606a74;
-    font-size: 15px;
+
+    font-size: 14.5px;
+
     line-height: 1.8;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
     padding: 32px 6%;
+
     background: #f6f7f8;
+
     border-top: 1px solid #e8eaed;
 }
 
 .footer-inner {
     width: 100%;
+
     max-width: 1450px;
+
     margin: auto;
+
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
 }
 
 .footer-lab {
     color: #0b4a8b;
+
     font-size: 14px;
     font-weight: 700;
 }
 
 .footer-copy {
     color: #8a929b;
+
     font-size: 12px;
 }
 
 
-/* MOBILE */
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .research-item,
+    .research-item.reverse {
+        gap: 40px;
+    }
+
+    .research-content h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
 
     header {
         height: auto;
+
         min-height: 104px;
+
         padding: 17px 20px 12px;
+
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 11px;
     }
 
@@ -274,9 +406,13 @@ footer {
 
     nav {
         width: 100%;
+
         gap: 0;
+
         overflow-x: auto;
+
         white-space: nowrap;
+
         scrollbar-width: none;
     }
 
@@ -286,10 +422,14 @@ footer {
 
     nav a {
         flex: 0 0 auto;
+
         font-size: 12px;
+
         padding: 5px 0 7px;
+
         margin-right: 22px;
     }
+
 
     .hero {
         padding: 50px 20px;
@@ -297,6 +437,7 @@ footer {
 
     .hero h1 {
         font-size: 36px;
+
         letter-spacing: -1.8px;
     }
 
@@ -305,48 +446,57 @@ footer {
         height: 3px;
     }
 
+
     .intro {
-        padding: 45px 20px 15px;
+        padding: 43px 20px 35px;
     }
 
     .intro-inner p {
         font-size: 14px;
+
         line-height: 1.75;
     }
 
-    .research-list {
-        padding: 15px 20px 70px;
+
+    .research-section {
+        padding: 0 20px 70px;
     }
 
     .research-item,
     .research-item.reverse {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-        align-items: stretch;
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
         padding: 50px 0;
     }
 
-    .research-item.reverse .research-image,
-    .research-item.reverse .research-text {
-        order: initial;
+    .research-item.reverse .research-image {
+        order: 1;
+    }
+
+    .research-item.reverse .research-content {
+        order: 2;
     }
 
     .research-image {
         aspect-ratio: 16 / 11;
-        padding: 7px;
+
+        padding: 8px;
     }
 
-    .research-text h2 {
-        font-size: 27px;
-        letter-spacing: -1px;
+    .research-content h2 {
+        font-size: 26px;
+
         margin-bottom: 15px;
     }
 
-    .research-text p {
+    .research-content p {
         font-size: 14px;
+
         line-height: 1.7;
     }
+
 
     footer {
         padding: 27px 20px;
@@ -354,16 +504,24 @@ footer {
 
     .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 8px;
     }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -372,21 +530,44 @@ footer {
     </div>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="people.html">People</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="research.html" class="active">
+            Research
+        </a>
+
+        <a href="people.html">
+            People
+        </a>
+
+        <a href="publications.html">
+            Publications
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
     </nav>
 
 </header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="hero">
 
     <div class="hero-inner">
 
-        <a href="research.html#metasurface" class="back-link">
+        <a
+            href="research.html#metasurface"
+            class="back-link"
+        >
             ← Back to Research
         </a>
 
@@ -402,17 +583,22 @@ footer {
 </section>
 
 
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
 <section class="intro">
 
     <div class="intro-inner">
 
         <p>
             SWARM Laboratory investigates magnetic materials,
-            electromagnetic absorbers, and engineered metasurfaces
-            for controlling electromagnetic-wave propagation,
-            reflection, absorption, polarization, and radiation
-            characteristics across microwave and millimeter-wave
-            frequency bands.
+            electromagnetic absorbers, and multifunctional
+            metasurfaces for controlling electromagnetic-wave
+            absorption, reflection, transmission, and radiation.
+            Our research also investigates robust electromagnetic
+            performance under temperature-varying environments
+            for advanced wireless and satellite applications.
         </p>
 
     </div>
@@ -420,12 +606,18 @@ footer {
 </section>
 
 
-<section class="research-list">
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
 
-<div class="research-container">
+<section class="research-section">
+
+<div class="research-list">
 
 
-    <!-- META 1 -->
+    <!-- =====================================================
+         01
+    ====================================================== -->
 
     <article class="research-item">
 
@@ -433,24 +625,29 @@ footer {
 
             <img
                 src="meta1.png"
-                alt="Magnetic Materials-Based Electromagnetic Absorber"
+                alt="Ferrite-Based Microwave Absorber"
             >
 
         </div>
 
-        <div class="research-text">
+
+        <div class="research-content">
+
+            <div class="item-number">
+                01
+            </div>
 
             <h2>
-                Magnetic Materials-Based
-                Electromagnetic Absorber
+                Ferrite-Based Microwave Absorber
             </h2>
 
             <p>
-                We investigate broadband electromagnetic absorbers
-                using ferrites and magnetic composite materials.
-                Material properties and absorber geometries are
-                engineered to achieve high absorption performance
-                over microwave and millimeter-wave frequency bands.
+                We investigate microwave absorbers based on
+                magnetic ferrite materials and meta-composite
+                structures. The electromagnetic properties of
+                the magnetic material and absorber structure are
+                engineered to achieve effective microwave
+                absorption and reflection characteristics.
             </p>
 
         </div>
@@ -458,7 +655,9 @@ footer {
     </article>
 
 
-    <!-- META 2 -->
+    <!-- =====================================================
+         02
+    ====================================================== -->
 
     <article class="research-item reverse">
 
@@ -466,24 +665,30 @@ footer {
 
             <img
                 src="meta2.png"
-                alt="Multifunctional Metasurface"
+                alt="Temperature-Robust Electromagnetic Performance"
             >
 
         </div>
 
-        <div class="research-text">
+
+        <div class="research-content">
+
+            <div class="item-number">
+                02
+            </div>
 
             <h2>
-                Multifunctional Metasurface
+                Temperature-Robust
+                Electromagnetic Performance
             </h2>
 
             <p>
-                Multifunctional metasurfaces are investigated for
-                manipulating electromagnetic waves within compact
-                planar structures. The research includes wave
-                absorption, radiation control, beam manipulation,
-                and polarization control using engineered
-                electromagnetic surfaces.
+                We investigate the temperature-dependent
+                electromagnetic characteristics of ferrite-based
+                structures, including changes in microwave
+                absorption and reflection performance. This
+                research aims to maintain stable RF operation
+                under temperature-varying environments.
             </p>
 
         </div>
@@ -491,7 +696,9 @@ footer {
     </article>
 
 
-    <!-- META 3 -->
+    <!-- =====================================================
+         03
+    ====================================================== -->
 
     <article class="research-item">
 
@@ -499,25 +706,31 @@ footer {
 
             <img
                 src="meta3.png"
-                alt="Reconfigurable Electromagnetic Surface"
+                alt="Multifunctional Ferrite-Based Metasurface"
             >
 
         </div>
 
-        <div class="research-text">
+
+        <div class="research-content">
+
+            <div class="item-number">
+                03
+            </div>
 
             <h2>
-                Reconfigurable
-                Electromagnetic Surface
+                Multifunctional Ferrite-Based
+                Metasurface
             </h2>
 
             <p>
-                We develop reconfigurable electromagnetic surfaces
-                capable of dynamically controlling reflected and
-                radiated electromagnetic waves. The research
-                focuses on beam steering, polarization control,
-                and adaptive electromagnetic-wave manipulation
-                for advanced wireless systems.
+                We develop multifunctional metasurfaces using
+                W-type ferrite materials for integrated
+                electromagnetic-wave control. The metasurface
+                enables multiple functions including beam
+                reflection, transmission, and microwave
+                absorption within a single electromagnetic
+                platform.
             </p>
 
         </div>
@@ -529,6 +742,10 @@ footer {
 
 </section>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -545,6 +762,7 @@ footer {
     </div>
 
 </footer>
+
 
 </body>
 </html>
