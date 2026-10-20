@@ -10,7 +10,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -244,26 +243,12 @@ nav a.active::after {
 }
 
 
-/* AREA HEADER */
+/* =========================================================
+   AREA TITLE
+========================================================= */
 
 .area-header {
-    display: flex;
-    align-items: baseline;
-
-    gap: 24px;
-
     margin-bottom: 42px;
-}
-
-.area-number {
-    flex: 0 0 auto;
-
-    color: #0b4a8b;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 1.3px;
 }
 
 .area-title {
@@ -293,7 +278,9 @@ nav a.active::after {
 }
 
 
-/* REVERSED */
+/* =========================================================
+   REVERSED
+========================================================= */
 
 .research-area.reverse .area-body {
     grid-template-columns: 0.92fr 1.08fr;
@@ -309,7 +296,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   SLIDER
+   SLIDER / IMAGE
 ========================================================= */
 
 .research-visual {
@@ -380,7 +367,7 @@ nav a.active::after {
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.88);
 
     backdrop-filter: blur(4px);
 }
@@ -430,7 +417,7 @@ nav a.active::after {
 .placeholder-text {
     color: #0b4a8b;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 
     letter-spacing: 0.3px;
@@ -445,16 +432,6 @@ nav a.active::after {
     width: 100%;
 }
 
-.area-description {
-    color: #606a74;
-
-    font-size: 14.5px;
-
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-}
-
 
 /* =========================================================
    KEYWORDS
@@ -467,7 +444,7 @@ nav a.active::after {
 }
 
 .keyword-item {
-    padding: 20px 0;
+    padding: 24px 0;
 
     border-bottom: 1px solid #dfe4e8;
 }
@@ -477,14 +454,14 @@ nav a.active::after {
 
     color: #111;
 
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
 
-    line-height: 1.35;
+    line-height: 1.4;
 
-    padding-left: 18px;
+    padding-left: 20px;
 
-    margin-bottom: 7px;
+    margin-bottom: 9px;
 }
 
 .keyword-title::before {
@@ -493,10 +470,10 @@ nav a.active::after {
     position: absolute;
 
     left: 0;
-    top: 8px;
+    top: 9px;
 
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
 
     border-radius: 50%;
 
@@ -504,13 +481,13 @@ nav a.active::after {
 }
 
 .keyword-text {
-    color: #707983;
+    color: #65717c;
 
-    font-size: 13px;
+    font-size: 14.5px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 
-    padding-left: 18px;
+    padding-left: 20px;
 }
 
 
@@ -569,6 +546,13 @@ footer {
         font-size: 35px;
     }
 
+    .keyword-title {
+        font-size: 17px;
+    }
+
+    .keyword-text {
+        font-size: 14px;
+    }
 }
 
 
@@ -690,15 +674,7 @@ footer {
     }
 
     .area-header {
-        display: block;
-
         margin-bottom: 27px;
-    }
-
-    .area-number {
-        font-size: 11px;
-
-        margin-bottom: 10px;
     }
 
     .area-title {
@@ -716,6 +692,9 @@ footer {
         gap: 30px;
     }
 
+
+    /* MOBILE ALWAYS IMAGE FIRST */
+
     .research-area.reverse .research-visual {
         order: 1;
     }
@@ -723,6 +702,7 @@ footer {
     .research-area.reverse .research-info {
         order: 2;
     }
+
 
     .research-visual {
         aspect-ratio: 16 / 11;
@@ -742,24 +722,34 @@ footer {
         bottom: 13px;
     }
 
-    .area-description {
-        font-size: 14px;
 
-        line-height: 1.7;
-
-        margin-bottom: 25px;
-    }
+    /* KEYWORDS */
 
     .keyword-item {
-        padding: 17px 0;
+        padding: 19px 0;
     }
 
     .keyword-title {
-        font-size: 15px;
+        font-size: 16.5px;
+
+        padding-left: 19px;
+
+        margin-bottom: 8px;
+    }
+
+    .keyword-title::before {
+        top: 8px;
+
+        width: 6px;
+        height: 6px;
     }
 
     .keyword-text {
-        font-size: 12.5px;
+        font-size: 13.5px;
+
+        line-height: 1.7;
+
+        padding-left: 19px;
     }
 
 
@@ -776,7 +766,6 @@ footer {
 
         gap: 8px;
     }
-
 }
 
 
@@ -912,16 +901,12 @@ footer {
 
 
 <!-- =========================================================
-     01 PHASED ARRAY
+     PHASED ARRAY
 ========================================================= -->
 
 <section class="research-area" id="phased-array">
 
     <div class="area-header">
-
-        <div class="area-number">
-            01
-        </div>
 
         <h2 class="area-title">
             Phased Array
@@ -948,17 +933,9 @@ footer {
         </div>
 
 
-        <!-- CONTENT -->
+        <!-- KEYWORDS -->
 
         <div class="research-info">
-
-            <p class="area-description">
-                We investigate phased-array antenna technologies
-                for high-performance wireless systems requiring
-                electronic beam steering, wide-angle scanning,
-                and adaptive radiation control.
-            </p>
-
 
             <div class="keyword-list">
 
@@ -1019,16 +996,12 @@ footer {
 
 
 <!-- =========================================================
-     02 BACKSCATTER COMMUNICATION
+     BACKSCATTER COMMUNICATION
 ========================================================= -->
 
 <section class="research-area reverse" id="backcom">
 
     <div class="area-header">
-
-        <div class="area-number">
-            02
-        </div>
 
         <h2 class="area-title">
             Backscatter Communication
@@ -1077,17 +1050,9 @@ footer {
         </div>
 
 
-        <!-- CONTENT -->
+        <!-- KEYWORDS -->
 
         <div class="research-info">
-
-            <p class="area-description">
-                We investigate advanced backscatter communication
-                technologies for high-speed and reliable wireless
-                connectivity using MIMO techniques, robust signal
-                processing, and intelligent communication methods.
-            </p>
-
 
             <div class="keyword-list">
 
@@ -1148,16 +1113,12 @@ footer {
 
 
 <!-- =========================================================
-     03 ABSORBER & METASURFACE
+     ABSORBER & METASURFACE
 ========================================================= -->
 
 <section class="research-area" id="metasurface">
 
     <div class="area-header">
-
-        <div class="area-number">
-            03
-        </div>
 
         <h2 class="area-title">
             Magnetic Materials-Based<br>
@@ -1207,17 +1168,9 @@ footer {
         </div>
 
 
-        <!-- CONTENT -->
+        <!-- KEYWORDS -->
 
         <div class="research-info">
-
-            <p class="area-description">
-                We investigate magnetic-material-based absorbers
-                and multifunctional metasurfaces for microwave
-                absorption, reflection, transmission, and
-                electromagnetic-wave control.
-            </p>
-
 
             <div class="keyword-list">
 
@@ -1279,16 +1232,12 @@ footer {
 
 
 <!-- =========================================================
-     04 ANTENNA-IN-PACKAGE
+     ANTENNA-IN-PACKAGE
 ========================================================= -->
 
 <section class="research-area reverse" id="aip">
 
     <div class="area-header">
-
-        <div class="area-number">
-            04
-        </div>
 
         <h2 class="area-title">
             Antenna-in-Package (AiP)
@@ -1337,17 +1286,9 @@ footer {
         </div>
 
 
-        <!-- CONTENT -->
+        <!-- KEYWORDS -->
 
         <div class="research-info">
-
-            <p class="area-description">
-                We develop highly integrated Antenna-in-Package
-                technologies combining antennas, RF front-end
-                components, beamforming circuits, multilayer
-                packaging, and thermal-management structures.
-            </p>
-
 
             <div class="keyword-list">
 
@@ -1458,9 +1399,7 @@ document.querySelectorAll(".research-slider").forEach((slider) => {
             dots[current].classList.remove("active");
         }
 
-
         current = (current + 1) % slides.length;
-
 
         slides[current].classList.add("active");
 
@@ -1476,5 +1415,4 @@ document.querySelectorAll(".research-slider").forEach((slider) => {
 
 
 </body>
-
 </html>
