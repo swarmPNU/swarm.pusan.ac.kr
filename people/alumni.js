@@ -44,7 +44,7 @@ const alumniData = [
         name: "Woohyeok Choi",
         degree: "M.S.",
         email: "whchoi1@postech.ac.kr",
-        image: "",
+        image: "./people/WoohyeokChoi.png",
 
         history: [
             "2021. 2. B.S. in Electronic Engineering, Pusan National University",
@@ -68,9 +68,10 @@ const alumniData = [
 
     {
         name: "Aparna Parameswaran",
-        degree: "",
+        degree: "Postdoctoral Researcher",
         email: "aparna16@pusan.ac.kr",
-        image: "",
+        image: "./people/AparnaParameswaran.png",
+
         history: []
     },
 
@@ -78,7 +79,7 @@ const alumniData = [
         name: "Myeongha Hwang",
         degree: "Ph.D.",
         email: "myeongha20@gmail.com",
-        image: "",
+        image: "./people/MyeonghaHwang.png",
 
         history: [
             "2025. 8. Ph.D. in Electrical and Electronic Engineering, Pusan National University",
