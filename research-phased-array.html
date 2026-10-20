@@ -14,494 +14,534 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-    font-family:'Inter',sans-serif;
-    color:#111;
-    background:#fff;
-    overflow-x:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    width:100%;
-    height:90px;
-    padding:0 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #eee;
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
 }
 
-.pnu-name{
-    color:#0b4a8b;
-    font-size:20px;
-    font-weight:700;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-nav{
-    display:flex;
-    gap:48px;
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-nav a{
-    position:relative;
-    color:#111;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
-    padding:10px 0;
-    white-space:nowrap;
+.pnu-name {
+    color: #0b4a8b;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+    white-space: nowrap;
 }
 
 nav a:hover,
-nav a.active{
-    color:#0b4a8b;
+nav a.active {
+    color: #0b4a8b;
 }
 
-nav a.active{
-    font-weight:600;
+nav a.active {
+    font-weight: 600;
 }
 
-nav a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:2px;
-    background:#0b4a8b;
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0b4a8b;
 }
 
-.hero{
-    padding:75px 6% 68px;
-    background:linear-gradient(115deg,#fff 0%,#f6faff 48%,#eaf4fd 100%);
+
+/* HERO */
+
+.hero {
+    padding: 72px 6% 65px;
+    background: linear-gradient(
+        115deg,
+        #ffffff 0%,
+        #f6faff 48%,
+        #eaf4fd 100%
+    );
 }
 
-.hero-inner{
-    max-width:1450px;
-    margin:auto;
+.hero-inner {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
-.back-link{
-    display:inline-block;
-    color:#0b4a8b;
-    font-size:13px;
-    font-weight:600;
-    text-decoration:none;
-    margin-bottom:24px;
+.back-link {
+    display: inline-block;
+    color: #0b4a8b;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 25px;
 }
 
-.hero h1{
-    font-size:clamp(42px,5vw,70px);
-    font-weight:800;
-    letter-spacing:-3px;
+.back-link:hover {
+    text-decoration: underline;
 }
 
-.title-line{
-    width:70px;
-    height:4px;
-    margin-top:25px;
-    background:#0b4a8b;
+.hero h1 {
+    max-width: 1000px;
+    font-size: clamp(43px, 5vw, 70px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -3px;
 }
 
-.content{
-    padding:75px 6% 110px;
+.title-line {
+    width: 70px;
+    height: 4px;
+    margin-top: 25px;
+    background: #0b4a8b;
 }
 
-.content-inner{
-    max-width:1250px;
-    margin:auto;
+
+/* INTRO */
+
+.intro {
+    padding: 65px 6% 35px;
 }
 
-.section-label{
-    color:#0b4a8b;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+.intro-inner {
+    max-width: 1050px;
+    margin: auto;
 }
 
-.overview{
-    margin-bottom:55px;
+.intro-inner p {
+    color: #626c76;
+    font-size: 15.5px;
+    line-height: 1.85;
 }
 
-.overview h2,
-.topics h2,
-.detail h2{
-    font-size:31px;
-    font-weight:700;
-    letter-spacing:-1px;
-    margin-bottom:20px;
+
+/* RESEARCH LIST */
+
+.research-list {
+    padding: 20px 6% 110px;
 }
 
-.overview p,
-.detail p{
-    max-width:1050px;
-    color:#5f6973;
-    font-size:15px;
-    line-height:1.85;
+.research-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
 }
 
-.image-grid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-    margin-bottom:75px;
+.research-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 75px;
+    align-items: center;
+    padding: 80px 0;
+    border-top: 1px solid #e1e5e9;
 }
 
-.placeholder{
-    aspect-ratio:4/3;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:linear-gradient(135deg,#edf4fa,#d8e7f4);
-
-    border:1px solid #e4e8ec;
-    border-radius:5px;
-
-    color:#8499ac;
-
-    font-size:13px;
-    font-weight:600;
+.research-item:last-child {
+    border-bottom: 1px solid #e1e5e9;
 }
 
-.topics{
-    margin-bottom:75px;
+.research-item.reverse {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 }
 
-.topic-grid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:15px;
+.research-item.reverse .research-image {
+    order: 2;
 }
 
-.topic{
-    padding:20px 22px;
-
-    background:#f7f9fb;
-
-    border:1px solid #e5e9ed;
-    border-radius:5px;
-
-    color:#38434e;
-
-    font-size:14px;
-    font-weight:600;
-
-    line-height:1.45;
+.research-item.reverse .research-text {
+    order: 1;
 }
 
-.detail{
-    padding-top:65px;
-    border-top:1px solid #e1e5e9;
+
+/* IMAGE */
+
+.research-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #e4e8ec;
+    border-radius: 5px;
+    padding: 12px;
+    overflow: hidden;
 }
 
-.detail p+p{
-    margin-top:18px;
+.research-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
-footer{
-    padding:32px 6%;
-    background:#f6f7f8;
-    border-top:1px solid #e8eaed;
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #edf4fa, #d8e7f4);
+    color: #8197aa;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.footer-inner{
-    max-width:1450px;
-    margin:auto;
 
-    display:flex;
-    justify-content:space-between;
+/* TEXT */
 
-    gap:20px;
+.research-text h2 {
+    max-width: 580px;
+    color: #111;
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin-bottom: 19px;
 }
 
-.footer-lab{
-    color:#0b4a8b;
-    font-size:14px;
-    font-weight:700;
+.research-text p {
+    max-width: 580px;
+    color: #606a74;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.footer-copy{
-    color:#8a929b;
-    font-size:12px;
+
+/* FOOTER */
+
+footer {
+    padding: 32px 6%;
+    background: #f6f7f8;
+    border-top: 1px solid #e8eaed;
 }
 
-@media(max-width:650px){
+.footer-inner {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
-    header{
-        height:auto;
-        min-height:104px;
-        padding:17px 20px 12px;
+.footer-lab {
+    color: #0b4a8b;
+    font-size: 14px;
+    font-weight: 700;
+}
 
-        flex-direction:column;
-        align-items:flex-start;
+.footer-copy {
+    color: #8a929b;
+    font-size: 12px;
+}
 
-        gap:11px;
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    header {
+        height: auto;
+        min-height: 104px;
+        padding: 17px 20px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11px;
     }
 
-    .pnu-name{
-        font-size:16px;
+    .pnu-name {
+        font-size: 16px;
     }
 
-    nav{
-        width:100%;
-        gap:0;
-
-        overflow-x:auto;
-        white-space:nowrap;
-
-        scrollbar-width:none;
+    nav {
+        width: 100%;
+        gap: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
     }
 
-    nav::-webkit-scrollbar{
-        display:none;
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
-    nav a{
-        flex:0 0 auto;
-
-        font-size:12px;
-
-        margin-right:22px;
-
-        padding:5px 0 7px;
+    nav a {
+        flex: 0 0 auto;
+        font-size: 12px;
+        padding: 5px 0 7px;
+        margin-right: 22px;
     }
 
-    .hero{
-        padding:50px 20px;
+    .hero {
+        padding: 50px 20px;
     }
 
-    .hero h1{
-        font-size:40px;
-        letter-spacing:-2px;
+    .hero h1 {
+        font-size: 39px;
+        letter-spacing: -2px;
     }
 
-    .content{
-        padding:55px 20px 75px;
+    .title-line {
+        width: 55px;
+        height: 3px;
     }
 
-    .image-grid,
-    .topic-grid{
-        grid-template-columns:1fr;
+    .intro {
+        padding: 45px 20px 15px;
     }
 
-    .placeholder{
-        aspect-ratio:16/11;
+    .intro-inner p {
+        font-size: 14px;
+        line-height: 1.75;
     }
 
-    .overview h2,
-    .topics h2,
-    .detail h2{
-        font-size:26px;
+    .research-list {
+        padding: 15px 20px 70px;
     }
 
-    .overview p,
-    .detail p{
-        font-size:14px;
+    .research-item,
+    .research-item.reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: stretch;
+        padding: 50px 0;
     }
 
-    footer{
-        padding:27px 20px;
+    .research-item.reverse .research-image,
+    .research-item.reverse .research-text {
+        order: initial;
     }
 
-    .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
+    .research-image {
+        aspect-ratio: 16 / 11;
+        padding: 7px;
     }
 
+    .research-text h2 {
+        font-size: 27px;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .research-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    footer {
+        padding: 27px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
 <header>
 
-<div class="pnu-name">
-Pusan National University
-</div>
+    <div class="pnu-name">
+        Pusan National University
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="research.html" class="active">Research</a>
-<a href="people.html">People</a>
-<a href="publications.html">Publications</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
 
 <section class="hero">
 
-<div class="hero-inner">
+    <div class="hero-inner">
 
-<a href="research.html#phased-array" class="back-link">
-← Back to Research
-</a>
+        <a href="research.html#phased-array" class="back-link">
+            ← Back to Research
+        </a>
 
-<h1>
-Phased Array
-</h1>
+        <h1>
+            Phased Array
+        </h1>
 
-<div class="title-line"></div>
+        <div class="title-line"></div>
 
-</div>
-
-</section>
-
-
-<main class="content">
-
-<div class="content-inner">
-
-
-<section class="overview">
-
-<div class="section-label">
-Overview
-</div>
-
-<h2>
-Electronically steerable antenna systems
-</h2>
-
-<p>
-Our research investigates phased-array antenna technologies
-for electronically controlled radiation and beam steering.
-Array geometry, antenna elements, feeding networks, and
-beamforming architectures are studied together to achieve
-high-performance and reconfigurable wireless systems.
-</p>
+    </div>
 
 </section>
 
 
-<div class="image-grid">
+<section class="intro">
 
-<div class="placeholder">
-Phased Array Image 1
-</div>
+    <div class="intro-inner">
 
-<div class="placeholder">
-Phased Array Image 2
-</div>
+        <p>
+            SWARM Laboratory investigates phased-array antenna
+            technologies for high-performance wireless systems.
+            Our research focuses on electronic beam steering,
+            wide-angle scanning, reconfigurable antenna arrays,
+            beamforming techniques, and integrated RF array systems.
+        </p>
 
-<div class="placeholder">
-Phased Array Image 3
-</div>
-
-</div>
-
-
-<section class="topics">
-
-<div class="section-label">
-Research Areas
-</div>
-
-<h2>
-Research Topics
-</h2>
-
-<div class="topic-grid">
-
-<div class="topic">
-Phased-Array Antennas
-</div>
-
-<div class="topic">
-Electronic Beam Steering
-</div>
-
-<div class="topic">
-RF Beamforming
-</div>
-
-<div class="topic">
-Wide-Angle Scanning
-</div>
-
-<div class="topic">
-Reconfigurable Antennas
-</div>
-
-<div class="topic">
-Microwave &amp; mmWave Arrays
-</div>
-
-<div class="topic">
-Array Calibration
-</div>
-
-<div class="topic">
-Beamforming IC Control
-</div>
-
-<div class="topic">
-Integrated Array Systems
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<section class="detail">
+<section class="research-list">
 
-<div class="section-label">
-Research Description
+<div class="research-container">
+
+
+    <article class="research-item">
+
+        <div class="research-image">
+            <div class="image-placeholder">
+                Phased Array Image 1
+            </div>
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                Beam-Steering Phased Array
+            </h2>
+
+            <p>
+                We investigate phased-array antenna architectures
+                for electronically controlled beam steering.
+                The research focuses on array configuration,
+                phase control, and radiation characteristics
+                for high-performance wireless systems.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="research-item reverse">
+
+        <div class="research-image">
+            <div class="image-placeholder">
+                Phased Array Image 2
+            </div>
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                Wide-Angle Scanning Array
+            </h2>
+
+            <p>
+                Wide-angle scanning techniques are investigated
+                to maintain stable radiation performance over
+                a broad steering range. The research includes
+                antenna-element design, array interaction, and
+                scan-performance optimization.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="research-item">
+
+        <div class="research-image">
+            <div class="image-placeholder">
+                Phased Array Image 3
+            </div>
+        </div>
+
+        <div class="research-text">
+
+            <h2>
+                Integrated Beamforming System
+            </h2>
+
+            <p>
+                We study integrated phased-array systems combining
+                antenna arrays with RF beamforming and control
+                technologies for compact and electronically
+                reconfigurable wireless platforms.
+            </p>
+
+        </div>
+
+    </article>
+
+
 </div>
-
-<h2>
-Advanced beam-steering antenna technology
-</h2>
-
-<p>
-Phased arrays electronically control the phase and amplitude
-of individual antenna elements to synthesize and steer the
-overall radiation pattern. We investigate antenna elements,
-array configurations, RF feeding structures, and beamforming
-methods for compact and high-performance array systems.
-</p>
-
-<p>
-Our research also considers practical implementation issues
-including beam-steering range, sidelobe characteristics,
-mutual coupling, array calibration, and integration with
-RF beamforming circuits for future wireless communication
-and sensing systems.
-</p>
 
 </section>
-
-
-</div>
-
-</main>
 
 
 <footer>
 
-<div class="footer-inner">
+    <div class="footer-inner">
 
-<div class="footer-lab">
-SWARM Laboratory
-</div>
+        <div class="footer-lab">
+            SWARM Laboratory
+        </div>
 
-<div class="footer-copy">
-© 2026 SWARM Laboratory, Pusan National University
-</div>
+        <div class="footer-copy">
+            © 2026 SWARM Laboratory, Pusan National University
+        </div>
 
-</div>
+    </div>
 
 </footer>
 
