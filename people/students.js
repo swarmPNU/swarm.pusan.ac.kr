@@ -124,7 +124,7 @@ const studentData = [
     email: "9lo522@pusan.ac.kr",
     website: "https://hyrecon.github.io/",
     research: "Self-Sustainable Wireless Communication and Sensing Systems, AI/ML",
-    image: "./people/ryuHanyeol.jpg"
+    image: "./people/ryuHanyeol.png"
 }
 
 ];
