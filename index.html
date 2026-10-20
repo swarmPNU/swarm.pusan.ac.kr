@@ -14,6 +14,10 @@
 
 <style>
 
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -62,9 +66,12 @@ header {
 
 .pnu-name {
     color: #0b4a8b;
+
     font-size: 20px;
     font-weight: 700;
+
     letter-spacing: -0.5px;
+
     white-space: nowrap;
 }
 
@@ -74,6 +81,7 @@ nav {
 
     display: flex;
     align-items: center;
+
     gap: 48px;
 }
 
@@ -82,6 +90,7 @@ nav a {
     z-index: 10001;
 
     color: #111;
+
     text-decoration: none;
 
     font-size: 15px;
@@ -105,6 +114,7 @@ nav a.active::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 0;
 
@@ -203,8 +213,40 @@ nav a.active::after {
     margin: 0 auto;
 }
 
+
+/* =========================================================
+   RESEARCH AREAS TITLE + LINES
+========================================================= */
+
+.research-heading {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 55px;
+
+    margin-bottom: 28px;
+}
+
+.research-heading::before,
+.research-heading::after {
+    content: "";
+
+    flex: 1;
+
+    height: 4px;
+
+    background: #000;
+
+    border-radius: 10px;
+}
+
 .research-title {
-    color: #0b4a8b;
+    flex: 0 0 auto;
+
+    color: #000;
 
     text-align: center;
 
@@ -213,7 +255,7 @@ nav a.active::after {
 
     letter-spacing: -1.5px;
 
-    margin-bottom: 28px;
+    white-space: nowrap;
 }
 
 
@@ -291,6 +333,11 @@ nav a.active::after {
 .research-image img.active {
     opacity: 1;
 }
+
+
+/* =========================================================
+   PHASED ARRAY PLACEHOLDER
+========================================================= */
 
 .phased-placeholder {
     width: 100%;
@@ -434,6 +481,7 @@ footer {
     margin: auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -468,6 +516,10 @@ footer {
 
     .research-card {
         min-height: 420px;
+    }
+
+    .research-heading {
+        gap: 35px;
     }
 
 }
@@ -531,6 +583,8 @@ footer {
     }
 
 
+    /* HERO */
+
     .hero {
         height: 400px;
 
@@ -565,16 +619,27 @@ footer {
     }
 
 
+    /* RESEARCH */
+
     .research-section {
         padding: 38px 20px 55px;
     }
 
-    .research-title {
-        font-size: 32px;
-
-        text-align: center;
+    .research-heading {
+        gap: 16px;
 
         margin-bottom: 25px;
+    }
+
+    .research-heading::before,
+    .research-heading::after {
+        height: 2px;
+    }
+
+    .research-title {
+        font-size: 27px;
+
+        letter-spacing: -1px;
     }
 
     .research-grid {
@@ -621,6 +686,8 @@ footer {
         bottom: 14px;
     }
 
+
+    /* FOOTER */
 
     footer {
         padding: 26px 20px;
@@ -672,6 +739,14 @@ footer {
         padding-right: 16px;
     }
 
+    .research-heading {
+        gap: 11px;
+    }
+
+    .research-title {
+        font-size: 23px;
+    }
+
 }
 
 </style>
@@ -681,6 +756,10 @@ footer {
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -747,15 +826,24 @@ footer {
 
     <div class="research-container">
 
-        <h2 class="research-title">
-            Research Areas
-        </h2>
+
+        <!-- TITLE WITH LINES -->
+
+        <div class="research-heading">
+
+            <h2 class="research-title">
+                Research Areas
+            </h2>
+
+        </div>
 
 
         <div class="research-grid">
 
 
-            <!-- 01 PHASED ARRAY -->
+            <!-- =================================================
+                 01 PHASED ARRAY
+            ================================================== -->
 
             <article class="research-card">
 
@@ -796,7 +884,9 @@ footer {
             </article>
 
 
-            <!-- 02 BACKSCATTER COMMUNICATION -->
+            <!-- =================================================
+                 02 BACKSCATTER COMMUNICATION
+            ================================================== -->
 
             <article class="research-card">
 
@@ -853,7 +943,9 @@ footer {
             </article>
 
 
-            <!-- 03 METASURFACE -->
+            <!-- =================================================
+                 03 METASURFACE
+            ================================================== -->
 
             <article class="research-card">
 
@@ -911,7 +1003,9 @@ footer {
             </article>
 
 
-            <!-- 04 AIP -->
+            <!-- =================================================
+                 04 ANTENNA-IN-PACKAGE
+            ================================================== -->
 
             <article class="research-card">
 
@@ -975,6 +1069,10 @@ footer {
 </section>
 
 
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
 
     <div class="footer-inner">
@@ -991,6 +1089,10 @@ footer {
 
 </footer>
 
+
+<!-- =========================================================
+     SLIDESHOW
+========================================================= -->
 
 <script>
 
@@ -1014,6 +1116,7 @@ function startSlideshow(selector, interval = 3000) {
 
 }
 
+
 startSlideshow(".backcom-slide", 3000);
 startSlideshow(".meta-slide", 3000);
 startSlideshow(".aip-slide", 3000);
@@ -1022,4 +1125,5 @@ startSlideshow(".aip-slide", 3000);
 
 
 </body>
+
 </html>
