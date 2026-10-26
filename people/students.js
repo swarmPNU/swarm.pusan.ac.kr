@@ -21,7 +21,7 @@ const studentData = [
         email: "hoyung110@pusan.ac.kr",
         research:
             "AiP (Antenna in Package), Filtenna, Metasurface",
-        image: ""
+        image: "./people/hoyongkim.jpg"
     },
 
     {
@@ -31,7 +31,7 @@ const studentData = [
         email: "eunyoung_24@pusan.ac.kr",
         research:
             "AiP (Antenna in Package), Active Phased Array, RF Packaging",
-        image: ""
+        image: "./people/eunyoungpark.jpg"
     },
 
 
@@ -45,7 +45,7 @@ const studentData = [
         degree: "M.S. Student",
         email: "dean1009@pusan.ac.kr",
         research: "RF Front-End Module",
-        image: ""
+        image: "./people/donghoonkim.jpg"
     },
 
     {
@@ -65,7 +65,7 @@ const studentData = [
         email: "dbsk0328@pusan.ac.kr",
         research:
             "AiP (Antenna in Package), Widebeam Antenna",
-        image: ""
+        image: "./people/yunajeong.jpg"
     },
 
     {
@@ -95,7 +95,7 @@ const studentData = [
         email: "xorbs7545@pusan.ac.kr",
         research:
             "EMC/EMI, RF Front-End",
-        image: ""
+        image: "./people/taehyunkang.jpg"
     },
 
     {
@@ -105,7 +105,7 @@ const studentData = [
         email: "juun4704@pusan.ac.kr",
         research:
             "SWIPT, Wireless Power Transfer, RF Front-End",
-        image: ""
+        image: "./people/junhyeongpark.jpg"
     },
 
     {
@@ -115,7 +115,7 @@ const studentData = [
         email: "sung04111@pusan.ac.kr",
         research:
             "RF Communication Systems",
-        image: ""
+        image: "./people/seongyophwang.jpg"
     },
   {
     group: "M.S. Students",
