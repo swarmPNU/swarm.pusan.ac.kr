@@ -95,17 +95,17 @@ const studentData = [
         email: "xorbs7545@pusan.ac.kr",
         research:
             "EMC/EMI, RF Front-End",
-        image: "./people/taehyunkang.png"
+        image: "./people/taegyunkang.png"
     },
 
     {
         group: "M.S. Students",
-        name: "JunHyeong Park",
+        name: "Junhyeong Park",
         degree: "M.S. Student",
         email: "juun4704@pusan.ac.kr",
         research:
             "SWIPT, Wireless Power Transfer, RF Front-End",
-        image: "./people/junhyeongpark.png"
+        image: "./people/junhyungpark.png"
     },
 
     {
@@ -115,7 +115,7 @@ const studentData = [
         email: "sung04111@pusan.ac.kr",
         research:
             "RF Communication Systems",
-        image: "./people/seongyophwang.png"
+        image: "./people/seongyeophwang.png"
     },
   {
     group: "M.S. Students",
