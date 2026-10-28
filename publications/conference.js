@@ -7,6 +7,14 @@ const conferencePublications = [
     {
         year: 2026,
         category: "International",
+        title: "Deep Learning-Aided Phase-Aware Channel Estimation for Error-Floor Suppression over Phase-Drifting Backscatter Links",
+        authors: "H. Ryu and S. Kim",
+        info: "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
+    },
+
+    {
+        year: 2026,
+        category: "International",
         title: "Wide-Beamwidth Dual-Polarized Dipole Antenna with Parasitic Patches for 6G Upper-Mid Band",
         authors: "Y. Jeong and S. Kim",
         info: "Asian Workshop on Antennas and Propagation (AWAP 2026)"
