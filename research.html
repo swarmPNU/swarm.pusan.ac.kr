@@ -59,6 +59,7 @@ header {
     justify-content: space-between;
 
     background: #fff;
+
     border-bottom: 1px solid #eee;
 
     position: relative;
@@ -221,7 +222,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   RESEARCH AREAS
+   RESEARCH
 ========================================================= */
 
 .research-main {
@@ -264,7 +265,9 @@ nav a.active::after {
 .area-body {
     display: grid;
 
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
 
     gap: 65px;
 
@@ -272,12 +275,14 @@ nav a.active::after {
 }
 
 .area-body.reverse {
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
 }
 
 
 /* =========================================================
-   RESEARCH VISUAL / SLIDER
+   VISUAL / SLIDER
 ========================================================= */
 
 .research-visual {
@@ -316,44 +321,11 @@ nav a.active::after {
 
     opacity: 0;
 
-    transition: opacity 0.7s ease;
+    transition: opacity .7s ease;
 }
 
 .research-slide.active {
     opacity: 1;
-}
-
-
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
-
-.visual-placeholder {
-    position: absolute;
-
-    top: 12px;
-    left: 12px;
-
-    width: calc(100% - 24px);
-    height: calc(100% - 24px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e2f0fb 0%,
-            #c9dff1 100%
-        );
-}
-
-.visual-placeholder span {
-    color: #0b4a8b;
-
-    font-size: 16px;
-    font-weight: 600;
 }
 
 
@@ -379,7 +351,7 @@ nav a.active::after {
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,.85);
 
     backdrop-filter: blur(4px);
 }
@@ -393,8 +365,8 @@ nav a.active::after {
     background: #b8c3cc;
 
     transition:
-        width 0.3s ease,
-        background 0.3s ease;
+        width .3s ease,
+        background .3s ease;
 }
 
 .slider-dot.active {
@@ -648,7 +620,7 @@ footer {
     .area-title {
         font-size: 27px;
 
-        letter-spacing: -0.8px;
+        letter-spacing: -.8px;
 
         margin-bottom: 27px;
     }
@@ -849,13 +821,25 @@ footer {
     <div class="area-body">
 
 
-        <div class="research-visual">
+        <div class="research-visual research-slider">
 
-            <div class="visual-placeholder">
+            <img
+                src="phasedarray1.png"
+                class="research-slide active"
+                alt="Phased Array"
+            >
 
-                <span>
-                    Phased Array
-                </span>
+            <img
+                src="phasedarray2.png"
+                class="research-slide"
+                alt="Phased Array"
+            >
+
+
+            <div class="slider-dots">
+
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
 
             </div>
 
@@ -1036,7 +1020,7 @@ footer {
 
 
 <!-- =========================================================
-     03 MAGNETIC MATERIALS-BASED ABSORBER & METASURFACE
+     03 ABSORBER & METASURFACE
 ========================================================= -->
 
 <section
