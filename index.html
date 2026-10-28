@@ -10,17 +10,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================================
-   BASIC RESET
-========================================================= */
 
 * {
     margin: 0;
@@ -36,7 +28,7 @@ html {
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #ffffff;
+    background: #fff;
     color: #0a0a0a;
     overflow-x: hidden;
 }
@@ -69,7 +61,6 @@ header {
     background: transparent;
 
     z-index: 9999;
-
     pointer-events: auto;
 }
 
@@ -86,11 +77,6 @@ header {
 
     white-space: nowrap;
 }
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
 
 nav {
     position: relative;
@@ -110,7 +96,7 @@ nav a {
 
     display: block;
 
-    color: #111111;
+    color: #111;
 
     text-decoration: none;
 
@@ -124,7 +110,7 @@ nav a {
     cursor: pointer;
     pointer-events: auto;
 
-    transition: color 0.2s ease;
+    transition: color .2s ease;
 }
 
 nav a:hover {
@@ -152,7 +138,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   HERO
+   SWARM HERO
 ========================================================= */
 
 .blue {
@@ -247,11 +233,6 @@ nav a.active::after {
     margin: 0 auto;
 }
 
-
-/* =========================================================
-   RESEARCH AREAS TITLE
-========================================================= */
-
 .research-heading {
     width: 100%;
 
@@ -292,11 +273,6 @@ nav a.active::after {
     white-space: nowrap;
 }
 
-
-/* =========================================================
-   RESEARCH GRID
-========================================================= */
-
 .research-grid {
     display: grid;
 
@@ -305,11 +281,6 @@ nav a.active::after {
     gap: 20px;
 }
 
-
-/* =========================================================
-   RESEARCH CARD
-========================================================= */
-
 .research-card {
     position: relative;
 
@@ -317,39 +288,33 @@ nav a.active::after {
 
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 
     border-radius: 6px;
 
-    box-shadow:
-        0 7px 20px rgba(30, 50, 70, 0.045);
+    box-shadow: 0 7px 20px rgba(30,50,70,.045);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .research-card:hover {
     transform: translateY(-5px);
 
-    box-shadow:
-        0 14px 30px rgba(30, 50, 70, 0.09);
+    box-shadow: 0 14px 30px rgba(30,50,70,.09);
 }
-
-
-/* =========================================================
-   RESEARCH IMAGE
-========================================================= */
 
 .research-image {
     position: relative;
 
     width: 100%;
+
     aspect-ratio: 16 / 10;
 
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 }
 
 .image-placeholder {
@@ -366,7 +331,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   COMMON SLIDER
+   HOME RESEARCH SLIDER
 ========================================================= */
 
 .research-slider {
@@ -380,7 +345,7 @@ nav a.active::after {
 
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 }
 
 .research-image img.research-slide {
@@ -399,17 +364,12 @@ nav a.active::after {
 
     opacity: 0;
 
-    transition: opacity 0.9s ease-in-out;
+    transition: opacity .9s ease-in-out;
 }
 
 .research-image img.research-slide.active {
     opacity: 1;
 }
-
-
-/* =========================================================
-   RESEARCH NUMBER
-========================================================= */
 
 .research-number {
     position: absolute;
@@ -419,13 +379,12 @@ nav a.active::after {
 
     z-index: 5;
 
-    color: #ffffff;
+    color: #fff;
 
     font-size: 17px;
     font-weight: 700;
 
-    text-shadow:
-        0 1px 5px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 1px 5px rgba(0,0,0,.75);
 }
 
 .research-number::after {
@@ -438,13 +397,8 @@ nav a.active::after {
 
     margin-top: 7px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,.9);
 }
-
-
-/* =========================================================
-   RESEARCH CONTENT
-========================================================= */
 
 .research-content {
     min-height: 190px;
@@ -455,14 +409,14 @@ nav a.active::after {
 }
 
 .research-content h3 {
-    color: #111111;
+    color: #111;
 
     font-size: 17px;
     font-weight: 700;
 
     line-height: 1.15;
 
-    letter-spacing: -0.45px;
+    letter-spacing: -.45px;
 
     margin-bottom: 11px;
 }
@@ -475,7 +429,6 @@ nav a.active::after {
     line-height: 1.55;
 
     padding-right: 8px;
-
     padding-bottom: 30px;
 }
 
@@ -493,7 +446,7 @@ nav a.active::after {
 
     line-height: 1;
 
-    transition: transform 0.2s ease;
+    transition: transform .2s ease;
 }
 
 .research-arrow:hover {
@@ -508,7 +461,7 @@ nav a.active::after {
 footer {
     padding: 32px 6%;
 
-    background: #ffffff;
+    background: #fff;
 
     border-top: 1px solid #e5e8eb;
 }
@@ -541,7 +494,7 @@ footer {
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -551,11 +504,6 @@ footer {
     }
 
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 650px) {
 
@@ -644,7 +592,7 @@ footer {
 
         line-height: 1.2;
 
-        letter-spacing: -0.8px;
+        letter-spacing: -.8px;
     }
 
 
@@ -711,11 +659,6 @@ footer {
     }
 
 }
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
 
 @media (max-width: 390px) {
 
@@ -839,7 +782,7 @@ footer {
     <div class="research-heading">
 
         <h2 class="research-title">
-            Research Areas
+            Research
         </h2>
 
     </div>
@@ -856,7 +799,21 @@ footer {
 
             <div class="research-image">
 
-                <div class="image-placeholder"></div>
+                <div class="research-slider">
+
+                    <img
+                        src="phasedarray1.png"
+                        class="research-slide phasedarray-slide active"
+                        alt="Phased Array"
+                    >
+
+                    <img
+                        src="phasedarray2.png"
+                        class="research-slide phasedarray-slide"
+                        alt="Phased Array"
+                    >
+
+                </div>
 
                 <div class="research-number">
                     01
@@ -872,9 +829,9 @@ footer {
                 </h3>
 
                 <p>
-                    Phased array antenna technologies for electronic
-                    beam steering, beamforming, and high-performance
-                    wireless communication systems.
+                    Phased array antenna technologies for electronic beam
+                    steering, beamforming, and high-performance wireless
+                    communication systems.
                 </p>
 
                 <a
@@ -917,11 +874,13 @@ footer {
                         class="research-slide backcom-slide"
                         alt="Backscatter Communication"
                     >
+
                     <img
                         src="backcom4.png"
                         class="research-slide backcom-slide"
                         alt="Backscatter Communication"
                     >
+
                 </div>
 
                 <div class="research-number">
@@ -938,10 +897,10 @@ footer {
                 </h3>
 
                 <p>
-                    Advanced backscatter communication technologies
-                    for high-speed and reliable connectivity, including
-                    MIMO, robust signal processing, and AI-driven
-                    intelligent wireless systems.
+                    Advanced backscatter communication technologies for
+                    high-speed and reliable connectivity, including MIMO,
+                    robust signal processing, and AI-driven intelligent
+                    wireless systems.
                 </p>
 
                 <a
@@ -958,7 +917,7 @@ footer {
 
 
         <!-- =================================================
-             03 MAGNETIC MATERIALS
+             03 ABSORBER & METASURFACE
         ================================================== -->
 
         <article class="research-card">
@@ -1070,10 +1029,9 @@ footer {
                 </h3>
 
                 <p>
-                    Antenna-in-package technologies integrating
-                    antennas, RF components, and beamforming circuits
-                    into compact packages for next-generation
-                    wireless systems.
+                    Antenna-in-package technologies integrating antennas,
+                    RF components, and beamforming circuits into compact
+                    packages for next-generation wireless systems.
                 </p>
 
                 <a
@@ -1118,7 +1076,7 @@ footer {
 
 
 <!-- =========================================================
-     SLIDESHOW
+     HOME SLIDESHOW
 ========================================================= -->
 
 <script>
@@ -1146,12 +1104,17 @@ function startSlideshow(selector, interval = 3000) {
 }
 
 
+startSlideshow(".phasedarray-slide", 3000);
+
 startSlideshow(".backcom-slide", 3000);
+
 startSlideshow(".meta-slide", 3000);
+
 startSlideshow(".aip-slide", 3000);
 
 </script>
 
 
 </body>
+
 </html>
