@@ -1,17 +1,42 @@
 const conferencePublications = [
 
     // =====================================================
-    // 2026
+    // INTERNATIONAL CONFERENCES
     // =====================================================
 
+
+    // =========================
+    // 2026
+    // =========================
+
+    // ISPACS 2026
     {
         year: 2026,
         category: "International",
-        title: "Deep Learning-Aided Phase-Aware Channel Estimation for Error-Floor Suppression over Phase-Drifting Backscatter Links",
-        authors: "H. Ryu and S. Kim",
-        info: "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
+        title: "Demonstration of C-Band Integrated Sensing and Communication System for Low-Power Indoor IoT Applications",
+        authors: "D. Kim, S. Choi, and S. Kim",
+        info: "The International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
     },
 
+    // Metamaterials 2026
+    {
+        year: 2026,
+        category: "International",
+        title: "M-Type Ferrite-Based Multi-Functional Metasurface for LEO Satellite Communication",
+        authors: "J. Kim, N. Ha, S. Kim, S. Choi, B. Park, S. Kwon, H. Lee, M. Lim, Y. Kim, G. Kim, and S. Kim",
+        info: "International Congress on Artificial Materials for Novel Wave Phenomena (Metamaterials 2026)"
+    },
+
+    // iWEM 2026
+    {
+        year: 2026,
+        category: "International",
+        title: "LTCC-Based Antennas and RF Front-End Components for Upper Mid-Band Applications",
+        authors: "E. Park, H. Kim, S. Kim, N. Ha, and S. Kim",
+        info: "International Workshop on Electromagnetics (iWEM 2026)"
+    },
+
+    // AWAP 2026
     {
         year: 2026,
         category: "International",
@@ -20,34 +45,10 @@ const conferencePublications = [
         info: "Asian Workshop on Antennas and Propagation (AWAP 2026)"
     },
 
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "광각 2축 스위치드빔 조향을 위한 유효 조명 개구 기반 저프로파일 공유 개구 투과어레이",
-        authors: "김도현, 황명하, 김호용, Theodore W. Callis, Manos M. Tentzeris, 김상길",
-        info: "한국전자파학회 하계종합학술대회"
-    },
 
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "위상 인식 채널 추정 기법을 적용한 초저전력 모노스태틱 후방산란 통신 플랫폼",
-        authors: "유한열, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
-    },
-
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "레이다 및 후방산란 통신 플랫폼을 위한 자기간섭 제거 시스템",
-        authors: "김동훈, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
-    },
-
-
-    // =====================================================
+    // =========================
     // 2025
-    // =====================================================
+    // =========================
 
     {
         year: 2025,
@@ -73,20 +74,93 @@ const conferencePublications = [
         info: "IEEE MTT-S International Microwave Symposium (IMS 2025)"
     },
 
+
+    // =========================
+    // 2024
+    // =========================
+
+    {
+        year: 2024,
+        category: "International",
+        title: "Spatial Multiplexing Technique for MIMO Backscatter Communication",
+        authors: "H. Jeong, H. Kim, N. Ha, and S. Kim",
+        info: "IEEE/MTT-S International Microwave Symposium (IMS 2024)"
+    },
+
+
+    // =========================
+    // 2023
+    // =========================
+
+    {
+        year: 2023,
+        category: "International",
+        title: "SWARM CubeSat: Smart mmWave Active Radio Module on a 2U CubeSat Platform for Ground-Space LEO Communication Networks",
+        authors: "D. Kim, G. Kim, H. Kim, E. Park, N. Ha, M. Hwang, and S. Kim",
+        info: "17th European Conference on Antennas and Propagation (EuCAP 2023)"
+    },
+
+
+    // =========================
+    // 2022
+    // =========================
+
+    {
+        year: 2022,
+        category: "International",
+        title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
+        authors: "M. Hwang, G. Kim, J. Kim, and S. Kim",
+        info: "International Symposium on Antennas and Propagation (ISAP 2022)"
+    },
+
+
+
+    // =====================================================
+    // DOMESTIC CONFERENCES
+    // =====================================================
+
+
+    // =========================
+    // 2026
+    // =========================
+
+    // Summer Conference
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "광각 2축 스위치드빔 조향을 위한 유효 조명 개구 기반 저프로파일 공유 개구 투과어레이",
+        authors: "김도현, 황명하, 김호용, Theodore W. Callis, Manos M. Tentzeris, 김상길",
+        info: "한국전자파학회 하계종합학술대회"
+    },
+
+    // Winter Conference
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "위상 인식 채널 추정 기법을 적용한 초저전력 모노스태틱 후방산란 통신 플랫폼",
+        authors: "유한열, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
+    },
+
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "레이다 및 후방산란 통신 플랫폼을 위한 자기간섭 제거 시스템",
+        authors: "김동훈, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
+    },
+
+
+    // =========================
+    // 2025
+    // =========================
+
     {
         year: 2025,
         category: "Domestic",
         title: "LTCC 기판에 설계된 6G Upper-Mid 대역용 기생 패치를 통한 이중 편파 고차 다이폴 모드 광각화 안테나 설계",
         authors: "정유나, 박은영, 김호용, 김상길",
         info: "한국전자파학회 추계종합학술대회"
-    },
-
-    {
-        year: 2025,
-        category: "Domestic",
-        title: "반사증폭기를 활용한 후방산란통신 거리 향상 연구",
-        authors: "최정현, 유한열, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
     },
 
     {
@@ -113,18 +187,18 @@ const conferencePublications = [
         info: "한국전자파학회 하계종합학술대회"
     },
 
-
-    // =====================================================
-    // 2024
-    // =====================================================
-
     {
-        year: 2024,
-        category: "International",
-        title: "Spatial Multiplexing Technique for MIMO Backscatter Communication",
-        authors: "H. Jeong, H. Kim, N. Ha, and S. Kim",
-        info: "IEEE/MTT-S International Microwave Symposium (IMS 2024)"
+        year: 2025,
+        category: "Domestic",
+        title: "반사증폭기를 활용한 후방산란통신 거리 향상 연구",
+        authors: "최정현, 유한열, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
     },
+
+
+    // =========================
+    // 2024
+    // =========================
 
     {
         year: 2024,
@@ -137,31 +211,23 @@ const conferencePublications = [
     {
         year: 2024,
         category: "Domestic",
-        title: "Ku-Band 광대역 평면형 Transmission-Line-to-Waveguide Transition",
-        authors: "김호용, 김경득, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
-    },
-
-    {
-        year: 2024,
-        category: "Domestic",
         title: "A Dual-Broadband Dual-Polarized Stacked Patch Array Antenna-in-Package (AiP) Module for mmWave Mobile Device Application",
         authors: "김도현, 김경득, 임경호, 양찬우, 유치상, 김상길",
         info: "RF/아날로그 회로 워크샵"
     },
 
-
-    // =====================================================
-    // 2023
-    // =====================================================
-
     {
-        year: 2023,
-        category: "International",
-        title: "SWARM CubeSat: Smart mmWave Active Radio Module on a 2U CubeSat Platform for Ground-Space LEO Communication Networks",
-        authors: "D. Kim, G. Kim, H. Kim, E. Park, N. Ha, M. Hwang, and S. Kim",
-        info: "17th European Conference on Antennas and Propagation (EuCAP 2023)"
+        year: 2024,
+        category: "Domestic",
+        title: "Ku-Band 광대역 평면형 Transmission-Line-to-Waveguide Transition",
+        authors: "김호용, 김경득, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
     },
+
+
+    // =========================
+    // 2023
+    // =========================
 
     {
         year: 2023,
@@ -180,17 +246,9 @@ const conferencePublications = [
     },
 
 
-    // =====================================================
+    // =========================
     // 2022
-    // =====================================================
-
-    {
-        year: 2022,
-        category: "International",
-        title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
-        authors: "M. Hwang, G. Kim, J. Kim, and S. Kim",
-        info: "International Symposium on Antennas and Propagation (ISAP 2022)"
-    },
+    // =========================
 
     {
         year: 2022,
@@ -201,9 +259,17 @@ const conferencePublications = [
     },
 
 
-    // =====================================================
+    // =========================
     // 2021
-    // =====================================================
+    // =========================
+
+    {
+        year: 2021,
+        category: "Domestic",
+        title: "T-공진기를 이용한 밀리미터파대역에서의 PCB 유전율 및 손실 측정",
+        authors: "박은영, 배현철, 김상길, 손기락, 오애선, 양용석",
+        info: "대한전자공학회 추계학술대회"
+    },
 
     {
         year: 2021,
@@ -221,18 +287,18 @@ const conferencePublications = [
         info: "한국전자파학회 하계종합학술대회"
     },
 
-    {
-        year: 2021,
-        category: "Domestic",
-        title: "T-공진기를 이용한 밀리미터파대역에서의 PCB 유전율 및 손실 측정",
-        authors: "박은영, 배현철, 김상길, 손기락, 오애선, 양용석",
-        info: "대한전자공학회 추계학술대회"
-    },
 
-
-    // =====================================================
+    // =========================
     // 2020
-    // =====================================================
+    // =========================
+
+    {
+        year: 2020,
+        category: "Domestic",
+        title: "종이접기 이론을 응용한 C-밴드 큐브위성용 패턴편파 재구성 다이폴 배열 안테나",
+        authors: "황명하, 김경득, 김상길",
+        info: "한국전자파학회 추계종합학술대회"
+    },
 
     {
         year: 2020,
@@ -248,14 +314,6 @@ const conferencePublications = [
         title: "Sub-6 GHz 5G 통신 중계기용 고성능 광대역 이중편파 안테나 설계",
         authors: "황명하, 김상길",
         info: "한국전자파학회 하계종합학술대회"
-    },
-
-    {
-        year: 2020,
-        category: "Domestic",
-        title: "종이접기 이론을 응용한 C-밴드 큐브위성용 패턴편파 재구성 다이폴 배열 안테나",
-        authors: "황명하, 김경득, 김상길",
-        info: "한국전자파학회 추계종합학술대회"
     },
 
     {
