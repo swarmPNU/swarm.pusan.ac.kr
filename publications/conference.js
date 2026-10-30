@@ -8,12 +8,19 @@ const conferencePublications = [
     // International
     // -------------------------
 
+     {
+        year: 2026,
+        category: "International",
+        title: "Deep Learning-Aided Phase-Aware Channel Estimation for Error-Floor Suppression over Phase-Drifting Backscatter Links",
+        authors: "H. Ryu and S. Kim",
+        info: "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
+    },
     {
         year: 2026,
         category: "International",
         title: "Demonstration of C-Band Integrated Sensing and Communication System for Low-Power Indoor IoT Applications",
         authors: "D. Kim, S. Choi, and S. Kim",
-        info: "The International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
+        info: "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
     },
 
     {
