@@ -1,15 +1,13 @@
 const conferencePublications = [
 
     // =====================================================
-    // INTERNATIONAL CONFERENCES
+    // 2026
     // =====================================================
 
+    // -------------------------
+    // International
+    // -------------------------
 
-    // =========================
-    // 2026
-    // =========================
-
-    // ISPACS 2026
     {
         year: 2026,
         category: "International",
@@ -18,7 +16,6 @@ const conferencePublications = [
         info: "The International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
     },
 
-    // Metamaterials 2026
     {
         year: 2026,
         category: "International",
@@ -27,7 +24,6 @@ const conferencePublications = [
         info: "International Congress on Artificial Materials for Novel Wave Phenomena (Metamaterials 2026)"
     },
 
-    // iWEM 2026
     {
         year: 2026,
         category: "International",
@@ -36,7 +32,6 @@ const conferencePublications = [
         info: "International Workshop on Electromagnetics (iWEM 2026)"
     },
 
-    // AWAP 2026
     {
         year: 2026,
         category: "International",
@@ -45,10 +40,42 @@ const conferencePublications = [
         info: "Asian Workshop on Antennas and Propagation (AWAP 2026)"
     },
 
+    // -------------------------
+    // Domestic
+    // -------------------------
 
-    // =========================
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "광각 2축 스위치드빔 조향을 위한 유효 조명 개구 기반 저프로파일 공유 개구 투과어레이",
+        authors: "김도현, 황명하, 김호용, Theodore W. Callis, Manos M. Tentzeris, 김상길",
+        info: "한국전자파학회 하계종합학술대회"
+    },
+
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "위상 인식 채널 추정 기법을 적용한 초저전력 모노스태틱 후방산란 통신 플랫폼",
+        authors: "유한열, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
+    },
+
+    {
+        year: 2026,
+        category: "Domestic",
+        title: "레이다 및 후방산란 통신 플랫폼을 위한 자기간섭 제거 시스템",
+        authors: "김동훈, 김상길",
+        info: "한국전자파학회 동계종합학술대회"
+    },
+
+
+    // =====================================================
     // 2025
-    // =========================
+    // =====================================================
+
+    // -------------------------
+    // International
+    // -------------------------
 
     {
         year: 2025,
@@ -74,86 +101,9 @@ const conferencePublications = [
         info: "IEEE MTT-S International Microwave Symposium (IMS 2025)"
     },
 
-
-    // =========================
-    // 2024
-    // =========================
-
-    {
-        year: 2024,
-        category: "International",
-        title: "Spatial Multiplexing Technique for MIMO Backscatter Communication",
-        authors: "H. Jeong, H. Kim, N. Ha, and S. Kim",
-        info: "IEEE/MTT-S International Microwave Symposium (IMS 2024)"
-    },
-
-
-    // =========================
-    // 2023
-    // =========================
-
-    {
-        year: 2023,
-        category: "International",
-        title: "SWARM CubeSat: Smart mmWave Active Radio Module on a 2U CubeSat Platform for Ground-Space LEO Communication Networks",
-        authors: "D. Kim, G. Kim, H. Kim, E. Park, N. Ha, M. Hwang, and S. Kim",
-        info: "17th European Conference on Antennas and Propagation (EuCAP 2023)"
-    },
-
-
-    // =========================
-    // 2022
-    // =========================
-
-    {
-        year: 2022,
-        category: "International",
-        title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
-        authors: "M. Hwang, G. Kim, J. Kim, and S. Kim",
-        info: "International Symposium on Antennas and Propagation (ISAP 2022)"
-    },
-
-
-
-    // =====================================================
-    // DOMESTIC CONFERENCES
-    // =====================================================
-
-
-    // =========================
-    // 2026
-    // =========================
-
-    // Summer Conference
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "광각 2축 스위치드빔 조향을 위한 유효 조명 개구 기반 저프로파일 공유 개구 투과어레이",
-        authors: "김도현, 황명하, 김호용, Theodore W. Callis, Manos M. Tentzeris, 김상길",
-        info: "한국전자파학회 하계종합학술대회"
-    },
-
-    // Winter Conference
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "위상 인식 채널 추정 기법을 적용한 초저전력 모노스태틱 후방산란 통신 플랫폼",
-        authors: "유한열, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
-    },
-
-    {
-        year: 2026,
-        category: "Domestic",
-        title: "레이다 및 후방산란 통신 플랫폼을 위한 자기간섭 제거 시스템",
-        authors: "김동훈, 김상길",
-        info: "한국전자파학회 동계종합학술대회"
-    },
-
-
-    // =========================
-    // 2025
-    // =========================
+    // -------------------------
+    // Domestic
+    // -------------------------
 
     {
         year: 2025,
@@ -196,9 +146,21 @@ const conferencePublications = [
     },
 
 
-    // =========================
+    // =====================================================
     // 2024
-    // =========================
+    // =====================================================
+
+    // International
+
+    {
+        year: 2024,
+        category: "International",
+        title: "Spatial Multiplexing Technique for MIMO Backscatter Communication",
+        authors: "H. Jeong, H. Kim, N. Ha, and S. Kim",
+        info: "IEEE/MTT-S International Microwave Symposium (IMS 2024)"
+    },
+
+    // Domestic
 
     {
         year: 2024,
@@ -225,9 +187,21 @@ const conferencePublications = [
     },
 
 
-    // =========================
+    // =====================================================
     // 2023
-    // =========================
+    // =====================================================
+
+    // International
+
+    {
+        year: 2023,
+        category: "International",
+        title: "SWARM CubeSat: Smart mmWave Active Radio Module on a 2U CubeSat Platform for Ground-Space LEO Communication Networks",
+        authors: "D. Kim, G. Kim, H. Kim, E. Park, N. Ha, M. Hwang, and S. Kim",
+        info: "17th European Conference on Antennas and Propagation (EuCAP 2023)"
+    },
+
+    // Domestic
 
     {
         year: 2023,
@@ -246,9 +220,21 @@ const conferencePublications = [
     },
 
 
-    // =========================
+    // =====================================================
     // 2022
-    // =========================
+    // =====================================================
+
+    // International
+
+    {
+        year: 2022,
+        category: "International",
+        title: "A Simultaneous Beam Steering and Polarization Converting S-Band Transmitarray Antenna",
+        authors: "M. Hwang, G. Kim, J. Kim, and S. Kim",
+        info: "International Symposium on Antennas and Propagation (ISAP 2022)"
+    },
+
+    // Domestic
 
     {
         year: 2022,
@@ -259,9 +245,11 @@ const conferencePublications = [
     },
 
 
-    // =========================
+    // =====================================================
     // 2021
-    // =========================
+    // =====================================================
+
+    // Domestic
 
     {
         year: 2021,
@@ -288,9 +276,11 @@ const conferencePublications = [
     },
 
 
-    // =========================
+    // =====================================================
     // 2020
-    // =========================
+    // =====================================================
+
+    // Domestic
 
     {
         year: 2020,
