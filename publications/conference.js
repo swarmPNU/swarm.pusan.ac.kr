@@ -15,6 +15,7 @@ const conferencePublications = [
         authors: "H. Ryu and S. Kim",
         info: "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS 2026)"
     },
+    
     {
         year: 2026,
         category: "International",
